@@ -5,11 +5,11 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<PackageId>MikyM.Autofac.Extensions</PackageId>
-		<Version>1.0.0</Version>
+		<Version>1.0.1</Version>
 		<Authors>Krzysztof Kupisz</Authors>
-		<PackageDescription>Autofac attribute registering extensiension.</PackageDescription>
+		<PackageDescription>Autofac attribute registering extension.</PackageDescription>
 		<RepositoryUrl>https://github.com/MikyM/MikyM.Autofac.Extensions</RepositoryUrl>
-		<PackageLicenseExpression>AGPL-3.0-or-later</PackageLicenseExpression>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	</PropertyGroup>
 
 	<ItemGroup>
