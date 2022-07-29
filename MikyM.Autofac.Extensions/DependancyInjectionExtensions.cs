@@ -7,16 +7,18 @@ using Autofac.Core.Activators.Reflection;
 
 namespace MikyM.Autofac.Extensions;
 
+/// <summary>
+/// Extensions.
+/// </summary>
+[PublicAPI]
 public static class DependancyInjectionExtensions
 {
     /// <summary>
-    /// Registers services with <see cref="ContainerBuilder"/> via attributes
+    /// Registers services with <see cref="ContainerBuilder"/> via attributes.
     /// </summary>
-    /// <param name="builder"></param>
-    /// <param name="options">Optional configuration</param>
-    /// <returns>Current <see cref="ContainerBuilder"/> instance</returns>
-    /// <exception cref="InvalidOperationException"></exception>
-    /// <exception cref="ArgumentOutOfRangeException"></exception>
+    /// <param name="builder">Current builder instance.</param>
+    /// <param name="options">Optional configuration.</param>
+    /// <returns>Current <see cref="ContainerBuilder"/> instance.</returns>
     public static ContainerBuilder AddAttributeDefinedServices(this ContainerBuilder builder, Action<AttributeRegistrationOptions>? options = null)
     {
         var config = new AttributeRegistrationOptions(builder);
@@ -25,7 +27,7 @@ public static class DependancyInjectionExtensions
         foreach (var assembly in AppDomain.CurrentDomain.GetAssemblies())
         {
             var set = assembly.GetTypes()
-                .Where(x => x.GetCustomAttributes(false).Any(y => y.GetType() == typeof(ServiceAttribute)) &&
+                .Where(x => x.GetCustomAttributes(false).Any(y => y is ServiceAttribute) &&
                             x.IsClass && !x.IsAbstract)
                 .ToList();
 
@@ -127,7 +129,7 @@ public static class DependancyInjectionExtensions
                         registrationBuilder = registrationBuilder?.InstancePerLifetimeScope();
                         registrationGenericBuilder = registrationGenericBuilder?.InstancePerLifetimeScope();
                         break;
-                    case Lifetime.InstancePerDependancy:
+                    case Lifetime.InstancePerDependency:
                         registrationBuilder = registrationBuilder?.InstancePerDependency();
                         registrationGenericBuilder = registrationGenericBuilder?.InstancePerDependency();
                         break;

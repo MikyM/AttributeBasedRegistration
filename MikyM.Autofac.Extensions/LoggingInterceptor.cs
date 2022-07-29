@@ -7,17 +7,20 @@ using Microsoft.Extensions.Logging;
 namespace MikyM.Autofac.Extensions;
 
 /// <summary>
-/// Base logging interceptor
+/// Base logging interceptor.
 /// </summary>
+[PublicAPI]
 public class LoggingInterceptor : AsyncInterceptorBase
 {
     private readonly ILogger _logger;
 
+    /// <inheritdoc />
     public LoggingInterceptor(ILogger logger)
     {
         _logger = logger;
     }
 
+    /// <inheritdoc />
     protected override async Task InterceptAsync(IInvocation invocation, IInvocationProceedInfo proceedInfo,
         Func<IInvocation, IInvocationProceedInfo, Task> proceed)
     {
@@ -67,6 +70,7 @@ public class LoggingInterceptor : AsyncInterceptorBase
         _logger.LogDebug($"Finished executing {invocation.Method.DeclaringType?.Name} {invocation.Method.Name} with args: {serializedArgs} after {sw.Elapsed.TotalMilliseconds} ms");
     }
 
+    /// <inheritdoc />
     protected override async Task<TResult> InterceptAsync<TResult>(IInvocation invocation,
         IInvocationProceedInfo proceedInfo, Func<IInvocation, IInvocationProceedInfo, Task<TResult>> proceed)
     {

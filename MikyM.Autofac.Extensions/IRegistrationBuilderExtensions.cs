@@ -3,9 +3,13 @@ using Autofac.Builder;
 using Autofac.Core;
 using Autofac.Features.Scanning;
 
-namespace MikyM.Autofac.Extensions.Extensions;
+namespace MikyM.Autofac.Extensions;
 
 // ReSharper disable once InconsistentNaming
+/// <summary>
+/// Extensions.
+/// </summary>
+[PublicAPI]
 public static class IRegistrationBuilderExtensions
 {
     /// <summary>

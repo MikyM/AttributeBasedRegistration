@@ -2,6 +2,7 @@
 
 namespace MikyM.Autofac.Extensions.Attributes;
 
+[PublicAPI]
 [AttributeUsage(AttributeTargets.Class)]
 public class FindConstructorsWithAttribute : Attribute
 {

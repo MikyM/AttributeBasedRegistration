@@ -5,13 +5,15 @@ using System.Reflection;
 namespace MikyM.Autofac.Extensions;
 
 /// <summary>
-/// Constructor finder that finds all constructors
+/// Constructor finder that finds all constructors.
 /// </summary>
+[PublicAPI]
 public sealed class AllConstructorsFinder : IConstructorFinder
 {
     private static readonly ConcurrentDictionary<Type, ConstructorInfo[]> Cache = new();
 
 
+    /// <inheritdoc />
     public ConstructorInfo[] FindConstructors(Type targetType)
     {
         var result = Cache.GetOrAdd(targetType,
