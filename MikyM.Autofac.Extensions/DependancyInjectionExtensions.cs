@@ -24,12 +24,18 @@ public static class DependancyInjectionExtensions
         var config = new AttributeRegistrationOptions(builder);
         options?.Invoke(config);
 
+        var decoratorServicePairs = new Dictionary<Type, List<Type>>();
+
         foreach (var assembly in AppDomain.CurrentDomain.GetAssemblies())
         {
             var set = assembly.GetTypes()
                 .Where(x => x.GetCustomAttributes(false).Any(y => y is ServiceAttribute) &&
                             x.IsClass && !x.IsAbstract)
                 .ToList();
+
+            var decorators = set.SelectMany(x => x.GetCustomAttributes<DecoratedByAttribute>(false))
+                .Select(x => x.DecoratorType).Distinct().ToList();
+            decorators.ForEach(x => decoratorServicePairs.Add(x, new List<Type>()));
 
             foreach (var type in set)
             {
@@ -38,6 +44,7 @@ public static class DependancyInjectionExtensions
                 var asAttrs = type.GetCustomAttributes<RegisterAsAttribute>(false).ToList();
                 var ctorAttr = type.GetCustomAttribute<FindConstructorsWithAttribute>(false);
                 var intrEnableAttr = type.GetCustomAttribute<EnableInterceptionAttribute>(false);
+                var decAttrs = type.GetCustomAttributes<DecoratedByAttribute>(false).ToList();
 
                 if (ctorAttr is not null && intrEnableAttr is not null)
                     throw new InvalidOperationException(
@@ -173,6 +180,50 @@ public static class DependancyInjectionExtensions
 
                     registrationBuilder = registrationBuilder?.FindConstructorsWith((IConstructorFinder)instance);
                     registrationGenericBuilder = registrationGenericBuilder?.FindConstructorsWith((IConstructorFinder)instance);
+                }
+
+                if (!decAttrs.Any())
+                    continue;
+                    
+                HashSet<Type> serviceTypes = new();
+
+                if (shouldAsSelf)
+                    serviceTypes.Add(type);
+                if (registerAsTypes.Any())
+                    registerAsTypes.ForEach(x =>
+                    {
+                        if (x is not null)
+                            serviceTypes.Add(x);
+                    });
+
+                foreach (var decAttr in decAttrs.OrderBy(x => x.RegistrationOrder))
+                {
+                    if (decAttr.DecoratorType.IsGenericType && decAttr.DecoratorType.IsGenericTypeDefinition)
+                    {
+                        foreach (var serviceType in serviceTypes)
+                        {
+                            if (!serviceType.IsGenericType || !serviceType.IsGenericTypeDefinition)
+                                throw new InvalidOperationException(
+                                    "Can't register an open generic type decorator for a non-open generic type service");
+                            
+                            builder.RegisterGenericDecorator(decAttr.DecoratorType, serviceType);
+                        }
+                    }
+                    else if (!decAttr.DecoratorType.IsGenericType)
+                    {
+                        foreach (var serviceType in serviceTypes)
+                        {
+                            if (serviceType.IsGenericType && serviceType.IsGenericTypeDefinition)
+                                throw new InvalidOperationException(
+                                    "Can't register an non-open generic type decorator for an open generic type service");
+                            
+                            builder.RegisterGenericDecorator(decAttr.DecoratorType, serviceType);
+                        }
+                    }
+                    else
+                    {
+                        throw new InvalidOperationException("Unsupported decorator");
+                    }
                 }
             }
         }

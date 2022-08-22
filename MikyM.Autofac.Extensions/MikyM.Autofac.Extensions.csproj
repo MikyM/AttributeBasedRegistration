@@ -5,13 +5,18 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<PackageId>MikyM.Autofac.Extensions</PackageId>
-		<Version>1.0.8</Version>
+		<Version>1.1.0</Version>
 		<Authors>Krzysztof Kupisz</Authors>
-		<PackageDescription>Autofac attribute registering extension.</PackageDescription>
+		<PackageDescription>Extensions to Autofac mainly allowing registration of services via attributes amongst other minor things.</PackageDescription>
 		<RepositoryUrl>https://github.com/MikyM/MikyM.Autofac.Extensions</RepositoryUrl>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
 	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="../README.md" Pack="true" PackagePath="\" />
+	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Autofac" Version="6.4.0" />
