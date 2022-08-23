@@ -209,7 +209,7 @@ public static class DependancyInjectionExtensions
                             builder.RegisterGenericDecorator(decAttr.DecoratorType, serviceType);
                         }
                     }
-                    else if (!decAttr.DecoratorType.IsGenericType)
+                    else 
                     {
                         foreach (var serviceType in serviceTypes)
                         {
@@ -217,12 +217,8 @@ public static class DependancyInjectionExtensions
                                 throw new InvalidOperationException(
                                     "Can't register an non-open generic type decorator for an open generic type service");
                             
-                            builder.RegisterGenericDecorator(decAttr.DecoratorType, serviceType);
+                            builder.RegisterDecorator(decAttr.DecoratorType, serviceType);
                         }
-                    }
-                    else
-                    {
-                        throw new InvalidOperationException("Unsupported decorator");
                     }
                 }
             }
