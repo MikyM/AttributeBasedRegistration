@@ -1,11 +1,13 @@
-﻿using Autofac;
+﻿using System.Reflection;
+using AttributeBasedRegistration.Attributes;
+using Autofac;
 using Autofac.Builder;
-using Autofac.Extras.DynamicProxy;
-using MikyM.Autofac.Extensions.Attributes;
-using System.Reflection;
 using Autofac.Core.Activators.Reflection;
+using Autofac.Extras.DynamicProxy;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 
-namespace MikyM.Autofac.Extensions;
+namespace AttributeBasedRegistration;
 
 /// <summary>
 /// Extensions.
@@ -225,5 +227,92 @@ public static class DependancyInjectionExtensions
         }
 
         return builder;
+    }
+    
+    /// <summary>
+    /// Registers services with <see cref="ContainerBuilder"/> via attributes.
+    /// </summary>
+    /// <param name="serviceCollection">Current service collection instance.</param>
+    /// <param name="options">Optional configuration.</param>
+    /// <returns>Current <see cref="ContainerBuilder"/> instance.</returns>
+    public static IServiceCollection AddAttributeDefinedServices(this IServiceCollection serviceCollection, Action<AttributeRegistrationOptions>? options = null)
+    {
+        var config = new AttributeRegistrationOptions(serviceCollection);
+        options?.Invoke(config);
+
+        foreach (var assembly in AppDomain.CurrentDomain.GetAssemblies())
+        {
+            var set = assembly.GetTypes()
+                .Where(x => x.GetCustomAttributes(false).Any(y => y is ServiceAttribute) &&
+                            x.IsClass && !x.IsAbstract)
+                .ToList(); ;
+
+            foreach (var type in set)
+            {
+                var scopeAttr = type.GetCustomAttribute<LifetimeAttribute>(false);
+                var asAttrs = type.GetCustomAttributes<RegisterAsAttribute>(false).ToList();
+                
+                var scope = scopeAttr?.Scope ?? config.DefaultLifetime;
+
+                var registerAsTypes = asAttrs.Where(x => x.RegisterAsType is not null)
+                    .Select(x => x.RegisterAsType)
+                    .Distinct()
+                    .ToList();
+                
+                var shouldAsSelf = asAttrs.Any(x => x.RegisterAsOption == RegisterAs.Self) &&
+                                   asAttrs.All(x => x.RegisterAsType != type);
+                var shouldAsInterfaces = !asAttrs.Any() ||
+                                         asAttrs.Any(x => x.RegisterAsOption == RegisterAs.ImplementedInterfaces);
+
+                if (!shouldAsInterfaces && !registerAsTypes.Any())
+                    shouldAsSelf = true;
+
+                var interfaces = type.GetInterfaces().ToList();
+                
+                switch (scope)
+                {
+                    case Lifetime.SingleInstance:
+                        if (shouldAsInterfaces)
+                            interfaces.ForEach(x => serviceCollection.TryAddSingleton(x, type));
+                        if (shouldAsSelf)
+                            serviceCollection.TryAddSingleton(type);
+                        if (registerAsTypes.Any())
+                            registerAsTypes.ForEach(x => serviceCollection.TryAddSingleton(x, type));
+                        break;
+                    case Lifetime.InstancePerRequest:
+                        if (shouldAsInterfaces)
+                            interfaces.ForEach(x => serviceCollection.TryAddScoped(x, type));
+                        if (shouldAsSelf)
+                            serviceCollection.TryAddScoped(type);
+                        if (registerAsTypes.Any())
+                            registerAsTypes.ForEach(x => serviceCollection.TryAddScoped(x, type));
+                        break;
+                    case Lifetime.InstancePerLifetimeScope:
+                        if (shouldAsInterfaces)
+                            interfaces.ForEach(x => serviceCollection.TryAddScoped(x, type));
+                        if (shouldAsSelf)
+                            serviceCollection.TryAddScoped(type);
+                        if (registerAsTypes.Any())
+                            registerAsTypes.ForEach(x => serviceCollection.TryAddScoped(x, type));
+                        break;
+                    case Lifetime.InstancePerDependency:
+                        if (shouldAsInterfaces)
+                            interfaces.ForEach(x => serviceCollection.TryAddTransient(x, type));
+                        if (shouldAsSelf)
+                            serviceCollection.TryAddTransient(type);
+                        if (registerAsTypes.Any())
+                            registerAsTypes.ForEach(x => serviceCollection.TryAddTransient(x, type));
+                        break;
+                    case Lifetime.InstancePerMatchingLifetimeScope:
+                        throw new NotSupportedException();
+                    case Lifetime.InstancePerOwned:
+                        throw new NotSupportedException();
+                    default:
+                        throw new ArgumentOutOfRangeException(nameof(scope));
+                }
+            }
+        }
+
+        return serviceCollection;
     }
 }

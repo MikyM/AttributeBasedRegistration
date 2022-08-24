@@ -1,4 +1,4 @@
-﻿namespace MikyM.Autofac.Extensions.Attributes;
+﻿namespace AttributeBasedRegistration.Attributes;
 
 /// <summary>
 /// Defines whether to enable interception for this registration.

@@ -1,4 +1,4 @@
-﻿namespace MikyM.Autofac.Extensions.Attributes;
+﻿namespace AttributeBasedRegistration.Attributes;
 
 /// <summary>
 /// Marks a class for registration as a service implementation.

@@ -1,6 +1,6 @@
 ﻿using Autofac.Core.Activators.Reflection;
 
-namespace MikyM.Autofac.Extensions.Attributes;
+namespace AttributeBasedRegistration.Attributes;
 
 [PublicAPI]
 [AttributeUsage(AttributeTargets.Class)]

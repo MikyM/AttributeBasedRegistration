@@ -4,7 +4,7 @@ using System.Text.Json;
 using Castle.DynamicProxy;
 using Microsoft.Extensions.Logging;
 
-namespace MikyM.Autofac.Extensions;
+namespace AttributeBasedRegistration;
 
 /// <summary>
 /// Base logging interceptor.

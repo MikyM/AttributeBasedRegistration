@@ -1,8 +1,8 @@
-﻿using Autofac.Core.Activators.Reflection;
-using System.Collections.Concurrent;
+﻿using System.Collections.Concurrent;
 using System.Reflection;
+using Autofac.Core.Activators.Reflection;
 
-namespace MikyM.Autofac.Extensions;
+namespace AttributeBasedRegistration;
 
 /// <summary>
 /// Constructor finder that finds all constructors.

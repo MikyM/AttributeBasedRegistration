@@ -1,4 +1,4 @@
-﻿namespace MikyM.Autofac.Extensions;
+﻿namespace AttributeBasedRegistration;
 
 /// <summary>
 /// Lifetime types.

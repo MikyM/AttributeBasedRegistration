@@ -1,6 +1,6 @@
 ﻿using Castle.DynamicProxy;
 
-namespace MikyM.Autofac.Extensions.Attributes;
+namespace AttributeBasedRegistration.Attributes;
 
 /// <summary>
 /// Defines with what interceptors should the service be intercepted.

@@ -1,4 +1,4 @@
-﻿namespace MikyM.Autofac.Extensions.Attributes;
+﻿namespace AttributeBasedRegistration.Attributes;
 
 /// <summary>
 /// Defines with which lifetime should the service be registered.

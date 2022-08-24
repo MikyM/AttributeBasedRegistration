@@ -28,7 +28,7 @@ jobs:
       run: dotnet restore
     - name: Build solution and generate NuGet package
       run: |  
-        cd MikyM.Autofac.Extensions
+        cd AttributeBasedRegistration
         dotnet pack -c Release -o out 
     - name: Push generated package to NuGet registry
-      run: dotnet nuget push ./MikyM.Autofac.Extensions/out/*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
+      run: dotnet nuget push ./AttributeBasedRegistration/out/*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
