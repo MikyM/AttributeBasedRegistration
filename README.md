@@ -1,6 +1,6 @@
 # AttributeBasedRegistration
 
-[![Build Status](https://github.com/MikyM/DependencyAttributation/actions/workflows/release.yml/badge.svg)](https://github.com/MikyM/DependencyAttributation/actions)
+[![Build Status](https://github.com/MikyM/AttributeBasedRegistration/actions/workflows/release.yml/badge.svg)](https://github.com/MikyM/AttributeBasedRegistration/actions)
 
 Library allowing registering services with Autofac and Microsoft's DI container via attributes. Additionally contains various extensions to Autofac and Microsoft's DI container.
 
