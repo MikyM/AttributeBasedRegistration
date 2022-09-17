@@ -9,9 +9,9 @@ public enum RegistrationStrategy
     /// <summary>
     /// Register as self.
     /// </summary>
-    Self,
+    AsSelf,
     /// <summary>
     /// Register as implemented interfaces.
     /// </summary>
-    ImplementedInterfaces
+    AsImplementedInterfaces
 }

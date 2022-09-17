@@ -68,11 +68,11 @@ public static class DependancyInjectionExtensions
                     .Distinct()
                     .ToList() ?? new List<Type>();
                 
-                var shouldAsSelf = serviceAttr.RegistrationStrategy is RegistrationStrategy.Self &&
+                var shouldAsSelf = serviceAttr.RegistrationStrategy is RegistrationStrategy.AsSelf &&
                                    registerAsTypes.All(x => x != type);
                 
                 var shouldAsInterfaces = !registerAsTypes.Any() ||
-                                         serviceAttr.RegistrationStrategy is RegistrationStrategy.ImplementedInterfaces;
+                                         serviceAttr.RegistrationStrategy is RegistrationStrategy.AsImplementedInterfaces;
                 
                 if (!shouldAsInterfaces && !registerAsTypes.Any())
                     shouldAsSelf = true;
@@ -284,11 +284,11 @@ public static class DependancyInjectionExtensions
                     .Distinct()
                     .ToList() ?? new List<Type>();
                 
-                var shouldAsSelf = serviceAttr.RegistrationStrategy is RegistrationStrategy.Self &&
+                var shouldAsSelf = serviceAttr.RegistrationStrategy is RegistrationStrategy.AsSelf &&
                                    registerAsTypes.All(x => x != type);
                 
                 var shouldAsInterfaces = !registerAsTypes.Any() ||
-                                         serviceAttr.RegistrationStrategy is RegistrationStrategy.ImplementedInterfaces;
+                                         serviceAttr.RegistrationStrategy is RegistrationStrategy.AsImplementedInterfaces;
 
                 if (!shouldAsInterfaces && !registerAsTypes.Any())
                     shouldAsSelf = true;
