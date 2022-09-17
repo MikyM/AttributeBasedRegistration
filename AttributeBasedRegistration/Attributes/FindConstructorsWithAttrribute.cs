@@ -2,11 +2,23 @@
 
 namespace AttributeBasedRegistration.Attributes;
 
+/// <summary>
+/// 
+/// </summary>
 [PublicAPI]
 [AttributeUsage(AttributeTargets.Class)]
-public class FindConstructorsWithAttribute : Attribute
+public sealed class FindConstructorsWithAttribute : Attribute
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public Type ConstructorFinder { get; set; }
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="constructorFinder"></param>
+    /// <exception cref="ArgumentNullException"></exception>
+    /// <exception cref="InvalidOperationException"></exception>
     public FindConstructorsWithAttribute(Type constructorFinder)
     {
         if (constructorFinder is null) throw new ArgumentNullException(nameof(constructorFinder));

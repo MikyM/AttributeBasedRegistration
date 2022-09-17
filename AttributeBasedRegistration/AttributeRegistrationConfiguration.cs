@@ -14,7 +14,7 @@ public sealed class AttributeRegistrationOptions
     /// <summary>
     /// Default lifetime of the registrations.
     /// </summary>
-    public Lifetime DefaultLifetime { get; set; } = Lifetime.InstancePerLifetimeScope;
+    public ServiceLifetime DefaultServiceLifetime { get; set; } = ServiceLifetime.InstancePerLifetimeScope;
 
     /// <summary>
     /// Constructor.
@@ -26,7 +26,7 @@ public sealed class AttributeRegistrationOptions
     /// <summary>
     /// Constructor.
     /// </summary>
-    /// <param name="builder">Builder.</param>
+    /// <param name="serviceCollection">Builder.</param>
     public AttributeRegistrationOptions(IServiceCollection serviceCollection)
         => ServiceCollection = serviceCollection;
 

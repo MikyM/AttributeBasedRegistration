@@ -1,10 +1,10 @@
 ﻿namespace AttributeBasedRegistration;
 
 /// <summary>
-/// Registration types.
+/// Registration strategies.
 /// </summary>
 [PublicAPI]
-public enum RegisterAs
+public enum RegistrationStrategy
 {
     /// <summary>
     /// Register as self.

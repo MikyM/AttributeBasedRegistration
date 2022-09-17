@@ -1,10 +1,10 @@
 ﻿namespace AttributeBasedRegistration;
 
 /// <summary>
-/// Interception types.
+/// Interception strategies.
 /// </summary>
 [PublicAPI]
-public enum Intercept
+public enum InterceptionStrategy
 {
     /// <summary>
     /// Intercept interface and class.

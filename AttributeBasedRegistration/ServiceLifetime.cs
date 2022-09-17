@@ -1,10 +1,10 @@
 ﻿namespace AttributeBasedRegistration;
 
 /// <summary>
-/// Lifetime types.
+/// Service lifetime types.
 /// </summary>
 [PublicAPI]
-public enum Lifetime
+public enum ServiceLifetime
 {
     /// <summary>
     /// Single instance.
