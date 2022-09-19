@@ -1,4 +1,4 @@
-﻿namespace AttributeBasedRegistration;
+﻿namespace AttributeBasedRegistration.Attributes;
 
 /// <summary>
 /// Defines a lifetime for a particular service if desired to be different than the default.
