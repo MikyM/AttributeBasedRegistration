@@ -6,7 +6,7 @@
 /// <remarks>This only has effect in external libraries that implement support for this attribute outside of the scope of this library.</remarks>
 [AttributeUsage(AttributeTargets.Class, Inherited = false)]
 [PublicAPI]
-public sealed class LifetimeAttribute : Attribute
+public sealed class ServiceLifetimeAttribute : Attribute
 {
     /// <summary>
     /// Lifetime.
@@ -17,7 +17,7 @@ public sealed class LifetimeAttribute : Attribute
     /// Creates a new instance of the lifetime attribute.
     /// </summary>
     /// <param name="lifetime">The desired lifetime.</param>
-    public LifetimeAttribute(ServiceLifetime lifetime)
+    public ServiceLifetimeAttribute(ServiceLifetime lifetime)
     {
         Lifetime = lifetime;
     }
