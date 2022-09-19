@@ -24,7 +24,7 @@ public sealed class InterceptedByAttribute : Attribute
 
         foreach (var i in interceptors)
         {
-            if (i.GetInterfaces().All(x => x != typeof(IAsyncInterceptor) || x != typeof(IInterceptor)))
+            if (i.GetInterfaces().All(x => x != typeof(IAsyncInterceptor) && x != typeof(IInterceptor)))
                 throw new InvalidOperationException($"{i.Name} does not implement any interceptor interface");
         }
 
