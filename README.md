@@ -37,11 +37,11 @@ public interface ICustomService
 
 }
 
-[Service]
+[ServiceImplementation]
 [RegisterAs(typeof(ICustomService))]
-[Lifetime(Lifetime.InstancePerLifetimeScope)]
+[Lifetime(ServiceLifetime.InstancePerLifetimeScope)]
 [DecoratedBy(typeof(ISomeDecorator), 1)]
-[EnableInterception(Intercept.Interface)]
+[EnableInterception(InterceptionStrategy.Interface)]
 [InterceptedBy(typeof(ISomeInterceptor))]
 public class CustomService : ICustomService
 {
