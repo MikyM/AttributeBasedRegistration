@@ -50,6 +50,7 @@ public static class DependancyInjectionExtensions
 
             foreach (var type in set)
             {
+                var attr = type.GetCustomAttribute<ServiceImplementationAttribute>(false);
                 var intrAttrs = type.GetCustomAttributes<InterceptedByAttribute>(false).ToList();
                 var scopeAttr = type.GetCustomAttribute<LifetimeAttribute>(false);
                 var asAttrs = type.GetCustomAttributes<RegisterAsAttribute>(false).ToList();
@@ -61,7 +62,7 @@ public static class DependancyInjectionExtensions
                     throw new InvalidOperationException(
                         "Using a custom constructor finder will prevent interception from happening");
 
-                var scope = scopeAttr?.Scope ?? config.DefaultServiceLifetime;
+                var scope = scopeAttr?.ServiceLifetime ?? attr?.ServiceLifetime ?? config.DefaultServiceLifetime;
 
                 var registerAsTypes = asAttrs.Where(x => x.ServiceTypes is not null)
                     .SelectMany(x => x.ServiceTypes ?? Type.EmptyTypes)
@@ -269,10 +270,11 @@ public static class DependancyInjectionExtensions
 
             foreach (var type in set)
             {
+                var attr = type.GetCustomAttribute<ServiceImplementationAttribute>(false);
                 var scopeAttr = type.GetCustomAttribute<LifetimeAttribute>(false);
                 var asAttrs = type.GetCustomAttributes<RegisterAsAttribute>(false).ToList();
                 
-                var scope = scopeAttr?.Scope ?? config.DefaultServiceLifetime;
+                var scope = scopeAttr?.ServiceLifetime ?? attr?.ServiceLifetime ?? config.DefaultServiceLifetime;
 
                 var registerAsTypes = asAttrs.Where(x => x.ServiceTypes is not null)
                     .SelectMany(x => x.ServiceTypes ?? Type.EmptyTypes)

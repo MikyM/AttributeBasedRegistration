@@ -24,7 +24,7 @@ public sealed class RegisterAsAttribute : Attribute
     public RegisterAsAttribute(params Type[] serviceTypes)
     {
         if (serviceTypes.Length == 0)
-            throw new InvalidOperationException("You must pass at least one service type");
+            throw new ArgumentException("You must pass at least one service type");
         
         ServiceTypes = serviceTypes ?? throw new ArgumentNullException(nameof(serviceTypes));
     }
