@@ -154,11 +154,11 @@ public static class DependancyInjectionExtensions
                         break;
                     case ServiceLifetime.InstancePerMatchingLifetimeScope:
                         registrationBuilder =
-                            registrationBuilder?.InstancePerMatchingLifetimeScope(scopeAttr?.Tags.ToArray() ??
+                            registrationBuilder?.InstancePerMatchingLifetimeScope(scopeAttr?.Tags?.ToArray() ??
                                 Array.Empty<object>());
                         registrationGenericBuilder =
                             registrationGenericBuilder?.InstancePerMatchingLifetimeScope(
-                                scopeAttr?.Tags.ToArray() ?? Array.Empty<object>());
+                                scopeAttr?.Tags?.ToArray() ?? Array.Empty<object>());
                         break;
                     case ServiceLifetime.InstancePerOwned:
                         if (scopeAttr?.Owned is null) throw new InvalidOperationException("Owned type was null");
