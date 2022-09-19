@@ -78,20 +78,20 @@ public static class DependancyInjectionExtensions
                                     attr?.RegistrationStrategy is RegistrationStrategy.AsSelf) &&
                                    registerAsTypes.All(y => y != type);
 
-                var shouldAsInterfaces = !asAttrs.Any() ||
-                                         asAttrs.Any(x =>
+                var shouldAsInterfaces = asAttrs.Any(x =>
                                              x.RegistrationStrategy is RegistrationStrategy.AsImplementedInterfaces) ||
                                          attr?.RegistrationStrategy is RegistrationStrategy.AsImplementedInterfaces;
 
                 var shouldAsDirectAncestors =
                     asAttrs.Any(x => x.RegistrationStrategy is RegistrationStrategy.AsDirectAncestorInterfaces) ||
                     attr?.RegistrationStrategy is RegistrationStrategy.AsDirectAncestorInterfaces;
-                
+
                 var shouldUsingNamingConvention =
                     asAttrs.Any(x => x.RegistrationStrategy is RegistrationStrategy.AsConventionNamedInterface) ||
                     attr?.RegistrationStrategy is RegistrationStrategy.AsConventionNamedInterface;
-                
-                if (!shouldAsInterfaces && !registerAsTypes.Any() && !shouldAsDirectAncestors && !shouldUsingNamingConvention)
+
+                if (!shouldAsInterfaces && !registerAsTypes.Any() && !shouldAsDirectAncestors &&
+                    !shouldUsingNamingConvention)
                     shouldAsSelf = true;
 
                 IRegistrationBuilder<object, ReflectionActivatorData, DynamicRegistrationStyle>?
@@ -330,8 +330,7 @@ public static class DependancyInjectionExtensions
                                     attr?.RegistrationStrategy is RegistrationStrategy.AsSelf) &&
                                    registerAsTypes.All(y => y != type);
 
-                var shouldAsInterfaces = !asAttrs.Any() ||
-                                         asAttrs.Any(x =>
+                var shouldAsInterfaces = asAttrs.Any(x =>
                                              x.RegistrationStrategy is RegistrationStrategy.AsImplementedInterfaces) ||
                                          attr?.RegistrationStrategy is RegistrationStrategy.AsImplementedInterfaces;
                 
