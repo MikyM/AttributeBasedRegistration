@@ -26,7 +26,7 @@ public sealed class AttributeRegistrationOptions
     /// <summary>
     /// Constructor.
     /// </summary>
-    /// <param name="serviceCollection">Builder.</param>
+    /// <param name="builder">Builder.</param>
     public AttributeRegistrationOptions(IServiceCollection serviceCollection)
         => ServiceCollection = serviceCollection;
 

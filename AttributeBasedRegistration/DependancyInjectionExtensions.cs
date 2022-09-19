@@ -6,6 +6,7 @@ using Autofac.Core.Activators.Reflection;
 using Autofac.Extras.DynamicProxy;
 using Castle.DynamicProxy;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using MikyM.Utilities.Extensions;
 
 namespace AttributeBasedRegistration;
@@ -25,9 +26,8 @@ public static class DependancyInjectionExtensions
     /// <returns>Current <see cref="ContainerBuilder"/> instance.</returns>
     public static ContainerBuilder AddAttributeDefinedServices(this ContainerBuilder builder,
         IEnumerable<Type> assembliesContainingTypesToScan, Action<AttributeRegistrationOptions>? options = null)
-        => AddAttributeDefinedServices(builder, assembliesContainingTypesToScan.Select(x => x.Assembly).Distinct(),
-            options);
-    
+        => AddAttributeDefinedServices(builder, assembliesContainingTypesToScan.Select(x => x.Assembly), options);
+        
     /// <summary>
     /// Registers services with <see cref="ContainerBuilder"/> via attributes.
     /// </summary>
@@ -47,35 +47,30 @@ public static class DependancyInjectionExtensions
                 .Where(x => x.GetCustomAttributes(false).Any(y => y is ServiceImplementationAttribute) &&
                             x.IsClass && !x.IsAbstract)
                 .ToList();
-            
+
             foreach (var type in set)
             {
-                var serviceAttr = type.GetCustomAttribute<ServiceImplementationAttribute>(false);
-                if (serviceAttr is null)
-                    throw new InvalidOperationException("Something went wrong while filtering types for registration");
-
-                var interceptAttr = type.GetCustomAttribute<InterceptedAttribute>(false);
+                var intrAttrs = type.GetCustomAttributes<InterceptedByAttribute>(false).ToList();
+                var scopeAttr = type.GetCustomAttribute<LifetimeAttribute>(false);
+                var asAttrs = type.GetCustomAttributes<RegisterAsAttribute>(false).ToList();
                 var ctorAttr = type.GetCustomAttribute<FindConstructorsWithAttribute>(false);
-                var decAttrs = type.GetCustomAttributes<DecoratedAttribute>(false).ToList();
+                var intrEnableAttr = type.GetCustomAttribute<EnableInterceptionAttribute>(false);
+                var decAttrs = type.GetCustomAttributes<DecoratedByAttribute>(false).ToList();
 
-                if (ctorAttr is not null && interceptAttr is not null)
+                if (ctorAttr is not null && intrEnableAttr is not null)
                     throw new InvalidOperationException(
                         "Using a custom constructor finder will prevent interception from happening");
 
-                var scope = serviceAttr.ServiceLifetime ?? config.DefaultServiceLifetime;
+                var scope = scopeAttr?.Scope ?? config.DefaultServiceLifetime;
 
-                var registerAsTypes = serviceAttr.ServiceTypes?
+                var registerAsTypes = asAttrs.Where(x => x.ServiceTypes is not null)
+                    .SelectMany(x => x.ServiceTypes ?? Type.EmptyTypes)
                     .Distinct()
-                    .ToList() ?? new List<Type>();
-                
-                var shouldAsSelf = serviceAttr.RegistrationStrategy is RegistrationStrategy.AsSelf &&
-                                   registerAsTypes.All(x => x != type);
-                
-                var shouldAsInterfaces = !registerAsTypes.Any() ||
-                                         serviceAttr.RegistrationStrategy is RegistrationStrategy.AsImplementedInterfaces;
-                
-                if (!shouldAsInterfaces && !registerAsTypes.Any())
-                    shouldAsSelf = true;
+                    .ToList();
+                var shouldAsSelf = asAttrs.Any(x => x.RegistrationStrategy == RegistrationStrategy.AsSelf) &&
+                                   asAttrs.All(x => (x.ServiceTypes ?? Type.EmptyTypes).All(y => y != type));
+                var shouldAsInterfaces = !asAttrs.Any() ||
+                                         asAttrs.Any(x => x.RegistrationStrategy == RegistrationStrategy.AsImplementedInterfaces);
 
                 IRegistrationBuilder<object, ReflectionActivatorData, DynamicRegistrationStyle>?
                     registrationGenericBuilder = null;
@@ -84,7 +79,7 @@ public static class DependancyInjectionExtensions
 
                 if (type.IsGenericType && type.IsGenericTypeDefinition)
                 {
-                    if (interceptAttr is not null)
+                    if (intrEnableAttr is not null)
                         registrationGenericBuilder = shouldAsInterfaces
                             ? builder.RegisterGeneric(type).AsImplementedInterfaces().EnableInterfaceInterceptors()
                             : builder.RegisterGeneric(type).EnableInterfaceInterceptors();
@@ -95,9 +90,9 @@ public static class DependancyInjectionExtensions
                 }
                 else
                 {
-                    if (interceptAttr is not null)
+                    if (intrEnableAttr is not null)
                     {
-                        registrationBuilder = interceptAttr.InterceptionStrategy switch
+                        registrationBuilder = intrEnableAttr.InterceptionStrategy switch
                         {
                             InterceptionStrategy.InterfaceAndClass => shouldAsInterfaces
                                 ? builder.RegisterType(type)
@@ -113,7 +108,7 @@ public static class DependancyInjectionExtensions
                             InterceptionStrategy.Class => shouldAsInterfaces
                                 ? builder.RegisterType(type).AsImplementedInterfaces().EnableClassInterceptors()
                                 : builder.RegisterType(type).EnableClassInterceptors(),
-                            _ => throw new ArgumentOutOfRangeException(nameof(interceptAttr.InterceptionStrategy))
+                            _ => throw new ArgumentOutOfRangeException(nameof(intrEnableAttr.InterceptionStrategy))
                         };
                     }
                     else
@@ -158,34 +153,33 @@ public static class DependancyInjectionExtensions
                         break;
                     case ServiceLifetime.InstancePerMatchingLifetimeScope:
                         registrationBuilder =
-                            registrationBuilder?.InstancePerMatchingLifetimeScope(serviceAttr?.Tags?.ToArray() ??
+                            registrationBuilder?.InstancePerMatchingLifetimeScope(scopeAttr?.Tags.ToArray() ??
                                 Array.Empty<object>());
                         registrationGenericBuilder =
                             registrationGenericBuilder?.InstancePerMatchingLifetimeScope(
-                                serviceAttr?.Tags?.ToArray() ?? Array.Empty<object>());
+                                scopeAttr?.Tags.ToArray() ?? Array.Empty<object>());
                         break;
                     case ServiceLifetime.InstancePerOwned:
-                        if (serviceAttr?.OwnedByType is null) throw new InvalidOperationException("Owned type was null");
+                        if (scopeAttr?.Owned is null) throw new InvalidOperationException("Owned type was null");
 
-                        registrationBuilder = registrationBuilder?.InstancePerOwned(serviceAttr.OwnedByType);
-                        registrationGenericBuilder = registrationGenericBuilder?.InstancePerOwned(serviceAttr.OwnedByType);
+                        registrationBuilder = registrationBuilder?.InstancePerOwned(scopeAttr.Owned);
+                        registrationGenericBuilder = registrationGenericBuilder?.InstancePerOwned(scopeAttr.Owned);
                         break;
                     default:
                         throw new ArgumentOutOfRangeException(nameof(scope));
                 }
 
-                if (interceptAttr is not null)
-                    foreach (var interceptor in interceptAttr.Interceptors)
-                    {
-                        registrationBuilder = IsInterceptorAsync(interceptor)
-                            ? registrationBuilder?.InterceptedBy(
-                                typeof(AsyncInterceptorAdapter<>).MakeGenericType(interceptor))
-                            : registrationBuilder?.InterceptedBy(interceptor);
-                        registrationGenericBuilder = IsInterceptorAsync(interceptor)
-                            ? registrationGenericBuilder?.InterceptedBy(
-                                typeof(AsyncInterceptorAdapter<>).MakeGenericType(interceptor))
-                            : registrationGenericBuilder?.InterceptedBy(interceptor);
-                    }
+                foreach (var interceptor in intrAttrs.SelectMany(x => x.Interceptors))
+                {
+                    registrationBuilder = IsInterceptorAsync(interceptor)
+                        ? registrationBuilder?.InterceptedBy(
+                            typeof(AsyncInterceptorAdapter<>).MakeGenericType(interceptor))
+                        : registrationBuilder?.InterceptedBy(interceptor);
+                    registrationGenericBuilder = IsInterceptorAsync(interceptor)
+                        ? registrationGenericBuilder?.InterceptedBy(
+                            typeof(AsyncInterceptorAdapter<>).MakeGenericType(interceptor))
+                        : registrationGenericBuilder?.InterceptedBy(interceptor);
+                }
 
                 if (ctorAttr is not null)
                 {
@@ -201,7 +195,7 @@ public static class DependancyInjectionExtensions
 
                 if (!decAttrs.Any())
                     continue;
-                
+                    
                 HashSet<Type> serviceTypes = new();
 
                 if (shouldAsSelf)
@@ -251,7 +245,8 @@ public static class DependancyInjectionExtensions
     /// <returns>Current <see cref="ContainerBuilder"/> instance.</returns>
     public static IServiceCollection AddAttributeDefinedServices(this IServiceCollection serviceCollection,
         IEnumerable<Type> assembliesContainingTypesToScan, Action<AttributeRegistrationOptions>? options = null)
-        => AddAttributeDefinedServices(serviceCollection, assembliesContainingTypesToScan.Select(x => x.Assembly).Distinct(), options);
+        => AddAttributeDefinedServices(serviceCollection, assembliesContainingTypesToScan.Select(x => x.Assembly),
+            options);
 
     /// <summary>
     /// Registers services with <see cref="ContainerBuilder"/> via attributes.
@@ -274,21 +269,20 @@ public static class DependancyInjectionExtensions
 
             foreach (var type in set)
             {
-                var serviceAttr = type.GetCustomAttribute<ServiceImplementationAttribute>(false);
-                if (serviceAttr is null)
-                    throw new InvalidOperationException("Something went wrong while filtering types for registration");
+                var scopeAttr = type.GetCustomAttribute<LifetimeAttribute>(false);
+                var asAttrs = type.GetCustomAttributes<RegisterAsAttribute>(false).ToList();
                 
-                var scope = serviceAttr.ServiceLifetime ?? config.DefaultServiceLifetime;
-                
-                var registerAsTypes = serviceAttr.ServiceTypes?
+                var scope = scopeAttr?.Scope ?? config.DefaultServiceLifetime;
+
+                var registerAsTypes = asAttrs.Where(x => x.ServiceTypes is not null)
+                    .SelectMany(x => x.ServiceTypes ?? Type.EmptyTypes)
                     .Distinct()
-                    .ToList() ?? new List<Type>();
+                    .ToList();
                 
-                var shouldAsSelf = serviceAttr.RegistrationStrategy is RegistrationStrategy.AsSelf &&
-                                   registerAsTypes.All(x => x != type);
-                
-                var shouldAsInterfaces = !registerAsTypes.Any() ||
-                                         serviceAttr.RegistrationStrategy is RegistrationStrategy.AsImplementedInterfaces;
+                var shouldAsSelf = asAttrs.Any(x => x.RegistrationStrategy == RegistrationStrategy.AsSelf) &&
+                                   asAttrs.All(x => (x.ServiceTypes ?? Type.EmptyTypes).All(y => y != type));
+                var shouldAsInterfaces = !asAttrs.Any() ||
+                                         asAttrs.Any(x => x.RegistrationStrategy == RegistrationStrategy.AsImplementedInterfaces);
 
                 if (!shouldAsInterfaces && !registerAsTypes.Any())
                     shouldAsSelf = true;

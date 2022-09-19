@@ -3,20 +3,21 @@
 namespace AttributeBasedRegistration.Attributes;
 
 /// <summary>
-/// 
+/// Marks a registration to use a specific constructor finder.
 /// </summary>
 [PublicAPI]
-[AttributeUsage(AttributeTargets.Class)]
-public sealed class FindConstructorsWithAttribute : Attribute
+[AttributeUsage(AttributeTargets.Class, Inherited = false)]
+public class FindConstructorsWithAttribute : Attribute
 {
     /// <summary>
-    /// 
+    /// Type of the ctor finder.
     /// </summary>
     public Type ConstructorFinder { get; set; }
+    
     /// <summary>
-    /// 
+    /// Creates a new instance of the ctor finder attribute.
     /// </summary>
-    /// <param name="constructorFinder"></param>
+    /// <param name="constructorFinder">The ctor finder.</param>
     /// <exception cref="ArgumentNullException"></exception>
     /// <exception cref="InvalidOperationException"></exception>
     public FindConstructorsWithAttribute(Type constructorFinder)

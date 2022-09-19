@@ -1,7 +1,7 @@
 ﻿namespace AttributeBasedRegistration;
 
 /// <summary>
-/// Service lifetime types.
+/// Lifetime types.
 /// </summary>
 [PublicAPI]
 public enum ServiceLifetime

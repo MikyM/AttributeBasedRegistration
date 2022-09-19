@@ -8,17 +8,20 @@ Library allowing registering services with Autofac and Microsoft's DI container 
 
 Set of attributes allowing automatic registration:
 
-- [ServiceImplementation] - marks the class as an implementation of a service, defines the service type(s) or a registration strategy and the lifetime of the service
-- [Intercepted] - marks the service implementation for interception, defines the interceptor types and the interception strategy - supported only with Autofac
+- [Service] - marks the class as an implementation of a service
+- [RegisterAs] - defines the service type to register
+- [Lifetime] - defines the lifetime with which the service should be registered (Autofac's based - Microsoft's DI equivalent will be used) - some supported only with Autofac
+- [EnableInterception] - enables interception on the service, in theory supports intercepting classes and interfaces (or both) (Intercept enum) though intercepting classes sometimes suffers from weird Castle.Core bugs thus when using interception it is encouraged to use interface service types - supported only with Autofac
+- [InterceptedBy] - defines types that should intercept calls to the service - supported only with Autofac
 - [FindConstructorsWith] - defines a constructor finder to use during creation of the service instance, supports only parameterless ctors and can't be used in conjunction with interceptors - supported only with Autofac
-- [Decorated] - marks the service implementation for decoration with a specified decorator and registration order - supported only with Autofac
+- [DecoratedBy] - defines types that decorate this service - supported only with Autofac
 
 ## Installation
 
 To pick up and register services via attributes use the extensions method on `ContainerBuilder` or `IServiceCollection` provided by the library:
 
 ```csharp
-builder.AddAttributeDefinedServices(assembliesToScan);
+builder.AddAttributeDefinedServices();
 ```
 
 ## Example usage
@@ -30,18 +33,13 @@ public interface ICustomService
 
 }
 
-[ServiceImplementation(ServiceLifetime.InstancePerLifetimeScope, typeof(ICustomService))]
-[Decorated(1, typeof(ISomeDecorator))]
-[Intercepted(InterceptionStrategy.Interface, typeof(ISomeInterceptor))]
+[Service]
+[RegisterAs(typeof(ICustomService))]
+[Lifetime(Lifetime.InstancePerLifetimeScope)]
+[DecoratedBy(typeof(ISomeDecorator), 1)]
+[EnableInterception(Intercept.Interface)]
+[InterceptedBy(typeof(ISomeInterceptor))]
 public class CustomService : ICustomService
-{
-
-}
-
-[ServiceImplementation(ServiceLifetime.InstancePerDependency, RegistrationStrategy.AsSelf)]
-[Decorated(1, typeof(ISomeDecorator))]
-[Intercepted(InterceptionStrategy.Interface, typeof(ISomeInterceptor))]
-public class AnotherCustomService
 {
 
 }

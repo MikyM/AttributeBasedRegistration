@@ -1,11 +1,11 @@
 ﻿namespace AttributeBasedRegistration.Attributes;
 
 /// <summary>
-/// Marks a service implementation for decoration with specified decorator.
+/// Defines a decorator for a service.
 /// </summary>
 [PublicAPI]
-[AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]
-public sealed class DecoratedAttribute : Attribute
+[AttributeUsage(AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
+public sealed class DecoratedByAttribute : Attribute
 {
     /// <summary>
     /// Decorator's type.
@@ -20,12 +20,12 @@ public sealed class DecoratedAttribute : Attribute
     /// <summary>
     /// Defines a decorator to use.
     /// </summary>
-    /// <param name="decorator">Decorator's type.</param>
+    /// <param name="decoratorType">Decorator's type.</param>
     /// <param name="registrationOrder">Registration order.</param>
     /// n>
-    public DecoratedAttribute(int registrationOrder, Type decorator)
+    public DecoratedByAttribute(Type decoratorType, int registrationOrder)
     {
-        DecoratorType = decorator;
+        DecoratorType = decoratorType;
         RegistrationOrder = registrationOrder;
     }
 }
