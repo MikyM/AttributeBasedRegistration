@@ -1,5 +1,6 @@
 ﻿using System.Reflection;
 using AttributeBasedRegistration.Attributes;
+using AttributeBasedRegistration.Extensions;
 using Autofac;
 using Autofac.Builder;
 using Autofac.Core.Activators.Reflection;
@@ -51,6 +52,9 @@ public static class DependancyInjectionExtensions
             foreach (var type in set)
             {
                 var attr = type.GetCustomAttribute<ServiceImplementationAttribute>(false);
+                if (attr is null)
+                    throw new InvalidOperationException();
+                
                 var intrAttrs = type.GetCustomAttributes<InterceptedByAttribute>(false).ToList();
                 var scopeAttr = type.GetCustomAttribute<LifetimeAttribute>(false);
                 var asAttrs = type.GetCustomAttributes<RegisterAsAttribute>(false).ToList();
@@ -66,12 +70,29 @@ public static class DependancyInjectionExtensions
 
                 var registerAsTypes = asAttrs.Where(x => x.ServiceTypes is not null)
                     .SelectMany(x => x.ServiceTypes ?? Type.EmptyTypes)
+                    .Concat(attr?.ServiceTypes ?? Type.EmptyTypes)
                     .Distinct()
                     .ToList();
-                var shouldAsSelf = asAttrs.Any(x => x.RegistrationStrategy == RegistrationStrategy.AsSelf) &&
-                                   asAttrs.All(x => (x.ServiceTypes ?? Type.EmptyTypes).All(y => y != type));
+
+                var shouldAsSelf = (asAttrs.Any(x => x.RegistrationStrategy is RegistrationStrategy.AsSelf) ||
+                                    attr?.RegistrationStrategy is RegistrationStrategy.AsSelf) &&
+                                   registerAsTypes.All(y => y != type);
+
                 var shouldAsInterfaces = !asAttrs.Any() ||
-                                         asAttrs.Any(x => x.RegistrationStrategy == RegistrationStrategy.AsImplementedInterfaces);
+                                         asAttrs.Any(x =>
+                                             x.RegistrationStrategy is RegistrationStrategy.AsImplementedInterfaces) ||
+                                         attr?.RegistrationStrategy is RegistrationStrategy.AsImplementedInterfaces;
+
+                var shouldAsDirectAncestors =
+                    asAttrs.Any(x => x.RegistrationStrategy is RegistrationStrategy.AsDirectAncestorInterfaces) ||
+                    attr?.RegistrationStrategy is RegistrationStrategy.AsDirectAncestorInterfaces;
+                
+                var shouldUsingNamingConvention =
+                    asAttrs.Any(x => x.RegistrationStrategy is RegistrationStrategy.AsConventionNamedInterface) ||
+                    attr?.RegistrationStrategy is RegistrationStrategy.AsConventionNamedInterface;
+                
+                if (!shouldAsInterfaces && !registerAsTypes.Any() && !shouldAsDirectAncestors && !shouldUsingNamingConvention)
+                    shouldAsSelf = true;
 
                 IRegistrationBuilder<object, ReflectionActivatorData, DynamicRegistrationStyle>?
                     registrationGenericBuilder = null;
@@ -126,6 +147,18 @@ public static class DependancyInjectionExtensions
                     registrationGenericBuilder = registrationGenericBuilder?.AsSelf();
                 }
 
+                if (shouldAsDirectAncestors)
+                {
+                    registrationBuilder = registrationBuilder?.AsDirectAncestorInterfaces();
+                    registrationGenericBuilder = registrationGenericBuilder?.AsDirectAncestorInterfaces();
+                }
+                
+                if (shouldUsingNamingConvention)
+                {
+                    registrationBuilder = registrationBuilder?.AsConventionNamedInterface();
+                    registrationGenericBuilder = registrationGenericBuilder?.AsConventionNamedInterface();
+                }
+
                 foreach (var asType in registerAsTypes)
                 {
                     if (asType is null) throw new InvalidOperationException("Type was null during registration");
@@ -170,7 +203,8 @@ public static class DependancyInjectionExtensions
                         throw new ArgumentOutOfRangeException(nameof(scope));
                 }
 
-                foreach (var interceptor in intrAttrs.SelectMany(x => x.Interceptors))
+                foreach (var interceptor in intrAttrs.SelectMany(x => x.Interceptors)
+                             .Concat(intrEnableAttr?.Interceptors ?? Type.EmptyTypes).Distinct())
                 {
                     registrationBuilder = IsInterceptorAsync(interceptor)
                         ? registrationBuilder?.InterceptedBy(
@@ -204,7 +238,14 @@ public static class DependancyInjectionExtensions
                 if (registerAsTypes.Any())
                     registerAsTypes.ForEach(x => serviceTypes.Add(x));
                 if (shouldAsInterfaces)
-                    type.GetInterfaces().Where(x => x.IsDirectAncestor(type)).ToList().ForEach(x => serviceTypes.Add(x));
+                    type.GetInterfaces().Where(x => x != typeof(IDisposable) && x != typeof(IAsyncDisposable)).ToList()
+                        .ForEach(x => serviceTypes.Add(x));
+                if (shouldAsDirectAncestors)
+                    type.GetDirectInterfaceAncestors()
+                        .Where(x => x != typeof(IDisposable) && x != typeof(IAsyncDisposable)).ToList()
+                        .ForEach(x => serviceTypes.Add(x));
+                if (shouldUsingNamingConvention)
+                    serviceTypes.Add(type.GetInterfaceByNamingConvention() ?? throw new InvalidOperationException("Couldn't find an interface by naming convention"));
 
                 foreach (var decAttr in decAttrs.OrderBy(x => x.RegistrationOrder))
                 {
@@ -271,6 +312,9 @@ public static class DependancyInjectionExtensions
             foreach (var type in set)
             {
                 var attr = type.GetCustomAttribute<ServiceImplementationAttribute>(false);
+                if (attr is null)
+                    throw new InvalidOperationException();
+                
                 var scopeAttr = type.GetCustomAttribute<LifetimeAttribute>(false);
                 var asAttrs = type.GetCustomAttributes<RegisterAsAttribute>(false).ToList();
                 
@@ -278,19 +322,33 @@ public static class DependancyInjectionExtensions
 
                 var registerAsTypes = asAttrs.Where(x => x.ServiceTypes is not null)
                     .SelectMany(x => x.ServiceTypes ?? Type.EmptyTypes)
+                    .Concat(attr?.ServiceTypes ?? Type.EmptyTypes)
                     .Distinct()
                     .ToList();
-                
-                var shouldAsSelf = asAttrs.Any(x => x.RegistrationStrategy == RegistrationStrategy.AsSelf) &&
-                                   asAttrs.All(x => (x.ServiceTypes ?? Type.EmptyTypes).All(y => y != type));
-                var shouldAsInterfaces = !asAttrs.Any() ||
-                                         asAttrs.Any(x => x.RegistrationStrategy == RegistrationStrategy.AsImplementedInterfaces);
 
-                if (!shouldAsInterfaces && !registerAsTypes.Any())
+                var shouldAsSelf = (asAttrs.Any(x => x.RegistrationStrategy is RegistrationStrategy.AsSelf) ||
+                                    attr?.RegistrationStrategy is RegistrationStrategy.AsSelf) &&
+                                   registerAsTypes.All(y => y != type);
+
+                var shouldAsInterfaces = !asAttrs.Any() ||
+                                         asAttrs.Any(x =>
+                                             x.RegistrationStrategy is RegistrationStrategy.AsImplementedInterfaces) ||
+                                         attr?.RegistrationStrategy is RegistrationStrategy.AsImplementedInterfaces;
+                
+                var shouldAsDirectAncestors =
+                    asAttrs.Any(x => x.RegistrationStrategy is RegistrationStrategy.AsDirectAncestorInterfaces) ||
+                    attr?.RegistrationStrategy is RegistrationStrategy.AsDirectAncestorInterfaces;
+
+                var shouldUsingNamingConvention =
+                    asAttrs.Any(x => x.RegistrationStrategy is RegistrationStrategy.AsConventionNamedInterface) ||
+                    attr?.RegistrationStrategy is RegistrationStrategy.AsConventionNamedInterface;
+
+                if (!shouldAsInterfaces && !registerAsTypes.Any() && !shouldAsDirectAncestors &&
+                    !shouldUsingNamingConvention)
                     shouldAsSelf = true;
 
                 var interfaces = type.GetInterfaces().ToList();
-                
+
                 switch (scope)
                 {
                     case ServiceLifetime.SingleInstance:
@@ -300,6 +358,13 @@ public static class DependancyInjectionExtensions
                             serviceCollection.AddSingleton(type);
                         if (registerAsTypes.Any())
                             registerAsTypes.ForEach(x => serviceCollection.AddSingleton(x, type));
+                        if (shouldAsDirectAncestors)
+                            type.GetDirectInterfaceAncestors()
+                                .Where(x => x != typeof(IDisposable) && x != typeof(IAsyncDisposable)).ToList()
+                                .ForEach(x => serviceCollection.AddSingleton(x, type));
+                        if (shouldUsingNamingConvention)
+                            serviceCollection.AddSingleton(type.GetInterfaceByNamingConvention() ?? throw new ArgumentException(
+                                "Couldn't find an implemented interface that follows the naming convention"), type);
                         break;
                     case ServiceLifetime.InstancePerRequest:
                         if (shouldAsInterfaces)
@@ -308,6 +373,13 @@ public static class DependancyInjectionExtensions
                             serviceCollection.AddScoped(type);
                         if (registerAsTypes.Any())
                             registerAsTypes.ForEach(x => serviceCollection.AddScoped(x, type));
+                        if (shouldAsDirectAncestors)
+                            type.GetDirectInterfaceAncestors()
+                                .Where(x => x != typeof(IDisposable) && x != typeof(IAsyncDisposable)).ToList()
+                                .ForEach(x => serviceCollection.AddScoped(x, type));
+                        if (shouldUsingNamingConvention)
+                            serviceCollection.AddScoped(type.GetInterfaceByNamingConvention() ?? throw new ArgumentException(
+                                "Couldn't find an implemented interface that follows the naming convention"), type);
                         break;
                     case ServiceLifetime.InstancePerLifetimeScope:
                         if (shouldAsInterfaces)
@@ -316,6 +388,13 @@ public static class DependancyInjectionExtensions
                             serviceCollection.AddScoped(type);
                         if (registerAsTypes.Any())
                             registerAsTypes.ForEach(x => serviceCollection.AddScoped(x, type));
+                        if (shouldAsDirectAncestors)
+                            type.GetDirectInterfaceAncestors()
+                                .Where(x => x != typeof(IDisposable) && x != typeof(IAsyncDisposable)).ToList()
+                                .ForEach(x => serviceCollection.AddScoped(x, type));
+                        if (shouldUsingNamingConvention)
+                            serviceCollection.AddScoped(type.GetInterfaceByNamingConvention() ?? throw new ArgumentException(
+                                "Couldn't find an implemented interface that follows the naming convention"), type);
                         break;
                     case ServiceLifetime.InstancePerDependency:
                         if (shouldAsInterfaces)
@@ -324,6 +403,13 @@ public static class DependancyInjectionExtensions
                             serviceCollection.AddTransient(type);
                         if (registerAsTypes.Any())
                             registerAsTypes.ForEach(x => serviceCollection.AddTransient(x, type));
+                        if (shouldAsDirectAncestors)
+                            type.GetDirectInterfaceAncestors()
+                                .Where(x => x != typeof(IDisposable) && x != typeof(IAsyncDisposable)).ToList()
+                                .ForEach(x => serviceCollection.AddTransient(x, type));
+                        if (shouldUsingNamingConvention)
+                            serviceCollection.AddTransient(type.GetInterfaceByNamingConvention() ?? throw new ArgumentException(
+                                "Couldn't find an implemented interface that follows the naming convention"), type);
                         break;
                     case ServiceLifetime.InstancePerMatchingLifetimeScope:
                         throw new NotSupportedException();

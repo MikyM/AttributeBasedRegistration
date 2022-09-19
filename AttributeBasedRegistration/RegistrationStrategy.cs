@@ -13,5 +13,13 @@ public enum RegistrationStrategy
     /// <summary>
     /// Register as implemented interfaces.
     /// </summary>
-    AsImplementedInterfaces
+    AsImplementedInterfaces,
+    /// <summary>
+    /// Register as direct ancestor interfaces.
+    /// </summary>
+    AsDirectAncestorInterfaces,
+    /// <summary>
+    /// Register using naming convention (SomeService -> ISomeService).
+    /// </summary>
+    AsConventionNamedInterface
 }

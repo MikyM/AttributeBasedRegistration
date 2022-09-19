@@ -10,7 +10,7 @@ namespace AttributeBasedRegistration.Attributes;
 public sealed class InterceptedByAttribute : Attribute
 {
     /// <summary>
-    /// Interceptor's type.
+    /// Interceptor types.
     /// </summary>
     public Type[] Interceptors { get; private set; }
 
