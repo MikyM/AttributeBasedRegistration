@@ -41,8 +41,6 @@ public static class DependancyInjectionExtensions
         var config = new AttributeRegistrationOptions();
         options?.Invoke(config);
 
-        builder.RegisterGeneric(typeof(AsyncInterceptorAdapter<>)).InstancePerDependency();
-
         var toScan = assembliesToScan.ToList();
 
         var iOptions = Options.Create(config);
@@ -311,6 +309,13 @@ public static class DependancyInjectionExtensions
 
         return builder;
     }
+    
+    /// <summary>
+    /// Registers the adapter (<see cref="AsyncInterceptorAdapter{TAsyncInterceptor}"/>) for async interceptors.
+    /// </summary>
+    /// <param name="builder">Container builder.</param>
+    public static void RegisterAsyncInterceptorAdapter(this ContainerBuilder builder)
+        => builder.RegisterGeneric(typeof(AsyncInterceptorAdapter<>)).InstancePerDependency();
 
 
     /// <summary>
@@ -326,6 +331,8 @@ public static class DependancyInjectionExtensions
     /// <returns>Container builder instance with registered interceptors.</returns>
     public static ContainerBuilder RegisterInterceptors(this ContainerBuilder containerBuilder, IEnumerable<Assembly> assembliesToScan, ServiceLifetime defaultLifetime = ServiceLifetime.InstancePerDependency)
     {
+        containerBuilder.RegisterAsyncInterceptorAdapter();
+        
         foreach (var assembly in assembliesToScan)
         {
             var interceptors = assembly.GetTypes().Where(x => x.IsInterceptorImplementation());
@@ -424,6 +431,9 @@ public static class DependancyInjectionExtensions
     /// <returns>Current instance of the <see cref="AttributeRegistrationOptions"/>.</returns>
     public static ContainerBuilder RegisterInterceptor<T>(this ContainerBuilder builder, Func<IComponentContext, T> factoryMethod, ServiceLifetime lifetime = ServiceLifetime.InstancePerDependency, IEnumerable<object>? tags = null) where T : notnull
     {
+        if (typeof(T).IsAsyncInterceptor())
+            builder.RegisterAsyncInterceptorAdapter();
+        
         switch (lifetime)
         {
             case ServiceLifetime.SingleInstance:
@@ -459,6 +469,9 @@ public static class DependancyInjectionExtensions
     /// <returns>Current instance of the <see cref="AttributeRegistrationOptions"/>.</returns>
     public static ContainerBuilder RegisterInterceptorInstance<T>(this ContainerBuilder builder, T instance, ServiceLifetime lifetime = ServiceLifetime.InstancePerDependency) where T : class
     {
+        if (typeof(T).IsAsyncInterceptor())
+            builder.RegisterAsyncInterceptorAdapter();
+        
         builder.RegisterInstance(instance);
 
         return builder;
