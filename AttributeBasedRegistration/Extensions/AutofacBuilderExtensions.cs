@@ -1,4 +1,5 @@
 ﻿using Autofac.Builder;
+using Castle.DynamicProxy;
 using MikyM.Utilities.Extensions;
 
 namespace AttributeBasedRegistration.Extensions;
@@ -19,7 +20,11 @@ public static class AutofacBuilderExtensions
             this IRegistrationBuilder<object, TActivatorData, TRegistrationStyle> builder)
         where TActivatorData : ReflectionActivatorData
     {
-        foreach (var ancestor in builder.ActivatorData.ImplementationType.GetDirectInterfaceAncestors().Where(x => x != typeof(IDisposable) && x != typeof(IAsyncDisposable)))
+        var implType = ProxyUtil.IsProxyType(builder.ActivatorData.ImplementationType)
+            ? builder.ActivatorData.ImplementationType.BaseType
+            : builder.ActivatorData.ImplementationType;
+
+        foreach (var ancestor in implType!.GetDirectInterfaceAncestors().Where(x => x != typeof(IDisposable) && x != typeof(IAsyncDisposable)))
             builder.As(ancestor);
 
         return builder;
@@ -35,7 +40,11 @@ public static class AutofacBuilderExtensions
             this IRegistrationBuilder<object, TActivatorData, TRegistrationStyle> builder)
         where TActivatorData : ReflectionActivatorData
     {
-        builder.As(builder.ActivatorData.ImplementationType.GetInterfaceByNamingConvention() ??
+        var implType = ProxyUtil.IsProxyType(builder.ActivatorData.ImplementationType)
+            ? builder.ActivatorData.ImplementationType.BaseType
+            : builder.ActivatorData.ImplementationType;
+        
+        builder.As(implType!.GetInterfaceByNamingConvention() ??
                    throw new ArgumentException("Couldn't find an implemented interface that follows the naming convention"));
 
         return builder;
