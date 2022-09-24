@@ -7,10 +7,6 @@
 public enum InterceptionStrategy
 {
     /// <summary>
-    /// Intercept interface and class.
-    /// </summary>
-    InterfaceAndClass,
-    /// <summary>
     /// Intercept interface.
     /// </summary>
     Interface,

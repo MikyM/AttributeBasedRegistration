@@ -217,14 +217,6 @@ public static class DependancyInjectionExtensions
             {
                 registrationBuilder = enableInterceptionAttribute.InterceptionStrategy switch
                 {
-                    InterceptionStrategy.InterfaceAndClass => shouldAsInterfaces
-                        ? builder.RegisterType(type)
-                            .AsImplementedInterfaces()
-                            .EnableClassInterceptors()
-                            .EnableInterfaceInterceptors()
-                        : builder.RegisterType(type)
-                            .EnableClassInterceptors()
-                            .EnableInterfaceInterceptors(),
                     InterceptionStrategy.Interface => shouldAsInterfaces
                         ? builder.RegisterType(type).AsImplementedInterfaces().EnableInterfaceInterceptors()
                         : builder.RegisterType(type).EnableInterfaceInterceptors(),
