@@ -355,7 +355,85 @@ public static class DependancyInjectionExtensions
     public static void RegisterAsyncInterceptorAdapter(this ContainerBuilder builder)
         => builder.RegisterGeneric(typeof(AsyncInterceptorAdapter<>)).InstancePerDependency();
 
+    /// <summary>
+    /// Registers all interceptors (sync and async) within provided assemblies.
+    /// </summary>
+    /// <remarks>
+    /// Takes <see cref="LifetimeAttribute"/> into account.
+    /// All registrations are <see cref="RegistrationStrategy.AsSelf"/>.
+    /// <see cref="ServiceLifetime.InstancePerDependency"/> will be used as a default lifetime.
+    /// </remarks>
+    /// <param name="containerBuilder">Container builder.</param>
+    /// <param name="assembliesToScan">Assemblies to scan for interceptors.</param>
+    /// <returns>Container builder instance with registered interceptors.</returns>
+    public static ContainerBuilder RegisterInterceptors(this ContainerBuilder containerBuilder,
+        params Assembly[] assembliesToScan)
+        => RegisterInterceptors(containerBuilder, assembliesToScan, ServiceLifetime.InstancePerDependency);
 
+    /// <summary>
+    /// Registers all interceptors (sync and async) within provided assemblies.
+    /// </summary>
+    /// <remarks>
+    /// Takes <see cref="LifetimeAttribute"/> into account.
+    /// All registrations are <see cref="RegistrationStrategy.AsSelf"/>.
+    /// <see cref="ServiceLifetime.InstancePerDependency"/> will be used as a default lifetime.
+    /// </remarks>
+    /// <param name="containerBuilder">Container builder.</param>
+    /// <param name="defaultLifetime">Default interceptor lifetime.</param>
+    /// <param name="assembliesToScan">Assemblies to scan for interceptors.</param>
+    /// <returns>Container builder instance with registered interceptors.</returns>
+    public static ContainerBuilder RegisterInterceptors(this ContainerBuilder containerBuilder, ServiceLifetime defaultLifetime,
+        params Assembly[] assembliesToScan)
+        => RegisterInterceptors(containerBuilder, assembliesToScan, defaultLifetime);
+    
+    /// <summary>
+    /// Registers all interceptors (sync and async) within provided assemblies.
+    /// </summary>
+    /// <remarks>
+    /// Takes <see cref="LifetimeAttribute"/> into account.
+    /// All registrations are <see cref="RegistrationStrategy.AsSelf"/>.
+    /// <see cref="ServiceLifetime.InstancePerDependency"/> will be used as a default lifetime.
+    /// </remarks>
+    /// <param name="containerBuilder">Container builder.</param>
+    /// <param name="assembliesContainingTypesToScan">Assemblies that contain given types to scan for interceptors.</param>
+    /// <returns>Container builder instance with registered interceptors.</returns>
+    public static ContainerBuilder RegisterInterceptors(this ContainerBuilder containerBuilder,
+        params Type[] assembliesContainingTypesToScan)
+        => RegisterInterceptors(containerBuilder, assembliesContainingTypesToScan, ServiceLifetime.InstancePerDependency);
+
+    /// <summary>
+    /// Registers all interceptors (sync and async) within provided assemblies.
+    /// </summary>
+    /// <remarks>
+    /// Takes <see cref="LifetimeAttribute"/> into account.
+    /// All registrations are <see cref="RegistrationStrategy.AsSelf"/>.
+    /// <see cref="ServiceLifetime.InstancePerDependency"/> will be used as a default lifetime.
+    /// </remarks>
+    /// <param name="containerBuilder">Container builder.</param>
+    /// <param name="defaultLifetime">Default interceptor lifetime.</param>
+    /// <param name="assembliesContainingTypesToScan">Assemblies that contain given types to scan for interceptors.</param>
+    /// <returns>Container builder instance with registered interceptors.</returns>
+    public static ContainerBuilder RegisterInterceptors(this ContainerBuilder containerBuilder, ServiceLifetime defaultLifetime,
+        params Type[] assembliesContainingTypesToScan)
+        => RegisterInterceptors(containerBuilder, assembliesContainingTypesToScan, defaultLifetime);
+
+    /// <summary>
+    /// Registers all interceptors (sync and async) within provided assemblies.
+    /// </summary>
+    /// <remarks>
+    /// Takes <see cref="LifetimeAttribute"/> into account.
+    /// All registrations are <see cref="RegistrationStrategy.AsSelf"/>.
+    /// </remarks>
+    /// <param name="containerBuilder">Container builder.</param>
+    /// <param name="assembliesContainingTypesToScan">Assemblies that contain given types to scan for interceptors.</param>
+    /// <param name="defaultLifetime">Default interceptor lifetime.</param>
+    /// <returns>Container builder instance with registered interceptors.</returns>
+    public static ContainerBuilder RegisterInterceptors(this ContainerBuilder containerBuilder,
+        IEnumerable<Type> assembliesContainingTypesToScan,
+        ServiceLifetime defaultLifetime = ServiceLifetime.InstancePerDependency)
+        => RegisterInterceptors(containerBuilder, assembliesContainingTypesToScan.Select(x => x.Assembly),
+            defaultLifetime);
+        
     /// <summary>
     /// Registers all interceptors (sync and async) within provided assemblies.
     /// </summary>
