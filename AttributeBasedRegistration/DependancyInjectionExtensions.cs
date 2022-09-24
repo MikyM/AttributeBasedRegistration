@@ -28,6 +28,44 @@ public static class DependancyInjectionExtensions
     public static ContainerBuilder AddAttributeDefinedServices(this ContainerBuilder builder,
         IEnumerable<Type> assembliesContainingTypesToScan, Action<AttributeRegistrationOptions>? options = null)
         => AddAttributeDefinedServices(builder, assembliesContainingTypesToScan.Select(x => x.Assembly), options);
+    
+    /// <summary>
+    /// Registers services with <see cref="ContainerBuilder"/> via attributes.
+    /// </summary>
+    /// <param name="builder">Current builder instance.</param>
+    /// <param name="assembliesContainingTypesToScan">Assemblies containing types to scan for services.</param>
+    /// <returns>Current <see cref="ContainerBuilder"/> instance.</returns>
+    public static ContainerBuilder AddAttributeDefinedServices(this ContainerBuilder builder, params Type[] assembliesContainingTypesToScan)
+        => AddAttributeDefinedServices(builder, assembliesContainingTypesToScan, null);
+    
+    /// <summary>
+    /// Registers services with <see cref="ContainerBuilder"/> via attributes.
+    /// </summary>
+    /// <param name="builder">Current builder instance.</param>
+    /// <param name="assembliesToScan">Assemblies to scan for services.</param>
+    /// <returns>Current <see cref="ContainerBuilder"/> instance.</returns>
+    public static ContainerBuilder AddAttributeDefinedServices(this ContainerBuilder builder, params Assembly[] assembliesToScan)
+        => AddAttributeDefinedServices(builder, assembliesToScan, null);
+    
+    /// <summary>
+    /// Registers services with <see cref="ContainerBuilder"/> via attributes.
+    /// </summary>
+    /// <param name="builder">Current builder instance.</param>
+    /// <param name="options">Configuration.</param>
+    /// <param name="assembliesContainingTypesToScan">Assemblies containing types to scan for services.</param>
+    /// <returns>Current <see cref="ContainerBuilder"/> instance.</returns>
+    public static ContainerBuilder AddAttributeDefinedServices(this ContainerBuilder builder, Action<AttributeRegistrationOptions> options, params Type[] assembliesContainingTypesToScan)
+        => AddAttributeDefinedServices(builder, assembliesContainingTypesToScan, options);
+    
+    /// <summary>
+    /// Registers services with <see cref="ContainerBuilder"/> via attributes.
+    /// </summary>
+    /// <param name="builder">Current builder instance.</param>
+    /// <param name="options">Configuration.</param>
+    /// <param name="assembliesToScan">Assemblies to scan for services.</param>
+    /// <returns>Current <see cref="ContainerBuilder"/> instance.</returns>
+    public static ContainerBuilder AddAttributeDefinedServices(this ContainerBuilder builder, Action<AttributeRegistrationOptions> options, params Assembly[] assembliesToScan)
+        => AddAttributeDefinedServices(builder, assembliesToScan, options);
         
     /// <summary>
     /// Registers services with <see cref="ContainerBuilder"/> via attributes.
@@ -488,6 +526,44 @@ public static class DependancyInjectionExtensions
         IEnumerable<Type> assembliesContainingTypesToScan, Action<AttributeRegistrationOptions>? options = null)
         => AddAttributeDefinedServices(serviceCollection, assembliesContainingTypesToScan.Select(x => x.Assembly),
             options);
+    
+    /// <summary>
+    /// Registers services with <see cref="ContainerBuilder"/> via attributes.
+    /// </summary>
+    /// <param name="serviceCollection">Current service collection instance.</param>
+    /// <param name="assembliesContainingTypesToScan">Assemblies containing types to scan for services.</param>
+    /// <returns>Current <see cref="ContainerBuilder"/> instance.</returns>
+    public static IServiceCollection AddAttributeDefinedServices(this IServiceCollection serviceCollection, params Type[] assembliesContainingTypesToScan)
+        => AddAttributeDefinedServices(serviceCollection, assembliesContainingTypesToScan, null);
+    
+    /// <summary>
+    /// Registers services with <see cref="ContainerBuilder"/> via attributes.
+    /// </summary>
+    /// <param name="serviceCollection">Current service collection instance.</param>
+    /// <param name="options">Configuration.</param>
+    /// <param name="assembliesContainingTypesToScan">Assemblies containing types to scan for services.</param>
+    /// <returns>Current <see cref="ContainerBuilder"/> instance.</returns>
+    public static IServiceCollection AddAttributeDefinedServices(this IServiceCollection serviceCollection, Action<AttributeRegistrationOptions> options, params Type[] assembliesContainingTypesToScan)
+        => AddAttributeDefinedServices(serviceCollection, assembliesContainingTypesToScan, options);
+    
+    /// <summary>
+    /// Registers services with <see cref="ContainerBuilder"/> via attributes.
+    /// </summary>
+    /// <param name="serviceCollection">Current service collection instance.</param>
+    /// <param name="options">Configuration.</param>
+    /// <param name="assembliesToScan">Assemblies to scan for services.</param>
+    /// <returns>Current <see cref="ContainerBuilder"/> instance.</returns>
+    public static IServiceCollection AddAttributeDefinedServices(this IServiceCollection serviceCollection, Action<AttributeRegistrationOptions> options, params Assembly[] assembliesToScan)
+        => AddAttributeDefinedServices(serviceCollection, assembliesToScan, options);
+    
+    /// <summary>
+    /// Registers services with <see cref="ContainerBuilder"/> via attributes.
+    /// </summary>
+    /// <param name="serviceCollection">Current service collection instance.</param>
+    /// <param name="assembliesToScan">Assemblies to scan for services.</param>
+    /// <returns>Current <see cref="ContainerBuilder"/> instance.</returns>
+    public static IServiceCollection AddAttributeDefinedServices(this IServiceCollection serviceCollection, params Assembly[] assembliesToScan)
+        => AddAttributeDefinedServices(serviceCollection, assembliesToScan, null);
 
     /// <summary>
     /// Registers services with <see cref="ContainerBuilder"/> via attributes.
