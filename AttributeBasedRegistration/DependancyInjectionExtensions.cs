@@ -87,6 +87,9 @@ public static class DependancyInjectionExtensions
                 registrationBuilder.HandleConstructorFinding(type);
                 registrationGenericBuilder.HandleConstructorFinding(type);
 
+                registrationBuilder.HandleInterceptors(type);
+                registrationGenericBuilder.HandleInterceptors(type);
+                
                 builder.HandleDecoration(type, shouldAsSelf, registerAsTypes, shouldAsInterfaces,
                     shouldAsDirectAncestors, shouldUsingNamingConvention);
             }
