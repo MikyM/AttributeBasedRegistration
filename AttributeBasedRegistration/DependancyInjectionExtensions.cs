@@ -516,7 +516,7 @@ public static class DependancyInjectionExtensions
     }
 
     /// <summary>
-    /// Registers services with <see cref="ContainerBuilder"/> via attributes.
+    /// Registers services with <see cref="IServiceCollection"/> via attributes.
     /// </summary>
     /// <param name="serviceCollection">Current service collection instance.</param>
     /// <param name="assembliesContainingTypesToScan">Assemblies containing types to scan for services.</param>
@@ -528,7 +528,7 @@ public static class DependancyInjectionExtensions
             options);
     
     /// <summary>
-    /// Registers services with <see cref="ContainerBuilder"/> via attributes.
+    /// Registers services with <see cref="IServiceCollection"/> via attributes.
     /// </summary>
     /// <param name="serviceCollection">Current service collection instance.</param>
     /// <param name="assembliesContainingTypesToScan">Assemblies containing types to scan for services.</param>
@@ -537,7 +537,7 @@ public static class DependancyInjectionExtensions
         => AddAttributeDefinedServices(serviceCollection, assembliesContainingTypesToScan, null);
     
     /// <summary>
-    /// Registers services with <see cref="ContainerBuilder"/> via attributes.
+    /// Registers services with <see cref="IServiceCollection"/> via attributes.
     /// </summary>
     /// <param name="serviceCollection">Current service collection instance.</param>
     /// <param name="options">Configuration.</param>
@@ -547,7 +547,7 @@ public static class DependancyInjectionExtensions
         => AddAttributeDefinedServices(serviceCollection, assembliesContainingTypesToScan, options);
     
     /// <summary>
-    /// Registers services with <see cref="ContainerBuilder"/> via attributes.
+    /// Registers services with <see cref="IServiceCollection"/> via attributes.
     /// </summary>
     /// <param name="serviceCollection">Current service collection instance.</param>
     /// <param name="options">Configuration.</param>
@@ -557,7 +557,7 @@ public static class DependancyInjectionExtensions
         => AddAttributeDefinedServices(serviceCollection, assembliesToScan, options);
     
     /// <summary>
-    /// Registers services with <see cref="ContainerBuilder"/> via attributes.
+    /// Registers services with <see cref="IServiceCollection"/> via attributes.
     /// </summary>
     /// <param name="serviceCollection">Current service collection instance.</param>
     /// <param name="assembliesToScan">Assemblies to scan for services.</param>
@@ -566,7 +566,7 @@ public static class DependancyInjectionExtensions
         => AddAttributeDefinedServices(serviceCollection, assembliesToScan, null);
 
     /// <summary>
-    /// Registers services with <see cref="ContainerBuilder"/> via attributes.
+    /// Registers services with <see cref="IServiceCollection"/> via attributes.
     /// </summary>
     /// <param name="serviceCollection">Current service collection instance.</param>
     /// <param name="assembliesToScan">Assemblies to scan for services.</param>
