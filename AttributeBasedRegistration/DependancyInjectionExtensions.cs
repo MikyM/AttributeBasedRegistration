@@ -7,7 +7,6 @@ using Autofac.Core.Activators.Reflection;
 using Autofac.Extras.DynamicProxy;
 using Castle.DynamicProxy;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.DependencyInjection.Extensions;
 using MikyM.Utilities.Extensions;
 
 namespace AttributeBasedRegistration;
@@ -48,6 +47,8 @@ public static class DependancyInjectionExtensions
                 .Where(x => x.IsServiceImplementation())
                 .ToList();
 
+            builder.RegisterInterceptors(assembly, config);
+
             foreach (var type in set)
             {
                 var implementationAttribute = type.GetCustomAttribute<ServiceImplementationAttribute>(false);
@@ -81,14 +82,14 @@ public static class DependancyInjectionExtensions
                 registrationGenericBuilder.HandleRegistrationOptions(type, shouldAsSelf,
                     shouldAsDirectAncestors, shouldUsingNamingConvention, registerAsTypes);
 
-                registrationBuilder.HandleScope(type, implementationAttribute, config);
-                registrationGenericBuilder.HandleScope(type, implementationAttribute, config);
+                registrationBuilder.HandleLifetime(type, implementationAttribute, config);
+                registrationGenericBuilder.HandleLifetime(type, implementationAttribute, config);
 
                 registrationBuilder.HandleConstructorFinding(type);
                 registrationGenericBuilder.HandleConstructorFinding(type);
 
-                registrationBuilder.HandleInterceptors(type);
-                registrationGenericBuilder.HandleInterceptors(type);
+                registrationBuilder.HandleInterceptors(builder, type);
+                registrationGenericBuilder.HandleInterceptors(builder, type);
                 
                 builder.HandleDecoration(type, shouldAsSelf, registerAsTypes, shouldAsInterfaces,
                     shouldAsDirectAncestors, shouldUsingNamingConvention);
@@ -101,6 +102,9 @@ public static class DependancyInjectionExtensions
     private static bool IsServiceImplementation(this Type type)
         => type.GetCustomAttributes(false).Any(y => y is ServiceImplementationAttribute) &&
            type.IsClass && !type.IsAbstract;
+    
+    private static bool IsInterceptorImplementation(this Type type)
+        => type.IsClass && !type.IsAbstract && type.GetInterfaces().Any(x => x == typeof(IInterceptor) || x == typeof(IAsyncInterceptor));
 
     private static List<Type> GetServiceTypes(this Type type, ServiceImplementationAttribute? implementationAttribute, IEnumerable<RegisterAsAttribute> asAttributes)
         => asAttributes.Where(x => x.ServiceTypes is not null)
@@ -128,7 +132,7 @@ public static class DependancyInjectionExtensions
            implementationAttribute?.RegistrationStrategy is RegistrationStrategy.AsConventionNamedInterface;
 
     private static IRegistrationBuilder<object, TActivatorData, TRegistrationStyle>?
-        HandleScope<TRegistrationStyle, TActivatorData>(
+        HandleLifetime<TRegistrationStyle, TActivatorData>(
             this IRegistrationBuilder<object, TActivatorData, TRegistrationStyle>? builder, Type type,
             ServiceImplementationAttribute implementationAttribute, AttributeRegistrationOptions options)
         where TActivatorData : ReflectionActivatorData
@@ -242,14 +246,14 @@ public static class DependancyInjectionExtensions
 
     private static IRegistrationBuilder<object, TActivatorData, TRegistrationStyle>?
         HandleInterceptors<TRegistrationStyle, TActivatorData>(
-            this IRegistrationBuilder<object, TActivatorData, TRegistrationStyle>? builder, Type type)
+            this IRegistrationBuilder<object, TActivatorData, TRegistrationStyle>? builder, ContainerBuilder containerBuilder, Type type)
         where TActivatorData : ReflectionActivatorData
     {
         var enableAttribute = type.GetCustomAttribute<EnableInterceptionAttribute>(false);
         if (enableAttribute is null)
             return builder;
         
-        var interceptedByAttributed = type.GetCustomAttributes<InterceptedByAttribute>(false);
+        var interceptedByAttributed = type.GetCustomAttributes<InterceptedByAttribute>(false).ToList();
 
         foreach (var interceptor in interceptedByAttributed.OrderBy(x => x.RegistrationOrder).Select(x => x.Interceptor)
                      .Distinct())
@@ -261,6 +265,60 @@ public static class DependancyInjectionExtensions
         }
 
         return builder;
+    }
+    
+    private static IRegistrationBuilder<object, TActivatorData, TRegistrationStyle>?
+        HandleInterceptorLifetime<TRegistrationStyle, TActivatorData>(
+            this IRegistrationBuilder<object, TActivatorData, TRegistrationStyle>? builder, Type type, AttributeRegistrationOptions options)
+        where TActivatorData : ReflectionActivatorData
+    {
+        var lifetimeAttribute = type.GetCustomAttribute<LifetimeAttribute>(false);
+
+        var lifetime = lifetimeAttribute?.ServiceLifetime ?? options.DefaultInterceptorLifetime;
+
+        switch (lifetime)
+        {
+            case ServiceLifetime.SingleInstance:
+                builder?.SingleInstance();
+                break;
+            case ServiceLifetime.InstancePerRequest:
+                builder?.InstancePerRequest();
+                break;
+            case ServiceLifetime.InstancePerLifetimeScope:
+                builder?.InstancePerLifetimeScope();
+                break;
+            case ServiceLifetime.InstancePerDependency:
+                builder?.InstancePerDependency();
+                break;
+            case ServiceLifetime.InstancePerMatchingLifetimeScope:
+                builder?.InstancePerMatchingLifetimeScope(lifetimeAttribute?.Tags?.ToArray() ??
+                                                          Array.Empty<object>());
+                break;
+            case ServiceLifetime.InstancePerOwned:
+                if (lifetimeAttribute?.Owned is null) throw new InvalidOperationException("Owned type was null");
+
+                builder?.InstancePerOwned(lifetimeAttribute.Owned);
+                break;
+            default:
+                throw new ArgumentOutOfRangeException(nameof(lifetime));
+        }
+
+        return builder;
+    }
+    
+    private static ContainerBuilder RegisterInterceptors(this ContainerBuilder containerBuilder, Assembly assembly, AttributeRegistrationOptions options)
+    {
+        var interceptors = assembly.GetTypes().Where(x => x.IsInterceptorImplementation());
+
+        foreach (var interceptor in interceptors)
+        {
+            if (interceptor.IsGenericType && interceptor.IsGenericTypeDefinition)
+                containerBuilder.RegisterGeneric(interceptor).HandleInterceptorLifetime(interceptor, options);
+            else
+                containerBuilder.RegisterType(interceptor).HandleInterceptorLifetime(interceptor, options);
+        }
+
+        return containerBuilder;
     }
 
     private static IRegistrationBuilder<object, TActivatorData, TRegistrationStyle>?

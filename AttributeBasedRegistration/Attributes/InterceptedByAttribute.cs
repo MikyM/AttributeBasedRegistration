@@ -15,6 +15,11 @@ public sealed class InterceptedByAttribute : Attribute
     public Type Interceptor { get; private set; }
     
     /// <summary>
+    /// Interceptor lifetime.
+    /// </summary>
+    public ServiceLifetime InterceptorLifetime { get; private set; }
+    
+    /// <summary>
     /// Registration order.
     /// </summary>
     public int RegistrationOrder { get; private set; }
@@ -24,12 +29,14 @@ public sealed class InterceptedByAttribute : Attribute
     /// </summary>
     /// <param name="interceptor">Interceptor type.</param>
     /// <param name="registrationOrder">Registration order.</param>
-    public InterceptedByAttribute(Type interceptor, int registrationOrder)
+    /// <param name="interceptorLifetime">Interceptor's lifetime.</param>
+    public InterceptedByAttribute(int registrationOrder, Type interceptor, ServiceLifetime interceptorLifetime)
     {
         if (interceptor.GetInterfaces().All(x => x != typeof(IAsyncInterceptor) && x != typeof(IInterceptor)))
             throw new ArgumentException($"{interceptor.Name} does not implement any interceptor interface");
 
         Interceptor = interceptor;
         RegistrationOrder = registrationOrder;
+        InterceptorLifetime = interceptorLifetime;
     }
 }

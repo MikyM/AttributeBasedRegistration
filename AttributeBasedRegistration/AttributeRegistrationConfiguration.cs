@@ -11,10 +11,16 @@ public sealed class AttributeRegistrationOptions
 {
     internal ContainerBuilder? Builder { get; set; }
     internal IServiceCollection? ServiceCollection { get; set; }
+    
     /// <summary>
     /// Default lifetime of the registrations.
     /// </summary>
     public ServiceLifetime DefaultServiceLifetime { get; set; } = ServiceLifetime.InstancePerLifetimeScope;
+    
+    /// <summary>
+    /// Default lifetime of the interceptors.
+    /// </summary>
+    public ServiceLifetime DefaultInterceptorLifetime { get; set; } = ServiceLifetime.InstancePerDependency;
 
     /// <summary>
     /// Constructor.

@@ -23,7 +23,7 @@ public sealed class DecoratedByAttribute : Attribute
     /// <param name="decoratorType">Decorator's type.</param>
     /// <param name="registrationOrder">Registration order.</param>
     /// n>
-    public DecoratedByAttribute(Type decoratorType, int registrationOrder)
+    public DecoratedByAttribute(int registrationOrder, Type decoratorType)
     {
         DecoratorType = decoratorType;
         RegistrationOrder = registrationOrder;
