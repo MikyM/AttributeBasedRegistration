@@ -262,7 +262,7 @@ public static class DependancyInjectionExtensions
         
         var interceptedByAttributed = type.GetCustomAttributes<InterceptedByAttribute>(false).ToList();
 
-        foreach (var interceptor in interceptedByAttributed.OrderBy(x => x.RegistrationOrder).Select(x => x.Interceptor)
+        foreach (var interceptor in interceptedByAttributed.OrderByDescending(x => x.RegistrationOrder).Select(x => x.Interceptor)
                      .Distinct())
         {
             builder = interceptor.IsAsyncInterceptor()
