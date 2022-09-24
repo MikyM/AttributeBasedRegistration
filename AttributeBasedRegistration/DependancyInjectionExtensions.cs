@@ -38,23 +38,22 @@ public static class DependancyInjectionExtensions
     /// <returns>Current <see cref="ContainerBuilder"/> instance.</returns>
     public static ContainerBuilder AddAttributeDefinedServices(this ContainerBuilder builder, IEnumerable<Assembly> assembliesToScan, Action<AttributeRegistrationOptions>? options = null)
     {
-        var config = new AttributeRegistrationOptions(builder);
+        var config = new AttributeRegistrationOptions();
         options?.Invoke(config);
 
         builder.RegisterGeneric(typeof(AsyncInterceptorAdapter<>)).InstancePerDependency();
+
+        var toScan = assembliesToScan.ToList();
 
         var iOptions = Options.Create(config);
         builder.RegisterInstance(iOptions).As<IOptions<AttributeRegistrationOptions>>().SingleInstance();
         builder.RegisterInstance(iOptions.Value).As<AttributeRegistrationOptions>().SingleInstance();
 
-        foreach (var assembly in assembliesToScan)
+        foreach (var assembly in toScan)
         {
             var set = assembly.GetTypes()
                 .Where(x => x.IsServiceImplementation())
                 .ToList();
-
-            if (config.RegisterInterceptors)
-                builder.RegisterInterceptors(assembly, config);
 
             foreach (var type in set)
             {
@@ -276,12 +275,12 @@ public static class DependancyInjectionExtensions
     
     private static IRegistrationBuilder<object, TActivatorData, TRegistrationStyle>?
         HandleInterceptorLifetime<TRegistrationStyle, TActivatorData>(
-            this IRegistrationBuilder<object, TActivatorData, TRegistrationStyle>? builder, Type type, AttributeRegistrationOptions options)
+            this IRegistrationBuilder<object, TActivatorData, TRegistrationStyle>? builder, Type type, ServiceLifetime defaultLifetime)
         where TActivatorData : ReflectionActivatorData
     {
         var lifetimeAttribute = type.GetCustomAttribute<LifetimeAttribute>(false);
 
-        var lifetime = lifetimeAttribute?.ServiceLifetime ?? options.DefaultInterceptorLifetime;
+        var lifetime = lifetimeAttribute?.ServiceLifetime ?? defaultLifetime;
 
         switch (lifetime)
         {
@@ -312,17 +311,32 @@ public static class DependancyInjectionExtensions
 
         return builder;
     }
-    
-    private static ContainerBuilder RegisterInterceptors(this ContainerBuilder containerBuilder, Assembly assembly, AttributeRegistrationOptions options)
-    {
-        var interceptors = assembly.GetTypes().Where(x => x.IsInterceptorImplementation());
 
-        foreach (var interceptor in interceptors)
+
+    /// <summary>
+    /// Registers all interceptors (sync and async) within provided assemblies.
+    /// </summary>
+    /// <remarks>
+    /// Takes <see cref="LifetimeAttribute"/> into account.
+    /// All registrations are <see cref="RegistrationStrategy.AsSelf"/>.
+    /// </remarks>
+    /// <param name="containerBuilder">Container builder.</param>
+    /// <param name="assembliesToScan">Assemblies to scan for interceptors.</param>
+    /// <param name="defaultLifetime">Default interceptor lifetime.</param>
+    /// <returns>Container builder instance with registered interceptors.</returns>
+    public static ContainerBuilder RegisterInterceptors(this ContainerBuilder containerBuilder, IEnumerable<Assembly> assembliesToScan, ServiceLifetime defaultLifetime = ServiceLifetime.InstancePerDependency)
+    {
+        foreach (var assembly in assembliesToScan)
         {
-            if (interceptor.IsGenericType && interceptor.IsGenericTypeDefinition)
-                containerBuilder.RegisterGeneric(interceptor).HandleInterceptorLifetime(interceptor, options);
-            else
-                containerBuilder.RegisterType(interceptor).HandleInterceptorLifetime(interceptor, options);
+            var interceptors = assembly.GetTypes().Where(x => x.IsInterceptorImplementation());
+
+            foreach (var interceptor in interceptors)
+            {
+                if (interceptor.IsGenericType && interceptor.IsGenericTypeDefinition)
+                    containerBuilder.RegisterGeneric(interceptor).HandleInterceptorLifetime(interceptor, defaultLifetime);
+                else
+                    containerBuilder.RegisterType(interceptor).HandleInterceptorLifetime(interceptor, defaultLifetime);
+            }
         }
 
         return containerBuilder;
@@ -401,6 +415,56 @@ public static class DependancyInjectionExtensions
     }
 
     /// <summary>
+    /// Registers an interceptor with <see cref="ContainerBuilder"/>.
+    /// </summary>
+    /// <param name="builder">Container builder.</param>
+    /// <param name="factoryMethod">Factory method for the registration.</param>
+    /// <param name="lifetime">Lifetime of the interceptor.</param>
+    /// <param name="tags">Optional tags for a <see cref="ServiceLifetime.InstancePerMatchingLifetimeScope"/> registration.</param>
+    /// <returns>Current instance of the <see cref="AttributeRegistrationOptions"/>.</returns>
+    public static ContainerBuilder RegisterInterceptor<T>(this ContainerBuilder builder, Func<IComponentContext, T> factoryMethod, ServiceLifetime lifetime = ServiceLifetime.InstancePerDependency, IEnumerable<object>? tags = null) where T : notnull
+    {
+        switch (lifetime)
+        {
+            case ServiceLifetime.SingleInstance:
+                builder.Register(factoryMethod).SingleInstance();
+                break;
+            case ServiceLifetime.InstancePerRequest:
+                builder.Register(factoryMethod).InstancePerRequest();
+                break;
+            case ServiceLifetime.InstancePerLifetimeScope:
+                builder.Register(factoryMethod).InstancePerLifetimeScope();
+                break;
+            case ServiceLifetime.InstancePerDependency:
+                builder.Register(factoryMethod).InstancePerDependency();
+                break;
+            case ServiceLifetime.InstancePerMatchingLifetimeScope:
+                builder.Register(factoryMethod).InstancePerMatchingLifetimeScope(tags ?? Array.Empty<object>());
+                break;
+            case ServiceLifetime.InstancePerOwned:
+                throw new NotSupportedException();
+            default:
+                throw new ArgumentOutOfRangeException(nameof(lifetime));
+        }
+
+        return builder;
+    }
+
+    /// <summary>
+    /// Registers an interceptor with <see cref="ContainerBuilder"/>.
+    /// </summary>
+    /// <param name="builder">Container builder.</param>
+    /// <param name="instance">Interceptor instance to register.</param>
+    /// <param name="lifetime">Lifetime of the interceptor.</param>
+    /// <returns>Current instance of the <see cref="AttributeRegistrationOptions"/>.</returns>
+    public static ContainerBuilder RegisterInterceptorInstance<T>(this ContainerBuilder builder, T instance, ServiceLifetime lifetime = ServiceLifetime.InstancePerDependency) where T : class
+    {
+        builder.RegisterInstance(instance);
+
+        return builder;
+    }
+
+    /// <summary>
     /// Registers services with <see cref="ContainerBuilder"/> via attributes.
     /// </summary>
     /// <param name="serviceCollection">Current service collection instance.</param>
@@ -421,7 +485,7 @@ public static class DependancyInjectionExtensions
     /// <returns>Current <see cref="ContainerBuilder"/> instance.</returns>
     public static IServiceCollection AddAttributeDefinedServices(this IServiceCollection serviceCollection, IEnumerable<Assembly> assembliesToScan, Action<AttributeRegistrationOptions>? options = null)
     {
-        var config = new AttributeRegistrationOptions(serviceCollection);
+        var config = new AttributeRegistrationOptions();
         options?.Invoke(config);
         
         var iOptions = Options.Create(config);
