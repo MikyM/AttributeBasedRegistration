@@ -39,7 +39,8 @@ public static class DependancyInjectionExtensions
     {
         var config = new AttributeRegistrationOptions(builder);
         options?.Invoke(config);
-        
+
+        builder.RegisterGeneric(typeof(AsyncInterceptorAdapter<>)).InstancePerDependency();
 
         foreach (var assembly in assembliesToScan)
         {
