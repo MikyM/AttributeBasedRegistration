@@ -10,24 +10,26 @@ namespace AttributeBasedRegistration.Attributes;
 public sealed class InterceptedByAttribute : Attribute
 {
     /// <summary>
-    /// Interceptor types.
+    /// Interceptor type.
     /// </summary>
-    public Type[] Interceptors { get; private set; }
+    public Type Interceptor { get; private set; }
+    
+    /// <summary>
+    /// Registration order.
+    /// </summary>
+    public int RegistrationOrder { get; private set; }
 
     /// <summary>
-    /// Defines with what interceptors should the service be intercepted.
+    /// Defines with what interceptor should the service be intercepted.
     /// </summary>
-    public InterceptedByAttribute(params Type[] interceptors)
+    /// <param name="interceptor">Interceptor type.</param>
+    /// <param name="registrationOrder">Registration order.</param>
+    public InterceptedByAttribute(Type interceptor, int registrationOrder)
     {
-        if (interceptors.Length == 0)
-            throw new ArgumentException("You must pass at least one interceptor");
+        if (interceptor.GetInterfaces().All(x => x != typeof(IAsyncInterceptor) && x != typeof(IInterceptor)))
+            throw new ArgumentException($"{interceptor.Name} does not implement any interceptor interface");
 
-        foreach (var i in interceptors)
-        {
-            if (i.GetInterfaces().All(x => x != typeof(IAsyncInterceptor) && x != typeof(IInterceptor)))
-                throw new ArgumentException($"{i.Name} does not implement any interceptor interface");
-        }
-
-        Interceptors = interceptors ?? throw new ArgumentNullException(nameof(interceptors));
+        Interceptor = interceptor;
+        RegistrationOrder = registrationOrder;
     }
 }

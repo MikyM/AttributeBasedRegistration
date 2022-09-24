@@ -256,8 +256,8 @@ public static class DependancyInjectionExtensions
         
         var interceptedByAttributed = type.GetCustomAttributes<InterceptedByAttribute>(false);
 
-        foreach (var interceptor in interceptedByAttributed.SelectMany(x => x.Interceptors)
-                     .Concat(enableAttribute.Interceptors ?? Type.EmptyTypes).Distinct())
+        foreach (var interceptor in interceptedByAttributed.OrderBy(x => x.RegistrationOrder).Select(x => x.Interceptor)
+                     .Distinct())
         {
             builder = interceptor.IsAsyncInterceptor()
                 ? builder?.InterceptedBy(
