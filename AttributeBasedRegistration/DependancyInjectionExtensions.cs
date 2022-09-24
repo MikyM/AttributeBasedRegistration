@@ -47,7 +47,8 @@ public static class DependancyInjectionExtensions
                 .Where(x => x.IsServiceImplementation())
                 .ToList();
 
-            builder.RegisterInterceptors(assembly, config);
+            if (config.RegisterInterceptors)
+                builder.RegisterInterceptors(assembly, config);
 
             foreach (var type in set)
             {
@@ -104,7 +105,7 @@ public static class DependancyInjectionExtensions
            type.IsClass && !type.IsAbstract;
     
     private static bool IsInterceptorImplementation(this Type type)
-        => type.IsClass && !type.IsAbstract && type.GetInterfaces().Any(x => x == typeof(IInterceptor) || x == typeof(IAsyncInterceptor));
+        => type.IsClass && !type.IsAbstract && type.GetCustomAttribute<SkipInterceptorRegistrationAttribute>() is null && type.GetInterfaces().Any(x => x == typeof(IInterceptor) || x == typeof(IAsyncInterceptor));
 
     private static List<Type> GetServiceTypes(this Type type, ServiceImplementationAttribute? implementationAttribute, IEnumerable<RegisterAsAttribute> asAttributes)
         => asAttributes.Where(x => x.ServiceTypes is not null)

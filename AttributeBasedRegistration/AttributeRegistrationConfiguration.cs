@@ -16,11 +16,16 @@ public sealed class AttributeRegistrationOptions
     /// Default lifetime of the registrations.
     /// </summary>
     public ServiceLifetime DefaultServiceLifetime { get; set; } = ServiceLifetime.InstancePerLifetimeScope;
-    
+
     /// <summary>
     /// Default lifetime of the interceptors.
     /// </summary>
     public ServiceLifetime DefaultInterceptorLifetime { get; set; } = ServiceLifetime.InstancePerDependency;
+    
+    /// <summary>
+    /// Whether to automatically register interceptors found in the provided assemblies to scan.
+    /// </summary>
+    public bool RegisterInterceptors { get; set; }
 
     /// <summary>
     /// Constructor.
