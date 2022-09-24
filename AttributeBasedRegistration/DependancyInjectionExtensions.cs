@@ -486,9 +486,9 @@ public static class DependancyInjectionExtensions
     private static ContainerBuilder HandleDecoration(this ContainerBuilder builder, Type type, bool shouldAsSelf, List<Type> registerAsTypes, bool shouldAsInterfaces,
         bool shouldAsDirectAncestors, bool shouldUsingNamingConvention)
     {
-        var attributes = type.GetCustomAttributes<DecoratedByAttribute>(false).ToList();
+        var decoratorAttributes = type.GetCustomAttributes<DecoratedByAttribute>(false).ToList();
         
-        if (!attributes.Any())
+        if (!decoratorAttributes.Any())
             return builder;
 
         HashSet<Type> serviceTypes = new();
@@ -507,18 +507,35 @@ public static class DependancyInjectionExtensions
         if (shouldUsingNamingConvention)
             serviceTypes.Add(type.GetInterfaceByNamingConvention() ??
                              throw new InvalidOperationException("Couldn't find an interface by naming convention"));
+        
+        Dictionary<Type,Dictionary<Type, List<Type>>>? genericDecorationConditions = null;
 
-        foreach (var decAttr in attributes.OrderBy(x => x.RegistrationOrder))
+        foreach (var attribute in decoratorAttributes.OrderBy(x => x.RegistrationOrder))
         {
-            if (decAttr.DecoratorType.IsGenericType && decAttr.DecoratorType.IsGenericTypeDefinition)
+            if (attribute.DecoratorType.GetCustomAttribute<SkipDecoratorRegistrationAttribute>() is not null)
+                continue;
+            
+            if (attribute.DecoratorType.IsGenericType && attribute.DecoratorType.IsGenericTypeDefinition)
             {
                 foreach (var serviceType in serviceTypes)
                 {
-                    if (!serviceType.IsGenericType || !serviceType.IsGenericTypeDefinition)
+                    if (!serviceType.IsGenericType && !serviceType.IsGenericTypeDefinition)
                         throw new InvalidOperationException(
                             "Can't register an open generic type decorator for a non-open generic type service");
-
-                    builder.RegisterGenericDecorator(decAttr.DecoratorType, serviceType);
+                    
+                    if (serviceType.IsGenericType && !serviceType.IsGenericTypeDefinition)
+                    {
+                        genericDecorationConditions ??= new Dictionary<Type, Dictionary<Type, List<Type>>>();
+                    
+                        var typeDef = serviceType.GetGenericTypeDefinition();
+                        genericDecorationConditions.TryAdd(typeDef, new Dictionary<Type, List<Type>>());
+                        genericDecorationConditions[typeDef].TryAdd(attribute.DecoratorType, new List<Type>());
+                        genericDecorationConditions[typeDef][attribute.DecoratorType].Add(serviceType);
+                    }
+                    else
+                    {
+                        builder.RegisterGenericDecorator(attribute.DecoratorType, serviceType);
+                    }
                 }
             }
             else
@@ -529,10 +546,20 @@ public static class DependancyInjectionExtensions
                         throw new InvalidOperationException(
                             "Can't register an non-open generic type decorator for an open generic type service");
 
-                    builder.RegisterDecorator(decAttr.DecoratorType, serviceType);
+                    builder.RegisterDecorator(attribute.DecoratorType, serviceType);
                 }
             }
         }
+
+        if (genericDecorationConditions is null)
+            return builder;
+
+        foreach (var (openGenericType, decoratorData) in genericDecorationConditions)
+        foreach (var (decorator, servicesTypes) in decoratorData)
+            builder.RegisterGenericDecorator(decorator, openGenericType,
+                x => servicesTypes.Contains(ProxyUtil.IsProxyType(x.ServiceType) && x.ServiceType.IsClass
+                    ? x.ServiceType.BaseType!
+                    : x.ServiceType));
 
         return builder;
     }
