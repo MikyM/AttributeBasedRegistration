@@ -7,6 +7,7 @@ using Autofac.Core.Activators.Reflection;
 using Autofac.Extras.DynamicProxy;
 using Castle.DynamicProxy;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
 using MikyM.Utilities.Extensions;
 
 namespace AttributeBasedRegistration;
@@ -41,6 +42,10 @@ public static class DependancyInjectionExtensions
         options?.Invoke(config);
 
         builder.RegisterGeneric(typeof(AsyncInterceptorAdapter<>)).InstancePerDependency();
+
+        var iOptions = Options.Create(config);
+        builder.RegisterInstance(iOptions).As<IOptions<AttributeRegistrationOptions>>().SingleInstance();
+        builder.RegisterInstance(iOptions.Value).As<AttributeRegistrationOptions>().SingleInstance();
 
         foreach (var assembly in assembliesToScan)
         {
@@ -418,6 +423,10 @@ public static class DependancyInjectionExtensions
     {
         var config = new AttributeRegistrationOptions(serviceCollection);
         options?.Invoke(config);
+        
+        var iOptions = Options.Create(config);
+        serviceCollection.AddSingleton(iOptions);
+        serviceCollection.AddSingleton(iOptions.Value);
 
         foreach (var assembly in assembliesToScan)
         {
