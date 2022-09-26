@@ -140,7 +140,7 @@ public static class DependancyInjectionExtensions
 
         return builder;
     }
-    
+
     private static bool IsServiceImplementation(this Type type)
         => type.GetCustomAttributes(false).Any(y => y is ServiceImplementationAttribute) &&
            type.IsClass && !type.IsAbstract;
@@ -507,8 +507,6 @@ public static class DependancyInjectionExtensions
         if (shouldUsingNamingConvention)
             serviceTypes.Add(type.GetInterfaceByNamingConvention() ??
                              throw new InvalidOperationException("Couldn't find an interface by naming convention"));
-        
-        Dictionary<Type,Dictionary<Type, List<Type>>>? genericDecorationConditions = null;
 
         foreach (var attribute in decoratorAttributes.OrderBy(x => x.RegistrationOrder))
         {
@@ -523,19 +521,7 @@ public static class DependancyInjectionExtensions
                         throw new InvalidOperationException(
                             "Can't register an open generic type decorator for a non-open generic type service");
                     
-                    if (serviceType.IsGenericType && !serviceType.IsGenericTypeDefinition)
-                    {
-                        genericDecorationConditions ??= new Dictionary<Type, Dictionary<Type, List<Type>>>();
-                    
-                        var typeDef = serviceType.GetGenericTypeDefinition();
-                        genericDecorationConditions.TryAdd(typeDef, new Dictionary<Type, List<Type>>());
-                        genericDecorationConditions[typeDef].TryAdd(attribute.DecoratorType, new List<Type>());
-                        genericDecorationConditions[typeDef][attribute.DecoratorType].Add(serviceType);
-                    }
-                    else
-                    {
-                        builder.RegisterGenericDecorator(attribute.DecoratorType, serviceType);
-                    }
+                    builder.RegisterGenericDecorator(attribute.DecoratorType, serviceType);
                 }
             }
             else
@@ -550,16 +536,6 @@ public static class DependancyInjectionExtensions
                 }
             }
         }
-
-        if (genericDecorationConditions is null)
-            return builder;
-
-        foreach (var (openGenericType, decoratorData) in genericDecorationConditions)
-        foreach (var (decorator, servicesTypes) in decoratorData)
-            builder.RegisterGenericDecorator(decorator, openGenericType,
-                x => servicesTypes.Contains(ProxyUtil.IsProxyType(x.ServiceType) && x.ServiceType.IsClass
-                    ? x.ServiceType.BaseType!
-                    : x.ServiceType));
 
         return builder;
     }
