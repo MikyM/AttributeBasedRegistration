@@ -516,24 +516,12 @@ public static class DependancyInjectionExtensions
             if (attribute.DecoratorType.IsGenericType && attribute.DecoratorType.IsGenericTypeDefinition)
             {
                 foreach (var serviceType in serviceTypes)
-                {
-                    if (!serviceType.IsGenericType && !serviceType.IsGenericTypeDefinition)
-                        throw new InvalidOperationException(
-                            "Can't register an open generic type decorator for a non-open generic type service");
-                    
                     builder.RegisterGenericDecorator(attribute.DecoratorType, serviceType);
-                }
             }
             else
             {
                 foreach (var serviceType in serviceTypes)
-                {
-                    if (serviceType.IsGenericType && serviceType.IsGenericTypeDefinition)
-                        throw new InvalidOperationException(
-                            "Can't register an non-open generic type decorator for an open generic type service");
-
                     builder.RegisterDecorator(attribute.DecoratorType, serviceType);
-                }
             }
         }
 
