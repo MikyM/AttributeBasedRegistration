@@ -14,6 +14,7 @@ public record RootScopeWrapper(IServiceProvider ServiceProvider)
     public IServiceProvider ServiceProvider { get; } = ServiceProvider;
 }
 
+
 /// <summary>
 /// Root scope wrapper starter.
 /// </summary>

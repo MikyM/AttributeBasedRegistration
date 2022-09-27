@@ -761,7 +761,7 @@ public static class DependancyInjectionExtensions
     /// Adds the identifier services of the root DI scope making <see cref="DependancyInjectionExtensions.IsRootScope(IServiceProvider)"/> available.
     /// </summary>
     /// <param name="serviceCollection">The service collection.</param>
-    private static IServiceCollection AddRootScopeIdentifier(this IServiceCollection serviceCollection)
+    public static IServiceCollection AddRootScopeIdentifier(this IServiceCollection serviceCollection)
     {
         serviceCollection.AddSingleton<RootScopeWrapper>();
         serviceCollection.AddHostedService<RootScopeWrapperStarter>();
@@ -781,10 +781,9 @@ public static class DependancyInjectionExtensions
     /// <returns>True if the given scope is the root scope, otherwise false.</returns>
     public static bool IsRootScope(this IServiceProvider serviceProvider)
     {
-        if (serviceProvider is AutofacServiceProvider autofacServiceProvider &&
-            autofacServiceProvider.LifetimeScope.Tag is "root")
+        if (serviceProvider is AutofacServiceProvider asp && asp.LifetimeScope.Tag is "root")
             return true;
-
+        
         var trueRoot = serviceProvider.GetService<RootScopeWrapper>()?.ServiceProvider;
         if (trueRoot is null)
             throw new InvalidOperationException(
