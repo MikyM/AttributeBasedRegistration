@@ -4,9 +4,11 @@ using AttributeBasedRegistration.Extensions;
 using Autofac;
 using Autofac.Builder;
 using Autofac.Core.Activators.Reflection;
+using Autofac.Extensions.DependencyInjection;
 using Autofac.Extras.DynamicProxy;
 using Castle.DynamicProxy;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using MikyM.Utilities.Extensions;
 
@@ -751,12 +753,66 @@ public static class DependancyInjectionExtensions
                 }
             }
         }
+        
+        return serviceCollection;
+    }
+
+    /// <summary>
+    /// Adds the identifier services of the root DI scope making <see cref="DependancyInjectionExtensions.IsRootScope(IServiceProvider)"/> available.
+    /// </summary>
+    /// <param name="serviceCollection">The service collection.</param>
+    private static IServiceCollection AddRootScopeIdentifier(this IServiceCollection serviceCollection)
+    {
+        serviceCollection.AddSingleton<NetRootScopeWrapper>();
+        serviceCollection.AddHostedService<NetRootScopeWrapperStarter>();
 
         return serviceCollection;
+    }
+    
+    /// <summary>
+    /// Adds the identifier services of the root DI scope making <see cref="DependancyInjectionExtensions.IsRootScope(ILifetimeScope)"/> available.
+    /// </summary>
+    /// <param name="containerBuilder">The container builder.</param>
+    private static ContainerBuilder AddRootScopeIdentifier(this ContainerBuilder containerBuilder)
+    {
+        containerBuilder.RegisterType<AutofacRootScopeWrapper>().AsSelf().SingleInstance();
+        containerBuilder.RegisterType<AutofacRootScopeWrapperStarter>().As<IHostedService>().SingleInstance();
+
+        return containerBuilder;
     }
     
     /// <summary>
     /// Whether given interceptor is an async interceptor.
     /// </summary>
     private static bool IsAsyncInterceptor(this Type interceptorCandidate) => interceptorCandidate.GetInterfaces().Any(x => x == typeof(IAsyncInterceptor));
+    
+    /// <summary>
+    /// Checks whether the given scope is a root scope.
+    /// </summary>
+    /// <param name="serviceProvider">Root scope candidate.</param>
+    /// <returns>True if the given scope is the root scope, otherwise false.</returns>
+    public static bool IsRootScope(this IServiceProvider serviceProvider)
+    {
+        var trueRoot = serviceProvider.GetService<NetRootScopeWrapper>()?.ServiceProvider;
+        if (trueRoot is null)
+            throw new InvalidOperationException(
+                "You must register root scope identifiers with AddRootScopeIdentifier extension method to be able to use IsRootScope method");
+
+        return serviceProvider == trueRoot;
+    }
+    
+    /// <summary>
+    /// Checks whether the given scope is a root scope.
+    /// </summary>
+    /// <param name="lifetimeScope">Root scope candidate.</param>
+    /// <returns>True if the given scope is the root scope, otherwise false.</returns>
+    public static bool IsRootScope(this ILifetimeScope lifetimeScope)
+    {
+        var trueRoot = lifetimeScope.ResolveOptional<AutofacRootScopeWrapper>()?.LifetimeScope;
+        if (trueRoot is null)
+            throw new InvalidOperationException(
+                "You must register root scope identifiers with AddRootScopeIdentifier extension method to be able to use IsRootScope method");
+
+        return lifetimeScope == trueRoot;
+    }
 }
