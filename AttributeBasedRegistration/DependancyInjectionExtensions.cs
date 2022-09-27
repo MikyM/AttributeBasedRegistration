@@ -763,24 +763,12 @@ public static class DependancyInjectionExtensions
     /// <param name="serviceCollection">The service collection.</param>
     public static IServiceCollection AddRootScopeIdentifier(this IServiceCollection serviceCollection)
     {
-        serviceCollection.AddSingleton<NetRootScopeWrapper>();
-        serviceCollection.AddHostedService<NetRootScopeWrapperStarter>();
+        serviceCollection.AddSingleton<RootScopeWrapper>();
+        serviceCollection.AddHostedService<RootScopeWrapperStarter>();
 
         return serviceCollection;
     }
-    
-    /// <summary>
-    /// Adds the identifier services of the root DI scope making <see cref="DependancyInjectionExtensions.IsRootScope(ILifetimeScope)"/> available.
-    /// </summary>
-    /// <param name="containerBuilder">The container builder.</param>
-    public static ContainerBuilder AddRootScopeIdentifier(this ContainerBuilder containerBuilder)
-    {
-        containerBuilder.RegisterType<AutofacRootScopeWrapper>().AsSelf().SingleInstance();
-        containerBuilder.RegisterType<AutofacRootScopeWrapperStarter>().As<IHostedService>().SingleInstance();
 
-        return containerBuilder;
-    }
-    
     /// <summary>
     /// Whether given interceptor is an async interceptor.
     /// </summary>
@@ -793,7 +781,10 @@ public static class DependancyInjectionExtensions
     /// <returns>True if the given scope is the root scope, otherwise false.</returns>
     public static bool IsRootScope(this IServiceProvider serviceProvider)
     {
-        var trueRoot = serviceProvider.GetService<NetRootScopeWrapper>()?.ServiceProvider;
+        if (serviceProvider is AutofacServiceProvider asp && asp.LifetimeScope.Tag is "root")
+            return true;
+        
+        var trueRoot = serviceProvider.GetService<RootScopeWrapper>()?.ServiceProvider;
         if (trueRoot is null)
             throw new InvalidOperationException(
                 "You must register root scope identifiers with AddRootScopeIdentifier extension method to be able to use IsRootScope method");
@@ -807,12 +798,5 @@ public static class DependancyInjectionExtensions
     /// <param name="lifetimeScope">Root scope candidate.</param>
     /// <returns>True if the given scope is the root scope, otherwise false.</returns>
     public static bool IsRootScope(this ILifetimeScope lifetimeScope)
-    {
-        var trueRoot = lifetimeScope.ResolveOptional<AutofacRootScopeWrapper>()?.LifetimeScope;
-        if (trueRoot is null)
-            throw new InvalidOperationException(
-                "You must register root scope identifiers with AddRootScopeIdentifier extension method to be able to use IsRootScope method");
-
-        return lifetimeScope == trueRoot;
-    }
+        => lifetimeScope.Tag is "root";
 }
