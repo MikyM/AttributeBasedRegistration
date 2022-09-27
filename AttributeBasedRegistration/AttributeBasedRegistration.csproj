@@ -5,7 +5,7 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<PackageId>AttributeBasedRegistration</PackageId>
-		<Version>1.2.14</Version>
+		<Version>1.2.15</Version>
 		<Authors>Krzysztof Kupisz</Authors>
 		<PackageDescription>Extensions to Autofac and Microsoft DI mainly allowing registration of services via attributes amongst other minor things.</PackageDescription>
 		<RepositoryUrl>https://github.com/MikyM/AttributeBasedRegistration</RepositoryUrl>
@@ -26,7 +26,7 @@
 		<PackageReference Include="JetBrains.Annotations" Version="2022.1.0" />
 		<PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="6.0.0" />
 		<PackageReference Include="Microsoft.Extensions.Logging" Version="6.0.0" />
-		<PackageReference Include="MikyM.Utilities" Version="1.0.4" />
+		<PackageReference Include="MikyM.Utilities" Version="1.0.5" />
 	</ItemGroup>
 
 </Project>
