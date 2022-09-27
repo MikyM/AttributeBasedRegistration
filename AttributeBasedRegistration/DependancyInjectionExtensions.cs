@@ -761,7 +761,7 @@ public static class DependancyInjectionExtensions
     /// Adds the identifier services of the root DI scope making <see cref="DependancyInjectionExtensions.IsRootScope(IServiceProvider)"/> available.
     /// </summary>
     /// <param name="serviceCollection">The service collection.</param>
-    private static IServiceCollection AddRootScopeIdentifier(this IServiceCollection serviceCollection)
+    public static IServiceCollection AddRootScopeIdentifier(this IServiceCollection serviceCollection)
     {
         serviceCollection.AddSingleton<NetRootScopeWrapper>();
         serviceCollection.AddHostedService<NetRootScopeWrapperStarter>();
@@ -773,7 +773,7 @@ public static class DependancyInjectionExtensions
     /// Adds the identifier services of the root DI scope making <see cref="DependancyInjectionExtensions.IsRootScope(ILifetimeScope)"/> available.
     /// </summary>
     /// <param name="containerBuilder">The container builder.</param>
-    private static ContainerBuilder AddRootScopeIdentifier(this ContainerBuilder containerBuilder)
+    public static ContainerBuilder AddRootScopeIdentifier(this ContainerBuilder containerBuilder)
     {
         containerBuilder.RegisterType<AutofacRootScopeWrapper>().AsSelf().SingleInstance();
         containerBuilder.RegisterType<AutofacRootScopeWrapperStarter>().As<IHostedService>().SingleInstance();
