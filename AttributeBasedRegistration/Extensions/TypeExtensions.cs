@@ -41,7 +41,7 @@ public static class TypeExtensions
     /// </summary>
     /// <param name="type">Type to check.</param>
     /// <typeparam name="TAttribute">Searched attribute type.</typeparam>
-    /// <returns>A collection of attributes.</returns>
+    /// <returns>Found attribute or null.</returns>
     public static TAttribute? GetRegistrationAttributeOfType<TAttribute>(this Type type) where TAttribute : class, IRegistrationAttribute
         => type.GetCustomAttributes(false).FirstOrDefault(y => y is TAttribute)?.CastTo<TAttribute?>();
 
