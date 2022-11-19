@@ -30,6 +30,7 @@ public class SelectConstructorsWithAttribute : Attribute, ISelectConstructorsWit
     }
 }
 
+#if NET7_0
 /// <summary>
 /// Marks a registration to use a specific constructor selector.
 /// </summary>
@@ -58,3 +59,4 @@ public class SelectConstructorsWithAttribute<TCtorSelecter> : Attribute, ISelect
         ConstructorSelector = constructorSelector;
     }
 }
+#endif

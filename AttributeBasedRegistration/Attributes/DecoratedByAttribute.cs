@@ -32,6 +32,7 @@ public sealed class DecoratedByAttribute : Attribute, IDecoratedByAttribute
     }
 }
 
+#if NET7_0
 /// <summary>
 /// Defines a decorator for a service.
 /// </summary>
@@ -60,3 +61,4 @@ public sealed class DecoratedByAttribute<TDecorator> : Attribute, IDecoratedByAt
         Decorator = typeof(TDecorator);
     }
 }
+#endif

@@ -81,6 +81,7 @@ public sealed class ServiceImplementationAttribute : Attribute, IServiceImplemen
     }
 }
 
+#if NET7_0
 /// <summary>
 /// Marks a class for registration as a service implementation.
 /// </summary>
@@ -259,3 +260,4 @@ public sealed class ServiceImplementationAttribute<TService1, TService2, TServic
         ServiceLifetime = serviceLifetime;
     }
 }
+#endif
