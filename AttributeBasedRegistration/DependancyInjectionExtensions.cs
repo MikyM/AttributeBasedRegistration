@@ -1,5 +1,6 @@
 ﻿using System.Reflection;
 using AttributeBasedRegistration.Attributes;
+using AttributeBasedRegistration.Attributes.Abstractions;
 using AttributeBasedRegistration.Extensions;
 using Autofac;
 using Autofac.Builder;
@@ -8,7 +9,6 @@ using Autofac.Extensions.DependencyInjection;
 using Autofac.Extras.DynamicProxy;
 using Castle.DynamicProxy;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using MikyM.Utilities.Extensions;
 
@@ -68,7 +68,7 @@ public static class DependancyInjectionExtensions
     /// <returns>Current <see cref="ContainerBuilder"/> instance.</returns>
     public static ContainerBuilder AddAttributeDefinedServices(this ContainerBuilder builder, Action<AttributeRegistrationOptions> options, params Assembly[] assembliesToScan)
         => AddAttributeDefinedServices(builder, assembliesToScan, options);
-        
+
     /// <summary>
     /// Registers services with <see cref="ContainerBuilder"/> via attributes.
     /// </summary>
@@ -95,15 +95,18 @@ public static class DependancyInjectionExtensions
 
             foreach (var type in set)
             {
-                var implementationAttribute = type.GetCustomAttribute<ServiceImplementationAttribute>(false);
-                if (implementationAttribute is null)
+                var implementationAttributes = type.GetAttributesByInterface<IServiceImplementationAttribute>().ToArray();
+                if (!implementationAttributes.Any())
                     throw new InvalidOperationException();
-                
-                var asAttributes = type.GetCustomAttributes<RegisterAsAttribute>(false).ToList();
-                var constructorAttribute = type.GetCustomAttribute<FindConstructorsWithAttribute>(false);
-                var enableInterceptionAttribute = type.GetCustomAttribute<EnableInterceptionAttribute>(false);
+                if (implementationAttributes.Length > 1)
+                    throw new InvalidOperationException($"Only a single implementation attribute is allowed on a type, type: {type.Name}");
+                var implementationAttribute = implementationAttributes.First();
 
-                if (constructorAttribute is not null && enableInterceptionAttribute is not null)
+                var asAttributes = type.GetAttributesByInterface<IRegisterAsAttribute>().ToArray();
+                var constructorAttributes = type.GetAttributesByInterface<IFindConstructorsWithAttribute>().ToArray();
+                var enableInterceptionAttribute = type.GetAttributesByInterface<IEnableInterceptionAttribute>().FirstOrDefault();
+
+                if (constructorAttributes.Any() && enableInterceptionAttribute is not null)
                     throw new InvalidOperationException(
                         "Using a custom constructor finder will prevent interception from happening");
 
@@ -131,6 +134,9 @@ public static class DependancyInjectionExtensions
 
                 registrationBuilder.HandleConstructorFinding(type);
                 registrationGenericBuilder.HandleConstructorFinding(type);
+                
+                registrationBuilder.HandleConstructorSelecting(type);
+                registrationGenericBuilder.HandleConstructorSelecting(type);
 
                 registrationBuilder.HandleInterceptors(builder, type);
                 registrationGenericBuilder.HandleInterceptors(builder, type);
@@ -144,45 +150,55 @@ public static class DependancyInjectionExtensions
     }
 
     private static bool IsServiceImplementation(this Type type)
-        => type.GetCustomAttributes(false).Any(y => y is ServiceImplementationAttribute) &&
+        => type.GetCustomAttributes(false).Any(y => y is IServiceImplementationAttribute) &&
            type.IsClass && !type.IsAbstract;
-    
-    private static bool IsInterceptorImplementation(this Type type)
-        => type.IsClass && !type.IsAbstract && type.GetCustomAttribute<SkipInterceptorRegistrationAttribute>() is null && type.GetInterfaces().Any(x => x == typeof(IInterceptor) || x == typeof(IAsyncInterceptor));
 
-    private static List<Type> GetServiceTypes(this Type type, ServiceImplementationAttribute? implementationAttribute, IEnumerable<RegisterAsAttribute> asAttributes)
+    private static bool ShouldSkipRegistration(this Type type)
+        => type.GetCustomAttributes(false).Any(y => y is ISkipRegistrationAttribute);
+
+    private static IEnumerable<TAttributeInterface> GetAttributesByInterface<TAttributeInterface>(this Type type) where TAttributeInterface : IRegistrationAttribute
+        => type.GetCustomAttributes(false).Where(y => y is TAttributeInterface).Cast<TAttributeInterface>();
+
+    private static bool IsInterceptorImplementation(this Type type)
+        => type.IsClass && !type.IsAbstract && !type.ShouldSkipRegistration() && type.GetInterfaces().Any(x => x == typeof(IInterceptor) || x == typeof(IAsyncInterceptor));
+
+    private static List<Type> GetServiceTypes(this Type type, IServiceImplementationAttribute implementationAttribute, IEnumerable<IRegisterAsAttribute> asAttributes)
         => asAttributes.Where(x => x.ServiceTypes is not null)
             .SelectMany(x => x.ServiceTypes ?? Type.EmptyTypes)
             .Concat(implementationAttribute?.ServiceTypes ?? Type.EmptyTypes)
             .Distinct()
             .ToList();
     
-    private static bool ShouldAsInterfaces(this Type type, ServiceImplementationAttribute? implementationAttribute, IEnumerable<RegisterAsAttribute> asAttributes)
+    private static bool ShouldAsInterfaces(this Type type, IServiceImplementationAttribute implementationAttribute, IEnumerable<IRegisterAsAttribute> asAttributes)
         => asAttributes.Any(x =>
                x.RegistrationStrategy is RegistrationStrategy.AsImplementedInterfaces) ||
            implementationAttribute?.RegistrationStrategy is RegistrationStrategy.AsImplementedInterfaces;
     
-    private static bool ShouldAsSelf(this Type type, ServiceImplementationAttribute? implementationAttribute, IEnumerable<RegisterAsAttribute> asAttributes, IEnumerable<Type> serviceTypes)
+    private static bool ShouldAsSelf(this Type type, IServiceImplementationAttribute implementationAttribute, IEnumerable<IRegisterAsAttribute> asAttributes, IEnumerable<Type> serviceTypes)
         => (asAttributes.Any(x => x.RegistrationStrategy is RegistrationStrategy.AsSelf) ||
             implementationAttribute?.RegistrationStrategy is RegistrationStrategy.AsSelf) &&
            serviceTypes.All(y => y != type);
     
-    private static bool ShouldAsDirectAncestors(this Type type, ServiceImplementationAttribute? implementationAttribute, IEnumerable<RegisterAsAttribute> asAttributes)
+    private static bool ShouldAsDirectAncestors(this Type type, IServiceImplementationAttribute implementationAttribute, IEnumerable<IRegisterAsAttribute> asAttributes)
         => asAttributes.Any(x => x.RegistrationStrategy is RegistrationStrategy.AsDirectAncestorInterfaces) ||
            implementationAttribute?.RegistrationStrategy is RegistrationStrategy.AsDirectAncestorInterfaces;
     
-    private static bool ShouldUsingNamingConvention(this Type type, ServiceImplementationAttribute? implementationAttribute, IEnumerable<RegisterAsAttribute> asAttributes)
+    private static bool ShouldUsingNamingConvention(this Type type, IServiceImplementationAttribute implementationAttribute, IEnumerable<IRegisterAsAttribute> asAttributes)
         => asAttributes.Any(x => x.RegistrationStrategy is RegistrationStrategy.AsConventionNamedInterface) ||
            implementationAttribute?.RegistrationStrategy is RegistrationStrategy.AsConventionNamedInterface;
 
     private static IRegistrationBuilder<object, TActivatorData, TRegistrationStyle>?
         HandleLifetime<TRegistrationStyle, TActivatorData>(
             this IRegistrationBuilder<object, TActivatorData, TRegistrationStyle>? builder, Type type,
-            ServiceImplementationAttribute implementationAttribute, AttributeRegistrationOptions options)
+            IServiceImplementationAttribute implementationAttribute, AttributeRegistrationOptions options)
         where TActivatorData : ReflectionActivatorData
     {
-        var lifetimeAttribute = type.GetCustomAttribute<LifetimeAttribute>(false);
+        var lifetimeAttributes = type.GetAttributesByInterface<ILifetimeAttribute>().ToArray();
 
+        if (lifetimeAttributes.Length > 1)
+            throw new InvalidOperationException($"Only a single Lifetime attribute is allowed on a type, type: {type.Name}");
+
+        var lifetimeAttribute = lifetimeAttributes.FirstOrDefault();
         var lifetime = lifetimeAttribute?.ServiceLifetime ??
                        implementationAttribute?.ServiceLifetime ?? options.DefaultServiceLifetime;
 
@@ -244,7 +260,10 @@ public static class DependancyInjectionExtensions
         HandleInitialRegistration(
             this ContainerBuilder builder, Type type, bool shouldAsInterfaces)
     {
-        var enableInterceptionAttribute = type.GetCustomAttribute<EnableInterceptionAttribute>(false);
+        var enableInterceptionAttributes = type.GetAttributesByInterface<IEnableInterceptionAttribute>().ToArray();
+        if (enableInterceptionAttributes.Length > 1)
+            throw new InvalidOperationException($"Only a single enable interception attribute is allowed on a type, type: {type.Name}");
+        var enableInterceptionAttribute = enableInterceptionAttributes.FirstOrDefault();
         
         IRegistrationBuilder<object, ReflectionActivatorData, DynamicRegistrationStyle>?
             registrationGenericBuilder = null;
@@ -293,15 +312,28 @@ public static class DependancyInjectionExtensions
             this IRegistrationBuilder<object, TActivatorData, TRegistrationStyle>? builder, ContainerBuilder containerBuilder, Type type)
         where TActivatorData : ReflectionActivatorData
     {
-        var enableAttribute = type.GetCustomAttribute<EnableInterceptionAttribute>(false);
-        if (enableAttribute is null)
+        var enableInterceptionAttributes = type.GetAttributesByInterface<IEnableInterceptionAttribute>().ToArray();
+        if (enableInterceptionAttributes.Length > 1)
+            throw new InvalidOperationException($"Only a single enable interception attribute is allowed on a type, type: {type.Name}");
+        if (enableInterceptionAttributes.Length == 0)
             return builder;
         
-        var interceptedByAttributed = type.GetCustomAttributes<InterceptedByAttribute>(false).ToList();
+        var interceptedByAttributes = type.GetAttributesByInterface<IInterceptedByAttribute>().ToArray();
+        
+        if (interceptedByAttributes.GroupBy(x => x.RegistrationOrder).FirstOrDefault(x => x.Count() > 1) is not null)
+            throw new InvalidOperationException($"Duplicated interceptor registration order on type {type.Name}");
 
-        foreach (var interceptor in interceptedByAttributed.OrderByDescending(x => x.RegistrationOrder).Select(x => x.Interceptor)
+        if (interceptedByAttributes.GroupBy(x => x.Interceptor)
+                .FirstOrDefault(x => x.Count() > 1) is not null)
+            throw new InvalidOperationException($"Duplicated interceptor type on type {type.Name}");
+
+        foreach (var interceptor in interceptedByAttributes.OrderByDescending(x => x.RegistrationOrder)
+                     .Select(x => x.Interceptor)
                      .Distinct())
         {
+            if (interceptor is null)
+                throw new InvalidOperationException();
+            
             builder = interceptor.IsAsyncInterceptor()
                 ? builder?.InterceptedBy(
                     typeof(AsyncInterceptorAdapter<>).MakeGenericType(interceptor))
@@ -316,8 +348,11 @@ public static class DependancyInjectionExtensions
             this IRegistrationBuilder<object, TActivatorData, TRegistrationStyle>? builder, Type type, ServiceLifetime defaultLifetime)
         where TActivatorData : ReflectionActivatorData
     {
-        var lifetimeAttribute = type.GetCustomAttribute<LifetimeAttribute>(false);
+        var lifetimeAttributes = type.GetAttributesByInterface<ILifetimeAttribute>().ToArray();
+        if (lifetimeAttributes.Length > 1)
+            throw new InvalidOperationException($"Only a single lifetime attribute is allowed on a type, type: {type.Name}");
 
+        var lifetimeAttribute = lifetimeAttributes.FirstOrDefault();
         var lifetime = lifetimeAttribute?.ServiceLifetime ?? defaultLifetime;
 
         switch (lifetime)
@@ -472,24 +507,47 @@ public static class DependancyInjectionExtensions
             this IRegistrationBuilder<object, TActivatorData, TRegistrationStyle>? builder, Type type)
         where TActivatorData : ReflectionActivatorData
     {
-        var attribute = type.GetCustomAttribute<FindConstructorsWithAttribute>(false);
-        if (attribute is null)
+        var findCtorAttributes = type.GetAttributesByInterface<IFindConstructorsWithAttribute>().ToArray();
+        if (!findCtorAttributes.Any())
             return builder;
 
-        var instance = Activator.CreateInstance(attribute.ConstructorFinder);
+        if (findCtorAttributes.Length > 1)
+            throw new InvalidOperationException($"Only one ctor finder can be set on a type - {type.Name}");
 
+        var instance = Activator.CreateInstance(findCtorAttributes.First().ConstructorFinder);
         if (instance is null)
             throw new InvalidOperationException(
-                $"Couldn't create an instance of a custom ctor finder of type {attribute.ConstructorFinder.Name}, only finders with parameterless ctors are supported");
+                $"Couldn't create an instance of a custom ctor finder for type {type.Name}, only finders with parameterless ctors are supported");
+
 
         return builder?.FindConstructorsWith((IConstructorFinder)instance);
+    }
+    
+    private static IRegistrationBuilder<object, TActivatorData, TRegistrationStyle>?
+        HandleConstructorSelecting<TRegistrationStyle, TActivatorData>(
+            this IRegistrationBuilder<object, TActivatorData, TRegistrationStyle>? builder, Type type)
+        where TActivatorData : ReflectionActivatorData
+    {
+        var selectCtorAttributes = type.GetAttributesByInterface<ISelectConstructorsWithAttribute>().ToArray();
+        if (!selectCtorAttributes.Any())
+            return builder;
+
+        if (selectCtorAttributes.Length > 1)
+            throw new InvalidOperationException($"Only one ctor selector can be set on a type - {type.Name}");
+
+        var instance = Activator.CreateInstance(selectCtorAttributes.First().ConstructorSelector);
+        if (instance is null)
+            throw new InvalidOperationException(
+                $"Couldn't create an instance of a custom ctor selector for type {type.Name}, only selectors with parameterless ctors are supported");
+
+
+        return builder?.UsingConstructor((IConstructorSelector)instance);
     }
 
     private static ContainerBuilder HandleDecoration(this ContainerBuilder builder, Type type, bool shouldAsSelf, List<Type> registerAsTypes, bool shouldAsInterfaces,
         bool shouldAsDirectAncestors, bool shouldUsingNamingConvention)
     {
-        var decoratorAttributes = type.GetCustomAttributes<DecoratedByAttribute>(false).ToList();
-        
+        var decoratorAttributes = type.GetAttributesByInterface<IDecoratedByAttribute>().ToArray();
         if (!decoratorAttributes.Any())
             return builder;
 
@@ -510,20 +568,28 @@ public static class DependancyInjectionExtensions
             serviceTypes.Add(type.GetInterfaceByNamingConvention() ??
                              throw new InvalidOperationException("Couldn't find an interface by naming convention"));
 
+        
+        if (decoratorAttributes.GroupBy(x => x.RegistrationOrder).FirstOrDefault(x => x.Count() > 1) is not null)
+            throw new InvalidOperationException($"Duplicated decorator registration order on type {type.Name}");
+
+        if (decoratorAttributes.GroupBy(x => x.Decorator)
+                .FirstOrDefault(x => x.Count() > 1) is not null)
+            throw new InvalidOperationException($"Duplicated decorator type on type {type.Name}");
+        
         foreach (var attribute in decoratorAttributes.OrderBy(x => x.RegistrationOrder))
         {
-            if (attribute.DecoratorType.GetCustomAttribute<SkipDecoratorRegistrationAttribute>() is not null)
+            if (attribute.Decorator.ShouldSkipRegistration())
                 continue;
             
-            if (attribute.DecoratorType.IsGenericType && attribute.DecoratorType.IsGenericTypeDefinition)
+            if (attribute.Decorator.IsGenericType && attribute.Decorator.IsGenericTypeDefinition)
             {
                 foreach (var serviceType in serviceTypes)
-                    builder.RegisterGenericDecorator(attribute.DecoratorType, serviceType);
+                    builder.RegisterGenericDecorator(attribute.Decorator, serviceType);
             }
             else
             {
                 foreach (var serviceType in serviceTypes)
-                    builder.RegisterDecorator(attribute.DecoratorType, serviceType);
+                    builder.RegisterDecorator(attribute.Decorator, serviceType);
             }
         }
 
@@ -660,14 +726,20 @@ public static class DependancyInjectionExtensions
 
             foreach (var type in set)
             {
-                var implementationAttribute = type.GetCustomAttribute<ServiceImplementationAttribute>(false);
-                if (implementationAttribute is null)
+                var implementationAttributes = type.GetAttributesByInterface<IServiceImplementationAttribute>().ToArray();
+                if (!implementationAttributes.Any())
                     throw new InvalidOperationException();
-                
-                var lifetimeAttribute = type.GetCustomAttribute<LifetimeAttribute>(false);
-                var asAttributes = type.GetCustomAttributes<RegisterAsAttribute>(false).ToList();
-                
-                var lifetime = lifetimeAttribute?.ServiceLifetime ?? implementationAttribute?.ServiceLifetime ?? config.DefaultServiceLifetime;
+                if (implementationAttributes.Length > 1)
+                    throw new InvalidOperationException($"Only a single implementation attribute is allowed on a type, type: {type.Name}");
+                var implementationAttribute = implementationAttributes.First();
+
+                var asAttributes = type.GetAttributesByInterface<IRegisterAsAttribute>().ToArray();
+                var lifetimeAttributes = type.GetAttributesByInterface<ILifetimeAttribute>().ToArray();
+                if (lifetimeAttributes.Length > 1)
+                    throw new InvalidOperationException($"Only a single lifetime attribute is allowed on a type, type: {type.Name}");
+
+                var lifetimeAttribute = lifetimeAttributes.FirstOrDefault();
+                var lifetime = lifetimeAttribute?.ServiceLifetime ?? implementationAttribute.ServiceLifetime ?? config.DefaultServiceLifetime;
 
                 var registerAsTypes = type.GetServiceTypes(implementationAttribute, asAttributes);
 
@@ -756,7 +828,7 @@ public static class DependancyInjectionExtensions
         
         return serviceCollection;
     }
-
+    
     /// <summary>
     /// Adds the identifier services of the root DI scope making <see cref="DependancyInjectionExtensions.IsRootScope(IServiceProvider)"/> available.
     /// </summary>

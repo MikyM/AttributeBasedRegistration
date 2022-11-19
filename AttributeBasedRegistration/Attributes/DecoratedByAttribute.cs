@@ -1,16 +1,18 @@
-﻿namespace AttributeBasedRegistration.Attributes;
+﻿using AttributeBasedRegistration.Attributes.Abstractions;
+
+namespace AttributeBasedRegistration.Attributes;
 
 /// <summary>
 /// Defines a decorator for a service.
 /// </summary>
 [PublicAPI]
 [AttributeUsage(AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
-public sealed class DecoratedByAttribute : Attribute
+public sealed class DecoratedByAttribute : Attribute, IDecoratedByAttribute
 {
     /// <summary>
     /// Decorator's type.
     /// </summary>
-    public Type DecoratorType { get; private set; }
+    public Type Decorator { get; private set; }
     
     /// <summary>
     /// Registration order.
@@ -25,7 +27,36 @@ public sealed class DecoratedByAttribute : Attribute
     /// n>
     public DecoratedByAttribute(int registrationOrder, Type decoratorType)
     {
-        DecoratorType = decoratorType;
+        Decorator = decoratorType;
         RegistrationOrder = registrationOrder;
+    }
+}
+
+/// <summary>
+/// Defines a decorator for a service.
+/// </summary>
+/// <typeparam name="TDecorator">Type of the decorator.</typeparam>
+[PublicAPI]
+[AttributeUsage(AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
+public sealed class DecoratedByAttribute<TDecorator> : Attribute, IDecoratedByAttribute where TDecorator : class
+{
+    /// <summary>
+    /// Decorator's type.
+    /// </summary>
+    public Type Decorator { get; private set; }
+    
+    /// <summary>
+    /// Registration order.
+    /// </summary>
+    public int RegistrationOrder { get; private set; }
+
+    /// <summary>
+    /// Defines a decorator to use.
+    /// </summary>
+    /// <param name="registrationOrder">Registration order.</param>
+    public DecoratedByAttribute(int registrationOrder)
+    {
+        RegistrationOrder = registrationOrder;
+        Decorator = typeof(TDecorator);
     }
 }
