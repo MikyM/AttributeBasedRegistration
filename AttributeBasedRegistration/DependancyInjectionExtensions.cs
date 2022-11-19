@@ -95,16 +95,16 @@ public static class DependancyInjectionExtensions
 
             foreach (var type in set)
             {
-                var implementationAttributes = type.GetAttributesByInterface<IServiceImplementationAttribute>().ToArray();
+                var implementationAttributes = type.GetRegistrationAttributesOfType<IServiceImplementationAttribute>().ToArray();
                 if (!implementationAttributes.Any())
                     throw new InvalidOperationException();
                 if (implementationAttributes.Length > 1)
                     throw new InvalidOperationException($"Only a single implementation attribute is allowed on a type, type: {type.Name}");
                 var implementationAttribute = implementationAttributes.First();
 
-                var asAttributes = type.GetAttributesByInterface<IRegisterAsAttribute>().ToArray();
-                var constructorAttributes = type.GetAttributesByInterface<IFindConstructorsWithAttribute>().ToArray();
-                var enableInterceptionAttribute = type.GetAttributesByInterface<IEnableInterceptionAttribute>().FirstOrDefault();
+                var asAttributes = type.GetRegistrationAttributesOfType<IRegisterAsAttribute>().ToArray();
+                var constructorAttributes = type.GetRegistrationAttributesOfType<IFindConstructorsWithAttribute>().ToArray();
+                var enableInterceptionAttribute = type.GetRegistrationAttributesOfType<IEnableInterceptionAttribute>().FirstOrDefault();
 
                 if (constructorAttributes.Any() && enableInterceptionAttribute is not null)
                     throw new InvalidOperationException(
@@ -149,19 +149,6 @@ public static class DependancyInjectionExtensions
         return builder;
     }
 
-    private static bool IsServiceImplementation(this Type type)
-        => type.GetCustomAttributes(false).Any(y => y is IServiceImplementationAttribute) &&
-           type.IsClass && !type.IsAbstract;
-
-    private static bool ShouldSkipRegistration(this Type type)
-        => type.GetCustomAttributes(false).Any(y => y is ISkipRegistrationAttribute);
-
-    private static IEnumerable<TAttributeInterface> GetAttributesByInterface<TAttributeInterface>(this Type type) where TAttributeInterface : IRegistrationAttribute
-        => type.GetCustomAttributes(false).Where(y => y is TAttributeInterface).Cast<TAttributeInterface>();
-
-    private static bool IsInterceptorImplementation(this Type type)
-        => type.IsClass && !type.IsAbstract && !type.ShouldSkipRegistration() && type.GetInterfaces().Any(x => x == typeof(IInterceptor) || x == typeof(IAsyncInterceptor));
-
     private static List<Type> GetServiceTypes(this Type type, IServiceImplementationAttribute implementationAttribute, IEnumerable<IRegisterAsAttribute> asAttributes)
         => asAttributes.Where(x => x.ServiceTypes is not null)
             .SelectMany(x => x.ServiceTypes ?? Type.EmptyTypes)
@@ -193,7 +180,7 @@ public static class DependancyInjectionExtensions
             IServiceImplementationAttribute implementationAttribute, AttributeRegistrationOptions options)
         where TActivatorData : ReflectionActivatorData
     {
-        var lifetimeAttributes = type.GetAttributesByInterface<ILifetimeAttribute>().ToArray();
+        var lifetimeAttributes = type.GetRegistrationAttributesOfType<ILifetimeAttribute>().ToArray();
 
         if (lifetimeAttributes.Length > 1)
             throw new InvalidOperationException($"Only a single Lifetime attribute is allowed on a type, type: {type.Name}");
@@ -260,7 +247,7 @@ public static class DependancyInjectionExtensions
         HandleInitialRegistration(
             this ContainerBuilder builder, Type type, bool shouldAsInterfaces)
     {
-        var enableInterceptionAttributes = type.GetAttributesByInterface<IEnableInterceptionAttribute>().ToArray();
+        var enableInterceptionAttributes = type.GetRegistrationAttributesOfType<IEnableInterceptionAttribute>().ToArray();
         if (enableInterceptionAttributes.Length > 1)
             throw new InvalidOperationException($"Only a single enable interception attribute is allowed on a type, type: {type.Name}");
         var enableInterceptionAttribute = enableInterceptionAttributes.FirstOrDefault();
@@ -312,13 +299,13 @@ public static class DependancyInjectionExtensions
             this IRegistrationBuilder<object, TActivatorData, TRegistrationStyle>? builder, ContainerBuilder containerBuilder, Type type)
         where TActivatorData : ReflectionActivatorData
     {
-        var enableInterceptionAttributes = type.GetAttributesByInterface<IEnableInterceptionAttribute>().ToArray();
+        var enableInterceptionAttributes = type.GetRegistrationAttributesOfType<IEnableInterceptionAttribute>().ToArray();
         if (enableInterceptionAttributes.Length > 1)
             throw new InvalidOperationException($"Only a single enable interception attribute is allowed on a type, type: {type.Name}");
         if (enableInterceptionAttributes.Length == 0)
             return builder;
         
-        var interceptedByAttributes = type.GetAttributesByInterface<IInterceptedByAttribute>().ToArray();
+        var interceptedByAttributes = type.GetRegistrationAttributesOfType<IInterceptedByAttribute>().ToArray();
         
         if (interceptedByAttributes.GroupBy(x => x.RegistrationOrder).FirstOrDefault(x => x.Count() > 1) is not null)
             throw new InvalidOperationException($"Duplicated interceptor registration order on type {type.Name}");
@@ -348,7 +335,7 @@ public static class DependancyInjectionExtensions
             this IRegistrationBuilder<object, TActivatorData, TRegistrationStyle>? builder, Type type, ServiceLifetime defaultLifetime)
         where TActivatorData : ReflectionActivatorData
     {
-        var lifetimeAttributes = type.GetAttributesByInterface<ILifetimeAttribute>().ToArray();
+        var lifetimeAttributes = type.GetRegistrationAttributesOfType<ILifetimeAttribute>().ToArray();
         if (lifetimeAttributes.Length > 1)
             throw new InvalidOperationException($"Only a single lifetime attribute is allowed on a type, type: {type.Name}");
 
@@ -488,7 +475,7 @@ public static class DependancyInjectionExtensions
         
         foreach (var assembly in assembliesToScan)
         {
-            var interceptors = assembly.GetTypes().Where(x => x.IsInterceptorImplementation());
+            var interceptors = assembly.GetTypes().Where(x => x.IsInterceptorImplementation() && !x.ShouldSkipRegistration());
 
             foreach (var interceptor in interceptors)
             {
@@ -507,7 +494,7 @@ public static class DependancyInjectionExtensions
             this IRegistrationBuilder<object, TActivatorData, TRegistrationStyle>? builder, Type type)
         where TActivatorData : ReflectionActivatorData
     {
-        var findCtorAttributes = type.GetAttributesByInterface<IFindConstructorsWithAttribute>().ToArray();
+        var findCtorAttributes = type.GetRegistrationAttributesOfType<IFindConstructorsWithAttribute>().ToArray();
         if (!findCtorAttributes.Any())
             return builder;
 
@@ -528,7 +515,7 @@ public static class DependancyInjectionExtensions
             this IRegistrationBuilder<object, TActivatorData, TRegistrationStyle>? builder, Type type)
         where TActivatorData : ReflectionActivatorData
     {
-        var selectCtorAttributes = type.GetAttributesByInterface<ISelectConstructorsWithAttribute>().ToArray();
+        var selectCtorAttributes = type.GetRegistrationAttributesOfType<ISelectConstructorsWithAttribute>().ToArray();
         if (!selectCtorAttributes.Any())
             return builder;
 
@@ -547,7 +534,7 @@ public static class DependancyInjectionExtensions
     private static ContainerBuilder HandleDecoration(this ContainerBuilder builder, Type type, bool shouldAsSelf, List<Type> registerAsTypes, bool shouldAsInterfaces,
         bool shouldAsDirectAncestors, bool shouldUsingNamingConvention)
     {
-        var decoratorAttributes = type.GetAttributesByInterface<IDecoratedByAttribute>().ToArray();
+        var decoratorAttributes = type.GetRegistrationAttributesOfType<IDecoratedByAttribute>().ToArray();
         if (!decoratorAttributes.Any())
             return builder;
 
@@ -726,15 +713,15 @@ public static class DependancyInjectionExtensions
 
             foreach (var type in set)
             {
-                var implementationAttributes = type.GetAttributesByInterface<IServiceImplementationAttribute>().ToArray();
+                var implementationAttributes = type.GetRegistrationAttributesOfType<IServiceImplementationAttribute>().ToArray();
                 if (!implementationAttributes.Any())
                     throw new InvalidOperationException();
                 if (implementationAttributes.Length > 1)
                     throw new InvalidOperationException($"Only a single implementation attribute is allowed on a type, type: {type.Name}");
                 var implementationAttribute = implementationAttributes.First();
 
-                var asAttributes = type.GetAttributesByInterface<IRegisterAsAttribute>().ToArray();
-                var lifetimeAttributes = type.GetAttributesByInterface<ILifetimeAttribute>().ToArray();
+                var asAttributes = type.GetRegistrationAttributesOfType<IRegisterAsAttribute>().ToArray();
+                var lifetimeAttributes = type.GetRegistrationAttributesOfType<ILifetimeAttribute>().ToArray();
                 if (lifetimeAttributes.Length > 1)
                     throw new InvalidOperationException($"Only a single lifetime attribute is allowed on a type, type: {type.Name}");
 
