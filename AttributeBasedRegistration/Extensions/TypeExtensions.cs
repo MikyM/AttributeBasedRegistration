@@ -1,5 +1,6 @@
 ﻿using AttributeBasedRegistration.Attributes.Abstractions;
 using Castle.DynamicProxy;
+using MikyM.Utilities.Extensions;
 
 namespace AttributeBasedRegistration.Extensions;
 
@@ -32,8 +33,17 @@ public static class TypeExtensions
     /// <param name="type">Type to check.</param>
     /// <typeparam name="TAttribute">Searched attribute type.</typeparam>
     /// <returns>A collection of attributes.</returns>
-    public static IEnumerable<TAttribute> GetRegistrationAttributesOfType<TAttribute>(this Type type) where TAttribute : IRegistrationAttribute
+    public static IEnumerable<TAttribute> GetRegistrationAttributesOfType<TAttribute>(this Type type) where TAttribute : class, IRegistrationAttribute
         => type.GetCustomAttributes(false).Where(y => y is TAttribute).Cast<TAttribute>();
+    
+    /// <summary>
+    /// Gets the first found attribute that can be cast to the given type.
+    /// </summary>
+    /// <param name="type">Type to check.</param>
+    /// <typeparam name="TAttribute">Searched attribute type.</typeparam>
+    /// <returns>A collection of attributes.</returns>
+    public static TAttribute? GetRegistrationAttributeOfType<TAttribute>(this Type type) where TAttribute : class, IRegistrationAttribute
+        => type.GetCustomAttributes(false).FirstOrDefault(y => y is TAttribute)?.CastTo<TAttribute?>();
 
     /// <summary>
     /// Checks whether the current type is an interceptor implementation (implements either <see cref="IInterceptor"/> or <see cref="IAsyncInterceptor"/>).
