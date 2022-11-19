@@ -1,11 +1,13 @@
-﻿namespace AttributeBasedRegistration.Attributes;
+﻿using AttributeBasedRegistration.Attributes.Abstractions;
+
+namespace AttributeBasedRegistration.Attributes;
 
 /// <summary>
 /// Defines whether to enable interception for this registration.
 /// </summary>
 [PublicAPI]
 [AttributeUsage(AttributeTargets.Class, Inherited = false)]
-public sealed class EnableInterceptionAttribute : Attribute
+public sealed class EnableInterceptionAttribute : Attribute, IEnableInterceptionAttribute
 {
     /// <summary>
     /// Type of interception.

@@ -1,11 +1,13 @@
-﻿namespace AttributeBasedRegistration.Attributes;
+﻿using AttributeBasedRegistration.Attributes.Abstractions;
+
+namespace AttributeBasedRegistration.Attributes;
 
 /// <summary>
 /// Defines with which lifetime should the service be registered.
 /// </summary>
 [PublicAPI]
 [AttributeUsage(AttributeTargets.Class, Inherited = false)]
-public sealed class LifetimeAttribute : Attribute
+public sealed class LifetimeAttribute : Attribute, ILifetimeAttribute
 {
     /// <summary>
     /// Lifetime to use for the registration.

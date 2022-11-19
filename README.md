@@ -8,9 +8,9 @@ Library allowing registering services with Autofac and Microsoft's DI container 
 
 Set of attributes allowing automatic registration:
 
-- [ServiceImplementation] - marks the class as an implementation of a service
-- [RegisterAs] - defines service types or a registration strategy
-- [Lifetime] - defines the lifetime with which the service should be registered (Autofac's based - Microsoft's DI equivalent will be used) - some supported only with Autofac
+- [ServiceImplementation] - marks the class as an implementation of a service, allows for a quick definition providing a few possible ctors
+- [RegisterAs] - explicitly defines service types or a registration strategy
+- [Lifetime] - explicitly defines the lifetime with which the service should be registered (Autofac's based - Microsoft's DI equivalent will be used) - some supported only with Autofac
 - [EnableInterception] - enables interception on the service, in theory supports intercepting classes and interfaces (or both) (Intercept enum) though intercepting classes sometimes suffers from weird Castle.Core bugs thus when using interception it is encouraged to use interface service types - supported only with Autofac
 - [InterceptedBy] - defines interceptor types that should intercept calls to the service - supported only with Autofac
 - [FindConstructorsWith] - defines a constructor finder to use during creation of the service instance, supports only parameterless ctors and can't be used in conjunction with interceptors - supported only with Autofac
@@ -32,20 +32,27 @@ builder.AddAttributeDefinedServices(assembliesToScan);
 
 ```csharp
 
-public interface ICustomService
+public interface ICustomService1
 {
-
 }
 
 [ServiceImplementation]
 [RegisterAs(typeof(ICustomService))]
 [Lifetime(ServiceLifetime.InstancePerLifetimeScope)]
-[DecoratedBy(typeof(ISomeDecorator), 1)]
+[DecoratedBy(1, typeof(ISomeDecorator))]
 [EnableInterception(InterceptionStrategy.Interface)]
-[InterceptedBy(typeof(ISomeInterceptor))]
-public class CustomService : ICustomService
+[InterceptedBy(1, typeof(ISomeInterceptor))]
+public class CustomService1 : ICustomService1
 {
+}
 
+public interface ICustomService2
+{
+}
+
+[ServiceImplementation(ServiceLifetime.SingleInstance, )]
+public class CustomService2 : ICustomService2
+{
 }
 
 ```
