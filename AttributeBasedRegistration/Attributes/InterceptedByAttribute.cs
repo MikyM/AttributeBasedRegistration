@@ -35,6 +35,7 @@ public sealed class InterceptedByAttribute : Attribute, IInterceptedByAttribute
     }
 }
 
+#if NET7_0
 /// <summary>
 /// Defines with what interceptors should the service be intercepted.
 /// </summary>
@@ -67,3 +68,4 @@ public sealed class InterceptedByAttribute<TInterceptor> : Attribute, IIntercept
         RegistrationOrder = registrationOrder;
     }
 }
+#endif

@@ -39,6 +39,7 @@ public sealed class RegisterAsAttribute : Attribute, IRegisterAsAttribute
         => RegistrationStrategy = registrationStrategy;
 }
 
+#if NET7_0
 /// <summary>
 /// Defines as what should the service be registered.
 /// </summary>
@@ -149,3 +150,4 @@ public sealed class RegisterAsAttribute<TService1, TService2, TService3, TServic
     public RegisterAsAttribute()
         => ServiceTypes = new[] { typeof(TService1), typeof(TService2), typeof(TService3), typeof(TService4) };
 }
+#endif

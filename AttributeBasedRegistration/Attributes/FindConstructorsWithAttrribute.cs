@@ -30,6 +30,7 @@ public class FindConstructorsWithAttribute : Attribute, IFindConstructorsWithAtt
     }
 }
 
+#if NET7_0
 /// <summary>
 /// Marks a registration to use a specific constructor finder.
 /// </summary>
@@ -58,3 +59,4 @@ public class FindConstructorsWithAttribute<TCtorFinder> : Attribute, IFindConstr
         ConstructorFinder = constructorFinder;
     }
 }
+#endif
