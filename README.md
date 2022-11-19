@@ -50,7 +50,7 @@ public interface ICustomService2
 {
 }
 
-[ServiceImplementation(ServiceLifetime.SingleInstance, )]
+[ServiceImplementation(ServiceLifetime.SingleInstance, RegistrationStrategy.AsConventionNamedInterface)]
 public class CustomService2 : ICustomService2
 {
 }
