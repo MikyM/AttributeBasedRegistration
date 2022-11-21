@@ -26,6 +26,15 @@ public static class TypeExtensions
     /// <returns>True if automatic registration should be skipped, otherwise false.</returns>
     public static bool ShouldSkipRegistration(this Type type)
         => type.GetCustomAttributes(false).Any(y => y is ISkipRegistrationAttribute);
+        
+    /// <summary>
+    /// Checks whether the automatic registration process should be skipped by checking if there is an attribute of a given type defined on the target type.
+    /// </summary>
+    /// <param name="type">Type to check.</param>
+    /// <typeparam name="TSkipAttribute">Type of attribute to look for.</typeparam>
+    /// <returns>True if automatic registration should be skipped, otherwise false.</returns>
+    public static bool ShouldSkipRegistration<TSkipAttribute>(this Type type) where TSkipAttribute : ISkipRegistrationAttribute
+        => type.GetCustomAttributes(false).Any(y => y is TSkipAttribute);
 
     /// <summary>
     /// Gets all registration attributes that can be cast to the given type.
