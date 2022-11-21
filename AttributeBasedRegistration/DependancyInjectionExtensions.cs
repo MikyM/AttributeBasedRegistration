@@ -475,7 +475,7 @@ public static class DependancyInjectionExtensions
         
         foreach (var assembly in assembliesToScan)
         {
-            var interceptors = assembly.GetTypes().Where(x => x.IsInterceptorImplementation() && !x.ShouldSkipRegistration());
+            var interceptors = assembly.GetTypes().Where(x => x.IsInterceptorImplementation() && !x.ShouldSkipRegistration<ISkipInterceptorRegistrationAttribute>());
 
             foreach (var interceptor in interceptors)
             {
@@ -565,7 +565,7 @@ public static class DependancyInjectionExtensions
         
         foreach (var attribute in decoratorAttributes.OrderBy(x => x.RegistrationOrder))
         {
-            if (attribute.Decorator.ShouldSkipRegistration())
+            if (attribute.Decorator.ShouldSkipRegistration<ISkipDecoratorRegistrationAttribute>())
                 continue;
             
             if (attribute.Decorator.IsGenericType && attribute.Decorator.IsGenericTypeDefinition)
