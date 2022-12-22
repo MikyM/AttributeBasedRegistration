@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AttributeBasedRegistration", "AttributeBasedRegistration\AttributeBasedRegistration.csproj", "{5499165F-2C17-4544-A0B4-C2AA1D114522}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AttributeBasedRegistration.Autofac", "AttributeBasedRegistration.Autofac\AttributeBasedRegistration.Autofac.csproj", "{0C3EA410-2FF4-4E61-A3EE-197031DA619F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{5499165F-2C17-4544-A0B4-C2AA1D114522}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5499165F-2C17-4544-A0B4-C2AA1D114522}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5499165F-2C17-4544-A0B4-C2AA1D114522}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C3EA410-2FF4-4E61-A3EE-197031DA619F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C3EA410-2FF4-4E61-A3EE-197031DA619F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C3EA410-2FF4-4E61-A3EE-197031DA619F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C3EA410-2FF4-4E61-A3EE-197031DA619F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
