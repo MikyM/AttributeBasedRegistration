@@ -11,6 +11,11 @@ namespace AttributeBasedRegistration.Extensions;
 public static class TypeExtensions
 {
     /// <summary>
+    /// Whether given interceptor is an async interceptor.
+    /// </summary>
+    public static bool IsAsyncInterceptor(this Type interceptorCandidate) => interceptorCandidate.GetInterfaces().Any(x => x == typeof(IAsyncInterceptor));
+    
+    /// <summary>
     /// Checks whether the current type is a service implementation (has a <see cref="IServiceImplementationAttribute"/> attribute).
     /// </summary>
     /// <param name="type">Candidate.</param>
