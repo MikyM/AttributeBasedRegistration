@@ -2,7 +2,7 @@
 using System.Reflection;
 using Autofac.Core.Activators.Reflection;
 
-namespace AttributeBasedRegistration;
+namespace AttributeBasedRegistration.Autofac;
 
 /// <summary>
 /// Constructor finder that finds all constructors.

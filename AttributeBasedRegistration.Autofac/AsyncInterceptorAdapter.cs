@@ -1,6 +1,6 @@
 ﻿using Castle.DynamicProxy;
 
-namespace AttributeBasedRegistration;
+namespace AttributeBasedRegistration.Autofac;
 
 /// <summary>
 /// Interceptor adapter that allows registering asynchronous interceptors.

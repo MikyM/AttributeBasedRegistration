@@ -11,11 +11,6 @@ namespace AttributeBasedRegistration.Extensions;
 public static class TypeExtensions
 {
     /// <summary>
-    /// Whether given interceptor is an async interceptor.
-    /// </summary>
-    public static bool IsAsyncInterceptor(this Type interceptorCandidate) => interceptorCandidate.GetInterfaces().Any(x => x == typeof(IAsyncInterceptor));
-    
-    /// <summary>
     /// Checks whether the current type is a service implementation (has a <see cref="IServiceImplementationAttribute"/> attribute).
     /// </summary>
     /// <param name="type">Candidate.</param>
@@ -41,6 +36,24 @@ public static class TypeExtensions
     public static bool ShouldSkipRegistration<TSkipAttribute>(this Type type) where TSkipAttribute : ISkipRegistrationAttribute
         => type.GetCustomAttributes(false).Any(y => y is TSkipAttribute);
 
+    /// <summary>
+    /// Gets all attributes that can be cast to the given type.
+    /// </summary>
+    /// <param name="type">Type to check.</param>
+    /// <typeparam name="TAttribute">Searched attribute type.</typeparam>
+    /// <returns>A collection of attributes.</returns>
+    public static IEnumerable<TAttribute> GetAttributesOfType<TAttribute>(this Type type) where TAttribute : class
+        => type.GetCustomAttributes(false).Where(y => y is TAttribute).Cast<TAttribute>();
+    
+    /// <summary>
+    /// Gets the first found attribute that can be cast to the given type.
+    /// </summary>
+    /// <param name="type">Type to check.</param>
+    /// <typeparam name="TAttribute">Searched attribute type.</typeparam>
+    /// <returns>Found attribute or null.</returns>
+    public static TAttribute? GetAttributeOfType<TAttribute>(this Type type) where TAttribute : class
+        => type.GetCustomAttributes(false).FirstOrDefault(y => y is TAttribute)?.CastTo<TAttribute?>();
+    
     /// <summary>
     /// Gets all registration attributes that can be cast to the given type.
     /// </summary>

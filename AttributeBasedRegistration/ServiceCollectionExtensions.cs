@@ -12,10 +12,8 @@ namespace AttributeBasedRegistration;
 /// Extensions.
 /// </summary>
 [PublicAPI]
-public static class DependancyInjectionExtensions
+public static class ServiceCollectionExtensions
 {
-
-
     /// <summary>
     /// Registers services with <see cref="IServiceCollection"/> via attributes.
     /// </summary>
@@ -194,7 +192,7 @@ public static class DependancyInjectionExtensions
     }
     
     /// <summary>
-    /// Adds the identifier services of the root DI scope making <see cref="DependancyInjectionExtensions.IsRootScope(IServiceProvider)"/> available.
+    /// Adds the identifier services of the root DI scope making <see cref="ServiceCollectionExtensions.IsRootScope(IServiceProvider)"/> available.
     /// </summary>
     /// <param name="serviceCollection">The service collection.</param>
     public static IServiceCollection AddRootScopeIdentifier(this IServiceCollection serviceCollection)

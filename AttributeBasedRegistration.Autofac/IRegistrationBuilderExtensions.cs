@@ -3,7 +3,7 @@ using Autofac.Builder;
 using Autofac.Core;
 using Autofac.Features.Scanning;
 
-namespace AttributeBasedRegistration;
+namespace AttributeBasedRegistration.Autofac;
 
 // ReSharper disable once InconsistentNaming
 /// <summary>
