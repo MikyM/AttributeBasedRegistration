@@ -27,6 +27,9 @@ To pick up and register services via attributes use the extensions method on `Co
 ```csharp
 builder.AddAttributeDefinedServices(assembliesToScan);
 ```
+## Documentation
+
+Documentation available at https://docs.attribute-registration.mikym.me/.
 
 ## Example usage
 
