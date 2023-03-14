@@ -19,6 +19,6 @@ public sealed class AllConstructorsFinder : IConstructorFinder
         var result = Cache.GetOrAdd(targetType,
             t => t.GetTypeInfo().DeclaredConstructors.Where(c => !c.IsStatic).ToArray());
 
-        return result.Length > 0 ? result : throw new NoConstructorsFoundException(targetType);
+        return result.Length > 0 ? result : throw new NoConstructorsFoundException(targetType, this);
     }
 }

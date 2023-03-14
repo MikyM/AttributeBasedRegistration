@@ -5,7 +5,7 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <PackageId>AttributeBasedRegistration.Autofac</PackageId>
-        <Version>2.0.10</Version>
+        <Version>2.1.0</Version>
         <Authors>Krzysztof Kupisz</Authors>
         <PackageDescription>Extensions to Autofac DI mainly allowing registration of services via attributes amongst other minor things.</PackageDescription>
         <RepositoryUrl>https://github.com/MikyM/AttributeBasedRegistration</RepositoryUrl>
@@ -21,11 +21,11 @@
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="Autofac" Version="6.5.0" />
+      <PackageReference Include="Autofac" Version="7.0.0" />
       <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="8.0.0" />
       <PackageReference Include="Autofac.Extras.DynamicProxy" Version="6.0.1" />
       <PackageReference Include="Castle.Core.AsyncInterceptor" Version="2.1.0" />
-      <PackageReference Include="MikyM.Utilities" Version="2.0.3" />
+      <PackageReference Include="MikyM.Utilities" Version="2.1.0" />
     </ItemGroup>
 
     <ItemGroup>
