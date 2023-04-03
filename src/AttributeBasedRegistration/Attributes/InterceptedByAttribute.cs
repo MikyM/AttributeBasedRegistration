@@ -1,7 +1,6 @@
 ﻿using AttributeBasedRegistration.Attributes.Abstractions;
-using Castle.DynamicProxy;
 
-namespace AttributeBasedRegistration.Autofac.Attributes;
+namespace AttributeBasedRegistration.Attributes;
 
 /// <summary>
 /// Defines with what interceptors should the service be intercepted.
@@ -27,9 +26,6 @@ public sealed class InterceptedByAttribute : Attribute, IInterceptedByAttribute
     /// <param name="registrationOrder">Registration order.</param>
     public InterceptedByAttribute(int registrationOrder, Type interceptor)
     {
-        if (interceptor.GetInterfaces().All(x => x != typeof(IAsyncInterceptor) && x != typeof(IInterceptor)))
-            throw new ArgumentException($"{interceptor.Name} does not implement any interceptor interface");
-
         Interceptor = interceptor;
         RegistrationOrder = registrationOrder;
     }
@@ -61,8 +57,6 @@ public sealed class InterceptedByAttribute<TInterceptor> : Attribute, IIntercept
     public InterceptedByAttribute(int registrationOrder)
     {
         var interceptor = typeof(TInterceptor);
-        if (interceptor.GetInterfaces().All(x => x != typeof(IAsyncInterceptor) && x != typeof(IInterceptor)))
-            throw new ArgumentException($"{interceptor.Name} does not implement any interceptor interface");
 
         Interceptor = interceptor;
         RegistrationOrder = registrationOrder;
