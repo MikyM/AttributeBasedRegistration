@@ -1,5 +1,4 @@
 ﻿using AttributeBasedRegistration.Attributes.Abstractions;
-using Castle.DynamicProxy;
 using MikyM.Utilities.Extensions;
 
 namespace AttributeBasedRegistration.Extensions;
@@ -71,12 +70,4 @@ public static class TypeExtensions
     /// <returns>Found attribute or null.</returns>
     public static TAttribute? GetRegistrationAttributeOfType<TAttribute>(this Type type) where TAttribute : class, IRegistrationAttribute
         => type.GetCustomAttributes(false).FirstOrDefault(y => y is TAttribute)?.CastTo<TAttribute?>();
-
-    /// <summary>
-    /// Checks whether the current type is an interceptor implementation (implements either <see cref="IInterceptor"/> or <see cref="IAsyncInterceptor"/>).
-    /// </summary>
-    /// <param name="type">Candidate.</param>
-    /// <returns>True if type is an interceptor implementation, otherwise false.</returns>
-    public static bool IsInterceptorImplementation(this Type type)
-        => type.IsClass && !type.IsAbstract && type.GetInterfaces().Any(x => x == typeof(IInterceptor) || x == typeof(IAsyncInterceptor));
 }

@@ -1,7 +1,7 @@
 ﻿using AttributeBasedRegistration.Attributes.Abstractions;
 using Autofac.Core.Activators.Reflection;
 
-namespace AttributeBasedRegistration.Attributes;
+namespace AttributeBasedRegistration.Autofac.Attributes;
 
 /// <summary>
 /// Marks a registration to use a specific constructor selector.

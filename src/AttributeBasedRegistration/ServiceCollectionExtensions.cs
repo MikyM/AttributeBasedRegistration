@@ -1,7 +1,6 @@
 ﻿using System.Reflection;
 using AttributeBasedRegistration.Attributes.Abstractions;
 using AttributeBasedRegistration.Extensions;
-using Autofac;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using MikyM.Utilities.Extensions;
@@ -20,7 +19,7 @@ public static class ServiceCollectionExtensions
     /// <param name="serviceCollection">Current service collection instance.</param>
     /// <param name="assembliesContainingTypesToScan">Assemblies containing types to scan for services.</param>
     /// <param name="options">Optional configuration.</param>
-    /// <returns>Current <see cref="ContainerBuilder"/> instance.</returns>
+    /// <returns>Current <see cref="IServiceCollection"/> instance.</returns>
     public static IServiceCollection AddAttributeDefinedServices(this IServiceCollection serviceCollection,
         IEnumerable<Type> assembliesContainingTypesToScan, Action<AttributeRegistrationOptions>? options = null)
         => AddAttributeDefinedServices(serviceCollection, assembliesContainingTypesToScan.Select(x => x.Assembly),
@@ -31,7 +30,7 @@ public static class ServiceCollectionExtensions
     /// </summary>
     /// <param name="serviceCollection">Current service collection instance.</param>
     /// <param name="assembliesContainingTypesToScan">Assemblies containing types to scan for services.</param>
-    /// <returns>Current <see cref="ContainerBuilder"/> instance.</returns>
+    /// <returns>Current <see cref="IServiceCollection"/> instance.</returns>
     public static IServiceCollection AddAttributeDefinedServices(this IServiceCollection serviceCollection, params Type[] assembliesContainingTypesToScan)
         => AddAttributeDefinedServices(serviceCollection, assembliesContainingTypesToScan, null);
     
@@ -41,7 +40,7 @@ public static class ServiceCollectionExtensions
     /// <param name="serviceCollection">Current service collection instance.</param>
     /// <param name="options">Configuration.</param>
     /// <param name="assembliesContainingTypesToScan">Assemblies containing types to scan for services.</param>
-    /// <returns>Current <see cref="ContainerBuilder"/> instance.</returns>
+    /// <returns>Current <see cref="IServiceCollection"/> instance.</returns>
     public static IServiceCollection AddAttributeDefinedServices(this IServiceCollection serviceCollection, Action<AttributeRegistrationOptions> options, params Type[] assembliesContainingTypesToScan)
         => AddAttributeDefinedServices(serviceCollection, assembliesContainingTypesToScan, options);
     
@@ -51,7 +50,7 @@ public static class ServiceCollectionExtensions
     /// <param name="serviceCollection">Current service collection instance.</param>
     /// <param name="options">Configuration.</param>
     /// <param name="assembliesToScan">Assemblies to scan for services.</param>
-    /// <returns>Current <see cref="ContainerBuilder"/> instance.</returns>
+    /// <returns>Current <see cref="IServiceCollection"/> instance.</returns>
     public static IServiceCollection AddAttributeDefinedServices(this IServiceCollection serviceCollection, Action<AttributeRegistrationOptions> options, params Assembly[] assembliesToScan)
         => AddAttributeDefinedServices(serviceCollection, assembliesToScan, options);
     
@@ -60,7 +59,7 @@ public static class ServiceCollectionExtensions
     /// </summary>
     /// <param name="serviceCollection">Current service collection instance.</param>
     /// <param name="assembliesToScan">Assemblies to scan for services.</param>
-    /// <returns>Current <see cref="ContainerBuilder"/> instance.</returns>
+    /// <returns>Current <see cref="IServiceCollection"/> instance.</returns>
     public static IServiceCollection AddAttributeDefinedServices(this IServiceCollection serviceCollection, params Assembly[] assembliesToScan)
         => AddAttributeDefinedServices(serviceCollection, assembliesToScan, null);
 
@@ -70,7 +69,7 @@ public static class ServiceCollectionExtensions
     /// <param name="serviceCollection">Current service collection instance.</param>
     /// <param name="assembliesToScan">Assemblies to scan for services.</param>
     /// <param name="options">Optional configuration.</param>
-    /// <returns>Current <see cref="ContainerBuilder"/> instance.</returns>
+    /// <returns>Current <see cref="IServiceCollection"/> instance.</returns>
     public static IServiceCollection AddAttributeDefinedServices(this IServiceCollection serviceCollection, IEnumerable<Assembly> assembliesToScan, Action<AttributeRegistrationOptions>? options = null)
     {
         var config = new AttributeRegistrationOptions();

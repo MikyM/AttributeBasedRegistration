@@ -1,7 +1,7 @@
 ﻿using AttributeBasedRegistration.Attributes.Abstractions;
 using Castle.DynamicProxy;
 
-namespace AttributeBasedRegistration.Attributes;
+namespace AttributeBasedRegistration.Autofac.Attributes;
 
 /// <summary>
 /// Defines with what interceptors should the service be intercepted.

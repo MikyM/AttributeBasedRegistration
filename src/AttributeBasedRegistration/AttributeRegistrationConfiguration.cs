@@ -1,7 +1,4 @@
-﻿using Autofac;
-using Microsoft.Extensions.DependencyInjection;
-
-namespace AttributeBasedRegistration;
+﻿namespace AttributeBasedRegistration;
 
 /// <summary>
 /// Registration extension configuration.
