@@ -52,7 +52,7 @@ jobs:
       with:
         context: ./docs
         push: true
-        tags: ${{ secrets.DOCKER_REGISTRY }}/docs-attr-regist:latest
+        tags: ${{ secrets.DOCKER_REGISTRY }}/attribute-registration:latest
     - name: Sleep for 10 seconds
       uses: jakejarvis/wait-action@master
       with:
