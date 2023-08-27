@@ -29,7 +29,7 @@ builder.AddAttributeDefinedServices(assembliesToScan);
 ```
 ## Documentation
 
-Documentation available at https://docs.attribute-registration.mikym.me/.
+Documentation available at https://attribute-registration.mikym.me/.
 
 ## Example usage
 
