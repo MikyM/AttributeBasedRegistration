@@ -61,4 +61,4 @@ jobs:
       uses: wei/curl@v1
       with:
         args: |
-          -H \"Authorization: Bearer ${{ secrets.WATCHTOWER_HTTP_API_TOKEN}}\" ${{ secrets.HOST_WATCHTOWER_API}}
+          -H \"Authorization: Bearer ${{ secrets.WATCHTOWER_HTTP_API_TOKEN}}\" ${{ secrets.HOST_WATCHTOWER_API}} --connect-timeout 600
