@@ -66,9 +66,9 @@ jobs:
       if: github.event_name == 'push'
       run: dotnet nuget push ./src/AttributeBasedRegistration.Autofac/out/*.nupkg --skip-duplicate -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
       
-    - name: Build docs - docfx metadata
+    - name: Build docs - copy readme and docfx metadata
       if: github.event_name == 'push' && !contains(format('{0} {1}', github.event.head_commit.message, github.event.pull_request.title), '[doc-skip]')
-      run: cd ./docs && dotnet docfx metadata
+      run: cd ./docs && cp ../README.md index.md && dotnet docfx metadata
 
     - name: Build docs - fix namespaces
       if: github.event_name == 'push' && !contains(format('{0} {1}', github.event.head_commit.message, github.event.pull_request.title), '[doc-skip]')
