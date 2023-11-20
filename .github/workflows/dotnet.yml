@@ -15,6 +15,7 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
+    if: "!contains(format('{0} {1}', github.event.head_commit.message, github.event.pull_request.title), '[ci-skip]')"
     steps:
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
@@ -46,23 +47,23 @@ jobs:
         dotnet test -c Release --no-restore --no-build --verbosity minimal
 
     - name: Pack AttributeBasedRegistration
-      if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+      if: github.event_name == 'push'
       run: |  
         cd src/AttributeBasedRegistration
         dotnet pack -c Release -o out 
 
     - name: Push AttributeBasedRegistration NuGet registry
-      if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+      if: github.event_name == 'push'
       run: dotnet nuget push ./src/AttributeBasedRegistration/out/*.nupkg --skip-duplicate -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
 
     - name: Pack AttributeBasedRegistration.Autofac
-      if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+      if: github.event_name == 'push'
       run: | 
         cd src/AttributeBasedRegistration.Autofac
         dotnet pack -c Release -o out 
 
     - name: Push AttributeBasedRegistration.Autofac NuGet registry
-      if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+      if: github.event_name == 'push'
       run: dotnet nuget push ./src/AttributeBasedRegistration.Autofac/out/*.nupkg --skip-duplicate -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
       
     - name: Build docs - docfx metadata
@@ -88,7 +89,7 @@ jobs:
   publish_docs:
     name: Publish Documentation
     needs: build
-    if: github.event_name == 'push'
+    if: github.event_name == 'push' && !contains(format('{0} {1}', github.event.head_commit.message, github.event.pull_request.title), '[doc-skip]') && !contains(format('{0} {1}', github.event.head_commit.message, github.event.pull_request.title), '[ci-skip]')
     runs-on: ubuntu-latest
     steps:
       - name: Checkout triggering branch
