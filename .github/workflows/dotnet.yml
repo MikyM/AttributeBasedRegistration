@@ -67,20 +67,20 @@ jobs:
       run: dotnet nuget push ./src/AttributeBasedRegistration.Autofac/out/*.nupkg --skip-duplicate -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
       
     - name: Build docs - docfx metadata
-      if: github.event_name == 'push'
+      if: github.event_name == 'push' && !contains(format('{0} {1}', github.event.head_commit.message, github.event.pull_request.title), '[doc-skip]')
       run: cd ./docs && dotnet docfx metadata
 
     - name: Build docs - fix namespaces
-      if: github.event_name == 'push'
+      if: github.event_name == 'push' && !contains(format('{0} {1}', github.event.head_commit.message, github.event.pull_request.title), '[doc-skip]')
       shell: pwsh
       run: cd ./docs && ./fix-nmsp.ps1 api\toc.yml
 
     - name: Build docs - docfx build
-      if: github.event_name == 'push'
+      if: github.event_name == 'push' && !contains(format('{0} {1}', github.event.head_commit.message, github.event.pull_request.title), '[doc-skip]')
       run: cd ./docs && dotnet docfx build -f
       
     - name: Upload docs
-      if: github.event_name == 'push'
+      if: github.event_name == 'push' && !contains(format('{0} {1}', github.event.head_commit.message, github.event.pull_request.title), '[doc-skip]')
       uses: actions/upload-artifact@v3
       with:
         name: docfx-site
