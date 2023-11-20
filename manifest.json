@@ -1,0 +1,668 @@
+{
+  "homepages": [],
+  "source_base_path": "/home/runner/work/AttributeBasedRegistration/AttributeBasedRegistration/docs",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttributeBasedRegistration.AttributeRegistrationOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttributeBasedRegistration.AttributeRegistrationOptions.html",
+          "hash": "byD0TvTJxu9Z6pMrlNSsaK2+7Cmz5zHaHuH5clkrsQE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttributeBasedRegistration.Attributes.Abstractions.IDecoratedByAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttributeBasedRegistration.Attributes.Abstractions.IDecoratedByAttribute.html",
+          "hash": "JwfwKE16Di/nhT496hdndKnLrk1Xg8g+vJRMkITanJE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttributeBasedRegistration.Attributes.Abstractions.IEnableInterceptionAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttributeBasedRegistration.Attributes.Abstractions.IEnableInterceptionAttribute.html",
+          "hash": "2OFLV+LNFhEG3dEMLTzxavrJrl1cNQ8EccuxvX3r/s8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttributeBasedRegistration.Attributes.Abstractions.IFindConstructorsWithAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttributeBasedRegistration.Attributes.Abstractions.IFindConstructorsWithAttribute.html",
+          "hash": "IbNmNAqw6fw2RdWrVIfPKUpc04CMNZ4aMSc7aS4ZMQU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttributeBasedRegistration.Attributes.Abstractions.IInterceptedByAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttributeBasedRegistration.Attributes.Abstractions.IInterceptedByAttribute.html",
+          "hash": "15CPvCorpGEpB6xKX76JYTgd2FLHq4wjeeuHSWIJ6+A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttributeBasedRegistration.Attributes.Abstractions.ILifetimeAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttributeBasedRegistration.Attributes.Abstractions.ILifetimeAttribute.html",
+          "hash": "CX/TBlfLyYsMvqkQtcIGmzjOTWMqXCGGPiwrJhxwyPI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttributeBasedRegistration.Attributes.Abstractions.IRegisterAsAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttributeBasedRegistration.Attributes.Abstractions.IRegisterAsAttribute.html",
+          "hash": "DA+5UnYdqAvE8/iQzlqwwZVEKQ/qU0o37p0AghF9J3k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttributeBasedRegistration.Attributes.Abstractions.IRegisterKeyedAsAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttributeBasedRegistration.Attributes.Abstractions.IRegisterKeyedAsAttribute.html",
+          "hash": "ox7JSlf4Ozf1qHyvzmLBT7AH3GvcxywVfGpZRjmoV30="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttributeBasedRegistration.Attributes.Abstractions.IRegistrationAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttributeBasedRegistration.Attributes.Abstractions.IRegistrationAttribute.html",
+          "hash": "2ms0GEF4SnfUO5vPMykax68eEIEM1VH5Xn7UgZJdx5I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttributeBasedRegistration.Attributes.Abstractions.ISelectConstructorsWithAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttributeBasedRegistration.Attributes.Abstractions.ISelectConstructorsWithAttribute.html",
+          "hash": "04QGxASS7/vs08lGfLgC1kMv/FvKVP11PqEVANa97uk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttributeBasedRegistration.Attributes.Abstractions.IServiceImplementationAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttributeBasedRegistration.Attributes.Abstractions.IServiceImplementationAttribute.html",
+          "hash": "jCpBfAX39clq/vyVcuuvF5k9qt9ju4sjzFeixRlCukM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttributeBasedRegistration.Attributes.Abstractions.ISkipDecoratorRegistrationAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttributeBasedRegistration.Attributes.Abstractions.ISkipDecoratorRegistrationAttribute.html",
+          "hash": "ak/Hjp/mAl8bWSxDIcalbVKkdZgu1E5nC+JK/9U9ia4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttributeBasedRegistration.Attributes.Abstractions.ISkipInterceptorRegistrationAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttributeBasedRegistration.Attributes.Abstractions.ISkipInterceptorRegistrationAttribute.html",
+          "hash": "7Z3r8hKujBzjobGHexYAX58ZyvrwLB+JCP5CIyUE4V0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttributeBasedRegistration.Attributes.Abstractions.ISkipRegistrationAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttributeBasedRegistration.Attributes.Abstractions.ISkipRegistrationAttribute.html",
+          "hash": "c9UQghNCaYmLNM+eKY6VGs3kuFoMIEwEqeuEFkaAsD0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttributeBasedRegistration.Attributes.Abstractions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttributeBasedRegistration.Attributes.Abstractions.html",
+          "hash": "RXlYkxwrVr/+3xUBkH2SwKJ/ypR8b1FeU0j0dTKWIS8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttributeBasedRegistration.Attributes.DecoratedByAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttributeBasedRegistration.Attributes.DecoratedByAttribute.html",
+          "hash": "fbr9CBPxJVcpnk0/vNSIUfdQpp7M7KJgmKQO6ZRoOhA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttributeBasedRegistration.Attributes.EnableInterceptionAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttributeBasedRegistration.Attributes.EnableInterceptionAttribute.html",
+          "hash": "wUnD9Gnn6lU3gzv9V0wVdJHZNZReGOsoCkSFdgEguH0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttributeBasedRegistration.Attributes.InterceptedByAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttributeBasedRegistration.Attributes.InterceptedByAttribute.html",
+          "hash": "ESBamOSpYrBetu6GjgUEiHTgWDbRybcwWF8lf83gjic="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttributeBasedRegistration.Attributes.LifetimeAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttributeBasedRegistration.Attributes.LifetimeAttribute.html",
+          "hash": "vrIwRf0HO8qKE9lZDLDz6JhfI0FfKlumnWNSI4pKp+s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttributeBasedRegistration.Attributes.RegisterAsAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttributeBasedRegistration.Attributes.RegisterAsAttribute.html",
+          "hash": "XusNIZdlqiwnREc2t6VNsgEECBkljWfBrw2tgfPpjMI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttributeBasedRegistration.Attributes.RegisterKeyedAsAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttributeBasedRegistration.Attributes.RegisterKeyedAsAttribute.html",
+          "hash": "LaWGNHkoVuofZwX1ZsPJEg/x/RuoMR7WbfhScKA6jL8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttributeBasedRegistration.Attributes.ServiceImplementationAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttributeBasedRegistration.Attributes.ServiceImplementationAttribute.html",
+          "hash": "3LkdP0hnjuE0R94MDHg7Qer62JZdGL5AXn1JkVz9RhA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttributeBasedRegistration.Attributes.SkipDecoratorRegistrationAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttributeBasedRegistration.Attributes.SkipDecoratorRegistrationAttribute.html",
+          "hash": "k+h3XjorzwJ+7125hGWCjv2Sen7Xl/inI402JIblGvg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttributeBasedRegistration.Attributes.SkipInterceptorRegistrationAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttributeBasedRegistration.Attributes.SkipInterceptorRegistrationAttribute.html",
+          "hash": "D6Z5u6z0Pob1kAO+IGYdFJfZAJ3LSLgu0nAw6cXhOn8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttributeBasedRegistration.Attributes.SkipRegistrationAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttributeBasedRegistration.Attributes.SkipRegistrationAttribute.html",
+          "hash": "CvSzuIQIUybpN8ddc3A1MvIcNtSc5T9KgNnsiIyqrKQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttributeBasedRegistration.Attributes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttributeBasedRegistration.Attributes.html",
+          "hash": "9s060r9LnzLCC0Y2DRVZfdfjJcd3zq3o0yQTXn34Qpo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttributeBasedRegistration.Autofac.AllConstructorsFinder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttributeBasedRegistration.Autofac.AllConstructorsFinder.html",
+          "hash": "SaY45pdBTMVPZmHkuYQzjA9TqLeWpNUQ6SC72H6sh0I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttributeBasedRegistration.Autofac.AsyncInterceptorAdapter-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttributeBasedRegistration.Autofac.AsyncInterceptorAdapter-1.html",
+          "hash": "WKGDy0mJrbSGBmG9jbtLC+WM1KwX0rngQkbOsf79Hnc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttributeBasedRegistration.Autofac.Attributes.FindConstructorsWithAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttributeBasedRegistration.Autofac.Attributes.FindConstructorsWithAttribute.html",
+          "hash": "/6QTNDYsEMcoaXQtapkDzSaW6o90iyYc8CKcn8Q60g4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttributeBasedRegistration.Autofac.Attributes.SelectConstructorsWithAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttributeBasedRegistration.Autofac.Attributes.SelectConstructorsWithAttribute.html",
+          "hash": "ZNaeL2CBtQ+luDPHk+SXitaz+4zu13KG76qjbv2zBMs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttributeBasedRegistration.Autofac.Attributes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttributeBasedRegistration.Autofac.Attributes.html",
+          "hash": "Uua5pUGNJ5vFCnfSXdrbTqmM+DNS9o0vn51HOk8L5J0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.html",
+          "hash": "UNHOKO6Blo/ThGYxoGAuM7Ru/laXp+u214k9juX2Tps="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttributeBasedRegistration.Autofac.IRegistrationBuilderExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttributeBasedRegistration.Autofac.IRegistrationBuilderExtensions.html",
+          "hash": "yA75YAqZSC9GPOOZ19clO5U0dm8npbecmCl9C3U8uUw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttributeBasedRegistration.Autofac.LoggingInterceptor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttributeBasedRegistration.Autofac.LoggingInterceptor.html",
+          "hash": "LtHROj28/AGSWCDqwkP+ISAGjHhadiL2jpKyziBeHU0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttributeBasedRegistration.Autofac.TypeExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttributeBasedRegistration.Autofac.TypeExtensions.html",
+          "hash": "cXWPQrAZgMviboWqwPKJXPy/YTXYw8URhJHkRvrUOeI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttributeBasedRegistration.Autofac.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttributeBasedRegistration.Autofac.html",
+          "hash": "Gy0CNS+bH9OzJTOUx5ns2yA3DfS7oRE18xI7s3APRDg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttributeBasedRegistration.Extensions.TypeExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttributeBasedRegistration.Extensions.TypeExtensions.html",
+          "hash": "zv7drBy2PmcyO91DCqKE4u5nMufkeVxOSXNEkENcsyw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttributeBasedRegistration.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttributeBasedRegistration.Extensions.html",
+          "hash": "fqLIhxLHRCMYwysbj1OSyTsglSDXB60qFjh4zQD4jAY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttributeBasedRegistration.InterceptionStrategy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttributeBasedRegistration.InterceptionStrategy.html",
+          "hash": "8o05k/XgriIbJSUMQJ128B9mr/kh+a+ctnZYuGTIFEU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttributeBasedRegistration.RegistrationStrategy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttributeBasedRegistration.RegistrationStrategy.html",
+          "hash": "COmA4Ivncqavqq7WlxH3NS5O2TL/p3NTJ4pdkkrHOa4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttributeBasedRegistration.RootScopeWrapper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttributeBasedRegistration.RootScopeWrapper.html",
+          "hash": "yOjO4mvSa/A0hl8cn+6wYxyunVR6KruvZHtzLGUKdA0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttributeBasedRegistration.RootScopeWrapperStarter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttributeBasedRegistration.RootScopeWrapperStarter.html",
+          "hash": "HDXEQier5f6EUhHaJnOqaj9tbf4yxh36mTye2STc440="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttributeBasedRegistration.ServiceCollectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttributeBasedRegistration.ServiceCollectionExtensions.html",
+          "hash": "8CZ/hNkS/Tl0vrSCJOIxH+Qkldjn651Jx/+OLdWKC/g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttributeBasedRegistration.ServiceLifetime.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttributeBasedRegistration.ServiceLifetime.html",
+          "hash": "iaLV5hIQDdNHlwQpK1L5GNk983I+z+43VjOmO71Rijs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttributeBasedRegistration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttributeBasedRegistration.html",
+          "hash": "JJqw/j027B3w+nK19mladZCwARThckZUd5jmEBG1zws="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "xN3vJ25FnlXJVLXP+x2Z76Ith1BGQ/3MXH37/Zp7aiE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "6ey9p3qfc2oR2C+ErfJ6voVOtp4KzkrnRzHOyY7CzvM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "ZZo8snh6ECnF8cFkUwWi/Jb5DsEJw+BfYi7EgzpkU1U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "VdgMpWwlVu4JP3ZDeZGxMf00YEotyM2dDbSn5CwZ6bo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "mi0m0TwkbUbRqwkhsQYN6pG5AyMFUKpCmc6mwGo9Y08="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "XH7Mrk1B93uE6qA8mxNVKaz1jzgd7MmOnFiJi/Pwwfo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Disable incremental build by force rebuild option.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "ForceRebuild"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 46,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: it's disabled.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
