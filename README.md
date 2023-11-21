@@ -1,7 +1,7 @@
 [![NuGet](https://img.shields.io/nuget/v/AttributeBasedRegistration)](https://www.nuget.org/packages/AttributeBasedRegistration)[![NuGet](https://img.shields.io/nuget/dt/AttributeBasedRegistration
 )](https://www.nuget.org/packages/AttributeBasedRegistration)
 [![Build Status](https://github.com/MikyM/AttributeBasedRegistration/actions/workflows/dotnet.yml/badge.svg)](https://github.com/MikyM/AttributeBasedRegistration/actions)
-[![GitHub License](https://img.shields.io/github/license/MikyM/AttributeBasedRegistration)]
+![GitHub License](https://img.shields.io/github/license/MikyM/AttributeBasedRegistration)
 [![Static Badge](https://img.shields.io/badge/Documentation-AttributeBasedRegistration-Green)](https://mikym.github.io/AttributeBasedRegistration)
 
 # AttributeBasedRegistration
