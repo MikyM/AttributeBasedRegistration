@@ -26,7 +26,7 @@ Similar to the above, using multiple `RegisterAs` or `InterceptedBy` attributes 
 
 ## Installation
 
-To pick up and register services via attributes use the extensions method on `ContainerBuilder` or `IServiceCollection` provided by the library:
+To let the auto registration process pick up your services via attributes use the extensions method on `ContainerBuilder` or `IServiceCollection` provided by the library:
 
 ```csharp
 builder.AddAttributeDefinedServices(assembliesToScan);
