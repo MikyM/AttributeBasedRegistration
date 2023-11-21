@@ -1,14 +1,18 @@
+[![NuGet](https://img.shields.io/nuget/v/AttributeBasedRegistration)](https://www.nuget.org/packages/AttributeBasedRegistration)[![NuGet](https://img.shields.io/nuget/dt/AttributeBasedRegistration
+)](https://www.nuget.org/packages/AttributeBasedRegistration)
+[![Build Status](https://github.com/MikyM/AttributeBasedRegistration/actions/workflows/dotnet.yml/badge.svg)](https://github.com/MikyM/AttributeBasedRegistration/actions)
+[![GitHub License](https://img.shields.io/github/license/MikyM/AttributeBasedRegistration)]
+[![Static Badge](https://img.shields.io/badge/Documentation-AttributeBasedRegistration-Green)](https://mikym.github.io/AttributeBasedRegistration)
+
 # AttributeBasedRegistration
 
-[![Build Status](https://github.com/MikyM/AttributeBasedRegistration/actions/workflows/dotnet.yml/badge.svg)](https://github.com/MikyM/AttributeBasedRegistration/actions)
-
-Library allowing registering services with Autofac and Microsoft's DI container via attributes. Additionally contains various extensions to Autofac and Microsoft's DI container.
+Library allowing registering services with Autofac and Microsoft's DI container via attributes.
 
 ## Features
 
 Set of attributes allowing automatic registration:
 
-- [ServiceImplementation] - marks the class as an implementation of a service, allows for a quick definition providing a few possible ctors
+- [ServiceImplementation] - marks the class as an implementation of a service
 - [RegisterAs] - explicitly defines service types or a registration strategy
 - [Lifetime] - explicitly defines the lifetime with which the service should be registered (Autofac's based - Microsoft's DI equivalent will be used) - some supported only with Autofac
 - [EnableInterception] - enables interception on the service, in theory supports intercepting classes and interfaces (or both) (Intercept enum) though intercepting classes sometimes suffers from weird Castle.Core bugs thus when using interception it is encouraged to use interface service types - supported only with Autofac
@@ -31,6 +35,11 @@ builder.AddAttributeDefinedServices(assembliesToScan);
 
 Documentation available at https://mikym.github.io/AttributeBasedRegistration/.
 
+## Download
+
+- `AttributeBasedRegistration` - [NuGet](https://www.nuget.org/packages/AttributeBasedRegistration)
+- `AttributeBasedRegistration.Autofac` - [NuGet](https://www.nuget.org/packages/AttributeBasedRegistration.Autofac)
+
 ## Example usage
 
 ```csharp
@@ -40,7 +49,7 @@ public interface ICustomService1
 }
 
 [ServiceImplementation]
-[RegisterAs(typeof(ICustomService))]
+[RegisterAs<ICustomService>)]
 [Lifetime(ServiceLifetime.InstancePerLifetimeScope)]
 [DecoratedBy(1, typeof(ISomeDecorator))]
 [EnableInterception(InterceptionStrategy.Interface)]
@@ -53,7 +62,7 @@ public interface ICustomService2
 {
 }
 
-[ServiceImplementation(ServiceLifetime.SingleInstance, RegistrationStrategy.AsConventionNamedInterface)]
+[ServiceImplementation<ICustomService2>(ServiceLifetime.SingleInstance)]
 public class CustomService2 : ICustomService2
 {
 }
