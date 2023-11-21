@@ -87,14 +87,17 @@
                         </div>
 
                     <article class="content wrap" id="_content" data-uid="">
-<h1 id="attributebasedregistration">AttributeBasedRegistration</h1>
 
-<p><a href="https://github.com/MikyM/AttributeBasedRegistration/actions"><img src="https://github.com/MikyM/AttributeBasedRegistration/actions/workflows/dotnet.yml/badge.svg" alt="Build Status"></a></p>
-<p>Library allowing registering services with Autofac and Microsoft's DI container via attributes. Additionally contains various extensions to Autofac and Microsoft's DI container.</p>
+<p><a href="https://www.nuget.org/packages/AttributeBasedRegistration"><img src="https://img.shields.io/nuget/v/AttributeBasedRegistration" alt="NuGet"></a><a href="https://www.nuget.org/packages/AttributeBasedRegistration"><img src="https://img.shields.io/nuget/dt/AttributeBasedRegistration" alt="NuGet"></a>
+<a href="https://github.com/MikyM/AttributeBasedRegistration/actions"><img src="https://github.com/MikyM/AttributeBasedRegistration/actions/workflows/dotnet.yml/badge.svg" alt="Build Status"></a>
+<img src="https://img.shields.io/github/license/MikyM/AttributeBasedRegistration" alt="GitHub License">
+<a href="https://mikym.github.io/AttributeBasedRegistration"><img src="https://img.shields.io/badge/Documentation-AttributeBasedRegistration-Green" alt="Static Badge"></a></p>
+<h1 id="attributebasedregistration">AttributeBasedRegistration</h1>
+<p>Library allowing registering services with Autofac and Microsoft's DI container via attributes.</p>
 <h2 id="features">Features</h2>
 <p>Set of attributes allowing automatic registration:</p>
 <ul>
-<li>[ServiceImplementation] - marks the class as an implementation of a service, allows for a quick definition providing a few possible ctors</li>
+<li>[ServiceImplementation] - marks the class as an implementation of a service</li>
 <li>[RegisterAs] - explicitly defines service types or a registration strategy</li>
 <li>[Lifetime] - explicitly defines the lifetime with which the service should be registered (Autofac's based - Microsoft's DI equivalent will be used) - some supported only with Autofac</li>
 <li>[EnableInterception] - enables interception on the service, in theory supports intercepting classes and interfaces (or both) (Intercept enum) though intercepting classes sometimes suffers from weird Castle.Core bugs thus when using interception it is encouraged to use interface service types - supported only with Autofac</li>
@@ -105,11 +108,16 @@
 <p>The usage of the <code>Lifetime</code> attribute versus supplying the lifetime to the <code>ServiceImplementation</code> is per users taste, the data from the more specific attribute will take precedence.</p>
 <p>Similar to the above, using multiple <code>RegisterAs</code> or <code>InterceptedBy</code> attributes versus one and supplying multiple types is per users taste - types will be aggregated from all attributes.</p>
 <h2 id="installation">Installation</h2>
-<p>To pick up and register services via attributes use the extensions method on <code>ContainerBuilder</code> or <code>IServiceCollection</code> provided by the library:</p>
+<p>To let the auto registration process pick up your services via attributes use the extensions method on <code>ContainerBuilder</code> or <code>IServiceCollection</code> provided by the library:</p>
 <pre><code class="lang-csharp">builder.AddAttributeDefinedServices(assembliesToScan);
 </code></pre>
 <h2 id="documentation">Documentation</h2>
 <p>Documentation available at <a href="https://mikym.github.io/AttributeBasedRegistration/">https://mikym.github.io/AttributeBasedRegistration/</a>.</p>
+<h2 id="download">Download</h2>
+<ul>
+<li><code>AttributeBasedRegistration</code> - <a href="https://www.nuget.org/packages/AttributeBasedRegistration">NuGet</a></li>
+<li><code>AttributeBasedRegistration.Autofac</code> - <a href="https://www.nuget.org/packages/AttributeBasedRegistration.Autofac">NuGet</a></li>
+</ul>
 <h2 id="example-usage">Example usage</h2>
 <pre><code class="lang-csharp">
 public interface ICustomService1
@@ -117,7 +125,7 @@ public interface ICustomService1
 }
 
 [ServiceImplementation]
-[RegisterAs(typeof(ICustomService))]
+[RegisterAs&lt;ICustomService&gt;)]
 [Lifetime(ServiceLifetime.InstancePerLifetimeScope)]
 [DecoratedBy(1, typeof(ISomeDecorator))]
 [EnableInterception(InterceptionStrategy.Interface)]
@@ -130,7 +138,7 @@ public interface ICustomService2
 {
 }
 
-[ServiceImplementation(ServiceLifetime.SingleInstance, RegistrationStrategy.AsConventionNamedInterface)]
+[ServiceImplementation&lt;ICustomService2&gt;(ServiceLifetime.SingleInstance)]
 public class CustomService2 : ICustomService2
 {
 }
