@@ -39,7 +39,7 @@ public sealed class RegisterAsAttribute : Attribute, IRegisterAsAttribute
         => RegistrationStrategy = registrationStrategy;
 }
 
-#if NET7_0
+#if NET7_0_OR_GREATER
 /// <summary>
 /// Defines as what should the service be registered.
 /// </summary>

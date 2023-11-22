@@ -32,7 +32,7 @@ public sealed class DecoratedByAttribute : Attribute, IDecoratedByAttribute
     }
 }
 
-#if NET7_0
+#if NET7_0_OR_GREATER
 /// <summary>
 /// Defines a decorator for a service.
 /// </summary>

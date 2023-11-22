@@ -31,7 +31,7 @@ public sealed class RegisterKeyedAsAttribute : Attribute, IRegisterKeyedAsAttrib
     }
 }
 
-#if NET7_0
+#if NET7_0_OR_GREATER
 /// <summary>
 /// Defines as what should the keyed service be registered.
 /// </summary>

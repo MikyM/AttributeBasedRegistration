@@ -30,7 +30,7 @@ public class FindConstructorsWithAttribute : Attribute, IFindConstructorsWithAtt
     }
 }
 
-#if NET7_0
+#if NET7_0_OR_GREATER
 /// <summary>
 /// Marks a registration to use a specific constructor finder.
 /// </summary>

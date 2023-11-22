@@ -31,7 +31,7 @@ public sealed class InterceptedByAttribute : Attribute, IInterceptedByAttribute
     }
 }
 
-#if NET7_0
+#if NET7_0_OR_GREATER
 /// <summary>
 /// Defines with what interceptors should the service be intercepted.
 /// </summary>

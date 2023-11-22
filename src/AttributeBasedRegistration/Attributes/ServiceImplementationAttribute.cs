@@ -81,7 +81,7 @@ public sealed class ServiceImplementationAttribute : Attribute, IServiceImplemen
     }
 }
 
-#if NET7_0
+#if NET7_0_OR_GREATER
 /// <summary>
 /// Marks a class for registration as a service implementation.
 /// </summary>
