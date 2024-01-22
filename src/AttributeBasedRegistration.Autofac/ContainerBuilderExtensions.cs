@@ -10,7 +10,6 @@ using Autofac.Extras.DynamicProxy;
 using Castle.DynamicProxy;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
-using MikyM.Utilities.Extensions;
 
 namespace AttributeBasedRegistration.Autofac;
 

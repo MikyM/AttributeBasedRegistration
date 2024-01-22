@@ -3,7 +3,6 @@ using AttributeBasedRegistration.Attributes.Abstractions;
 using AttributeBasedRegistration.Extensions;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
-using MikyM.Utilities.Extensions;
 
 namespace AttributeBasedRegistration;
 
