@@ -143,7 +143,7 @@ public static class TypeExtensions</code></pre>
     <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Extensions_TypeExtensions_GetAttributeOfType__1_System_Type_.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Extensions.TypeExtensions.GetAttributeOfType%60%601(System.Type)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration/Extensions/TypeExtensions.cs/#L53">View Source</a>
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration/Extensions/TypeExtensions.cs/#L52">View Source</a>
   </span>
   <a id="AttributeBasedRegistration_Extensions_TypeExtensions_GetAttributeOfType_" data-uid="AttributeBasedRegistration.Extensions.TypeExtensions.GetAttributeOfType*"></a>
   <h4 id="AttributeBasedRegistration_Extensions_TypeExtensions_GetAttributeOfType__1_System_Type_" data-uid="AttributeBasedRegistration.Extensions.TypeExtensions.GetAttributeOfType``1(System.Type)">GetAttributeOfType&lt;TAttribute&gt;(Type)</h4>
@@ -210,7 +210,7 @@ public static class TypeExtensions</code></pre>
     <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Extensions_TypeExtensions_GetAttributesOfType__1_System_Type_.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Extensions.TypeExtensions.GetAttributesOfType%60%601(System.Type)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration/Extensions/TypeExtensions.cs/#L44">View Source</a>
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration/Extensions/TypeExtensions.cs/#L43">View Source</a>
   </span>
   <a id="AttributeBasedRegistration_Extensions_TypeExtensions_GetAttributesOfType_" data-uid="AttributeBasedRegistration.Extensions.TypeExtensions.GetAttributesOfType*"></a>
   <h4 id="AttributeBasedRegistration_Extensions_TypeExtensions_GetAttributesOfType__1_System_Type_" data-uid="AttributeBasedRegistration.Extensions.TypeExtensions.GetAttributesOfType``1(System.Type)">GetAttributesOfType&lt;TAttribute&gt;(Type)</h4>
@@ -274,10 +274,369 @@ public static class TypeExtensions</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Extensions_TypeExtensions_GetDirectAncestors_System_Type_System_Boolean_.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Extensions.TypeExtensions.GetDirectAncestors(System.Type%2CSystem.Boolean)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration/Extensions/TypeExtensions.cs/#L201">View Source</a>
+  </span>
+  <a id="AttributeBasedRegistration_Extensions_TypeExtensions_GetDirectAncestors_" data-uid="AttributeBasedRegistration.Extensions.TypeExtensions.GetDirectAncestors*"></a>
+  <h4 id="AttributeBasedRegistration_Extensions_TypeExtensions_GetDirectAncestors_System_Type_System_Boolean_" data-uid="AttributeBasedRegistration.Extensions.TypeExtensions.GetDirectAncestors(System.Type,System.Boolean)">GetDirectAncestors(Type, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Gets the direct ancestors of a given type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;Type&gt; GetDirectAncestors(this Type type, bool onlyInterfaces = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">type</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">onlyInterfaces</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Type</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Extensions_TypeExtensions_GetDirectClassAncestors_System_Type_System_Boolean_.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Extensions.TypeExtensions.GetDirectClassAncestors(System.Type%2CSystem.Boolean)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration/Extensions/TypeExtensions.cs/#L221">View Source</a>
+  </span>
+  <a id="AttributeBasedRegistration_Extensions_TypeExtensions_GetDirectClassAncestors_" data-uid="AttributeBasedRegistration.Extensions.TypeExtensions.GetDirectClassAncestors*"></a>
+  <h4 id="AttributeBasedRegistration_Extensions_TypeExtensions_GetDirectClassAncestors_System_Type_System_Boolean_" data-uid="AttributeBasedRegistration.Extensions.TypeExtensions.GetDirectClassAncestors(System.Type,System.Boolean)">GetDirectClassAncestors(Type, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Gets the direct ancestors of a given type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;Type&gt; GetDirectClassAncestors(this Type type, bool skipAbstract = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">type</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">skipAbstract</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Type</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Extensions_TypeExtensions_GetDirectInterfaceAncestors_System_Type_.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Extensions.TypeExtensions.GetDirectInterfaceAncestors(System.Type)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration/Extensions/TypeExtensions.cs/#L215">View Source</a>
+  </span>
+  <a id="AttributeBasedRegistration_Extensions_TypeExtensions_GetDirectInterfaceAncestors_" data-uid="AttributeBasedRegistration.Extensions.TypeExtensions.GetDirectInterfaceAncestors*"></a>
+  <h4 id="AttributeBasedRegistration_Extensions_TypeExtensions_GetDirectInterfaceAncestors_System_Type_" data-uid="AttributeBasedRegistration.Extensions.TypeExtensions.GetDirectInterfaceAncestors(System.Type)">GetDirectInterfaceAncestors(Type)</h4>
+  <div class="markdown level1 summary"><p>Gets the direct ancestors of a given type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;Type&gt; GetDirectInterfaceAncestors(this Type type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">type</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Type</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Extensions_TypeExtensions_GetInterfaceByNamingConvention_System_Type_.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Extensions.TypeExtensions.GetInterfaceByNamingConvention(System.Type)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration/Extensions/TypeExtensions.cs/#L209">View Source</a>
+  </span>
+  <a id="AttributeBasedRegistration_Extensions_TypeExtensions_GetInterfaceByNamingConvention_" data-uid="AttributeBasedRegistration.Extensions.TypeExtensions.GetInterfaceByNamingConvention*"></a>
+  <h4 id="AttributeBasedRegistration_Extensions_TypeExtensions_GetInterfaceByNamingConvention_System_Type_" data-uid="AttributeBasedRegistration.Extensions.TypeExtensions.GetInterfaceByNamingConvention(System.Type)">GetInterfaceByNamingConvention(Type)</h4>
+  <div class="markdown level1 summary"><p>Gets interface by naming convention.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Type GetInterfaceByNamingConvention(this Type type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">type</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Extensions_TypeExtensions_GetInterfaceImplementationPairs_System_Type_.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Extensions.TypeExtensions.GetInterfaceImplementationPairs(System.Type)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration/Extensions/TypeExtensions.cs/#L132">View Source</a>
+  </span>
+  <a id="AttributeBasedRegistration_Extensions_TypeExtensions_GetInterfaceImplementationPairs_" data-uid="AttributeBasedRegistration.Extensions.TypeExtensions.GetInterfaceImplementationPairs*"></a>
+  <h4 id="AttributeBasedRegistration_Extensions_TypeExtensions_GetInterfaceImplementationPairs_System_Type_" data-uid="AttributeBasedRegistration.Extensions.TypeExtensions.GetInterfaceImplementationPairs(System.Type)">GetInterfaceImplementationPairs(Type)</h4>
+  <div class="markdown level1 summary"><p>Gets a dictionary with interface implementation pairs that implement a given base interface.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Dictionary&lt;Type, Type&gt; GetInterfaceImplementationPairs(this Type interfaceToSearchFor)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">interfaceToSearchFor</span></td>
+        <td><p>Base interface to search for.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.Type</span>, <span class="xref">System.Type</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Extensions_TypeExtensions_GetInterfaces_System_Type_System_Boolean_System_Boolean_.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Extensions.TypeExtensions.GetInterfaces(System.Type%2CSystem.Boolean%2CSystem.Boolean)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration/Extensions/TypeExtensions.cs/#L80">View Source</a>
+  </span>
+  <a id="AttributeBasedRegistration_Extensions_TypeExtensions_GetInterfaces_" data-uid="AttributeBasedRegistration.Extensions.TypeExtensions.GetInterfaces*"></a>
+  <h4 id="AttributeBasedRegistration_Extensions_TypeExtensions_GetInterfaces_System_Type_System_Boolean_System_Boolean_" data-uid="AttributeBasedRegistration.Extensions.TypeExtensions.GetInterfaces(System.Type,System.Boolean,System.Boolean)">GetInterfaces(Type, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Extended get interfaces method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;Type&gt; GetInterfaces(this Type type, bool includeInherited, bool fullSet = true)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">type</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">includeInherited</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">fullSet</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Type</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Extensions_TypeExtensions_GetName_System_Type_.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Extensions.TypeExtensions.GetName(System.Type)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration/Extensions/TypeExtensions.cs/#L108">View Source</a>
+  </span>
+  <a id="AttributeBasedRegistration_Extensions_TypeExtensions_GetName_" data-uid="AttributeBasedRegistration.Extensions.TypeExtensions.GetName*"></a>
+  <h4 id="AttributeBasedRegistration_Extensions_TypeExtensions_GetName_System_Type_" data-uid="AttributeBasedRegistration.Extensions.TypeExtensions.GetName(System.Type)">GetName(Type)</h4>
+  <div class="markdown level1 summary"><p>Gets the types name while discarding anything that comes after &quot;`&quot; for generic types.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetName(this Type type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>Types name.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Extensions_TypeExtensions_GetRegistrationAttributeOfType__1_System_Type_.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Extensions.TypeExtensions.GetRegistrationAttributeOfType%60%601(System.Type)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration/Extensions/TypeExtensions.cs/#L71">View Source</a>
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration/Extensions/TypeExtensions.cs/#L70">View Source</a>
   </span>
   <a id="AttributeBasedRegistration_Extensions_TypeExtensions_GetRegistrationAttributeOfType_" data-uid="AttributeBasedRegistration.Extensions.TypeExtensions.GetRegistrationAttributeOfType*"></a>
   <h4 id="AttributeBasedRegistration_Extensions_TypeExtensions_GetRegistrationAttributeOfType__1_System_Type_" data-uid="AttributeBasedRegistration.Extensions.TypeExtensions.GetRegistrationAttributeOfType``1(System.Type)">GetRegistrationAttributeOfType&lt;TAttribute&gt;(Type)</h4>
@@ -344,7 +703,7 @@ public static class TypeExtensions</code></pre>
     <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Extensions_TypeExtensions_GetRegistrationAttributesOfType__1_System_Type_.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Extensions.TypeExtensions.GetRegistrationAttributesOfType%60%601(System.Type)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration/Extensions/TypeExtensions.cs/#L62">View Source</a>
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration/Extensions/TypeExtensions.cs/#L61">View Source</a>
   </span>
   <a id="AttributeBasedRegistration_Extensions_TypeExtensions_GetRegistrationAttributesOfType_" data-uid="AttributeBasedRegistration.Extensions.TypeExtensions.GetRegistrationAttributesOfType*"></a>
   <h4 id="AttributeBasedRegistration_Extensions_TypeExtensions_GetRegistrationAttributesOfType__1_System_Type_" data-uid="AttributeBasedRegistration.Extensions.TypeExtensions.GetRegistrationAttributesOfType``1(System.Type)">GetRegistrationAttributesOfType&lt;TAttribute&gt;(Type)</h4>
@@ -408,10 +767,219 @@ public static class TypeExtensions</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Extensions_TypeExtensions_GetTypeInheritance_System_Type_.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Extensions.TypeExtensions.GetTypeInheritance(System.Type)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration/Extensions/TypeExtensions.cs/#L178">View Source</a>
+  </span>
+  <a id="AttributeBasedRegistration_Extensions_TypeExtensions_GetTypeInheritance_" data-uid="AttributeBasedRegistration.Extensions.TypeExtensions.GetTypeInheritance*"></a>
+  <h4 id="AttributeBasedRegistration_Extensions_TypeExtensions_GetTypeInheritance_System_Type_" data-uid="AttributeBasedRegistration.Extensions.TypeExtensions.GetTypeInheritance(System.Type)">GetTypeInheritance(Type)</h4>
+  <div class="markdown level1 summary"><p>Retrieves the type inheritance tree</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static InheritanceTree GetTypeInheritance(this Type type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The type to find tree for.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AttributeBasedRegistration.InheritanceTree.html">InheritanceTree</a></td>
+        <td><p>The inheritance tree.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Extensions_TypeExtensions_IsAssignableToWithGenerics_System_Type_System_Type_.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Extensions.TypeExtensions.IsAssignableToWithGenerics(System.Type%2CSystem.Type)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration/Extensions/TypeExtensions.cs/#L154">View Source</a>
+  </span>
+  <a id="AttributeBasedRegistration_Extensions_TypeExtensions_IsAssignableToWithGenerics_" data-uid="AttributeBasedRegistration.Extensions.TypeExtensions.IsAssignableToWithGenerics*"></a>
+  <h4 id="AttributeBasedRegistration_Extensions_TypeExtensions_IsAssignableToWithGenerics_System_Type_System_Type_" data-uid="AttributeBasedRegistration.Extensions.TypeExtensions.IsAssignableToWithGenerics(System.Type,System.Type)">IsAssignableToWithGenerics(Type, Type)</h4>
+  <div class="markdown level1 summary"><p>Checks whether the given type is assignable to another type supporting generic types.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsAssignableToWithGenerics(this Type givenType, Type genericType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">givenType</span></td>
+        <td><p>Type to check.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">genericType</span></td>
+        <td><p>Type to compare with.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the given type is assignable to another type, otherwise false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Extensions_TypeExtensions_IsDirectAncestor_System_Type_System_Type_.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Extensions.TypeExtensions.IsDirectAncestor(System.Type%2CSystem.Type)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration/Extensions/TypeExtensions.cs/#L195">View Source</a>
+  </span>
+  <a id="AttributeBasedRegistration_Extensions_TypeExtensions_IsDirectAncestor_" data-uid="AttributeBasedRegistration.Extensions.TypeExtensions.IsDirectAncestor*"></a>
+  <h4 id="AttributeBasedRegistration_Extensions_TypeExtensions_IsDirectAncestor_System_Type_System_Type_" data-uid="AttributeBasedRegistration.Extensions.TypeExtensions.IsDirectAncestor(System.Type,System.Type)">IsDirectAncestor(Type, Type)</h4>
+  <div class="markdown level1 summary"><p>Check if a type is a direct ancestor of given type</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsDirectAncestor(this Type ancestorCandidate, Type type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">ancestorCandidate</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">type</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Extensions_TypeExtensions_IsNullable_System_Type_.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Extensions.TypeExtensions.IsNullable(System.Type)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration/Extensions/TypeExtensions.cs/#L118">View Source</a>
+  </span>
+  <a id="AttributeBasedRegistration_Extensions_TypeExtensions_IsNullable_" data-uid="AttributeBasedRegistration.Extensions.TypeExtensions.IsNullable*"></a>
+  <h4 id="AttributeBasedRegistration_Extensions_TypeExtensions_IsNullable_System_Type_" data-uid="AttributeBasedRegistration.Extensions.TypeExtensions.IsNullable(System.Type)">IsNullable(Type)</h4>
+  <div class="markdown level1 summary"><p>Determines whether the given type is a closed <span class="xref">System.Nullable&lt;T&gt;</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsNullable(this Type type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the type is a closed Nullable; otherwise, false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Extensions_TypeExtensions_IsServiceImplementation_System_Type_.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Extensions.TypeExtensions.IsServiceImplementation(System.Type)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration/Extensions/TypeExtensions.cs/#L17">View Source</a>
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration/Extensions/TypeExtensions.cs/#L16">View Source</a>
   </span>
   <a id="AttributeBasedRegistration_Extensions_TypeExtensions_IsServiceImplementation_" data-uid="AttributeBasedRegistration.Extensions.TypeExtensions.IsServiceImplementation*"></a>
   <h4 id="AttributeBasedRegistration_Extensions_TypeExtensions_IsServiceImplementation_System_Type_" data-uid="AttributeBasedRegistration.Extensions.TypeExtensions.IsServiceImplementation(System.Type)">IsServiceImplementation(Type)</h4>
@@ -461,7 +1029,7 @@ public static class TypeExtensions</code></pre>
     <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Extensions_TypeExtensions_ShouldSkipRegistration_System_Type_.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Extensions.TypeExtensions.ShouldSkipRegistration(System.Type)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration/Extensions/TypeExtensions.cs/#L26">View Source</a>
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration/Extensions/TypeExtensions.cs/#L25">View Source</a>
   </span>
   <a id="AttributeBasedRegistration_Extensions_TypeExtensions_ShouldSkipRegistration_" data-uid="AttributeBasedRegistration.Extensions.TypeExtensions.ShouldSkipRegistration*"></a>
   <h4 id="AttributeBasedRegistration_Extensions_TypeExtensions_ShouldSkipRegistration_System_Type_" data-uid="AttributeBasedRegistration.Extensions.TypeExtensions.ShouldSkipRegistration(System.Type)">ShouldSkipRegistration(Type)</h4>
@@ -511,7 +1079,7 @@ public static class TypeExtensions</code></pre>
     <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Extensions_TypeExtensions_ShouldSkipRegistration__1_System_Type_.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Extensions.TypeExtensions.ShouldSkipRegistration%60%601(System.Type)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration/Extensions/TypeExtensions.cs/#L35">View Source</a>
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration/Extensions/TypeExtensions.cs/#L34">View Source</a>
   </span>
   <a id="AttributeBasedRegistration_Extensions_TypeExtensions_ShouldSkipRegistration_" data-uid="AttributeBasedRegistration.Extensions.TypeExtensions.ShouldSkipRegistration*"></a>
   <h4 id="AttributeBasedRegistration_Extensions_TypeExtensions_ShouldSkipRegistration__1_System_Type_" data-uid="AttributeBasedRegistration.Extensions.TypeExtensions.ShouldSkipRegistration``1(System.Type)">ShouldSkipRegistration&lt;TSkipAttribute&gt;(Type)</h4>

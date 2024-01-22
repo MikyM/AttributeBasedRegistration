@@ -1246,6 +1246,97 @@ references:
   fullName.vb: AttributeBasedRegistration.Extensions.TypeExtensions.GetAttributesOfType(Of TAttribute)(System.Type)
   nameWithType: TypeExtensions.GetAttributesOfType<TAttribute>(Type)
   nameWithType.vb: TypeExtensions.GetAttributesOfType(Of TAttribute)(Type)
+- uid: AttributeBasedRegistration.Extensions.TypeExtensions.GetDirectAncestors(System.Type,System.Boolean)
+  name: GetDirectAncestors(Type, Boolean)
+  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_GetDirectAncestors_System_Type_System_Boolean_
+  commentId: M:AttributeBasedRegistration.Extensions.TypeExtensions.GetDirectAncestors(System.Type,System.Boolean)
+  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.GetDirectAncestors(System.Type, System.Boolean)
+  nameWithType: TypeExtensions.GetDirectAncestors(Type, Boolean)
+- uid: AttributeBasedRegistration.Extensions.TypeExtensions.GetDirectAncestors*
+  name: GetDirectAncestors
+  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_GetDirectAncestors_
+  commentId: Overload:AttributeBasedRegistration.Extensions.TypeExtensions.GetDirectAncestors
+  isSpec: "True"
+  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.GetDirectAncestors
+  nameWithType: TypeExtensions.GetDirectAncestors
+- uid: AttributeBasedRegistration.Extensions.TypeExtensions.GetDirectClassAncestors(System.Type,System.Boolean)
+  name: GetDirectClassAncestors(Type, Boolean)
+  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_GetDirectClassAncestors_System_Type_System_Boolean_
+  commentId: M:AttributeBasedRegistration.Extensions.TypeExtensions.GetDirectClassAncestors(System.Type,System.Boolean)
+  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.GetDirectClassAncestors(System.Type, System.Boolean)
+  nameWithType: TypeExtensions.GetDirectClassAncestors(Type, Boolean)
+- uid: AttributeBasedRegistration.Extensions.TypeExtensions.GetDirectClassAncestors*
+  name: GetDirectClassAncestors
+  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_GetDirectClassAncestors_
+  commentId: Overload:AttributeBasedRegistration.Extensions.TypeExtensions.GetDirectClassAncestors
+  isSpec: "True"
+  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.GetDirectClassAncestors
+  nameWithType: TypeExtensions.GetDirectClassAncestors
+- uid: AttributeBasedRegistration.Extensions.TypeExtensions.GetDirectInterfaceAncestors(System.Type)
+  name: GetDirectInterfaceAncestors(Type)
+  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_GetDirectInterfaceAncestors_System_Type_
+  commentId: M:AttributeBasedRegistration.Extensions.TypeExtensions.GetDirectInterfaceAncestors(System.Type)
+  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.GetDirectInterfaceAncestors(System.Type)
+  nameWithType: TypeExtensions.GetDirectInterfaceAncestors(Type)
+- uid: AttributeBasedRegistration.Extensions.TypeExtensions.GetDirectInterfaceAncestors*
+  name: GetDirectInterfaceAncestors
+  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_GetDirectInterfaceAncestors_
+  commentId: Overload:AttributeBasedRegistration.Extensions.TypeExtensions.GetDirectInterfaceAncestors
+  isSpec: "True"
+  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.GetDirectInterfaceAncestors
+  nameWithType: TypeExtensions.GetDirectInterfaceAncestors
+- uid: AttributeBasedRegistration.Extensions.TypeExtensions.GetInterfaceByNamingConvention(System.Type)
+  name: GetInterfaceByNamingConvention(Type)
+  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_GetInterfaceByNamingConvention_System_Type_
+  commentId: M:AttributeBasedRegistration.Extensions.TypeExtensions.GetInterfaceByNamingConvention(System.Type)
+  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.GetInterfaceByNamingConvention(System.Type)
+  nameWithType: TypeExtensions.GetInterfaceByNamingConvention(Type)
+- uid: AttributeBasedRegistration.Extensions.TypeExtensions.GetInterfaceByNamingConvention*
+  name: GetInterfaceByNamingConvention
+  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_GetInterfaceByNamingConvention_
+  commentId: Overload:AttributeBasedRegistration.Extensions.TypeExtensions.GetInterfaceByNamingConvention
+  isSpec: "True"
+  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.GetInterfaceByNamingConvention
+  nameWithType: TypeExtensions.GetInterfaceByNamingConvention
+- uid: AttributeBasedRegistration.Extensions.TypeExtensions.GetInterfaceImplementationPairs(System.Type)
+  name: GetInterfaceImplementationPairs(Type)
+  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_GetInterfaceImplementationPairs_System_Type_
+  commentId: M:AttributeBasedRegistration.Extensions.TypeExtensions.GetInterfaceImplementationPairs(System.Type)
+  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.GetInterfaceImplementationPairs(System.Type)
+  nameWithType: TypeExtensions.GetInterfaceImplementationPairs(Type)
+- uid: AttributeBasedRegistration.Extensions.TypeExtensions.GetInterfaceImplementationPairs*
+  name: GetInterfaceImplementationPairs
+  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_GetInterfaceImplementationPairs_
+  commentId: Overload:AttributeBasedRegistration.Extensions.TypeExtensions.GetInterfaceImplementationPairs
+  isSpec: "True"
+  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.GetInterfaceImplementationPairs
+  nameWithType: TypeExtensions.GetInterfaceImplementationPairs
+- uid: AttributeBasedRegistration.Extensions.TypeExtensions.GetInterfaces(System.Type,System.Boolean,System.Boolean)
+  name: GetInterfaces(Type, Boolean, Boolean)
+  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_GetInterfaces_System_Type_System_Boolean_System_Boolean_
+  commentId: M:AttributeBasedRegistration.Extensions.TypeExtensions.GetInterfaces(System.Type,System.Boolean,System.Boolean)
+  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.GetInterfaces(System.Type, System.Boolean, System.Boolean)
+  nameWithType: TypeExtensions.GetInterfaces(Type, Boolean, Boolean)
+- uid: AttributeBasedRegistration.Extensions.TypeExtensions.GetInterfaces*
+  name: GetInterfaces
+  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_GetInterfaces_
+  commentId: Overload:AttributeBasedRegistration.Extensions.TypeExtensions.GetInterfaces
+  isSpec: "True"
+  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.GetInterfaces
+  nameWithType: TypeExtensions.GetInterfaces
+- uid: AttributeBasedRegistration.Extensions.TypeExtensions.GetName(System.Type)
+  name: GetName(Type)
+  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_GetName_System_Type_
+  commentId: M:AttributeBasedRegistration.Extensions.TypeExtensions.GetName(System.Type)
+  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.GetName(System.Type)
+  nameWithType: TypeExtensions.GetName(Type)
+- uid: AttributeBasedRegistration.Extensions.TypeExtensions.GetName*
+  name: GetName
+  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_GetName_
+  commentId: Overload:AttributeBasedRegistration.Extensions.TypeExtensions.GetName
+  isSpec: "True"
+  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.GetName
+  nameWithType: TypeExtensions.GetName
 - uid: AttributeBasedRegistration.Extensions.TypeExtensions.GetRegistrationAttributeOfType*
   name: GetRegistrationAttributeOfType
   href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_GetRegistrationAttributeOfType_
@@ -1278,6 +1369,58 @@ references:
   fullName.vb: AttributeBasedRegistration.Extensions.TypeExtensions.GetRegistrationAttributesOfType(Of TAttribute)(System.Type)
   nameWithType: TypeExtensions.GetRegistrationAttributesOfType<TAttribute>(Type)
   nameWithType.vb: TypeExtensions.GetRegistrationAttributesOfType(Of TAttribute)(Type)
+- uid: AttributeBasedRegistration.Extensions.TypeExtensions.GetTypeInheritance(System.Type)
+  name: GetTypeInheritance(Type)
+  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_GetTypeInheritance_System_Type_
+  commentId: M:AttributeBasedRegistration.Extensions.TypeExtensions.GetTypeInheritance(System.Type)
+  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.GetTypeInheritance(System.Type)
+  nameWithType: TypeExtensions.GetTypeInheritance(Type)
+- uid: AttributeBasedRegistration.Extensions.TypeExtensions.GetTypeInheritance*
+  name: GetTypeInheritance
+  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_GetTypeInheritance_
+  commentId: Overload:AttributeBasedRegistration.Extensions.TypeExtensions.GetTypeInheritance
+  isSpec: "True"
+  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.GetTypeInheritance
+  nameWithType: TypeExtensions.GetTypeInheritance
+- uid: AttributeBasedRegistration.Extensions.TypeExtensions.IsAssignableToWithGenerics(System.Type,System.Type)
+  name: IsAssignableToWithGenerics(Type, Type)
+  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_IsAssignableToWithGenerics_System_Type_System_Type_
+  commentId: M:AttributeBasedRegistration.Extensions.TypeExtensions.IsAssignableToWithGenerics(System.Type,System.Type)
+  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.IsAssignableToWithGenerics(System.Type, System.Type)
+  nameWithType: TypeExtensions.IsAssignableToWithGenerics(Type, Type)
+- uid: AttributeBasedRegistration.Extensions.TypeExtensions.IsAssignableToWithGenerics*
+  name: IsAssignableToWithGenerics
+  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_IsAssignableToWithGenerics_
+  commentId: Overload:AttributeBasedRegistration.Extensions.TypeExtensions.IsAssignableToWithGenerics
+  isSpec: "True"
+  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.IsAssignableToWithGenerics
+  nameWithType: TypeExtensions.IsAssignableToWithGenerics
+- uid: AttributeBasedRegistration.Extensions.TypeExtensions.IsDirectAncestor(System.Type,System.Type)
+  name: IsDirectAncestor(Type, Type)
+  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_IsDirectAncestor_System_Type_System_Type_
+  commentId: M:AttributeBasedRegistration.Extensions.TypeExtensions.IsDirectAncestor(System.Type,System.Type)
+  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.IsDirectAncestor(System.Type, System.Type)
+  nameWithType: TypeExtensions.IsDirectAncestor(Type, Type)
+- uid: AttributeBasedRegistration.Extensions.TypeExtensions.IsDirectAncestor*
+  name: IsDirectAncestor
+  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_IsDirectAncestor_
+  commentId: Overload:AttributeBasedRegistration.Extensions.TypeExtensions.IsDirectAncestor
+  isSpec: "True"
+  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.IsDirectAncestor
+  nameWithType: TypeExtensions.IsDirectAncestor
+- uid: AttributeBasedRegistration.Extensions.TypeExtensions.IsNullable(System.Type)
+  name: IsNullable(Type)
+  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_IsNullable_System_Type_
+  commentId: M:AttributeBasedRegistration.Extensions.TypeExtensions.IsNullable(System.Type)
+  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.IsNullable(System.Type)
+  nameWithType: TypeExtensions.IsNullable(Type)
+- uid: AttributeBasedRegistration.Extensions.TypeExtensions.IsNullable*
+  name: IsNullable
+  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_IsNullable_
+  commentId: Overload:AttributeBasedRegistration.Extensions.TypeExtensions.IsNullable
+  isSpec: "True"
+  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.IsNullable
+  nameWithType: TypeExtensions.IsNullable
 - uid: AttributeBasedRegistration.Extensions.TypeExtensions.IsServiceImplementation(System.Type)
   name: IsServiceImplementation(Type)
   href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_IsServiceImplementation_System_Type_
@@ -1313,6 +1456,67 @@ references:
   fullName.vb: AttributeBasedRegistration.Extensions.TypeExtensions.ShouldSkipRegistration(Of TSkipAttribute)(System.Type)
   nameWithType: TypeExtensions.ShouldSkipRegistration<TSkipAttribute>(Type)
   nameWithType.vb: TypeExtensions.ShouldSkipRegistration(Of TSkipAttribute)(Type)
+- uid: AttributeBasedRegistration.InheritanceTree
+  name: InheritanceTree
+  href: api/AttributeBasedRegistration.InheritanceTree.html
+  commentId: T:AttributeBasedRegistration.InheritanceTree
+  fullName: AttributeBasedRegistration.InheritanceTree
+  nameWithType: InheritanceTree
+- uid: AttributeBasedRegistration.InheritanceTree.#ctor(System.Type,System.Collections.Generic.IEnumerable{AttributeBasedRegistration.InheritanceTree})
+  name: InheritanceTree(Type, IEnumerable<InheritanceTree>)
+  href: api/AttributeBasedRegistration.InheritanceTree.html#AttributeBasedRegistration_InheritanceTree__ctor_System_Type_System_Collections_Generic_IEnumerable_AttributeBasedRegistration_InheritanceTree__
+  commentId: M:AttributeBasedRegistration.InheritanceTree.#ctor(System.Type,System.Collections.Generic.IEnumerable{AttributeBasedRegistration.InheritanceTree})
+  name.vb: InheritanceTree(Type, IEnumerable(Of InheritanceTree))
+  fullName: AttributeBasedRegistration.InheritanceTree.InheritanceTree(System.Type, System.Collections.Generic.IEnumerable<AttributeBasedRegistration.InheritanceTree>)
+  fullName.vb: AttributeBasedRegistration.InheritanceTree.InheritanceTree(System.Type, System.Collections.Generic.IEnumerable(Of AttributeBasedRegistration.InheritanceTree))
+  nameWithType: InheritanceTree.InheritanceTree(Type, IEnumerable<InheritanceTree>)
+  nameWithType.vb: InheritanceTree.InheritanceTree(Type, IEnumerable(Of InheritanceTree))
+- uid: AttributeBasedRegistration.InheritanceTree.#ctor*
+  name: InheritanceTree
+  href: api/AttributeBasedRegistration.InheritanceTree.html#AttributeBasedRegistration_InheritanceTree__ctor_
+  commentId: Overload:AttributeBasedRegistration.InheritanceTree.#ctor
+  isSpec: "True"
+  fullName: AttributeBasedRegistration.InheritanceTree.InheritanceTree
+  nameWithType: InheritanceTree.InheritanceTree
+- uid: AttributeBasedRegistration.InheritanceTree.Ancestors
+  name: Ancestors
+  href: api/AttributeBasedRegistration.InheritanceTree.html#AttributeBasedRegistration_InheritanceTree_Ancestors
+  commentId: P:AttributeBasedRegistration.InheritanceTree.Ancestors
+  fullName: AttributeBasedRegistration.InheritanceTree.Ancestors
+  nameWithType: InheritanceTree.Ancestors
+- uid: AttributeBasedRegistration.InheritanceTree.Ancestors*
+  name: Ancestors
+  href: api/AttributeBasedRegistration.InheritanceTree.html#AttributeBasedRegistration_InheritanceTree_Ancestors_
+  commentId: Overload:AttributeBasedRegistration.InheritanceTree.Ancestors
+  isSpec: "True"
+  fullName: AttributeBasedRegistration.InheritanceTree.Ancestors
+  nameWithType: InheritanceTree.Ancestors
+- uid: AttributeBasedRegistration.InheritanceTree.IsDirectAncestor(System.Type)
+  name: IsDirectAncestor(Type)
+  href: api/AttributeBasedRegistration.InheritanceTree.html#AttributeBasedRegistration_InheritanceTree_IsDirectAncestor_System_Type_
+  commentId: M:AttributeBasedRegistration.InheritanceTree.IsDirectAncestor(System.Type)
+  fullName: AttributeBasedRegistration.InheritanceTree.IsDirectAncestor(System.Type)
+  nameWithType: InheritanceTree.IsDirectAncestor(Type)
+- uid: AttributeBasedRegistration.InheritanceTree.IsDirectAncestor*
+  name: IsDirectAncestor
+  href: api/AttributeBasedRegistration.InheritanceTree.html#AttributeBasedRegistration_InheritanceTree_IsDirectAncestor_
+  commentId: Overload:AttributeBasedRegistration.InheritanceTree.IsDirectAncestor
+  isSpec: "True"
+  fullName: AttributeBasedRegistration.InheritanceTree.IsDirectAncestor
+  nameWithType: InheritanceTree.IsDirectAncestor
+- uid: AttributeBasedRegistration.InheritanceTree.Node
+  name: Node
+  href: api/AttributeBasedRegistration.InheritanceTree.html#AttributeBasedRegistration_InheritanceTree_Node
+  commentId: P:AttributeBasedRegistration.InheritanceTree.Node
+  fullName: AttributeBasedRegistration.InheritanceTree.Node
+  nameWithType: InheritanceTree.Node
+- uid: AttributeBasedRegistration.InheritanceTree.Node*
+  name: Node
+  href: api/AttributeBasedRegistration.InheritanceTree.html#AttributeBasedRegistration_InheritanceTree_Node_
+  commentId: Overload:AttributeBasedRegistration.InheritanceTree.Node
+  isSpec: "True"
+  fullName: AttributeBasedRegistration.InheritanceTree.Node
+  nameWithType: InheritanceTree.Node
 - uid: AttributeBasedRegistration.InterceptionStrategy
   name: InterceptionStrategy
   href: api/AttributeBasedRegistration.InterceptionStrategy.html

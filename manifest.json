@@ -381,7 +381,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.html",
-          "hash": "UNHOKO6Blo/ThGYxoGAuM7Ru/laXp+u214k9juX2Tps="
+          "hash": "+fZsPX2Xq+H15otvWzYJXB0tO2NyNMoOKz2dqnMZpuw="
         }
       },
       "is_incremental": false,
@@ -441,7 +441,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AttributeBasedRegistration.Extensions.TypeExtensions.html",
-          "hash": "zv7drBy2PmcyO91DCqKE4u5nMufkeVxOSXNEkENcsyw="
+          "hash": "4DubA0Uy5OPXRDJxj0K2VKbYb5t/oVMceVUdoTVZur0="
         }
       },
       "is_incremental": false,
@@ -454,6 +454,18 @@
         ".html": {
           "relative_path": "api/AttributeBasedRegistration.Extensions.html",
           "hash": "fqLIhxLHRCMYwysbj1OSyTsglSDXB60qFjh4zQD4jAY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttributeBasedRegistration.InheritanceTree.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttributeBasedRegistration.InheritanceTree.html",
+          "hash": "s3tVJr4HIkG5c0MrwyNxF3jSQzv9DHgIMIvSWHCwN6I="
         }
       },
       "is_incremental": false,
@@ -513,7 +525,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AttributeBasedRegistration.ServiceCollectionExtensions.html",
-          "hash": "8CZ/hNkS/Tl0vrSCJOIxH+Qkldjn651Jx/+OLdWKC/g="
+          "hash": "mKMls26WRCi7dXc3BNfBMdnFu0GoAzefYK++Dec1Whk="
         }
       },
       "is_incremental": false,
@@ -537,7 +549,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AttributeBasedRegistration.html",
-          "hash": "JJqw/j027B3w+nK19mladZCwARThckZUd5jmEBG1zws="
+          "hash": "tU1QKuOxnOmrjgycqdTFnMTEBeBpvF1mdsOMkIynJbI="
         }
       },
       "is_incremental": false,
@@ -561,7 +573,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "GiPCaW5SqiMvp6sBx6Z6B7Db5zpnCqe8zUnm2D22M34="
+          "hash": "lhsHOGdnJybEU+RTt+oZdgjxOTgIi5er6wtTbsB+3eQ="
         }
       },
       "is_incremental": false,
@@ -636,7 +648,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 46,
+          "total_file_count": 47,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
