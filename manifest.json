@@ -53,6 +53,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/AttributeBasedRegistration.Attributes.Abstractions.IImplementationOfAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttributeBasedRegistration.Attributes.Abstractions.IImplementationOfAttribute.html",
+          "hash": "3+Yodz7OJLMEBNIbS65XvLpY3wjXQ8bNIlYTJpcLBsI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/AttributeBasedRegistration.Attributes.Abstractions.IInterceptedByAttribute.yml",
       "output": {
         ".html": {
@@ -177,7 +189,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AttributeBasedRegistration.Attributes.Abstractions.html",
-          "hash": "RXlYkxwrVr/+3xUBkH2SwKJ/ypR8b1FeU0j0dTKWIS8="
+          "hash": "f4DO0qRkRJaOzDOKw5JThjDC4w/7blTNROe7Mext02Y="
         }
       },
       "is_incremental": false,
@@ -405,7 +417,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AttributeBasedRegistration.Autofac.LoggingInterceptor.html",
-          "hash": "LtHROj28/AGSWCDqwkP+ISAGjHhadiL2jpKyziBeHU0="
+          "hash": "EyWpuzbr/IVwkKBRw9xFRcZlU/yW+YqEiiPz5WzvSw8="
         }
       },
       "is_incremental": false,
@@ -573,7 +585,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "jq7kTTjhz8sHfYsr8aNdgyF/EntRWmOOqcg1cipD6Vc="
+          "hash": "0XPv1Gyo5SIE5hFE76mAeb32vKCgoSuaXq/cB8ZkkrY="
         }
       },
       "is_incremental": false,
@@ -648,7 +660,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 47,
+          "total_file_count": 48,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {

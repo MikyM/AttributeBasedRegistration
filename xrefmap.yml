@@ -108,6 +108,51 @@ references:
   isSpec: "True"
   fullName: AttributeBasedRegistration.Attributes.Abstractions.IFindConstructorsWithAttribute.ConstructorFinder
   nameWithType: IFindConstructorsWithAttribute.ConstructorFinder
+- uid: AttributeBasedRegistration.Attributes.Abstractions.IImplementationOfAttribute
+  name: IImplementationOfAttribute
+  href: api/AttributeBasedRegistration.Attributes.Abstractions.IImplementationOfAttribute.html
+  commentId: T:AttributeBasedRegistration.Attributes.Abstractions.IImplementationOfAttribute
+  fullName: AttributeBasedRegistration.Attributes.Abstractions.IImplementationOfAttribute
+  nameWithType: IImplementationOfAttribute
+- uid: AttributeBasedRegistration.Attributes.Abstractions.IImplementationOfAttribute.RegistrationStrategy
+  name: RegistrationStrategy
+  href: api/AttributeBasedRegistration.Attributes.Abstractions.IImplementationOfAttribute.html#AttributeBasedRegistration_Attributes_Abstractions_IImplementationOfAttribute_RegistrationStrategy
+  commentId: P:AttributeBasedRegistration.Attributes.Abstractions.IImplementationOfAttribute.RegistrationStrategy
+  fullName: AttributeBasedRegistration.Attributes.Abstractions.IImplementationOfAttribute.RegistrationStrategy
+  nameWithType: IImplementationOfAttribute.RegistrationStrategy
+- uid: AttributeBasedRegistration.Attributes.Abstractions.IImplementationOfAttribute.RegistrationStrategy*
+  name: RegistrationStrategy
+  href: api/AttributeBasedRegistration.Attributes.Abstractions.IImplementationOfAttribute.html#AttributeBasedRegistration_Attributes_Abstractions_IImplementationOfAttribute_RegistrationStrategy_
+  commentId: Overload:AttributeBasedRegistration.Attributes.Abstractions.IImplementationOfAttribute.RegistrationStrategy
+  isSpec: "True"
+  fullName: AttributeBasedRegistration.Attributes.Abstractions.IImplementationOfAttribute.RegistrationStrategy
+  nameWithType: IImplementationOfAttribute.RegistrationStrategy
+- uid: AttributeBasedRegistration.Attributes.Abstractions.IImplementationOfAttribute.ServiceLifetime
+  name: ServiceLifetime
+  href: api/AttributeBasedRegistration.Attributes.Abstractions.IImplementationOfAttribute.html#AttributeBasedRegistration_Attributes_Abstractions_IImplementationOfAttribute_ServiceLifetime
+  commentId: P:AttributeBasedRegistration.Attributes.Abstractions.IImplementationOfAttribute.ServiceLifetime
+  fullName: AttributeBasedRegistration.Attributes.Abstractions.IImplementationOfAttribute.ServiceLifetime
+  nameWithType: IImplementationOfAttribute.ServiceLifetime
+- uid: AttributeBasedRegistration.Attributes.Abstractions.IImplementationOfAttribute.ServiceLifetime*
+  name: ServiceLifetime
+  href: api/AttributeBasedRegistration.Attributes.Abstractions.IImplementationOfAttribute.html#AttributeBasedRegistration_Attributes_Abstractions_IImplementationOfAttribute_ServiceLifetime_
+  commentId: Overload:AttributeBasedRegistration.Attributes.Abstractions.IImplementationOfAttribute.ServiceLifetime
+  isSpec: "True"
+  fullName: AttributeBasedRegistration.Attributes.Abstractions.IImplementationOfAttribute.ServiceLifetime
+  nameWithType: IImplementationOfAttribute.ServiceLifetime
+- uid: AttributeBasedRegistration.Attributes.Abstractions.IImplementationOfAttribute.ServiceTypes
+  name: ServiceTypes
+  href: api/AttributeBasedRegistration.Attributes.Abstractions.IImplementationOfAttribute.html#AttributeBasedRegistration_Attributes_Abstractions_IImplementationOfAttribute_ServiceTypes
+  commentId: P:AttributeBasedRegistration.Attributes.Abstractions.IImplementationOfAttribute.ServiceTypes
+  fullName: AttributeBasedRegistration.Attributes.Abstractions.IImplementationOfAttribute.ServiceTypes
+  nameWithType: IImplementationOfAttribute.ServiceTypes
+- uid: AttributeBasedRegistration.Attributes.Abstractions.IImplementationOfAttribute.ServiceTypes*
+  name: ServiceTypes
+  href: api/AttributeBasedRegistration.Attributes.Abstractions.IImplementationOfAttribute.html#AttributeBasedRegistration_Attributes_Abstractions_IImplementationOfAttribute_ServiceTypes_
+  commentId: Overload:AttributeBasedRegistration.Attributes.Abstractions.IImplementationOfAttribute.ServiceTypes
+  isSpec: "True"
+  fullName: AttributeBasedRegistration.Attributes.Abstractions.IImplementationOfAttribute.ServiceTypes
+  nameWithType: IImplementationOfAttribute.ServiceTypes
 - uid: AttributeBasedRegistration.Attributes.Abstractions.IInterceptedByAttribute
   name: IInterceptedByAttribute
   href: api/AttributeBasedRegistration.Attributes.Abstractions.IInterceptedByAttribute.html
