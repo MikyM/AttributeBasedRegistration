@@ -388,11 +388,11 @@ references:
   commentId: T:AttributeBasedRegistration.Attributes.DecoratedByAttribute
   fullName: AttributeBasedRegistration.Attributes.DecoratedByAttribute
   nameWithType: DecoratedByAttribute
-- uid: AttributeBasedRegistration.Attributes.DecoratedByAttribute.#ctor(System.Int32,System.Type)
+- uid: AttributeBasedRegistration.Attributes.DecoratedByAttribute.#ctor(System.Int32,Type)
   name: DecoratedByAttribute(Int32, Type)
-  href: api/AttributeBasedRegistration.Attributes.DecoratedByAttribute.html#AttributeBasedRegistration_Attributes_DecoratedByAttribute__ctor_System_Int32_System_Type_
-  commentId: M:AttributeBasedRegistration.Attributes.DecoratedByAttribute.#ctor(System.Int32,System.Type)
-  fullName: AttributeBasedRegistration.Attributes.DecoratedByAttribute.DecoratedByAttribute(System.Int32, System.Type)
+  href: api/AttributeBasedRegistration.Attributes.DecoratedByAttribute.html#AttributeBasedRegistration_Attributes_DecoratedByAttribute__ctor_System_Int32_Type_
+  commentId: M:AttributeBasedRegistration.Attributes.DecoratedByAttribute.#ctor(System.Int32,Type)
+  fullName: AttributeBasedRegistration.Attributes.DecoratedByAttribute.DecoratedByAttribute(System.Int32, Type)
   nameWithType: DecoratedByAttribute.DecoratedByAttribute(Int32, Type)
 - uid: AttributeBasedRegistration.Attributes.DecoratedByAttribute.#ctor*
   name: DecoratedByAttribute
@@ -465,11 +465,11 @@ references:
   commentId: T:AttributeBasedRegistration.Attributes.InterceptedByAttribute
   fullName: AttributeBasedRegistration.Attributes.InterceptedByAttribute
   nameWithType: InterceptedByAttribute
-- uid: AttributeBasedRegistration.Attributes.InterceptedByAttribute.#ctor(System.Int32,System.Type)
+- uid: AttributeBasedRegistration.Attributes.InterceptedByAttribute.#ctor(System.Int32,Type)
   name: InterceptedByAttribute(Int32, Type)
-  href: api/AttributeBasedRegistration.Attributes.InterceptedByAttribute.html#AttributeBasedRegistration_Attributes_InterceptedByAttribute__ctor_System_Int32_System_Type_
-  commentId: M:AttributeBasedRegistration.Attributes.InterceptedByAttribute.#ctor(System.Int32,System.Type)
-  fullName: AttributeBasedRegistration.Attributes.InterceptedByAttribute.InterceptedByAttribute(System.Int32, System.Type)
+  href: api/AttributeBasedRegistration.Attributes.InterceptedByAttribute.html#AttributeBasedRegistration_Attributes_InterceptedByAttribute__ctor_System_Int32_Type_
+  commentId: M:AttributeBasedRegistration.Attributes.InterceptedByAttribute.#ctor(System.Int32,Type)
+  fullName: AttributeBasedRegistration.Attributes.InterceptedByAttribute.InterceptedByAttribute(System.Int32, Type)
   nameWithType: InterceptedByAttribute.InterceptedByAttribute(Int32, Type)
 - uid: AttributeBasedRegistration.Attributes.InterceptedByAttribute.#ctor*
   name: InterceptedByAttribute
@@ -525,11 +525,11 @@ references:
   fullName.vb: AttributeBasedRegistration.Attributes.LifetimeAttribute.LifetimeAttribute(System.Object())
   nameWithType: LifetimeAttribute.LifetimeAttribute(Object[])
   nameWithType.vb: LifetimeAttribute.LifetimeAttribute(Object())
-- uid: AttributeBasedRegistration.Attributes.LifetimeAttribute.#ctor(System.Type)
+- uid: AttributeBasedRegistration.Attributes.LifetimeAttribute.#ctor(Type)
   name: LifetimeAttribute(Type)
-  href: api/AttributeBasedRegistration.Attributes.LifetimeAttribute.html#AttributeBasedRegistration_Attributes_LifetimeAttribute__ctor_System_Type_
-  commentId: M:AttributeBasedRegistration.Attributes.LifetimeAttribute.#ctor(System.Type)
-  fullName: AttributeBasedRegistration.Attributes.LifetimeAttribute.LifetimeAttribute(System.Type)
+  href: api/AttributeBasedRegistration.Attributes.LifetimeAttribute.html#AttributeBasedRegistration_Attributes_LifetimeAttribute__ctor_Type_
+  commentId: M:AttributeBasedRegistration.Attributes.LifetimeAttribute.#ctor(Type)
+  fullName: AttributeBasedRegistration.Attributes.LifetimeAttribute.LifetimeAttribute(Type)
   nameWithType: LifetimeAttribute.LifetimeAttribute(Type)
 - uid: AttributeBasedRegistration.Attributes.LifetimeAttribute.#ctor*
   name: LifetimeAttribute
@@ -589,13 +589,13 @@ references:
   commentId: M:AttributeBasedRegistration.Attributes.RegisterAsAttribute.#ctor(AttributeBasedRegistration.RegistrationStrategy)
   fullName: AttributeBasedRegistration.Attributes.RegisterAsAttribute.RegisterAsAttribute(AttributeBasedRegistration.RegistrationStrategy)
   nameWithType: RegisterAsAttribute.RegisterAsAttribute(RegistrationStrategy)
-- uid: AttributeBasedRegistration.Attributes.RegisterAsAttribute.#ctor(System.Type[])
+- uid: AttributeBasedRegistration.Attributes.RegisterAsAttribute.#ctor(Type[])
   name: RegisterAsAttribute(Type[])
-  href: api/AttributeBasedRegistration.Attributes.RegisterAsAttribute.html#AttributeBasedRegistration_Attributes_RegisterAsAttribute__ctor_System_Type___
-  commentId: M:AttributeBasedRegistration.Attributes.RegisterAsAttribute.#ctor(System.Type[])
+  href: api/AttributeBasedRegistration.Attributes.RegisterAsAttribute.html#AttributeBasedRegistration_Attributes_RegisterAsAttribute__ctor_Type___
+  commentId: M:AttributeBasedRegistration.Attributes.RegisterAsAttribute.#ctor(Type[])
   name.vb: RegisterAsAttribute(Type())
-  fullName: AttributeBasedRegistration.Attributes.RegisterAsAttribute.RegisterAsAttribute(System.Type[])
-  fullName.vb: AttributeBasedRegistration.Attributes.RegisterAsAttribute.RegisterAsAttribute(System.Type())
+  fullName: AttributeBasedRegistration.Attributes.RegisterAsAttribute.RegisterAsAttribute(Type[])
+  fullName.vb: AttributeBasedRegistration.Attributes.RegisterAsAttribute.RegisterAsAttribute(Type())
   nameWithType: RegisterAsAttribute.RegisterAsAttribute(Type[])
   nameWithType.vb: RegisterAsAttribute.RegisterAsAttribute(Type())
 - uid: AttributeBasedRegistration.Attributes.RegisterAsAttribute.#ctor*
@@ -637,11 +637,11 @@ references:
   commentId: T:AttributeBasedRegistration.Attributes.RegisterKeyedAsAttribute
   fullName: AttributeBasedRegistration.Attributes.RegisterKeyedAsAttribute
   nameWithType: RegisterKeyedAsAttribute
-- uid: AttributeBasedRegistration.Attributes.RegisterKeyedAsAttribute.#ctor(System.Object,System.Type)
+- uid: AttributeBasedRegistration.Attributes.RegisterKeyedAsAttribute.#ctor(System.Object,Type)
   name: RegisterKeyedAsAttribute(Object, Type)
-  href: api/AttributeBasedRegistration.Attributes.RegisterKeyedAsAttribute.html#AttributeBasedRegistration_Attributes_RegisterKeyedAsAttribute__ctor_System_Object_System_Type_
-  commentId: M:AttributeBasedRegistration.Attributes.RegisterKeyedAsAttribute.#ctor(System.Object,System.Type)
-  fullName: AttributeBasedRegistration.Attributes.RegisterKeyedAsAttribute.RegisterKeyedAsAttribute(System.Object, System.Type)
+  href: api/AttributeBasedRegistration.Attributes.RegisterKeyedAsAttribute.html#AttributeBasedRegistration_Attributes_RegisterKeyedAsAttribute__ctor_System_Object_Type_
+  commentId: M:AttributeBasedRegistration.Attributes.RegisterKeyedAsAttribute.#ctor(System.Object,Type)
+  fullName: AttributeBasedRegistration.Attributes.RegisterKeyedAsAttribute.RegisterKeyedAsAttribute(System.Object, Type)
   nameWithType: RegisterKeyedAsAttribute.RegisterKeyedAsAttribute(Object, Type)
 - uid: AttributeBasedRegistration.Attributes.RegisterKeyedAsAttribute.#ctor*
   name: RegisterKeyedAsAttribute
@@ -700,13 +700,13 @@ references:
   commentId: M:AttributeBasedRegistration.Attributes.ServiceImplementationAttribute.#ctor(AttributeBasedRegistration.ServiceLifetime,AttributeBasedRegistration.RegistrationStrategy)
   fullName: AttributeBasedRegistration.Attributes.ServiceImplementationAttribute.ServiceImplementationAttribute(AttributeBasedRegistration.ServiceLifetime, AttributeBasedRegistration.RegistrationStrategy)
   nameWithType: ServiceImplementationAttribute.ServiceImplementationAttribute(ServiceLifetime, RegistrationStrategy)
-- uid: AttributeBasedRegistration.Attributes.ServiceImplementationAttribute.#ctor(AttributeBasedRegistration.ServiceLifetime,System.Type[])
+- uid: AttributeBasedRegistration.Attributes.ServiceImplementationAttribute.#ctor(AttributeBasedRegistration.ServiceLifetime,Type[])
   name: ServiceImplementationAttribute(ServiceLifetime, Type[])
-  href: api/AttributeBasedRegistration.Attributes.ServiceImplementationAttribute.html#AttributeBasedRegistration_Attributes_ServiceImplementationAttribute__ctor_AttributeBasedRegistration_ServiceLifetime_System_Type___
-  commentId: M:AttributeBasedRegistration.Attributes.ServiceImplementationAttribute.#ctor(AttributeBasedRegistration.ServiceLifetime,System.Type[])
+  href: api/AttributeBasedRegistration.Attributes.ServiceImplementationAttribute.html#AttributeBasedRegistration_Attributes_ServiceImplementationAttribute__ctor_AttributeBasedRegistration_ServiceLifetime_Type___
+  commentId: M:AttributeBasedRegistration.Attributes.ServiceImplementationAttribute.#ctor(AttributeBasedRegistration.ServiceLifetime,Type[])
   name.vb: ServiceImplementationAttribute(ServiceLifetime, Type())
-  fullName: AttributeBasedRegistration.Attributes.ServiceImplementationAttribute.ServiceImplementationAttribute(AttributeBasedRegistration.ServiceLifetime, System.Type[])
-  fullName.vb: AttributeBasedRegistration.Attributes.ServiceImplementationAttribute.ServiceImplementationAttribute(AttributeBasedRegistration.ServiceLifetime, System.Type())
+  fullName: AttributeBasedRegistration.Attributes.ServiceImplementationAttribute.ServiceImplementationAttribute(AttributeBasedRegistration.ServiceLifetime, Type[])
+  fullName.vb: AttributeBasedRegistration.Attributes.ServiceImplementationAttribute.ServiceImplementationAttribute(AttributeBasedRegistration.ServiceLifetime, Type())
   nameWithType: ServiceImplementationAttribute.ServiceImplementationAttribute(ServiceLifetime, Type[])
   nameWithType.vb: ServiceImplementationAttribute.ServiceImplementationAttribute(ServiceLifetime, Type())
 - uid: AttributeBasedRegistration.Attributes.ServiceImplementationAttribute.#ctor(AttributeBasedRegistration.ServiceLifetime)
@@ -715,13 +715,13 @@ references:
   commentId: M:AttributeBasedRegistration.Attributes.ServiceImplementationAttribute.#ctor(AttributeBasedRegistration.ServiceLifetime)
   fullName: AttributeBasedRegistration.Attributes.ServiceImplementationAttribute.ServiceImplementationAttribute(AttributeBasedRegistration.ServiceLifetime)
   nameWithType: ServiceImplementationAttribute.ServiceImplementationAttribute(ServiceLifetime)
-- uid: AttributeBasedRegistration.Attributes.ServiceImplementationAttribute.#ctor(System.Type[])
+- uid: AttributeBasedRegistration.Attributes.ServiceImplementationAttribute.#ctor(Type[])
   name: ServiceImplementationAttribute(Type[])
-  href: api/AttributeBasedRegistration.Attributes.ServiceImplementationAttribute.html#AttributeBasedRegistration_Attributes_ServiceImplementationAttribute__ctor_System_Type___
-  commentId: M:AttributeBasedRegistration.Attributes.ServiceImplementationAttribute.#ctor(System.Type[])
+  href: api/AttributeBasedRegistration.Attributes.ServiceImplementationAttribute.html#AttributeBasedRegistration_Attributes_ServiceImplementationAttribute__ctor_Type___
+  commentId: M:AttributeBasedRegistration.Attributes.ServiceImplementationAttribute.#ctor(Type[])
   name.vb: ServiceImplementationAttribute(Type())
-  fullName: AttributeBasedRegistration.Attributes.ServiceImplementationAttribute.ServiceImplementationAttribute(System.Type[])
-  fullName.vb: AttributeBasedRegistration.Attributes.ServiceImplementationAttribute.ServiceImplementationAttribute(System.Type())
+  fullName: AttributeBasedRegistration.Attributes.ServiceImplementationAttribute.ServiceImplementationAttribute(Type[])
+  fullName.vb: AttributeBasedRegistration.Attributes.ServiceImplementationAttribute.ServiceImplementationAttribute(Type())
   nameWithType: ServiceImplementationAttribute.ServiceImplementationAttribute(Type[])
   nameWithType.vb: ServiceImplementationAttribute.ServiceImplementationAttribute(Type())
 - uid: AttributeBasedRegistration.Attributes.ServiceImplementationAttribute.#ctor*
@@ -800,11 +800,11 @@ references:
   commentId: T:AttributeBasedRegistration.Autofac.AllConstructorsFinder
   fullName: AttributeBasedRegistration.Autofac.AllConstructorsFinder
   nameWithType: AllConstructorsFinder
-- uid: AttributeBasedRegistration.Autofac.AllConstructorsFinder.FindConstructors(System.Type)
+- uid: AttributeBasedRegistration.Autofac.AllConstructorsFinder.FindConstructors(Type)
   name: FindConstructors(Type)
-  href: api/AttributeBasedRegistration.Autofac.AllConstructorsFinder.html#AttributeBasedRegistration_Autofac_AllConstructorsFinder_FindConstructors_System_Type_
-  commentId: M:AttributeBasedRegistration.Autofac.AllConstructorsFinder.FindConstructors(System.Type)
-  fullName: AttributeBasedRegistration.Autofac.AllConstructorsFinder.FindConstructors(System.Type)
+  href: api/AttributeBasedRegistration.Autofac.AllConstructorsFinder.html#AttributeBasedRegistration_Autofac_AllConstructorsFinder_FindConstructors_Type_
+  commentId: M:AttributeBasedRegistration.Autofac.AllConstructorsFinder.FindConstructors(Type)
+  fullName: AttributeBasedRegistration.Autofac.AllConstructorsFinder.FindConstructors(Type)
   nameWithType: AllConstructorsFinder.FindConstructors(Type)
 - uid: AttributeBasedRegistration.Autofac.AllConstructorsFinder.FindConstructors*
   name: FindConstructors
@@ -851,11 +851,11 @@ references:
   commentId: T:AttributeBasedRegistration.Autofac.Attributes.FindConstructorsWithAttribute
   fullName: AttributeBasedRegistration.Autofac.Attributes.FindConstructorsWithAttribute
   nameWithType: FindConstructorsWithAttribute
-- uid: AttributeBasedRegistration.Autofac.Attributes.FindConstructorsWithAttribute.#ctor(System.Type)
+- uid: AttributeBasedRegistration.Autofac.Attributes.FindConstructorsWithAttribute.#ctor(Type)
   name: FindConstructorsWithAttribute(Type)
-  href: api/AttributeBasedRegistration.Autofac.Attributes.FindConstructorsWithAttribute.html#AttributeBasedRegistration_Autofac_Attributes_FindConstructorsWithAttribute__ctor_System_Type_
-  commentId: M:AttributeBasedRegistration.Autofac.Attributes.FindConstructorsWithAttribute.#ctor(System.Type)
-  fullName: AttributeBasedRegistration.Autofac.Attributes.FindConstructorsWithAttribute.FindConstructorsWithAttribute(System.Type)
+  href: api/AttributeBasedRegistration.Autofac.Attributes.FindConstructorsWithAttribute.html#AttributeBasedRegistration_Autofac_Attributes_FindConstructorsWithAttribute__ctor_Type_
+  commentId: M:AttributeBasedRegistration.Autofac.Attributes.FindConstructorsWithAttribute.#ctor(Type)
+  fullName: AttributeBasedRegistration.Autofac.Attributes.FindConstructorsWithAttribute.FindConstructorsWithAttribute(Type)
   nameWithType: FindConstructorsWithAttribute.FindConstructorsWithAttribute(Type)
 - uid: AttributeBasedRegistration.Autofac.Attributes.FindConstructorsWithAttribute.#ctor*
   name: FindConstructorsWithAttribute
@@ -883,11 +883,11 @@ references:
   commentId: T:AttributeBasedRegistration.Autofac.Attributes.SelectConstructorsWithAttribute
   fullName: AttributeBasedRegistration.Autofac.Attributes.SelectConstructorsWithAttribute
   nameWithType: SelectConstructorsWithAttribute
-- uid: AttributeBasedRegistration.Autofac.Attributes.SelectConstructorsWithAttribute.#ctor(System.Type)
+- uid: AttributeBasedRegistration.Autofac.Attributes.SelectConstructorsWithAttribute.#ctor(Type)
   name: SelectConstructorsWithAttribute(Type)
-  href: api/AttributeBasedRegistration.Autofac.Attributes.SelectConstructorsWithAttribute.html#AttributeBasedRegistration_Autofac_Attributes_SelectConstructorsWithAttribute__ctor_System_Type_
-  commentId: M:AttributeBasedRegistration.Autofac.Attributes.SelectConstructorsWithAttribute.#ctor(System.Type)
-  fullName: AttributeBasedRegistration.Autofac.Attributes.SelectConstructorsWithAttribute.SelectConstructorsWithAttribute(System.Type)
+  href: api/AttributeBasedRegistration.Autofac.Attributes.SelectConstructorsWithAttribute.html#AttributeBasedRegistration_Autofac_Attributes_SelectConstructorsWithAttribute__ctor_Type_
+  commentId: M:AttributeBasedRegistration.Autofac.Attributes.SelectConstructorsWithAttribute.#ctor(Type)
+  fullName: AttributeBasedRegistration.Autofac.Attributes.SelectConstructorsWithAttribute.SelectConstructorsWithAttribute(Type)
   nameWithType: SelectConstructorsWithAttribute.SelectConstructorsWithAttribute(Type)
 - uid: AttributeBasedRegistration.Autofac.Attributes.SelectConstructorsWithAttribute.#ctor*
   name: SelectConstructorsWithAttribute
@@ -915,58 +915,58 @@ references:
   commentId: T:AttributeBasedRegistration.Autofac.ContainerBuilderExtensions
   fullName: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions
   nameWithType: ContainerBuilderExtensions
-- uid: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(Autofac.ContainerBuilder,System.Action{AttributeBasedRegistration.AttributeRegistrationOptions},System.Reflection.Assembly[])
+- uid: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(ContainerBuilder,Action{AttributeBasedRegistration.AttributeRegistrationOptions},Assembly[])
   name: AddAttributeDefinedServices(ContainerBuilder, Action<AttributeRegistrationOptions>, Assembly[])
-  href: api/AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.html#AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AddAttributeDefinedServices_Autofac_ContainerBuilder_System_Action_AttributeBasedRegistration_AttributeRegistrationOptions__System_Reflection_Assembly___
-  commentId: M:AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(Autofac.ContainerBuilder,System.Action{AttributeBasedRegistration.AttributeRegistrationOptions},System.Reflection.Assembly[])
+  href: api/AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.html#AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AddAttributeDefinedServices_ContainerBuilder_Action_AttributeBasedRegistration_AttributeRegistrationOptions__Assembly___
+  commentId: M:AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(ContainerBuilder,Action{AttributeBasedRegistration.AttributeRegistrationOptions},Assembly[])
   name.vb: AddAttributeDefinedServices(ContainerBuilder, Action(Of AttributeRegistrationOptions), Assembly())
-  fullName: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(Autofac.ContainerBuilder, System.Action<AttributeBasedRegistration.AttributeRegistrationOptions>, System.Reflection.Assembly[])
-  fullName.vb: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(Autofac.ContainerBuilder, System.Action(Of AttributeBasedRegistration.AttributeRegistrationOptions), System.Reflection.Assembly())
+  fullName: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(ContainerBuilder, Action<AttributeBasedRegistration.AttributeRegistrationOptions>, Assembly[])
+  fullName.vb: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(ContainerBuilder, Action(Of AttributeBasedRegistration.AttributeRegistrationOptions), Assembly())
   nameWithType: ContainerBuilderExtensions.AddAttributeDefinedServices(ContainerBuilder, Action<AttributeRegistrationOptions>, Assembly[])
   nameWithType.vb: ContainerBuilderExtensions.AddAttributeDefinedServices(ContainerBuilder, Action(Of AttributeRegistrationOptions), Assembly())
-- uid: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(Autofac.ContainerBuilder,System.Action{AttributeBasedRegistration.AttributeRegistrationOptions},System.Type[])
+- uid: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(ContainerBuilder,Action{AttributeBasedRegistration.AttributeRegistrationOptions},Type[])
   name: AddAttributeDefinedServices(ContainerBuilder, Action<AttributeRegistrationOptions>, Type[])
-  href: api/AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.html#AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AddAttributeDefinedServices_Autofac_ContainerBuilder_System_Action_AttributeBasedRegistration_AttributeRegistrationOptions__System_Type___
-  commentId: M:AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(Autofac.ContainerBuilder,System.Action{AttributeBasedRegistration.AttributeRegistrationOptions},System.Type[])
+  href: api/AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.html#AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AddAttributeDefinedServices_ContainerBuilder_Action_AttributeBasedRegistration_AttributeRegistrationOptions__Type___
+  commentId: M:AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(ContainerBuilder,Action{AttributeBasedRegistration.AttributeRegistrationOptions},Type[])
   name.vb: AddAttributeDefinedServices(ContainerBuilder, Action(Of AttributeRegistrationOptions), Type())
-  fullName: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(Autofac.ContainerBuilder, System.Action<AttributeBasedRegistration.AttributeRegistrationOptions>, System.Type[])
-  fullName.vb: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(Autofac.ContainerBuilder, System.Action(Of AttributeBasedRegistration.AttributeRegistrationOptions), System.Type())
+  fullName: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(ContainerBuilder, Action<AttributeBasedRegistration.AttributeRegistrationOptions>, Type[])
+  fullName.vb: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(ContainerBuilder, Action(Of AttributeBasedRegistration.AttributeRegistrationOptions), Type())
   nameWithType: ContainerBuilderExtensions.AddAttributeDefinedServices(ContainerBuilder, Action<AttributeRegistrationOptions>, Type[])
   nameWithType.vb: ContainerBuilderExtensions.AddAttributeDefinedServices(ContainerBuilder, Action(Of AttributeRegistrationOptions), Type())
-- uid: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(Autofac.ContainerBuilder,System.Collections.Generic.IEnumerable{System.Reflection.Assembly},System.Action{AttributeBasedRegistration.AttributeRegistrationOptions})
-  name: AddAttributeDefinedServices(ContainerBuilder, IEnumerable<Assembly>, Action<AttributeRegistrationOptions>)
-  href: api/AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.html#AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AddAttributeDefinedServices_Autofac_ContainerBuilder_System_Collections_Generic_IEnumerable_System_Reflection_Assembly__System_Action_AttributeBasedRegistration_AttributeRegistrationOptions__
-  commentId: M:AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(Autofac.ContainerBuilder,System.Collections.Generic.IEnumerable{System.Reflection.Assembly},System.Action{AttributeBasedRegistration.AttributeRegistrationOptions})
-  name.vb: AddAttributeDefinedServices(ContainerBuilder, IEnumerable(Of Assembly), Action(Of AttributeRegistrationOptions))
-  fullName: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(Autofac.ContainerBuilder, System.Collections.Generic.IEnumerable<System.Reflection.Assembly>, System.Action<AttributeBasedRegistration.AttributeRegistrationOptions>)
-  fullName.vb: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(Autofac.ContainerBuilder, System.Collections.Generic.IEnumerable(Of System.Reflection.Assembly), System.Action(Of AttributeBasedRegistration.AttributeRegistrationOptions))
-  nameWithType: ContainerBuilderExtensions.AddAttributeDefinedServices(ContainerBuilder, IEnumerable<Assembly>, Action<AttributeRegistrationOptions>)
-  nameWithType.vb: ContainerBuilderExtensions.AddAttributeDefinedServices(ContainerBuilder, IEnumerable(Of Assembly), Action(Of AttributeRegistrationOptions))
-- uid: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(Autofac.ContainerBuilder,System.Collections.Generic.IEnumerable{System.Type},System.Action{AttributeBasedRegistration.AttributeRegistrationOptions})
-  name: AddAttributeDefinedServices(ContainerBuilder, IEnumerable<Type>, Action<AttributeRegistrationOptions>)
-  href: api/AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.html#AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AddAttributeDefinedServices_Autofac_ContainerBuilder_System_Collections_Generic_IEnumerable_System_Type__System_Action_AttributeBasedRegistration_AttributeRegistrationOptions__
-  commentId: M:AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(Autofac.ContainerBuilder,System.Collections.Generic.IEnumerable{System.Type},System.Action{AttributeBasedRegistration.AttributeRegistrationOptions})
-  name.vb: AddAttributeDefinedServices(ContainerBuilder, IEnumerable(Of Type), Action(Of AttributeRegistrationOptions))
-  fullName: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(Autofac.ContainerBuilder, System.Collections.Generic.IEnumerable<System.Type>, System.Action<AttributeBasedRegistration.AttributeRegistrationOptions>)
-  fullName.vb: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(Autofac.ContainerBuilder, System.Collections.Generic.IEnumerable(Of System.Type), System.Action(Of AttributeBasedRegistration.AttributeRegistrationOptions))
-  nameWithType: ContainerBuilderExtensions.AddAttributeDefinedServices(ContainerBuilder, IEnumerable<Type>, Action<AttributeRegistrationOptions>)
-  nameWithType.vb: ContainerBuilderExtensions.AddAttributeDefinedServices(ContainerBuilder, IEnumerable(Of Type), Action(Of AttributeRegistrationOptions))
-- uid: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(Autofac.ContainerBuilder,System.Reflection.Assembly[])
+- uid: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(ContainerBuilder,Assembly[])
   name: AddAttributeDefinedServices(ContainerBuilder, Assembly[])
-  href: api/AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.html#AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AddAttributeDefinedServices_Autofac_ContainerBuilder_System_Reflection_Assembly___
-  commentId: M:AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(Autofac.ContainerBuilder,System.Reflection.Assembly[])
+  href: api/AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.html#AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AddAttributeDefinedServices_ContainerBuilder_Assembly___
+  commentId: M:AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(ContainerBuilder,Assembly[])
   name.vb: AddAttributeDefinedServices(ContainerBuilder, Assembly())
-  fullName: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(Autofac.ContainerBuilder, System.Reflection.Assembly[])
-  fullName.vb: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(Autofac.ContainerBuilder, System.Reflection.Assembly())
+  fullName: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(ContainerBuilder, Assembly[])
+  fullName.vb: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(ContainerBuilder, Assembly())
   nameWithType: ContainerBuilderExtensions.AddAttributeDefinedServices(ContainerBuilder, Assembly[])
   nameWithType.vb: ContainerBuilderExtensions.AddAttributeDefinedServices(ContainerBuilder, Assembly())
-- uid: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(Autofac.ContainerBuilder,System.Type[])
+- uid: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(ContainerBuilder,IEnumerable{Assembly},System.Nullable{Action{AttributeBasedRegistration.AttributeRegistrationOptions}})
+  name: AddAttributeDefinedServices(ContainerBuilder, IEnumerable<Assembly>, Nullable<Action<AttributeRegistrationOptions>>)
+  href: api/AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.html#AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AddAttributeDefinedServices_ContainerBuilder_IEnumerable_Assembly__System_Nullable_Action_AttributeBasedRegistration_AttributeRegistrationOptions___
+  commentId: M:AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(ContainerBuilder,IEnumerable{Assembly},System.Nullable{Action{AttributeBasedRegistration.AttributeRegistrationOptions}})
+  name.vb: AddAttributeDefinedServices(ContainerBuilder, IEnumerable(Of Assembly), Nullable(Of Action(Of AttributeRegistrationOptions)))
+  fullName: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(ContainerBuilder, IEnumerable<Assembly>, System.Nullable<Action<AttributeBasedRegistration.AttributeRegistrationOptions>>)
+  fullName.vb: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(ContainerBuilder, IEnumerable(Of Assembly), System.Nullable(Of Action(Of AttributeBasedRegistration.AttributeRegistrationOptions)))
+  nameWithType: ContainerBuilderExtensions.AddAttributeDefinedServices(ContainerBuilder, IEnumerable<Assembly>, Nullable<Action<AttributeRegistrationOptions>>)
+  nameWithType.vb: ContainerBuilderExtensions.AddAttributeDefinedServices(ContainerBuilder, IEnumerable(Of Assembly), Nullable(Of Action(Of AttributeRegistrationOptions)))
+- uid: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(ContainerBuilder,IEnumerable{Type},System.Nullable{Action{AttributeBasedRegistration.AttributeRegistrationOptions}})
+  name: AddAttributeDefinedServices(ContainerBuilder, IEnumerable<Type>, Nullable<Action<AttributeRegistrationOptions>>)
+  href: api/AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.html#AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AddAttributeDefinedServices_ContainerBuilder_IEnumerable_Type__System_Nullable_Action_AttributeBasedRegistration_AttributeRegistrationOptions___
+  commentId: M:AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(ContainerBuilder,IEnumerable{Type},System.Nullable{Action{AttributeBasedRegistration.AttributeRegistrationOptions}})
+  name.vb: AddAttributeDefinedServices(ContainerBuilder, IEnumerable(Of Type), Nullable(Of Action(Of AttributeRegistrationOptions)))
+  fullName: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(ContainerBuilder, IEnumerable<Type>, System.Nullable<Action<AttributeBasedRegistration.AttributeRegistrationOptions>>)
+  fullName.vb: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(ContainerBuilder, IEnumerable(Of Type), System.Nullable(Of Action(Of AttributeBasedRegistration.AttributeRegistrationOptions)))
+  nameWithType: ContainerBuilderExtensions.AddAttributeDefinedServices(ContainerBuilder, IEnumerable<Type>, Nullable<Action<AttributeRegistrationOptions>>)
+  nameWithType.vb: ContainerBuilderExtensions.AddAttributeDefinedServices(ContainerBuilder, IEnumerable(Of Type), Nullable(Of Action(Of AttributeRegistrationOptions)))
+- uid: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(ContainerBuilder,Type[])
   name: AddAttributeDefinedServices(ContainerBuilder, Type[])
-  href: api/AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.html#AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AddAttributeDefinedServices_Autofac_ContainerBuilder_System_Type___
-  commentId: M:AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(Autofac.ContainerBuilder,System.Type[])
+  href: api/AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.html#AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AddAttributeDefinedServices_ContainerBuilder_Type___
+  commentId: M:AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(ContainerBuilder,Type[])
   name.vb: AddAttributeDefinedServices(ContainerBuilder, Type())
-  fullName: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(Autofac.ContainerBuilder, System.Type[])
-  fullName.vb: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(Autofac.ContainerBuilder, System.Type())
+  fullName: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(ContainerBuilder, Type[])
+  fullName.vb: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(ContainerBuilder, Type())
   nameWithType: ContainerBuilderExtensions.AddAttributeDefinedServices(ContainerBuilder, Type[])
   nameWithType.vb: ContainerBuilderExtensions.AddAttributeDefinedServices(ContainerBuilder, Type())
 - uid: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices*
@@ -983,13 +983,13 @@ references:
   isSpec: "True"
   fullName: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AsConventionNamedInterface
   nameWithType: ContainerBuilderExtensions.AsConventionNamedInterface
-- uid: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AsConventionNamedInterface``2(Autofac.Builder.IRegistrationBuilder{System.Object,``1,``0})
+- uid: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AsConventionNamedInterface``2(IRegistrationBuilder{System.Object,``1,``0})
   name: AsConventionNamedInterface<TRegistrationStyle, TActivatorData>(IRegistrationBuilder<Object, TActivatorData, TRegistrationStyle>)
-  href: api/AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.html#AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AsConventionNamedInterface__2_Autofac_Builder_IRegistrationBuilder_System_Object___1___0__
-  commentId: M:AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AsConventionNamedInterface``2(Autofac.Builder.IRegistrationBuilder{System.Object,``1,``0})
+  href: api/AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.html#AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AsConventionNamedInterface__2_IRegistrationBuilder_System_Object___1___0__
+  commentId: M:AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AsConventionNamedInterface``2(IRegistrationBuilder{System.Object,``1,``0})
   name.vb: AsConventionNamedInterface(Of TRegistrationStyle, TActivatorData)(IRegistrationBuilder(Of Object, TActivatorData, TRegistrationStyle))
-  fullName: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AsConventionNamedInterface<TRegistrationStyle, TActivatorData>(Autofac.Builder.IRegistrationBuilder<System.Object, TActivatorData, TRegistrationStyle>)
-  fullName.vb: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AsConventionNamedInterface(Of TRegistrationStyle, TActivatorData)(Autofac.Builder.IRegistrationBuilder(Of System.Object, TActivatorData, TRegistrationStyle))
+  fullName: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AsConventionNamedInterface<TRegistrationStyle, TActivatorData>(IRegistrationBuilder<System.Object, TActivatorData, TRegistrationStyle>)
+  fullName.vb: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AsConventionNamedInterface(Of TRegistrationStyle, TActivatorData)(IRegistrationBuilder(Of System.Object, TActivatorData, TRegistrationStyle))
   nameWithType: ContainerBuilderExtensions.AsConventionNamedInterface<TRegistrationStyle, TActivatorData>(IRegistrationBuilder<Object, TActivatorData, TRegistrationStyle>)
   nameWithType.vb: ContainerBuilderExtensions.AsConventionNamedInterface(Of TRegistrationStyle, TActivatorData)(IRegistrationBuilder(Of Object, TActivatorData, TRegistrationStyle))
 - uid: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AsDirectAncestorInterfaces*
@@ -999,26 +999,26 @@ references:
   isSpec: "True"
   fullName: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AsDirectAncestorInterfaces
   nameWithType: ContainerBuilderExtensions.AsDirectAncestorInterfaces
-- uid: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AsDirectAncestorInterfaces``2(Autofac.Builder.IRegistrationBuilder{System.Object,``1,``0})
+- uid: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AsDirectAncestorInterfaces``2(IRegistrationBuilder{System.Object,``1,``0})
   name: AsDirectAncestorInterfaces<TRegistrationStyle, TActivatorData>(IRegistrationBuilder<Object, TActivatorData, TRegistrationStyle>)
-  href: api/AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.html#AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AsDirectAncestorInterfaces__2_Autofac_Builder_IRegistrationBuilder_System_Object___1___0__
-  commentId: M:AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AsDirectAncestorInterfaces``2(Autofac.Builder.IRegistrationBuilder{System.Object,``1,``0})
+  href: api/AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.html#AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AsDirectAncestorInterfaces__2_IRegistrationBuilder_System_Object___1___0__
+  commentId: M:AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AsDirectAncestorInterfaces``2(IRegistrationBuilder{System.Object,``1,``0})
   name.vb: AsDirectAncestorInterfaces(Of TRegistrationStyle, TActivatorData)(IRegistrationBuilder(Of Object, TActivatorData, TRegistrationStyle))
-  fullName: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AsDirectAncestorInterfaces<TRegistrationStyle, TActivatorData>(Autofac.Builder.IRegistrationBuilder<System.Object, TActivatorData, TRegistrationStyle>)
-  fullName.vb: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AsDirectAncestorInterfaces(Of TRegistrationStyle, TActivatorData)(Autofac.Builder.IRegistrationBuilder(Of System.Object, TActivatorData, TRegistrationStyle))
+  fullName: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AsDirectAncestorInterfaces<TRegistrationStyle, TActivatorData>(IRegistrationBuilder<System.Object, TActivatorData, TRegistrationStyle>)
+  fullName.vb: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AsDirectAncestorInterfaces(Of TRegistrationStyle, TActivatorData)(IRegistrationBuilder(Of System.Object, TActivatorData, TRegistrationStyle))
   nameWithType: ContainerBuilderExtensions.AsDirectAncestorInterfaces<TRegistrationStyle, TActivatorData>(IRegistrationBuilder<Object, TActivatorData, TRegistrationStyle>)
   nameWithType.vb: ContainerBuilderExtensions.AsDirectAncestorInterfaces(Of TRegistrationStyle, TActivatorData)(IRegistrationBuilder(Of Object, TActivatorData, TRegistrationStyle))
-- uid: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.IsRootScope(Autofac.ILifetimeScope)
+- uid: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.IsRootScope(ILifetimeScope)
   name: IsRootScope(ILifetimeScope)
-  href: api/AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.html#AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_IsRootScope_Autofac_ILifetimeScope_
-  commentId: M:AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.IsRootScope(Autofac.ILifetimeScope)
-  fullName: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.IsRootScope(Autofac.ILifetimeScope)
+  href: api/AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.html#AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_IsRootScope_ILifetimeScope_
+  commentId: M:AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.IsRootScope(ILifetimeScope)
+  fullName: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.IsRootScope(ILifetimeScope)
   nameWithType: ContainerBuilderExtensions.IsRootScope(ILifetimeScope)
-- uid: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.IsRootScope(System.IServiceProvider)
+- uid: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.IsRootScope(IServiceProvider)
   name: IsRootScope(IServiceProvider)
-  href: api/AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.html#AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_IsRootScope_System_IServiceProvider_
-  commentId: M:AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.IsRootScope(System.IServiceProvider)
-  fullName: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.IsRootScope(System.IServiceProvider)
+  href: api/AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.html#AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_IsRootScope_IServiceProvider_
+  commentId: M:AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.IsRootScope(IServiceProvider)
+  fullName: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.IsRootScope(IServiceProvider)
   nameWithType: ContainerBuilderExtensions.IsRootScope(IServiceProvider)
 - uid: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.IsRootScope*
   name: IsRootScope
@@ -1027,11 +1027,11 @@ references:
   isSpec: "True"
   fullName: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.IsRootScope
   nameWithType: ContainerBuilderExtensions.IsRootScope
-- uid: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterAsyncInterceptorAdapter(Autofac.ContainerBuilder)
+- uid: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterAsyncInterceptorAdapter(ContainerBuilder)
   name: RegisterAsyncInterceptorAdapter(ContainerBuilder)
-  href: api/AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.html#AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterAsyncInterceptorAdapter_Autofac_ContainerBuilder_
-  commentId: M:AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterAsyncInterceptorAdapter(Autofac.ContainerBuilder)
-  fullName: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterAsyncInterceptorAdapter(Autofac.ContainerBuilder)
+  href: api/AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.html#AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterAsyncInterceptorAdapter_ContainerBuilder_
+  commentId: M:AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterAsyncInterceptorAdapter(ContainerBuilder)
+  fullName: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterAsyncInterceptorAdapter(ContainerBuilder)
   nameWithType: ContainerBuilderExtensions.RegisterAsyncInterceptorAdapter(ContainerBuilder)
 - uid: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterAsyncInterceptorAdapter*
   name: RegisterAsyncInterceptorAdapter
@@ -1047,15 +1047,15 @@ references:
   isSpec: "True"
   fullName: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptor
   nameWithType: ContainerBuilderExtensions.RegisterInterceptor
-- uid: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptor``1(Autofac.ContainerBuilder,System.Func{Autofac.IComponentContext,``0},AttributeBasedRegistration.ServiceLifetime,System.Collections.Generic.IEnumerable{System.Object})
-  name: RegisterInterceptor<T>(ContainerBuilder, Func<IComponentContext, T>, ServiceLifetime, IEnumerable<Object>)
-  href: api/AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.html#AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptor__1_Autofac_ContainerBuilder_System_Func_Autofac_IComponentContext___0__AttributeBasedRegistration_ServiceLifetime_System_Collections_Generic_IEnumerable_System_Object__
-  commentId: M:AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptor``1(Autofac.ContainerBuilder,System.Func{Autofac.IComponentContext,``0},AttributeBasedRegistration.ServiceLifetime,System.Collections.Generic.IEnumerable{System.Object})
-  name.vb: RegisterInterceptor(Of T)(ContainerBuilder, Func(Of IComponentContext, T), ServiceLifetime, IEnumerable(Of Object))
-  fullName: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptor<T>(Autofac.ContainerBuilder, System.Func<Autofac.IComponentContext, T>, AttributeBasedRegistration.ServiceLifetime, System.Collections.Generic.IEnumerable<System.Object>)
-  fullName.vb: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptor(Of T)(Autofac.ContainerBuilder, System.Func(Of Autofac.IComponentContext, T), AttributeBasedRegistration.ServiceLifetime, System.Collections.Generic.IEnumerable(Of System.Object))
-  nameWithType: ContainerBuilderExtensions.RegisterInterceptor<T>(ContainerBuilder, Func<IComponentContext, T>, ServiceLifetime, IEnumerable<Object>)
-  nameWithType.vb: ContainerBuilderExtensions.RegisterInterceptor(Of T)(ContainerBuilder, Func(Of IComponentContext, T), ServiceLifetime, IEnumerable(Of Object))
+- uid: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptor``1(ContainerBuilder,Func{IComponentContext,``0},AttributeBasedRegistration.ServiceLifetime,System.Nullable{IEnumerable{System.Object}})
+  name: RegisterInterceptor<T>(ContainerBuilder, Func<IComponentContext, T>, ServiceLifetime, Nullable<IEnumerable<Object>>)
+  href: api/AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.html#AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptor__1_ContainerBuilder_Func_IComponentContext___0__AttributeBasedRegistration_ServiceLifetime_System_Nullable_IEnumerable_System_Object___
+  commentId: M:AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptor``1(ContainerBuilder,Func{IComponentContext,``0},AttributeBasedRegistration.ServiceLifetime,System.Nullable{IEnumerable{System.Object}})
+  name.vb: RegisterInterceptor(Of T)(ContainerBuilder, Func(Of IComponentContext, T), ServiceLifetime, Nullable(Of IEnumerable(Of Object)))
+  fullName: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptor<T>(ContainerBuilder, Func<IComponentContext, T>, AttributeBasedRegistration.ServiceLifetime, System.Nullable<IEnumerable<System.Object>>)
+  fullName.vb: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptor(Of T)(ContainerBuilder, Func(Of IComponentContext, T), AttributeBasedRegistration.ServiceLifetime, System.Nullable(Of IEnumerable(Of System.Object)))
+  nameWithType: ContainerBuilderExtensions.RegisterInterceptor<T>(ContainerBuilder, Func<IComponentContext, T>, ServiceLifetime, Nullable<IEnumerable<Object>>)
+  nameWithType.vb: ContainerBuilderExtensions.RegisterInterceptor(Of T)(ContainerBuilder, Func(Of IComponentContext, T), ServiceLifetime, Nullable(Of IEnumerable(Of Object)))
 - uid: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptorInstance*
   name: RegisterInterceptorInstance
   href: api/AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.html#AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptorInstance_
@@ -1063,67 +1063,67 @@ references:
   isSpec: "True"
   fullName: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptorInstance
   nameWithType: ContainerBuilderExtensions.RegisterInterceptorInstance
-- uid: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptorInstance``1(Autofac.ContainerBuilder,``0,AttributeBasedRegistration.ServiceLifetime)
+- uid: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptorInstance``1(ContainerBuilder,``0,AttributeBasedRegistration.ServiceLifetime)
   name: RegisterInterceptorInstance<T>(ContainerBuilder, T, ServiceLifetime)
-  href: api/AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.html#AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptorInstance__1_Autofac_ContainerBuilder___0_AttributeBasedRegistration_ServiceLifetime_
-  commentId: M:AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptorInstance``1(Autofac.ContainerBuilder,``0,AttributeBasedRegistration.ServiceLifetime)
+  href: api/AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.html#AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptorInstance__1_ContainerBuilder___0_AttributeBasedRegistration_ServiceLifetime_
+  commentId: M:AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptorInstance``1(ContainerBuilder,``0,AttributeBasedRegistration.ServiceLifetime)
   name.vb: RegisterInterceptorInstance(Of T)(ContainerBuilder, T, ServiceLifetime)
-  fullName: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptorInstance<T>(Autofac.ContainerBuilder, T, AttributeBasedRegistration.ServiceLifetime)
-  fullName.vb: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptorInstance(Of T)(Autofac.ContainerBuilder, T, AttributeBasedRegistration.ServiceLifetime)
+  fullName: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptorInstance<T>(ContainerBuilder, T, AttributeBasedRegistration.ServiceLifetime)
+  fullName.vb: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptorInstance(Of T)(ContainerBuilder, T, AttributeBasedRegistration.ServiceLifetime)
   nameWithType: ContainerBuilderExtensions.RegisterInterceptorInstance<T>(ContainerBuilder, T, ServiceLifetime)
   nameWithType.vb: ContainerBuilderExtensions.RegisterInterceptorInstance(Of T)(ContainerBuilder, T, ServiceLifetime)
-- uid: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(Autofac.ContainerBuilder,AttributeBasedRegistration.ServiceLifetime,System.Reflection.Assembly[])
-  name: RegisterInterceptors(ContainerBuilder, ServiceLifetime, Assembly[])
-  href: api/AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.html#AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_Autofac_ContainerBuilder_AttributeBasedRegistration_ServiceLifetime_System_Reflection_Assembly___
-  commentId: M:AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(Autofac.ContainerBuilder,AttributeBasedRegistration.ServiceLifetime,System.Reflection.Assembly[])
-  name.vb: RegisterInterceptors(ContainerBuilder, ServiceLifetime, Assembly())
-  fullName: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(Autofac.ContainerBuilder, AttributeBasedRegistration.ServiceLifetime, System.Reflection.Assembly[])
-  fullName.vb: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(Autofac.ContainerBuilder, AttributeBasedRegistration.ServiceLifetime, System.Reflection.Assembly())
-  nameWithType: ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder, ServiceLifetime, Assembly[])
-  nameWithType.vb: ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder, ServiceLifetime, Assembly())
-- uid: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(Autofac.ContainerBuilder,AttributeBasedRegistration.ServiceLifetime,System.Type[])
-  name: RegisterInterceptors(ContainerBuilder, ServiceLifetime, Type[])
-  href: api/AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.html#AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_Autofac_ContainerBuilder_AttributeBasedRegistration_ServiceLifetime_System_Type___
-  commentId: M:AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(Autofac.ContainerBuilder,AttributeBasedRegistration.ServiceLifetime,System.Type[])
-  name.vb: RegisterInterceptors(ContainerBuilder, ServiceLifetime, Type())
-  fullName: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(Autofac.ContainerBuilder, AttributeBasedRegistration.ServiceLifetime, System.Type[])
-  fullName.vb: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(Autofac.ContainerBuilder, AttributeBasedRegistration.ServiceLifetime, System.Type())
-  nameWithType: ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder, ServiceLifetime, Type[])
-  nameWithType.vb: ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder, ServiceLifetime, Type())
-- uid: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(Autofac.ContainerBuilder,System.Collections.Generic.IEnumerable{System.Reflection.Assembly},AttributeBasedRegistration.ServiceLifetime)
-  name: RegisterInterceptors(ContainerBuilder, IEnumerable<Assembly>, ServiceLifetime)
-  href: api/AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.html#AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_Autofac_ContainerBuilder_System_Collections_Generic_IEnumerable_System_Reflection_Assembly__AttributeBasedRegistration_ServiceLifetime_
-  commentId: M:AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(Autofac.ContainerBuilder,System.Collections.Generic.IEnumerable{System.Reflection.Assembly},AttributeBasedRegistration.ServiceLifetime)
-  name.vb: RegisterInterceptors(ContainerBuilder, IEnumerable(Of Assembly), ServiceLifetime)
-  fullName: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(Autofac.ContainerBuilder, System.Collections.Generic.IEnumerable<System.Reflection.Assembly>, AttributeBasedRegistration.ServiceLifetime)
-  fullName.vb: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(Autofac.ContainerBuilder, System.Collections.Generic.IEnumerable(Of System.Reflection.Assembly), AttributeBasedRegistration.ServiceLifetime)
-  nameWithType: ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder, IEnumerable<Assembly>, ServiceLifetime)
-  nameWithType.vb: ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder, IEnumerable(Of Assembly), ServiceLifetime)
-- uid: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(Autofac.ContainerBuilder,System.Collections.Generic.IEnumerable{System.Type},AttributeBasedRegistration.ServiceLifetime)
-  name: RegisterInterceptors(ContainerBuilder, IEnumerable<Type>, ServiceLifetime)
-  href: api/AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.html#AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_Autofac_ContainerBuilder_System_Collections_Generic_IEnumerable_System_Type__AttributeBasedRegistration_ServiceLifetime_
-  commentId: M:AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(Autofac.ContainerBuilder,System.Collections.Generic.IEnumerable{System.Type},AttributeBasedRegistration.ServiceLifetime)
-  name.vb: RegisterInterceptors(ContainerBuilder, IEnumerable(Of Type), ServiceLifetime)
-  fullName: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(Autofac.ContainerBuilder, System.Collections.Generic.IEnumerable<System.Type>, AttributeBasedRegistration.ServiceLifetime)
-  fullName.vb: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(Autofac.ContainerBuilder, System.Collections.Generic.IEnumerable(Of System.Type), AttributeBasedRegistration.ServiceLifetime)
-  nameWithType: ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder, IEnumerable<Type>, ServiceLifetime)
-  nameWithType.vb: ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder, IEnumerable(Of Type), ServiceLifetime)
-- uid: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(Autofac.ContainerBuilder,System.Reflection.Assembly[])
+- uid: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder,Assembly[])
   name: RegisterInterceptors(ContainerBuilder, Assembly[])
-  href: api/AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.html#AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_Autofac_ContainerBuilder_System_Reflection_Assembly___
-  commentId: M:AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(Autofac.ContainerBuilder,System.Reflection.Assembly[])
+  href: api/AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.html#AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_ContainerBuilder_Assembly___
+  commentId: M:AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder,Assembly[])
   name.vb: RegisterInterceptors(ContainerBuilder, Assembly())
-  fullName: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(Autofac.ContainerBuilder, System.Reflection.Assembly[])
-  fullName.vb: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(Autofac.ContainerBuilder, System.Reflection.Assembly())
+  fullName: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder, Assembly[])
+  fullName.vb: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder, Assembly())
   nameWithType: ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder, Assembly[])
   nameWithType.vb: ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder, Assembly())
-- uid: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(Autofac.ContainerBuilder,System.Type[])
+- uid: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder,AttributeBasedRegistration.ServiceLifetime,Assembly[])
+  name: RegisterInterceptors(ContainerBuilder, ServiceLifetime, Assembly[])
+  href: api/AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.html#AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_ContainerBuilder_AttributeBasedRegistration_ServiceLifetime_Assembly___
+  commentId: M:AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder,AttributeBasedRegistration.ServiceLifetime,Assembly[])
+  name.vb: RegisterInterceptors(ContainerBuilder, ServiceLifetime, Assembly())
+  fullName: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder, AttributeBasedRegistration.ServiceLifetime, Assembly[])
+  fullName.vb: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder, AttributeBasedRegistration.ServiceLifetime, Assembly())
+  nameWithType: ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder, ServiceLifetime, Assembly[])
+  nameWithType.vb: ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder, ServiceLifetime, Assembly())
+- uid: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder,AttributeBasedRegistration.ServiceLifetime,Type[])
+  name: RegisterInterceptors(ContainerBuilder, ServiceLifetime, Type[])
+  href: api/AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.html#AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_ContainerBuilder_AttributeBasedRegistration_ServiceLifetime_Type___
+  commentId: M:AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder,AttributeBasedRegistration.ServiceLifetime,Type[])
+  name.vb: RegisterInterceptors(ContainerBuilder, ServiceLifetime, Type())
+  fullName: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder, AttributeBasedRegistration.ServiceLifetime, Type[])
+  fullName.vb: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder, AttributeBasedRegistration.ServiceLifetime, Type())
+  nameWithType: ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder, ServiceLifetime, Type[])
+  nameWithType.vb: ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder, ServiceLifetime, Type())
+- uid: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder,IEnumerable{Assembly},AttributeBasedRegistration.ServiceLifetime)
+  name: RegisterInterceptors(ContainerBuilder, IEnumerable<Assembly>, ServiceLifetime)
+  href: api/AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.html#AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_ContainerBuilder_IEnumerable_Assembly__AttributeBasedRegistration_ServiceLifetime_
+  commentId: M:AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder,IEnumerable{Assembly},AttributeBasedRegistration.ServiceLifetime)
+  name.vb: RegisterInterceptors(ContainerBuilder, IEnumerable(Of Assembly), ServiceLifetime)
+  fullName: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder, IEnumerable<Assembly>, AttributeBasedRegistration.ServiceLifetime)
+  fullName.vb: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder, IEnumerable(Of Assembly), AttributeBasedRegistration.ServiceLifetime)
+  nameWithType: ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder, IEnumerable<Assembly>, ServiceLifetime)
+  nameWithType.vb: ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder, IEnumerable(Of Assembly), ServiceLifetime)
+- uid: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder,IEnumerable{Type},AttributeBasedRegistration.ServiceLifetime)
+  name: RegisterInterceptors(ContainerBuilder, IEnumerable<Type>, ServiceLifetime)
+  href: api/AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.html#AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_ContainerBuilder_IEnumerable_Type__AttributeBasedRegistration_ServiceLifetime_
+  commentId: M:AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder,IEnumerable{Type},AttributeBasedRegistration.ServiceLifetime)
+  name.vb: RegisterInterceptors(ContainerBuilder, IEnumerable(Of Type), ServiceLifetime)
+  fullName: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder, IEnumerable<Type>, AttributeBasedRegistration.ServiceLifetime)
+  fullName.vb: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder, IEnumerable(Of Type), AttributeBasedRegistration.ServiceLifetime)
+  nameWithType: ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder, IEnumerable<Type>, ServiceLifetime)
+  nameWithType.vb: ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder, IEnumerable(Of Type), ServiceLifetime)
+- uid: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder,Type[])
   name: RegisterInterceptors(ContainerBuilder, Type[])
-  href: api/AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.html#AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_Autofac_ContainerBuilder_System_Type___
-  commentId: M:AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(Autofac.ContainerBuilder,System.Type[])
+  href: api/AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.html#AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_ContainerBuilder_Type___
+  commentId: M:AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder,Type[])
   name.vb: RegisterInterceptors(ContainerBuilder, Type())
-  fullName: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(Autofac.ContainerBuilder, System.Type[])
-  fullName.vb: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(Autofac.ContainerBuilder, System.Type())
+  fullName: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder, Type[])
+  fullName.vb: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder, Type())
   nameWithType: ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder, Type[])
   nameWithType.vb: ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder, Type())
 - uid: AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors*
@@ -1146,13 +1146,13 @@ references:
   isSpec: "True"
   fullName: AttributeBasedRegistration.Autofac.IRegistrationBuilderExtensions.AsClosedClassesOf
   nameWithType: IRegistrationBuilderExtensions.AsClosedClassesOf
-- uid: AttributeBasedRegistration.Autofac.IRegistrationBuilderExtensions.AsClosedClassesOf``3(Autofac.Builder.IRegistrationBuilder{``0,``1,``2},System.Type)
+- uid: AttributeBasedRegistration.Autofac.IRegistrationBuilderExtensions.AsClosedClassesOf``3(IRegistrationBuilder{``0,``1,``2},Type)
   name: AsClosedClassesOf<TLimit, TScanningActivatorData, TRegistrationStyle>(IRegistrationBuilder<TLimit, TScanningActivatorData, TRegistrationStyle>, Type)
-  href: api/AttributeBasedRegistration.Autofac.IRegistrationBuilderExtensions.html#AttributeBasedRegistration_Autofac_IRegistrationBuilderExtensions_AsClosedClassesOf__3_Autofac_Builder_IRegistrationBuilder___0___1___2__System_Type_
-  commentId: M:AttributeBasedRegistration.Autofac.IRegistrationBuilderExtensions.AsClosedClassesOf``3(Autofac.Builder.IRegistrationBuilder{``0,``1,``2},System.Type)
+  href: api/AttributeBasedRegistration.Autofac.IRegistrationBuilderExtensions.html#AttributeBasedRegistration_Autofac_IRegistrationBuilderExtensions_AsClosedClassesOf__3_IRegistrationBuilder___0___1___2__Type_
+  commentId: M:AttributeBasedRegistration.Autofac.IRegistrationBuilderExtensions.AsClosedClassesOf``3(IRegistrationBuilder{``0,``1,``2},Type)
   name.vb: AsClosedClassesOf(Of TLimit, TScanningActivatorData, TRegistrationStyle)(IRegistrationBuilder(Of TLimit, TScanningActivatorData, TRegistrationStyle), Type)
-  fullName: AttributeBasedRegistration.Autofac.IRegistrationBuilderExtensions.AsClosedClassesOf<TLimit, TScanningActivatorData, TRegistrationStyle>(Autofac.Builder.IRegistrationBuilder<TLimit, TScanningActivatorData, TRegistrationStyle>, System.Type)
-  fullName.vb: AttributeBasedRegistration.Autofac.IRegistrationBuilderExtensions.AsClosedClassesOf(Of TLimit, TScanningActivatorData, TRegistrationStyle)(Autofac.Builder.IRegistrationBuilder(Of TLimit, TScanningActivatorData, TRegistrationStyle), System.Type)
+  fullName: AttributeBasedRegistration.Autofac.IRegistrationBuilderExtensions.AsClosedClassesOf<TLimit, TScanningActivatorData, TRegistrationStyle>(IRegistrationBuilder<TLimit, TScanningActivatorData, TRegistrationStyle>, Type)
+  fullName.vb: AttributeBasedRegistration.Autofac.IRegistrationBuilderExtensions.AsClosedClassesOf(Of TLimit, TScanningActivatorData, TRegistrationStyle)(IRegistrationBuilder(Of TLimit, TScanningActivatorData, TRegistrationStyle), Type)
   nameWithType: IRegistrationBuilderExtensions.AsClosedClassesOf<TLimit, TScanningActivatorData, TRegistrationStyle>(IRegistrationBuilder<TLimit, TScanningActivatorData, TRegistrationStyle>, Type)
   nameWithType.vb: IRegistrationBuilderExtensions.AsClosedClassesOf(Of TLimit, TScanningActivatorData, TRegistrationStyle)(IRegistrationBuilder(Of TLimit, TScanningActivatorData, TRegistrationStyle), Type)
 - uid: AttributeBasedRegistration.Autofac.IRegistrationBuilderExtensions.AsClosedInterfacesOf*
@@ -1162,13 +1162,13 @@ references:
   isSpec: "True"
   fullName: AttributeBasedRegistration.Autofac.IRegistrationBuilderExtensions.AsClosedInterfacesOf
   nameWithType: IRegistrationBuilderExtensions.AsClosedInterfacesOf
-- uid: AttributeBasedRegistration.Autofac.IRegistrationBuilderExtensions.AsClosedInterfacesOf``3(Autofac.Builder.IRegistrationBuilder{``0,``1,``2},System.Type)
+- uid: AttributeBasedRegistration.Autofac.IRegistrationBuilderExtensions.AsClosedInterfacesOf``3(IRegistrationBuilder{``0,``1,``2},Type)
   name: AsClosedInterfacesOf<TLimit, TScanningActivatorData, TRegistrationStyle>(IRegistrationBuilder<TLimit, TScanningActivatorData, TRegistrationStyle>, Type)
-  href: api/AttributeBasedRegistration.Autofac.IRegistrationBuilderExtensions.html#AttributeBasedRegistration_Autofac_IRegistrationBuilderExtensions_AsClosedInterfacesOf__3_Autofac_Builder_IRegistrationBuilder___0___1___2__System_Type_
-  commentId: M:AttributeBasedRegistration.Autofac.IRegistrationBuilderExtensions.AsClosedInterfacesOf``3(Autofac.Builder.IRegistrationBuilder{``0,``1,``2},System.Type)
+  href: api/AttributeBasedRegistration.Autofac.IRegistrationBuilderExtensions.html#AttributeBasedRegistration_Autofac_IRegistrationBuilderExtensions_AsClosedInterfacesOf__3_IRegistrationBuilder___0___1___2__Type_
+  commentId: M:AttributeBasedRegistration.Autofac.IRegistrationBuilderExtensions.AsClosedInterfacesOf``3(IRegistrationBuilder{``0,``1,``2},Type)
   name.vb: AsClosedInterfacesOf(Of TLimit, TScanningActivatorData, TRegistrationStyle)(IRegistrationBuilder(Of TLimit, TScanningActivatorData, TRegistrationStyle), Type)
-  fullName: AttributeBasedRegistration.Autofac.IRegistrationBuilderExtensions.AsClosedInterfacesOf<TLimit, TScanningActivatorData, TRegistrationStyle>(Autofac.Builder.IRegistrationBuilder<TLimit, TScanningActivatorData, TRegistrationStyle>, System.Type)
-  fullName.vb: AttributeBasedRegistration.Autofac.IRegistrationBuilderExtensions.AsClosedInterfacesOf(Of TLimit, TScanningActivatorData, TRegistrationStyle)(Autofac.Builder.IRegistrationBuilder(Of TLimit, TScanningActivatorData, TRegistrationStyle), System.Type)
+  fullName: AttributeBasedRegistration.Autofac.IRegistrationBuilderExtensions.AsClosedInterfacesOf<TLimit, TScanningActivatorData, TRegistrationStyle>(IRegistrationBuilder<TLimit, TScanningActivatorData, TRegistrationStyle>, Type)
+  fullName.vb: AttributeBasedRegistration.Autofac.IRegistrationBuilderExtensions.AsClosedInterfacesOf(Of TLimit, TScanningActivatorData, TRegistrationStyle)(IRegistrationBuilder(Of TLimit, TScanningActivatorData, TRegistrationStyle), Type)
   nameWithType: IRegistrationBuilderExtensions.AsClosedInterfacesOf<TLimit, TScanningActivatorData, TRegistrationStyle>(IRegistrationBuilder<TLimit, TScanningActivatorData, TRegistrationStyle>, Type)
   nameWithType.vb: IRegistrationBuilderExtensions.AsClosedInterfacesOf(Of TLimit, TScanningActivatorData, TRegistrationStyle)(IRegistrationBuilder(Of TLimit, TScanningActivatorData, TRegistrationStyle), Type)
 - uid: AttributeBasedRegistration.Autofac.LoggingInterceptor
@@ -1177,11 +1177,11 @@ references:
   commentId: T:AttributeBasedRegistration.Autofac.LoggingInterceptor
   fullName: AttributeBasedRegistration.Autofac.LoggingInterceptor
   nameWithType: LoggingInterceptor
-- uid: AttributeBasedRegistration.Autofac.LoggingInterceptor.#ctor(Microsoft.Extensions.Logging.ILogger)
+- uid: AttributeBasedRegistration.Autofac.LoggingInterceptor.#ctor(ILogger)
   name: LoggingInterceptor(ILogger)
-  href: api/AttributeBasedRegistration.Autofac.LoggingInterceptor.html#AttributeBasedRegistration_Autofac_LoggingInterceptor__ctor_Microsoft_Extensions_Logging_ILogger_
-  commentId: M:AttributeBasedRegistration.Autofac.LoggingInterceptor.#ctor(Microsoft.Extensions.Logging.ILogger)
-  fullName: AttributeBasedRegistration.Autofac.LoggingInterceptor.LoggingInterceptor(Microsoft.Extensions.Logging.ILogger)
+  href: api/AttributeBasedRegistration.Autofac.LoggingInterceptor.html#AttributeBasedRegistration_Autofac_LoggingInterceptor__ctor_ILogger_
+  commentId: M:AttributeBasedRegistration.Autofac.LoggingInterceptor.#ctor(ILogger)
+  fullName: AttributeBasedRegistration.Autofac.LoggingInterceptor.LoggingInterceptor(ILogger)
   nameWithType: LoggingInterceptor.LoggingInterceptor(ILogger)
 - uid: AttributeBasedRegistration.Autofac.LoggingInterceptor.#ctor*
   name: LoggingInterceptor
@@ -1190,13 +1190,13 @@ references:
   isSpec: "True"
   fullName: AttributeBasedRegistration.Autofac.LoggingInterceptor.LoggingInterceptor
   nameWithType: LoggingInterceptor.LoggingInterceptor
-- uid: AttributeBasedRegistration.Autofac.LoggingInterceptor.InterceptAsync(Castle.DynamicProxy.IInvocation,Castle.DynamicProxy.IInvocationProceedInfo,System.Func{Castle.DynamicProxy.IInvocation,Castle.DynamicProxy.IInvocationProceedInfo,System.Threading.Tasks.Task})
+- uid: AttributeBasedRegistration.Autofac.LoggingInterceptor.InterceptAsync(IInvocation,IInvocationProceedInfo,Func{IInvocation,IInvocationProceedInfo,Task})
   name: InterceptAsync(IInvocation, IInvocationProceedInfo, Func<IInvocation, IInvocationProceedInfo, Task>)
-  href: api/AttributeBasedRegistration.Autofac.LoggingInterceptor.html#AttributeBasedRegistration_Autofac_LoggingInterceptor_InterceptAsync_Castle_DynamicProxy_IInvocation_Castle_DynamicProxy_IInvocationProceedInfo_System_Func_Castle_DynamicProxy_IInvocation_Castle_DynamicProxy_IInvocationProceedInfo_System_Threading_Tasks_Task__
-  commentId: M:AttributeBasedRegistration.Autofac.LoggingInterceptor.InterceptAsync(Castle.DynamicProxy.IInvocation,Castle.DynamicProxy.IInvocationProceedInfo,System.Func{Castle.DynamicProxy.IInvocation,Castle.DynamicProxy.IInvocationProceedInfo,System.Threading.Tasks.Task})
+  href: api/AttributeBasedRegistration.Autofac.LoggingInterceptor.html#AttributeBasedRegistration_Autofac_LoggingInterceptor_InterceptAsync_IInvocation_IInvocationProceedInfo_Func_IInvocation_IInvocationProceedInfo_Task__
+  commentId: M:AttributeBasedRegistration.Autofac.LoggingInterceptor.InterceptAsync(IInvocation,IInvocationProceedInfo,Func{IInvocation,IInvocationProceedInfo,Task})
   name.vb: InterceptAsync(IInvocation, IInvocationProceedInfo, Func(Of IInvocation, IInvocationProceedInfo, Task))
-  fullName: AttributeBasedRegistration.Autofac.LoggingInterceptor.InterceptAsync(Castle.DynamicProxy.IInvocation, Castle.DynamicProxy.IInvocationProceedInfo, System.Func<Castle.DynamicProxy.IInvocation, Castle.DynamicProxy.IInvocationProceedInfo, System.Threading.Tasks.Task>)
-  fullName.vb: AttributeBasedRegistration.Autofac.LoggingInterceptor.InterceptAsync(Castle.DynamicProxy.IInvocation, Castle.DynamicProxy.IInvocationProceedInfo, System.Func(Of Castle.DynamicProxy.IInvocation, Castle.DynamicProxy.IInvocationProceedInfo, System.Threading.Tasks.Task))
+  fullName: AttributeBasedRegistration.Autofac.LoggingInterceptor.InterceptAsync(IInvocation, IInvocationProceedInfo, Func<IInvocation, IInvocationProceedInfo, Task>)
+  fullName.vb: AttributeBasedRegistration.Autofac.LoggingInterceptor.InterceptAsync(IInvocation, IInvocationProceedInfo, Func(Of IInvocation, IInvocationProceedInfo, Task))
   nameWithType: LoggingInterceptor.InterceptAsync(IInvocation, IInvocationProceedInfo, Func<IInvocation, IInvocationProceedInfo, Task>)
   nameWithType.vb: LoggingInterceptor.InterceptAsync(IInvocation, IInvocationProceedInfo, Func(Of IInvocation, IInvocationProceedInfo, Task))
 - uid: AttributeBasedRegistration.Autofac.LoggingInterceptor.InterceptAsync*
@@ -1206,13 +1206,13 @@ references:
   isSpec: "True"
   fullName: AttributeBasedRegistration.Autofac.LoggingInterceptor.InterceptAsync
   nameWithType: LoggingInterceptor.InterceptAsync
-- uid: AttributeBasedRegistration.Autofac.LoggingInterceptor.InterceptAsync``1(Castle.DynamicProxy.IInvocation,Castle.DynamicProxy.IInvocationProceedInfo,System.Func{Castle.DynamicProxy.IInvocation,Castle.DynamicProxy.IInvocationProceedInfo,System.Threading.Tasks.Task{``0}})
+- uid: AttributeBasedRegistration.Autofac.LoggingInterceptor.InterceptAsync``1(IInvocation,IInvocationProceedInfo,Func{IInvocation,IInvocationProceedInfo,Task{``0}})
   name: InterceptAsync<TResult>(IInvocation, IInvocationProceedInfo, Func<IInvocation, IInvocationProceedInfo, Task<TResult>>)
-  href: api/AttributeBasedRegistration.Autofac.LoggingInterceptor.html#AttributeBasedRegistration_Autofac_LoggingInterceptor_InterceptAsync__1_Castle_DynamicProxy_IInvocation_Castle_DynamicProxy_IInvocationProceedInfo_System_Func_Castle_DynamicProxy_IInvocation_Castle_DynamicProxy_IInvocationProceedInfo_System_Threading_Tasks_Task___0___
-  commentId: M:AttributeBasedRegistration.Autofac.LoggingInterceptor.InterceptAsync``1(Castle.DynamicProxy.IInvocation,Castle.DynamicProxy.IInvocationProceedInfo,System.Func{Castle.DynamicProxy.IInvocation,Castle.DynamicProxy.IInvocationProceedInfo,System.Threading.Tasks.Task{``0}})
+  href: api/AttributeBasedRegistration.Autofac.LoggingInterceptor.html#AttributeBasedRegistration_Autofac_LoggingInterceptor_InterceptAsync__1_IInvocation_IInvocationProceedInfo_Func_IInvocation_IInvocationProceedInfo_Task___0___
+  commentId: M:AttributeBasedRegistration.Autofac.LoggingInterceptor.InterceptAsync``1(IInvocation,IInvocationProceedInfo,Func{IInvocation,IInvocationProceedInfo,Task{``0}})
   name.vb: InterceptAsync(Of TResult)(IInvocation, IInvocationProceedInfo, Func(Of IInvocation, IInvocationProceedInfo, Task(Of TResult)))
-  fullName: AttributeBasedRegistration.Autofac.LoggingInterceptor.InterceptAsync<TResult>(Castle.DynamicProxy.IInvocation, Castle.DynamicProxy.IInvocationProceedInfo, System.Func<Castle.DynamicProxy.IInvocation, Castle.DynamicProxy.IInvocationProceedInfo, System.Threading.Tasks.Task<TResult>>)
-  fullName.vb: AttributeBasedRegistration.Autofac.LoggingInterceptor.InterceptAsync(Of TResult)(Castle.DynamicProxy.IInvocation, Castle.DynamicProxy.IInvocationProceedInfo, System.Func(Of Castle.DynamicProxy.IInvocation, Castle.DynamicProxy.IInvocationProceedInfo, System.Threading.Tasks.Task(Of TResult)))
+  fullName: AttributeBasedRegistration.Autofac.LoggingInterceptor.InterceptAsync<TResult>(IInvocation, IInvocationProceedInfo, Func<IInvocation, IInvocationProceedInfo, Task<TResult>>)
+  fullName.vb: AttributeBasedRegistration.Autofac.LoggingInterceptor.InterceptAsync(Of TResult)(IInvocation, IInvocationProceedInfo, Func(Of IInvocation, IInvocationProceedInfo, Task(Of TResult)))
   nameWithType: LoggingInterceptor.InterceptAsync<TResult>(IInvocation, IInvocationProceedInfo, Func<IInvocation, IInvocationProceedInfo, Task<TResult>>)
   nameWithType.vb: LoggingInterceptor.InterceptAsync(Of TResult)(IInvocation, IInvocationProceedInfo, Func(Of IInvocation, IInvocationProceedInfo, Task(Of TResult)))
 - uid: AttributeBasedRegistration.Autofac.TypeExtensions
@@ -1221,11 +1221,11 @@ references:
   commentId: T:AttributeBasedRegistration.Autofac.TypeExtensions
   fullName: AttributeBasedRegistration.Autofac.TypeExtensions
   nameWithType: TypeExtensions
-- uid: AttributeBasedRegistration.Autofac.TypeExtensions.IsAsyncInterceptor(System.Type)
+- uid: AttributeBasedRegistration.Autofac.TypeExtensions.IsAsyncInterceptor(Type)
   name: IsAsyncInterceptor(Type)
-  href: api/AttributeBasedRegistration.Autofac.TypeExtensions.html#AttributeBasedRegistration_Autofac_TypeExtensions_IsAsyncInterceptor_System_Type_
-  commentId: M:AttributeBasedRegistration.Autofac.TypeExtensions.IsAsyncInterceptor(System.Type)
-  fullName: AttributeBasedRegistration.Autofac.TypeExtensions.IsAsyncInterceptor(System.Type)
+  href: api/AttributeBasedRegistration.Autofac.TypeExtensions.html#AttributeBasedRegistration_Autofac_TypeExtensions_IsAsyncInterceptor_Type_
+  commentId: M:AttributeBasedRegistration.Autofac.TypeExtensions.IsAsyncInterceptor(Type)
+  fullName: AttributeBasedRegistration.Autofac.TypeExtensions.IsAsyncInterceptor(Type)
   nameWithType: TypeExtensions.IsAsyncInterceptor(Type)
 - uid: AttributeBasedRegistration.Autofac.TypeExtensions.IsAsyncInterceptor*
   name: IsAsyncInterceptor
@@ -1234,11 +1234,11 @@ references:
   isSpec: "True"
   fullName: AttributeBasedRegistration.Autofac.TypeExtensions.IsAsyncInterceptor
   nameWithType: TypeExtensions.IsAsyncInterceptor
-- uid: AttributeBasedRegistration.Autofac.TypeExtensions.IsInterceptorImplementation(System.Type)
+- uid: AttributeBasedRegistration.Autofac.TypeExtensions.IsInterceptorImplementation(Type)
   name: IsInterceptorImplementation(Type)
-  href: api/AttributeBasedRegistration.Autofac.TypeExtensions.html#AttributeBasedRegistration_Autofac_TypeExtensions_IsInterceptorImplementation_System_Type_
-  commentId: M:AttributeBasedRegistration.Autofac.TypeExtensions.IsInterceptorImplementation(System.Type)
-  fullName: AttributeBasedRegistration.Autofac.TypeExtensions.IsInterceptorImplementation(System.Type)
+  href: api/AttributeBasedRegistration.Autofac.TypeExtensions.html#AttributeBasedRegistration_Autofac_TypeExtensions_IsInterceptorImplementation_Type_
+  commentId: M:AttributeBasedRegistration.Autofac.TypeExtensions.IsInterceptorImplementation(Type)
+  fullName: AttributeBasedRegistration.Autofac.TypeExtensions.IsInterceptorImplementation(Type)
   nameWithType: TypeExtensions.IsInterceptorImplementation(Type)
 - uid: AttributeBasedRegistration.Autofac.TypeExtensions.IsInterceptorImplementation*
   name: IsInterceptorImplementation
@@ -1266,13 +1266,13 @@ references:
   isSpec: "True"
   fullName: AttributeBasedRegistration.Extensions.TypeExtensions.GetAttributeOfType
   nameWithType: TypeExtensions.GetAttributeOfType
-- uid: AttributeBasedRegistration.Extensions.TypeExtensions.GetAttributeOfType``1(System.Type)
+- uid: AttributeBasedRegistration.Extensions.TypeExtensions.GetAttributeOfType``1(Type)
   name: GetAttributeOfType<TAttribute>(Type)
-  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_GetAttributeOfType__1_System_Type_
-  commentId: M:AttributeBasedRegistration.Extensions.TypeExtensions.GetAttributeOfType``1(System.Type)
+  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_GetAttributeOfType__1_Type_
+  commentId: M:AttributeBasedRegistration.Extensions.TypeExtensions.GetAttributeOfType``1(Type)
   name.vb: GetAttributeOfType(Of TAttribute)(Type)
-  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.GetAttributeOfType<TAttribute>(System.Type)
-  fullName.vb: AttributeBasedRegistration.Extensions.TypeExtensions.GetAttributeOfType(Of TAttribute)(System.Type)
+  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.GetAttributeOfType<TAttribute>(Type)
+  fullName.vb: AttributeBasedRegistration.Extensions.TypeExtensions.GetAttributeOfType(Of TAttribute)(Type)
   nameWithType: TypeExtensions.GetAttributeOfType<TAttribute>(Type)
   nameWithType.vb: TypeExtensions.GetAttributeOfType(Of TAttribute)(Type)
 - uid: AttributeBasedRegistration.Extensions.TypeExtensions.GetAttributesOfType*
@@ -1282,20 +1282,20 @@ references:
   isSpec: "True"
   fullName: AttributeBasedRegistration.Extensions.TypeExtensions.GetAttributesOfType
   nameWithType: TypeExtensions.GetAttributesOfType
-- uid: AttributeBasedRegistration.Extensions.TypeExtensions.GetAttributesOfType``1(System.Type)
+- uid: AttributeBasedRegistration.Extensions.TypeExtensions.GetAttributesOfType``1(Type)
   name: GetAttributesOfType<TAttribute>(Type)
-  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_GetAttributesOfType__1_System_Type_
-  commentId: M:AttributeBasedRegistration.Extensions.TypeExtensions.GetAttributesOfType``1(System.Type)
+  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_GetAttributesOfType__1_Type_
+  commentId: M:AttributeBasedRegistration.Extensions.TypeExtensions.GetAttributesOfType``1(Type)
   name.vb: GetAttributesOfType(Of TAttribute)(Type)
-  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.GetAttributesOfType<TAttribute>(System.Type)
-  fullName.vb: AttributeBasedRegistration.Extensions.TypeExtensions.GetAttributesOfType(Of TAttribute)(System.Type)
+  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.GetAttributesOfType<TAttribute>(Type)
+  fullName.vb: AttributeBasedRegistration.Extensions.TypeExtensions.GetAttributesOfType(Of TAttribute)(Type)
   nameWithType: TypeExtensions.GetAttributesOfType<TAttribute>(Type)
   nameWithType.vb: TypeExtensions.GetAttributesOfType(Of TAttribute)(Type)
-- uid: AttributeBasedRegistration.Extensions.TypeExtensions.GetDirectAncestors(System.Type,System.Boolean)
+- uid: AttributeBasedRegistration.Extensions.TypeExtensions.GetDirectAncestors(Type,System.Boolean)
   name: GetDirectAncestors(Type, Boolean)
-  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_GetDirectAncestors_System_Type_System_Boolean_
-  commentId: M:AttributeBasedRegistration.Extensions.TypeExtensions.GetDirectAncestors(System.Type,System.Boolean)
-  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.GetDirectAncestors(System.Type, System.Boolean)
+  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_GetDirectAncestors_Type_System_Boolean_
+  commentId: M:AttributeBasedRegistration.Extensions.TypeExtensions.GetDirectAncestors(Type,System.Boolean)
+  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.GetDirectAncestors(Type, System.Boolean)
   nameWithType: TypeExtensions.GetDirectAncestors(Type, Boolean)
 - uid: AttributeBasedRegistration.Extensions.TypeExtensions.GetDirectAncestors*
   name: GetDirectAncestors
@@ -1304,11 +1304,11 @@ references:
   isSpec: "True"
   fullName: AttributeBasedRegistration.Extensions.TypeExtensions.GetDirectAncestors
   nameWithType: TypeExtensions.GetDirectAncestors
-- uid: AttributeBasedRegistration.Extensions.TypeExtensions.GetDirectClassAncestors(System.Type,System.Boolean)
+- uid: AttributeBasedRegistration.Extensions.TypeExtensions.GetDirectClassAncestors(Type,System.Boolean)
   name: GetDirectClassAncestors(Type, Boolean)
-  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_GetDirectClassAncestors_System_Type_System_Boolean_
-  commentId: M:AttributeBasedRegistration.Extensions.TypeExtensions.GetDirectClassAncestors(System.Type,System.Boolean)
-  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.GetDirectClassAncestors(System.Type, System.Boolean)
+  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_GetDirectClassAncestors_Type_System_Boolean_
+  commentId: M:AttributeBasedRegistration.Extensions.TypeExtensions.GetDirectClassAncestors(Type,System.Boolean)
+  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.GetDirectClassAncestors(Type, System.Boolean)
   nameWithType: TypeExtensions.GetDirectClassAncestors(Type, Boolean)
 - uid: AttributeBasedRegistration.Extensions.TypeExtensions.GetDirectClassAncestors*
   name: GetDirectClassAncestors
@@ -1317,11 +1317,11 @@ references:
   isSpec: "True"
   fullName: AttributeBasedRegistration.Extensions.TypeExtensions.GetDirectClassAncestors
   nameWithType: TypeExtensions.GetDirectClassAncestors
-- uid: AttributeBasedRegistration.Extensions.TypeExtensions.GetDirectInterfaceAncestors(System.Type)
+- uid: AttributeBasedRegistration.Extensions.TypeExtensions.GetDirectInterfaceAncestors(Type)
   name: GetDirectInterfaceAncestors(Type)
-  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_GetDirectInterfaceAncestors_System_Type_
-  commentId: M:AttributeBasedRegistration.Extensions.TypeExtensions.GetDirectInterfaceAncestors(System.Type)
-  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.GetDirectInterfaceAncestors(System.Type)
+  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_GetDirectInterfaceAncestors_Type_
+  commentId: M:AttributeBasedRegistration.Extensions.TypeExtensions.GetDirectInterfaceAncestors(Type)
+  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.GetDirectInterfaceAncestors(Type)
   nameWithType: TypeExtensions.GetDirectInterfaceAncestors(Type)
 - uid: AttributeBasedRegistration.Extensions.TypeExtensions.GetDirectInterfaceAncestors*
   name: GetDirectInterfaceAncestors
@@ -1330,11 +1330,11 @@ references:
   isSpec: "True"
   fullName: AttributeBasedRegistration.Extensions.TypeExtensions.GetDirectInterfaceAncestors
   nameWithType: TypeExtensions.GetDirectInterfaceAncestors
-- uid: AttributeBasedRegistration.Extensions.TypeExtensions.GetInterfaceByNamingConvention(System.Type)
+- uid: AttributeBasedRegistration.Extensions.TypeExtensions.GetInterfaceByNamingConvention(Type)
   name: GetInterfaceByNamingConvention(Type)
-  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_GetInterfaceByNamingConvention_System_Type_
-  commentId: M:AttributeBasedRegistration.Extensions.TypeExtensions.GetInterfaceByNamingConvention(System.Type)
-  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.GetInterfaceByNamingConvention(System.Type)
+  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_GetInterfaceByNamingConvention_Type_
+  commentId: M:AttributeBasedRegistration.Extensions.TypeExtensions.GetInterfaceByNamingConvention(Type)
+  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.GetInterfaceByNamingConvention(Type)
   nameWithType: TypeExtensions.GetInterfaceByNamingConvention(Type)
 - uid: AttributeBasedRegistration.Extensions.TypeExtensions.GetInterfaceByNamingConvention*
   name: GetInterfaceByNamingConvention
@@ -1343,11 +1343,11 @@ references:
   isSpec: "True"
   fullName: AttributeBasedRegistration.Extensions.TypeExtensions.GetInterfaceByNamingConvention
   nameWithType: TypeExtensions.GetInterfaceByNamingConvention
-- uid: AttributeBasedRegistration.Extensions.TypeExtensions.GetInterfaceImplementationPairs(System.Type)
+- uid: AttributeBasedRegistration.Extensions.TypeExtensions.GetInterfaceImplementationPairs(Type)
   name: GetInterfaceImplementationPairs(Type)
-  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_GetInterfaceImplementationPairs_System_Type_
-  commentId: M:AttributeBasedRegistration.Extensions.TypeExtensions.GetInterfaceImplementationPairs(System.Type)
-  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.GetInterfaceImplementationPairs(System.Type)
+  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_GetInterfaceImplementationPairs_Type_
+  commentId: M:AttributeBasedRegistration.Extensions.TypeExtensions.GetInterfaceImplementationPairs(Type)
+  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.GetInterfaceImplementationPairs(Type)
   nameWithType: TypeExtensions.GetInterfaceImplementationPairs(Type)
 - uid: AttributeBasedRegistration.Extensions.TypeExtensions.GetInterfaceImplementationPairs*
   name: GetInterfaceImplementationPairs
@@ -1356,11 +1356,11 @@ references:
   isSpec: "True"
   fullName: AttributeBasedRegistration.Extensions.TypeExtensions.GetInterfaceImplementationPairs
   nameWithType: TypeExtensions.GetInterfaceImplementationPairs
-- uid: AttributeBasedRegistration.Extensions.TypeExtensions.GetInterfaces(System.Type,System.Boolean,System.Boolean)
+- uid: AttributeBasedRegistration.Extensions.TypeExtensions.GetInterfaces(Type,System.Boolean,System.Boolean)
   name: GetInterfaces(Type, Boolean, Boolean)
-  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_GetInterfaces_System_Type_System_Boolean_System_Boolean_
-  commentId: M:AttributeBasedRegistration.Extensions.TypeExtensions.GetInterfaces(System.Type,System.Boolean,System.Boolean)
-  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.GetInterfaces(System.Type, System.Boolean, System.Boolean)
+  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_GetInterfaces_Type_System_Boolean_System_Boolean_
+  commentId: M:AttributeBasedRegistration.Extensions.TypeExtensions.GetInterfaces(Type,System.Boolean,System.Boolean)
+  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.GetInterfaces(Type, System.Boolean, System.Boolean)
   nameWithType: TypeExtensions.GetInterfaces(Type, Boolean, Boolean)
 - uid: AttributeBasedRegistration.Extensions.TypeExtensions.GetInterfaces*
   name: GetInterfaces
@@ -1369,11 +1369,11 @@ references:
   isSpec: "True"
   fullName: AttributeBasedRegistration.Extensions.TypeExtensions.GetInterfaces
   nameWithType: TypeExtensions.GetInterfaces
-- uid: AttributeBasedRegistration.Extensions.TypeExtensions.GetName(System.Type)
+- uid: AttributeBasedRegistration.Extensions.TypeExtensions.GetName(Type)
   name: GetName(Type)
-  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_GetName_System_Type_
-  commentId: M:AttributeBasedRegistration.Extensions.TypeExtensions.GetName(System.Type)
-  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.GetName(System.Type)
+  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_GetName_Type_
+  commentId: M:AttributeBasedRegistration.Extensions.TypeExtensions.GetName(Type)
+  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.GetName(Type)
   nameWithType: TypeExtensions.GetName(Type)
 - uid: AttributeBasedRegistration.Extensions.TypeExtensions.GetName*
   name: GetName
@@ -1389,13 +1389,13 @@ references:
   isSpec: "True"
   fullName: AttributeBasedRegistration.Extensions.TypeExtensions.GetRegistrationAttributeOfType
   nameWithType: TypeExtensions.GetRegistrationAttributeOfType
-- uid: AttributeBasedRegistration.Extensions.TypeExtensions.GetRegistrationAttributeOfType``1(System.Type)
+- uid: AttributeBasedRegistration.Extensions.TypeExtensions.GetRegistrationAttributeOfType``1(Type)
   name: GetRegistrationAttributeOfType<TAttribute>(Type)
-  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_GetRegistrationAttributeOfType__1_System_Type_
-  commentId: M:AttributeBasedRegistration.Extensions.TypeExtensions.GetRegistrationAttributeOfType``1(System.Type)
+  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_GetRegistrationAttributeOfType__1_Type_
+  commentId: M:AttributeBasedRegistration.Extensions.TypeExtensions.GetRegistrationAttributeOfType``1(Type)
   name.vb: GetRegistrationAttributeOfType(Of TAttribute)(Type)
-  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.GetRegistrationAttributeOfType<TAttribute>(System.Type)
-  fullName.vb: AttributeBasedRegistration.Extensions.TypeExtensions.GetRegistrationAttributeOfType(Of TAttribute)(System.Type)
+  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.GetRegistrationAttributeOfType<TAttribute>(Type)
+  fullName.vb: AttributeBasedRegistration.Extensions.TypeExtensions.GetRegistrationAttributeOfType(Of TAttribute)(Type)
   nameWithType: TypeExtensions.GetRegistrationAttributeOfType<TAttribute>(Type)
   nameWithType.vb: TypeExtensions.GetRegistrationAttributeOfType(Of TAttribute)(Type)
 - uid: AttributeBasedRegistration.Extensions.TypeExtensions.GetRegistrationAttributesOfType*
@@ -1405,20 +1405,20 @@ references:
   isSpec: "True"
   fullName: AttributeBasedRegistration.Extensions.TypeExtensions.GetRegistrationAttributesOfType
   nameWithType: TypeExtensions.GetRegistrationAttributesOfType
-- uid: AttributeBasedRegistration.Extensions.TypeExtensions.GetRegistrationAttributesOfType``1(System.Type)
+- uid: AttributeBasedRegistration.Extensions.TypeExtensions.GetRegistrationAttributesOfType``1(Type)
   name: GetRegistrationAttributesOfType<TAttribute>(Type)
-  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_GetRegistrationAttributesOfType__1_System_Type_
-  commentId: M:AttributeBasedRegistration.Extensions.TypeExtensions.GetRegistrationAttributesOfType``1(System.Type)
+  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_GetRegistrationAttributesOfType__1_Type_
+  commentId: M:AttributeBasedRegistration.Extensions.TypeExtensions.GetRegistrationAttributesOfType``1(Type)
   name.vb: GetRegistrationAttributesOfType(Of TAttribute)(Type)
-  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.GetRegistrationAttributesOfType<TAttribute>(System.Type)
-  fullName.vb: AttributeBasedRegistration.Extensions.TypeExtensions.GetRegistrationAttributesOfType(Of TAttribute)(System.Type)
+  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.GetRegistrationAttributesOfType<TAttribute>(Type)
+  fullName.vb: AttributeBasedRegistration.Extensions.TypeExtensions.GetRegistrationAttributesOfType(Of TAttribute)(Type)
   nameWithType: TypeExtensions.GetRegistrationAttributesOfType<TAttribute>(Type)
   nameWithType.vb: TypeExtensions.GetRegistrationAttributesOfType(Of TAttribute)(Type)
-- uid: AttributeBasedRegistration.Extensions.TypeExtensions.GetTypeInheritance(System.Type)
+- uid: AttributeBasedRegistration.Extensions.TypeExtensions.GetTypeInheritance(Type)
   name: GetTypeInheritance(Type)
-  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_GetTypeInheritance_System_Type_
-  commentId: M:AttributeBasedRegistration.Extensions.TypeExtensions.GetTypeInheritance(System.Type)
-  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.GetTypeInheritance(System.Type)
+  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_GetTypeInheritance_Type_
+  commentId: M:AttributeBasedRegistration.Extensions.TypeExtensions.GetTypeInheritance(Type)
+  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.GetTypeInheritance(Type)
   nameWithType: TypeExtensions.GetTypeInheritance(Type)
 - uid: AttributeBasedRegistration.Extensions.TypeExtensions.GetTypeInheritance*
   name: GetTypeInheritance
@@ -1427,11 +1427,11 @@ references:
   isSpec: "True"
   fullName: AttributeBasedRegistration.Extensions.TypeExtensions.GetTypeInheritance
   nameWithType: TypeExtensions.GetTypeInheritance
-- uid: AttributeBasedRegistration.Extensions.TypeExtensions.IsAssignableToWithGenerics(System.Type,System.Type)
+- uid: AttributeBasedRegistration.Extensions.TypeExtensions.IsAssignableToWithGenerics(Type,Type)
   name: IsAssignableToWithGenerics(Type, Type)
-  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_IsAssignableToWithGenerics_System_Type_System_Type_
-  commentId: M:AttributeBasedRegistration.Extensions.TypeExtensions.IsAssignableToWithGenerics(System.Type,System.Type)
-  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.IsAssignableToWithGenerics(System.Type, System.Type)
+  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_IsAssignableToWithGenerics_Type_Type_
+  commentId: M:AttributeBasedRegistration.Extensions.TypeExtensions.IsAssignableToWithGenerics(Type,Type)
+  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.IsAssignableToWithGenerics(Type, Type)
   nameWithType: TypeExtensions.IsAssignableToWithGenerics(Type, Type)
 - uid: AttributeBasedRegistration.Extensions.TypeExtensions.IsAssignableToWithGenerics*
   name: IsAssignableToWithGenerics
@@ -1440,11 +1440,11 @@ references:
   isSpec: "True"
   fullName: AttributeBasedRegistration.Extensions.TypeExtensions.IsAssignableToWithGenerics
   nameWithType: TypeExtensions.IsAssignableToWithGenerics
-- uid: AttributeBasedRegistration.Extensions.TypeExtensions.IsDirectAncestor(System.Type,System.Type)
+- uid: AttributeBasedRegistration.Extensions.TypeExtensions.IsDirectAncestor(Type,Type)
   name: IsDirectAncestor(Type, Type)
-  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_IsDirectAncestor_System_Type_System_Type_
-  commentId: M:AttributeBasedRegistration.Extensions.TypeExtensions.IsDirectAncestor(System.Type,System.Type)
-  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.IsDirectAncestor(System.Type, System.Type)
+  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_IsDirectAncestor_Type_Type_
+  commentId: M:AttributeBasedRegistration.Extensions.TypeExtensions.IsDirectAncestor(Type,Type)
+  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.IsDirectAncestor(Type, Type)
   nameWithType: TypeExtensions.IsDirectAncestor(Type, Type)
 - uid: AttributeBasedRegistration.Extensions.TypeExtensions.IsDirectAncestor*
   name: IsDirectAncestor
@@ -1453,11 +1453,11 @@ references:
   isSpec: "True"
   fullName: AttributeBasedRegistration.Extensions.TypeExtensions.IsDirectAncestor
   nameWithType: TypeExtensions.IsDirectAncestor
-- uid: AttributeBasedRegistration.Extensions.TypeExtensions.IsNullable(System.Type)
+- uid: AttributeBasedRegistration.Extensions.TypeExtensions.IsNullable(Type)
   name: IsNullable(Type)
-  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_IsNullable_System_Type_
-  commentId: M:AttributeBasedRegistration.Extensions.TypeExtensions.IsNullable(System.Type)
-  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.IsNullable(System.Type)
+  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_IsNullable_Type_
+  commentId: M:AttributeBasedRegistration.Extensions.TypeExtensions.IsNullable(Type)
+  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.IsNullable(Type)
   nameWithType: TypeExtensions.IsNullable(Type)
 - uid: AttributeBasedRegistration.Extensions.TypeExtensions.IsNullable*
   name: IsNullable
@@ -1466,11 +1466,11 @@ references:
   isSpec: "True"
   fullName: AttributeBasedRegistration.Extensions.TypeExtensions.IsNullable
   nameWithType: TypeExtensions.IsNullable
-- uid: AttributeBasedRegistration.Extensions.TypeExtensions.IsServiceImplementation(System.Type)
+- uid: AttributeBasedRegistration.Extensions.TypeExtensions.IsServiceImplementation(Type)
   name: IsServiceImplementation(Type)
-  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_IsServiceImplementation_System_Type_
-  commentId: M:AttributeBasedRegistration.Extensions.TypeExtensions.IsServiceImplementation(System.Type)
-  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.IsServiceImplementation(System.Type)
+  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_IsServiceImplementation_Type_
+  commentId: M:AttributeBasedRegistration.Extensions.TypeExtensions.IsServiceImplementation(Type)
+  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.IsServiceImplementation(Type)
   nameWithType: TypeExtensions.IsServiceImplementation(Type)
 - uid: AttributeBasedRegistration.Extensions.TypeExtensions.IsServiceImplementation*
   name: IsServiceImplementation
@@ -1479,11 +1479,11 @@ references:
   isSpec: "True"
   fullName: AttributeBasedRegistration.Extensions.TypeExtensions.IsServiceImplementation
   nameWithType: TypeExtensions.IsServiceImplementation
-- uid: AttributeBasedRegistration.Extensions.TypeExtensions.ShouldSkipRegistration(System.Type)
+- uid: AttributeBasedRegistration.Extensions.TypeExtensions.ShouldSkipRegistration(Type)
   name: ShouldSkipRegistration(Type)
-  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_ShouldSkipRegistration_System_Type_
-  commentId: M:AttributeBasedRegistration.Extensions.TypeExtensions.ShouldSkipRegistration(System.Type)
-  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.ShouldSkipRegistration(System.Type)
+  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_ShouldSkipRegistration_Type_
+  commentId: M:AttributeBasedRegistration.Extensions.TypeExtensions.ShouldSkipRegistration(Type)
+  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.ShouldSkipRegistration(Type)
   nameWithType: TypeExtensions.ShouldSkipRegistration(Type)
 - uid: AttributeBasedRegistration.Extensions.TypeExtensions.ShouldSkipRegistration*
   name: ShouldSkipRegistration
@@ -1492,13 +1492,13 @@ references:
   isSpec: "True"
   fullName: AttributeBasedRegistration.Extensions.TypeExtensions.ShouldSkipRegistration
   nameWithType: TypeExtensions.ShouldSkipRegistration
-- uid: AttributeBasedRegistration.Extensions.TypeExtensions.ShouldSkipRegistration``1(System.Type)
+- uid: AttributeBasedRegistration.Extensions.TypeExtensions.ShouldSkipRegistration``1(Type)
   name: ShouldSkipRegistration<TSkipAttribute>(Type)
-  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_ShouldSkipRegistration__1_System_Type_
-  commentId: M:AttributeBasedRegistration.Extensions.TypeExtensions.ShouldSkipRegistration``1(System.Type)
+  href: api/AttributeBasedRegistration.Extensions.TypeExtensions.html#AttributeBasedRegistration_Extensions_TypeExtensions_ShouldSkipRegistration__1_Type_
+  commentId: M:AttributeBasedRegistration.Extensions.TypeExtensions.ShouldSkipRegistration``1(Type)
   name.vb: ShouldSkipRegistration(Of TSkipAttribute)(Type)
-  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.ShouldSkipRegistration<TSkipAttribute>(System.Type)
-  fullName.vb: AttributeBasedRegistration.Extensions.TypeExtensions.ShouldSkipRegistration(Of TSkipAttribute)(System.Type)
+  fullName: AttributeBasedRegistration.Extensions.TypeExtensions.ShouldSkipRegistration<TSkipAttribute>(Type)
+  fullName.vb: AttributeBasedRegistration.Extensions.TypeExtensions.ShouldSkipRegistration(Of TSkipAttribute)(Type)
   nameWithType: TypeExtensions.ShouldSkipRegistration<TSkipAttribute>(Type)
   nameWithType.vb: TypeExtensions.ShouldSkipRegistration(Of TSkipAttribute)(Type)
 - uid: AttributeBasedRegistration.InheritanceTree
@@ -1507,13 +1507,13 @@ references:
   commentId: T:AttributeBasedRegistration.InheritanceTree
   fullName: AttributeBasedRegistration.InheritanceTree
   nameWithType: InheritanceTree
-- uid: AttributeBasedRegistration.InheritanceTree.#ctor(System.Type,System.Collections.Generic.IEnumerable{AttributeBasedRegistration.InheritanceTree})
+- uid: AttributeBasedRegistration.InheritanceTree.#ctor(Type,IEnumerable{AttributeBasedRegistration.InheritanceTree})
   name: InheritanceTree(Type, IEnumerable<InheritanceTree>)
-  href: api/AttributeBasedRegistration.InheritanceTree.html#AttributeBasedRegistration_InheritanceTree__ctor_System_Type_System_Collections_Generic_IEnumerable_AttributeBasedRegistration_InheritanceTree__
-  commentId: M:AttributeBasedRegistration.InheritanceTree.#ctor(System.Type,System.Collections.Generic.IEnumerable{AttributeBasedRegistration.InheritanceTree})
+  href: api/AttributeBasedRegistration.InheritanceTree.html#AttributeBasedRegistration_InheritanceTree__ctor_Type_IEnumerable_AttributeBasedRegistration_InheritanceTree__
+  commentId: M:AttributeBasedRegistration.InheritanceTree.#ctor(Type,IEnumerable{AttributeBasedRegistration.InheritanceTree})
   name.vb: InheritanceTree(Type, IEnumerable(Of InheritanceTree))
-  fullName: AttributeBasedRegistration.InheritanceTree.InheritanceTree(System.Type, System.Collections.Generic.IEnumerable<AttributeBasedRegistration.InheritanceTree>)
-  fullName.vb: AttributeBasedRegistration.InheritanceTree.InheritanceTree(System.Type, System.Collections.Generic.IEnumerable(Of AttributeBasedRegistration.InheritanceTree))
+  fullName: AttributeBasedRegistration.InheritanceTree.InheritanceTree(Type, IEnumerable<AttributeBasedRegistration.InheritanceTree>)
+  fullName.vb: AttributeBasedRegistration.InheritanceTree.InheritanceTree(Type, IEnumerable(Of AttributeBasedRegistration.InheritanceTree))
   nameWithType: InheritanceTree.InheritanceTree(Type, IEnumerable<InheritanceTree>)
   nameWithType.vb: InheritanceTree.InheritanceTree(Type, IEnumerable(Of InheritanceTree))
 - uid: AttributeBasedRegistration.InheritanceTree.#ctor*
@@ -1536,11 +1536,11 @@ references:
   isSpec: "True"
   fullName: AttributeBasedRegistration.InheritanceTree.Ancestors
   nameWithType: InheritanceTree.Ancestors
-- uid: AttributeBasedRegistration.InheritanceTree.IsDirectAncestor(System.Type)
+- uid: AttributeBasedRegistration.InheritanceTree.IsDirectAncestor(Type)
   name: IsDirectAncestor(Type)
-  href: api/AttributeBasedRegistration.InheritanceTree.html#AttributeBasedRegistration_InheritanceTree_IsDirectAncestor_System_Type_
-  commentId: M:AttributeBasedRegistration.InheritanceTree.IsDirectAncestor(System.Type)
-  fullName: AttributeBasedRegistration.InheritanceTree.IsDirectAncestor(System.Type)
+  href: api/AttributeBasedRegistration.InheritanceTree.html#AttributeBasedRegistration_InheritanceTree_IsDirectAncestor_Type_
+  commentId: M:AttributeBasedRegistration.InheritanceTree.IsDirectAncestor(Type)
+  fullName: AttributeBasedRegistration.InheritanceTree.IsDirectAncestor(Type)
   nameWithType: InheritanceTree.IsDirectAncestor(Type)
 - uid: AttributeBasedRegistration.InheritanceTree.IsDirectAncestor*
   name: IsDirectAncestor
@@ -1616,11 +1616,11 @@ references:
   commentId: T:AttributeBasedRegistration.RootScopeWrapper
   fullName: AttributeBasedRegistration.RootScopeWrapper
   nameWithType: RootScopeWrapper
-- uid: AttributeBasedRegistration.RootScopeWrapper.#ctor(System.IServiceProvider)
+- uid: AttributeBasedRegistration.RootScopeWrapper.#ctor(IServiceProvider)
   name: RootScopeWrapper(IServiceProvider)
-  href: api/AttributeBasedRegistration.RootScopeWrapper.html#AttributeBasedRegistration_RootScopeWrapper__ctor_System_IServiceProvider_
-  commentId: M:AttributeBasedRegistration.RootScopeWrapper.#ctor(System.IServiceProvider)
-  fullName: AttributeBasedRegistration.RootScopeWrapper.RootScopeWrapper(System.IServiceProvider)
+  href: api/AttributeBasedRegistration.RootScopeWrapper.html#AttributeBasedRegistration_RootScopeWrapper__ctor_IServiceProvider_
+  commentId: M:AttributeBasedRegistration.RootScopeWrapper.#ctor(IServiceProvider)
+  fullName: AttributeBasedRegistration.RootScopeWrapper.RootScopeWrapper(IServiceProvider)
   nameWithType: RootScopeWrapper.RootScopeWrapper(IServiceProvider)
 - uid: AttributeBasedRegistration.RootScopeWrapper.#ctor*
   name: RootScopeWrapper
@@ -1674,11 +1674,11 @@ references:
   isSpec: "True"
   fullName: AttributeBasedRegistration.RootScopeWrapperStarter.RootScopeWrapper
   nameWithType: RootScopeWrapperStarter.RootScopeWrapper
-- uid: AttributeBasedRegistration.RootScopeWrapperStarter.StartAsync(System.Threading.CancellationToken)
+- uid: AttributeBasedRegistration.RootScopeWrapperStarter.StartAsync(CancellationToken)
   name: StartAsync(CancellationToken)
-  href: api/AttributeBasedRegistration.RootScopeWrapperStarter.html#AttributeBasedRegistration_RootScopeWrapperStarter_StartAsync_System_Threading_CancellationToken_
-  commentId: M:AttributeBasedRegistration.RootScopeWrapperStarter.StartAsync(System.Threading.CancellationToken)
-  fullName: AttributeBasedRegistration.RootScopeWrapperStarter.StartAsync(System.Threading.CancellationToken)
+  href: api/AttributeBasedRegistration.RootScopeWrapperStarter.html#AttributeBasedRegistration_RootScopeWrapperStarter_StartAsync_CancellationToken_
+  commentId: M:AttributeBasedRegistration.RootScopeWrapperStarter.StartAsync(CancellationToken)
+  fullName: AttributeBasedRegistration.RootScopeWrapperStarter.StartAsync(CancellationToken)
   nameWithType: RootScopeWrapperStarter.StartAsync(CancellationToken)
 - uid: AttributeBasedRegistration.RootScopeWrapperStarter.StartAsync*
   name: StartAsync
@@ -1687,11 +1687,11 @@ references:
   isSpec: "True"
   fullName: AttributeBasedRegistration.RootScopeWrapperStarter.StartAsync
   nameWithType: RootScopeWrapperStarter.StartAsync
-- uid: AttributeBasedRegistration.RootScopeWrapperStarter.StopAsync(System.Threading.CancellationToken)
+- uid: AttributeBasedRegistration.RootScopeWrapperStarter.StopAsync(CancellationToken)
   name: StopAsync(CancellationToken)
-  href: api/AttributeBasedRegistration.RootScopeWrapperStarter.html#AttributeBasedRegistration_RootScopeWrapperStarter_StopAsync_System_Threading_CancellationToken_
-  commentId: M:AttributeBasedRegistration.RootScopeWrapperStarter.StopAsync(System.Threading.CancellationToken)
-  fullName: AttributeBasedRegistration.RootScopeWrapperStarter.StopAsync(System.Threading.CancellationToken)
+  href: api/AttributeBasedRegistration.RootScopeWrapperStarter.html#AttributeBasedRegistration_RootScopeWrapperStarter_StopAsync_CancellationToken_
+  commentId: M:AttributeBasedRegistration.RootScopeWrapperStarter.StopAsync(CancellationToken)
+  fullName: AttributeBasedRegistration.RootScopeWrapperStarter.StopAsync(CancellationToken)
   nameWithType: RootScopeWrapperStarter.StopAsync(CancellationToken)
 - uid: AttributeBasedRegistration.RootScopeWrapperStarter.StopAsync*
   name: StopAsync
@@ -1706,58 +1706,58 @@ references:
   commentId: T:AttributeBasedRegistration.ServiceCollectionExtensions
   fullName: AttributeBasedRegistration.ServiceCollectionExtensions
   nameWithType: ServiceCollectionExtensions
-- uid: AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{AttributeBasedRegistration.AttributeRegistrationOptions},System.Reflection.Assembly[])
+- uid: AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(IServiceCollection,Action{AttributeBasedRegistration.AttributeRegistrationOptions},Assembly[])
   name: AddAttributeDefinedServices(IServiceCollection, Action<AttributeRegistrationOptions>, Assembly[])
-  href: api/AttributeBasedRegistration.ServiceCollectionExtensions.html#AttributeBasedRegistration_ServiceCollectionExtensions_AddAttributeDefinedServices_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_AttributeBasedRegistration_AttributeRegistrationOptions__System_Reflection_Assembly___
-  commentId: M:AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{AttributeBasedRegistration.AttributeRegistrationOptions},System.Reflection.Assembly[])
+  href: api/AttributeBasedRegistration.ServiceCollectionExtensions.html#AttributeBasedRegistration_ServiceCollectionExtensions_AddAttributeDefinedServices_IServiceCollection_Action_AttributeBasedRegistration_AttributeRegistrationOptions__Assembly___
+  commentId: M:AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(IServiceCollection,Action{AttributeBasedRegistration.AttributeRegistrationOptions},Assembly[])
   name.vb: AddAttributeDefinedServices(IServiceCollection, Action(Of AttributeRegistrationOptions), Assembly())
-  fullName: AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<AttributeBasedRegistration.AttributeRegistrationOptions>, System.Reflection.Assembly[])
-  fullName.vb: AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of AttributeBasedRegistration.AttributeRegistrationOptions), System.Reflection.Assembly())
+  fullName: AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(IServiceCollection, Action<AttributeBasedRegistration.AttributeRegistrationOptions>, Assembly[])
+  fullName.vb: AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(IServiceCollection, Action(Of AttributeBasedRegistration.AttributeRegistrationOptions), Assembly())
   nameWithType: ServiceCollectionExtensions.AddAttributeDefinedServices(IServiceCollection, Action<AttributeRegistrationOptions>, Assembly[])
   nameWithType.vb: ServiceCollectionExtensions.AddAttributeDefinedServices(IServiceCollection, Action(Of AttributeRegistrationOptions), Assembly())
-- uid: AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{AttributeBasedRegistration.AttributeRegistrationOptions},System.Type[])
+- uid: AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(IServiceCollection,Action{AttributeBasedRegistration.AttributeRegistrationOptions},Type[])
   name: AddAttributeDefinedServices(IServiceCollection, Action<AttributeRegistrationOptions>, Type[])
-  href: api/AttributeBasedRegistration.ServiceCollectionExtensions.html#AttributeBasedRegistration_ServiceCollectionExtensions_AddAttributeDefinedServices_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_AttributeBasedRegistration_AttributeRegistrationOptions__System_Type___
-  commentId: M:AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{AttributeBasedRegistration.AttributeRegistrationOptions},System.Type[])
+  href: api/AttributeBasedRegistration.ServiceCollectionExtensions.html#AttributeBasedRegistration_ServiceCollectionExtensions_AddAttributeDefinedServices_IServiceCollection_Action_AttributeBasedRegistration_AttributeRegistrationOptions__Type___
+  commentId: M:AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(IServiceCollection,Action{AttributeBasedRegistration.AttributeRegistrationOptions},Type[])
   name.vb: AddAttributeDefinedServices(IServiceCollection, Action(Of AttributeRegistrationOptions), Type())
-  fullName: AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<AttributeBasedRegistration.AttributeRegistrationOptions>, System.Type[])
-  fullName.vb: AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of AttributeBasedRegistration.AttributeRegistrationOptions), System.Type())
+  fullName: AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(IServiceCollection, Action<AttributeBasedRegistration.AttributeRegistrationOptions>, Type[])
+  fullName.vb: AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(IServiceCollection, Action(Of AttributeBasedRegistration.AttributeRegistrationOptions), Type())
   nameWithType: ServiceCollectionExtensions.AddAttributeDefinedServices(IServiceCollection, Action<AttributeRegistrationOptions>, Type[])
   nameWithType.vb: ServiceCollectionExtensions.AddAttributeDefinedServices(IServiceCollection, Action(Of AttributeRegistrationOptions), Type())
-- uid: AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Collections.Generic.IEnumerable{System.Reflection.Assembly},System.Action{AttributeBasedRegistration.AttributeRegistrationOptions})
-  name: AddAttributeDefinedServices(IServiceCollection, IEnumerable<Assembly>, Action<AttributeRegistrationOptions>)
-  href: api/AttributeBasedRegistration.ServiceCollectionExtensions.html#AttributeBasedRegistration_ServiceCollectionExtensions_AddAttributeDefinedServices_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Collections_Generic_IEnumerable_System_Reflection_Assembly__System_Action_AttributeBasedRegistration_AttributeRegistrationOptions__
-  commentId: M:AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Collections.Generic.IEnumerable{System.Reflection.Assembly},System.Action{AttributeBasedRegistration.AttributeRegistrationOptions})
-  name.vb: AddAttributeDefinedServices(IServiceCollection, IEnumerable(Of Assembly), Action(Of AttributeRegistrationOptions))
-  fullName: AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Collections.Generic.IEnumerable<System.Reflection.Assembly>, System.Action<AttributeBasedRegistration.AttributeRegistrationOptions>)
-  fullName.vb: AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Collections.Generic.IEnumerable(Of System.Reflection.Assembly), System.Action(Of AttributeBasedRegistration.AttributeRegistrationOptions))
-  nameWithType: ServiceCollectionExtensions.AddAttributeDefinedServices(IServiceCollection, IEnumerable<Assembly>, Action<AttributeRegistrationOptions>)
-  nameWithType.vb: ServiceCollectionExtensions.AddAttributeDefinedServices(IServiceCollection, IEnumerable(Of Assembly), Action(Of AttributeRegistrationOptions))
-- uid: AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Collections.Generic.IEnumerable{System.Type},System.Action{AttributeBasedRegistration.AttributeRegistrationOptions})
-  name: AddAttributeDefinedServices(IServiceCollection, IEnumerable<Type>, Action<AttributeRegistrationOptions>)
-  href: api/AttributeBasedRegistration.ServiceCollectionExtensions.html#AttributeBasedRegistration_ServiceCollectionExtensions_AddAttributeDefinedServices_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Collections_Generic_IEnumerable_System_Type__System_Action_AttributeBasedRegistration_AttributeRegistrationOptions__
-  commentId: M:AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Collections.Generic.IEnumerable{System.Type},System.Action{AttributeBasedRegistration.AttributeRegistrationOptions})
-  name.vb: AddAttributeDefinedServices(IServiceCollection, IEnumerable(Of Type), Action(Of AttributeRegistrationOptions))
-  fullName: AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Collections.Generic.IEnumerable<System.Type>, System.Action<AttributeBasedRegistration.AttributeRegistrationOptions>)
-  fullName.vb: AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Collections.Generic.IEnumerable(Of System.Type), System.Action(Of AttributeBasedRegistration.AttributeRegistrationOptions))
-  nameWithType: ServiceCollectionExtensions.AddAttributeDefinedServices(IServiceCollection, IEnumerable<Type>, Action<AttributeRegistrationOptions>)
-  nameWithType.vb: ServiceCollectionExtensions.AddAttributeDefinedServices(IServiceCollection, IEnumerable(Of Type), Action(Of AttributeRegistrationOptions))
-- uid: AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Reflection.Assembly[])
+- uid: AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(IServiceCollection,Assembly[])
   name: AddAttributeDefinedServices(IServiceCollection, Assembly[])
-  href: api/AttributeBasedRegistration.ServiceCollectionExtensions.html#AttributeBasedRegistration_ServiceCollectionExtensions_AddAttributeDefinedServices_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Reflection_Assembly___
-  commentId: M:AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Reflection.Assembly[])
+  href: api/AttributeBasedRegistration.ServiceCollectionExtensions.html#AttributeBasedRegistration_ServiceCollectionExtensions_AddAttributeDefinedServices_IServiceCollection_Assembly___
+  commentId: M:AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(IServiceCollection,Assembly[])
   name.vb: AddAttributeDefinedServices(IServiceCollection, Assembly())
-  fullName: AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Reflection.Assembly[])
-  fullName.vb: AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Reflection.Assembly())
+  fullName: AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(IServiceCollection, Assembly[])
+  fullName.vb: AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(IServiceCollection, Assembly())
   nameWithType: ServiceCollectionExtensions.AddAttributeDefinedServices(IServiceCollection, Assembly[])
   nameWithType.vb: ServiceCollectionExtensions.AddAttributeDefinedServices(IServiceCollection, Assembly())
-- uid: AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type[])
+- uid: AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(IServiceCollection,IEnumerable{Assembly},System.Nullable{Action{AttributeBasedRegistration.AttributeRegistrationOptions}})
+  name: AddAttributeDefinedServices(IServiceCollection, IEnumerable<Assembly>, Nullable<Action<AttributeRegistrationOptions>>)
+  href: api/AttributeBasedRegistration.ServiceCollectionExtensions.html#AttributeBasedRegistration_ServiceCollectionExtensions_AddAttributeDefinedServices_IServiceCollection_IEnumerable_Assembly__System_Nullable_Action_AttributeBasedRegistration_AttributeRegistrationOptions___
+  commentId: M:AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(IServiceCollection,IEnumerable{Assembly},System.Nullable{Action{AttributeBasedRegistration.AttributeRegistrationOptions}})
+  name.vb: AddAttributeDefinedServices(IServiceCollection, IEnumerable(Of Assembly), Nullable(Of Action(Of AttributeRegistrationOptions)))
+  fullName: AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(IServiceCollection, IEnumerable<Assembly>, System.Nullable<Action<AttributeBasedRegistration.AttributeRegistrationOptions>>)
+  fullName.vb: AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(IServiceCollection, IEnumerable(Of Assembly), System.Nullable(Of Action(Of AttributeBasedRegistration.AttributeRegistrationOptions)))
+  nameWithType: ServiceCollectionExtensions.AddAttributeDefinedServices(IServiceCollection, IEnumerable<Assembly>, Nullable<Action<AttributeRegistrationOptions>>)
+  nameWithType.vb: ServiceCollectionExtensions.AddAttributeDefinedServices(IServiceCollection, IEnumerable(Of Assembly), Nullable(Of Action(Of AttributeRegistrationOptions)))
+- uid: AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(IServiceCollection,IEnumerable{Type},System.Nullable{Action{AttributeBasedRegistration.AttributeRegistrationOptions}})
+  name: AddAttributeDefinedServices(IServiceCollection, IEnumerable<Type>, Nullable<Action<AttributeRegistrationOptions>>)
+  href: api/AttributeBasedRegistration.ServiceCollectionExtensions.html#AttributeBasedRegistration_ServiceCollectionExtensions_AddAttributeDefinedServices_IServiceCollection_IEnumerable_Type__System_Nullable_Action_AttributeBasedRegistration_AttributeRegistrationOptions___
+  commentId: M:AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(IServiceCollection,IEnumerable{Type},System.Nullable{Action{AttributeBasedRegistration.AttributeRegistrationOptions}})
+  name.vb: AddAttributeDefinedServices(IServiceCollection, IEnumerable(Of Type), Nullable(Of Action(Of AttributeRegistrationOptions)))
+  fullName: AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(IServiceCollection, IEnumerable<Type>, System.Nullable<Action<AttributeBasedRegistration.AttributeRegistrationOptions>>)
+  fullName.vb: AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(IServiceCollection, IEnumerable(Of Type), System.Nullable(Of Action(Of AttributeBasedRegistration.AttributeRegistrationOptions)))
+  nameWithType: ServiceCollectionExtensions.AddAttributeDefinedServices(IServiceCollection, IEnumerable<Type>, Nullable<Action<AttributeRegistrationOptions>>)
+  nameWithType.vb: ServiceCollectionExtensions.AddAttributeDefinedServices(IServiceCollection, IEnumerable(Of Type), Nullable(Of Action(Of AttributeRegistrationOptions)))
+- uid: AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(IServiceCollection,Type[])
   name: AddAttributeDefinedServices(IServiceCollection, Type[])
-  href: api/AttributeBasedRegistration.ServiceCollectionExtensions.html#AttributeBasedRegistration_ServiceCollectionExtensions_AddAttributeDefinedServices_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Type___
-  commentId: M:AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type[])
+  href: api/AttributeBasedRegistration.ServiceCollectionExtensions.html#AttributeBasedRegistration_ServiceCollectionExtensions_AddAttributeDefinedServices_IServiceCollection_Type___
+  commentId: M:AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(IServiceCollection,Type[])
   name.vb: AddAttributeDefinedServices(IServiceCollection, Type())
-  fullName: AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Type[])
-  fullName.vb: AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Type())
+  fullName: AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(IServiceCollection, Type[])
+  fullName.vb: AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(IServiceCollection, Type())
   nameWithType: ServiceCollectionExtensions.AddAttributeDefinedServices(IServiceCollection, Type[])
   nameWithType.vb: ServiceCollectionExtensions.AddAttributeDefinedServices(IServiceCollection, Type())
 - uid: AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices*
@@ -1767,11 +1767,11 @@ references:
   isSpec: "True"
   fullName: AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices
   nameWithType: ServiceCollectionExtensions.AddAttributeDefinedServices
-- uid: AttributeBasedRegistration.ServiceCollectionExtensions.AddRootScopeIdentifier(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+- uid: AttributeBasedRegistration.ServiceCollectionExtensions.AddRootScopeIdentifier(IServiceCollection)
   name: AddRootScopeIdentifier(IServiceCollection)
-  href: api/AttributeBasedRegistration.ServiceCollectionExtensions.html#AttributeBasedRegistration_ServiceCollectionExtensions_AddRootScopeIdentifier_Microsoft_Extensions_DependencyInjection_IServiceCollection_
-  commentId: M:AttributeBasedRegistration.ServiceCollectionExtensions.AddRootScopeIdentifier(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  fullName: AttributeBasedRegistration.ServiceCollectionExtensions.AddRootScopeIdentifier(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  href: api/AttributeBasedRegistration.ServiceCollectionExtensions.html#AttributeBasedRegistration_ServiceCollectionExtensions_AddRootScopeIdentifier_IServiceCollection_
+  commentId: M:AttributeBasedRegistration.ServiceCollectionExtensions.AddRootScopeIdentifier(IServiceCollection)
+  fullName: AttributeBasedRegistration.ServiceCollectionExtensions.AddRootScopeIdentifier(IServiceCollection)
   nameWithType: ServiceCollectionExtensions.AddRootScopeIdentifier(IServiceCollection)
 - uid: AttributeBasedRegistration.ServiceCollectionExtensions.AddRootScopeIdentifier*
   name: AddRootScopeIdentifier
@@ -1780,11 +1780,11 @@ references:
   isSpec: "True"
   fullName: AttributeBasedRegistration.ServiceCollectionExtensions.AddRootScopeIdentifier
   nameWithType: ServiceCollectionExtensions.AddRootScopeIdentifier
-- uid: AttributeBasedRegistration.ServiceCollectionExtensions.IsRootScope(System.IServiceProvider)
+- uid: AttributeBasedRegistration.ServiceCollectionExtensions.IsRootScope(IServiceProvider)
   name: IsRootScope(IServiceProvider)
-  href: api/AttributeBasedRegistration.ServiceCollectionExtensions.html#AttributeBasedRegistration_ServiceCollectionExtensions_IsRootScope_System_IServiceProvider_
-  commentId: M:AttributeBasedRegistration.ServiceCollectionExtensions.IsRootScope(System.IServiceProvider)
-  fullName: AttributeBasedRegistration.ServiceCollectionExtensions.IsRootScope(System.IServiceProvider)
+  href: api/AttributeBasedRegistration.ServiceCollectionExtensions.html#AttributeBasedRegistration_ServiceCollectionExtensions_IsRootScope_IServiceProvider_
+  commentId: M:AttributeBasedRegistration.ServiceCollectionExtensions.IsRootScope(IServiceProvider)
+  fullName: AttributeBasedRegistration.ServiceCollectionExtensions.IsRootScope(IServiceProvider)
   nameWithType: ServiceCollectionExtensions.IsRootScope(IServiceProvider)
 - uid: AttributeBasedRegistration.ServiceCollectionExtensions.IsRootScope*
   name: IsRootScope

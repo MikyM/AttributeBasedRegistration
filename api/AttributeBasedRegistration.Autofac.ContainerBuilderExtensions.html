@@ -105,49 +105,24 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">ContainerBuilderExtensions</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="AttributeBasedRegistration.Autofac.html">AttributeBasedRegistration.Autofac</a></h6>
   <h6><strong>Assembly</strong>: AttributeBasedRegistration.Autofac.dll</h6>
   <h5 id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[PublicAPI]
-public static class ContainerBuilderExtensions</code></pre>
+    <pre><code class="lang-csharp hljs">public static class ContainerBuilderExtensions : object</code></pre>
   </div>
   <h3 id="methods">Methods
 </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AddAttributeDefinedServices_Autofac_ContainerBuilder_System_Action_AttributeBasedRegistration_AttributeRegistrationOptions__System_Reflection_Assembly___.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(Autofac.ContainerBuilder%2CSystem.Action%7BAttributeBasedRegistration.AttributeRegistrationOptions%7D%2CSystem.Reflection.Assembly%5B%5D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AddAttributeDefinedServices_ContainerBuilder_Action_AttributeBasedRegistration_AttributeRegistrationOptions__Assembly___.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(ContainerBuilder%2CAction%7BAttributeBasedRegistration.AttributeRegistrationOptions%7D%2CAssembly%5B%5D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration.Autofac/ContainerBuilderExtensions.cs/#L68">View Source</a>
   </span>
   <a id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AddAttributeDefinedServices_" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices*"></a>
-  <h4 id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AddAttributeDefinedServices_Autofac_ContainerBuilder_System_Action_AttributeBasedRegistration_AttributeRegistrationOptions__System_Reflection_Assembly___" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(Autofac.ContainerBuilder,System.Action{AttributeBasedRegistration.AttributeRegistrationOptions},System.Reflection.Assembly[])">AddAttributeDefinedServices(ContainerBuilder, Action&lt;AttributeRegistrationOptions&gt;, Assembly[])</h4>
-  <div class="markdown level1 summary"><p>Registers services with <span class="xref">Autofac.ContainerBuilder</span> via attributes.</p>
+  <h4 id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AddAttributeDefinedServices_ContainerBuilder_Action_AttributeBasedRegistration_AttributeRegistrationOptions__Assembly___" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(ContainerBuilder,Action{AttributeBasedRegistration.AttributeRegistrationOptions},Assembly[])">AddAttributeDefinedServices(ContainerBuilder, Action&lt;AttributeRegistrationOptions&gt;, Assembly[])</h4>
+  <div class="markdown level1 summary"><p>Registers services with <see cref="!:ContainerBuilder"></see> via attributes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -165,19 +140,19 @@ public static class ContainerBuilderExtensions</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Autofac.ContainerBuilder</span></td>
+        <td><span class="xref">ContainerBuilder</span></td>
         <td><span class="parametername">builder</span></td>
         <td><p>Current builder instance.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="AttributeBasedRegistration.AttributeRegistrationOptions.html">AttributeRegistrationOptions</a>&gt;</td>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="AttributeBasedRegistration.AttributeRegistrationOptions.html">AttributeRegistrationOptions</a>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>Configuration.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Reflection.Assembly</span>[]</td>
+        <td><span class="xref">Assembly</span>[]</td>
         <td><span class="parametername">assembliesToScan</span></td>
         <td><p>Assemblies to scan for services.</p>
 </td>
@@ -194,22 +169,22 @@ public static class ContainerBuilderExtensions</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Autofac.ContainerBuilder</span></td>
-        <td><p>Current <span class="xref">Autofac.ContainerBuilder</span> instance.</p>
+        <td><span class="xref">ContainerBuilder</span></td>
+        <td><p>Current <see cref="!:ContainerBuilder"></see> instance.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AddAttributeDefinedServices_Autofac_ContainerBuilder_System_Action_AttributeBasedRegistration_AttributeRegistrationOptions__System_Type___.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(Autofac.ContainerBuilder%2CSystem.Action%7BAttributeBasedRegistration.AttributeRegistrationOptions%7D%2CSystem.Type%5B%5D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AddAttributeDefinedServices_ContainerBuilder_Action_AttributeBasedRegistration_AttributeRegistrationOptions__Type___.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(ContainerBuilder%2CAction%7BAttributeBasedRegistration.AttributeRegistrationOptions%7D%2CType%5B%5D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration.Autofac/ContainerBuilderExtensions.cs/#L58">View Source</a>
   </span>
   <a id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AddAttributeDefinedServices_" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices*"></a>
-  <h4 id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AddAttributeDefinedServices_Autofac_ContainerBuilder_System_Action_AttributeBasedRegistration_AttributeRegistrationOptions__System_Type___" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(Autofac.ContainerBuilder,System.Action{AttributeBasedRegistration.AttributeRegistrationOptions},System.Type[])">AddAttributeDefinedServices(ContainerBuilder, Action&lt;AttributeRegistrationOptions&gt;, Type[])</h4>
-  <div class="markdown level1 summary"><p>Registers services with <span class="xref">Autofac.ContainerBuilder</span> via attributes.</p>
+  <h4 id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AddAttributeDefinedServices_ContainerBuilder_Action_AttributeBasedRegistration_AttributeRegistrationOptions__Type___" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(ContainerBuilder,Action{AttributeBasedRegistration.AttributeRegistrationOptions},Type[])">AddAttributeDefinedServices(ContainerBuilder, Action&lt;AttributeRegistrationOptions&gt;, Type[])</h4>
+  <div class="markdown level1 summary"><p>Registers services with <see cref="!:ContainerBuilder"></see> via attributes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -227,19 +202,19 @@ public static class ContainerBuilderExtensions</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Autofac.ContainerBuilder</span></td>
+        <td><span class="xref">ContainerBuilder</span></td>
         <td><span class="parametername">builder</span></td>
         <td><p>Current builder instance.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="AttributeBasedRegistration.AttributeRegistrationOptions.html">AttributeRegistrationOptions</a>&gt;</td>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="AttributeBasedRegistration.AttributeRegistrationOptions.html">AttributeRegistrationOptions</a>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>Configuration.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Type</span>[]</td>
+        <td><span class="xref">Type</span>[]</td>
         <td><span class="parametername">assembliesContainingTypesToScan</span></td>
         <td><p>Assemblies containing types to scan for services.</p>
 </td>
@@ -256,146 +231,22 @@ public static class ContainerBuilderExtensions</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Autofac.ContainerBuilder</span></td>
-        <td><p>Current <span class="xref">Autofac.ContainerBuilder</span> instance.</p>
+        <td><span class="xref">ContainerBuilder</span></td>
+        <td><p>Current <see cref="!:ContainerBuilder"></see> instance.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AddAttributeDefinedServices_Autofac_ContainerBuilder_System_Collections_Generic_IEnumerable_System_Reflection_Assembly__System_Action_AttributeBasedRegistration_AttributeRegistrationOptions__.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(Autofac.ContainerBuilder%2CSystem.Collections.Generic.IEnumerable%7BSystem.Reflection.Assembly%7D%2CSystem.Action%7BAttributeBasedRegistration.AttributeRegistrationOptions%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration.Autofac/ContainerBuilderExtensions.cs/#L78">View Source</a>
-  </span>
-  <a id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AddAttributeDefinedServices_" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices*"></a>
-  <h4 id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AddAttributeDefinedServices_Autofac_ContainerBuilder_System_Collections_Generic_IEnumerable_System_Reflection_Assembly__System_Action_AttributeBasedRegistration_AttributeRegistrationOptions__" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(Autofac.ContainerBuilder,System.Collections.Generic.IEnumerable{System.Reflection.Assembly},System.Action{AttributeBasedRegistration.AttributeRegistrationOptions})">AddAttributeDefinedServices(ContainerBuilder, IEnumerable&lt;Assembly&gt;, Action&lt;AttributeRegistrationOptions&gt;)</h4>
-  <div class="markdown level1 summary"><p>Registers services with <span class="xref">Autofac.ContainerBuilder</span> via attributes.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ContainerBuilder AddAttributeDefinedServices(this ContainerBuilder builder, IEnumerable&lt;Assembly&gt; assembliesToScan, Action&lt;AttributeRegistrationOptions&gt; options = null)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Autofac.ContainerBuilder</span></td>
-        <td><span class="parametername">builder</span></td>
-        <td><p>Current builder instance.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Reflection.Assembly</span>&gt;</td>
-        <td><span class="parametername">assembliesToScan</span></td>
-        <td><p>Assemblies to scan for services.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="AttributeBasedRegistration.AttributeRegistrationOptions.html">AttributeRegistrationOptions</a>&gt;</td>
-        <td><span class="parametername">options</span></td>
-        <td><p>Optional configuration.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Autofac.ContainerBuilder</span></td>
-        <td><p>Current <span class="xref">Autofac.ContainerBuilder</span> instance.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AddAttributeDefinedServices_Autofac_ContainerBuilder_System_Collections_Generic_IEnumerable_System_Type__System_Action_AttributeBasedRegistration_AttributeRegistrationOptions__.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(Autofac.ContainerBuilder%2CSystem.Collections.Generic.IEnumerable%7BSystem.Type%7D%2CSystem.Action%7BAttributeBasedRegistration.AttributeRegistrationOptions%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration.Autofac/ContainerBuilderExtensions.cs/#L29">View Source</a>
-  </span>
-  <a id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AddAttributeDefinedServices_" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices*"></a>
-  <h4 id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AddAttributeDefinedServices_Autofac_ContainerBuilder_System_Collections_Generic_IEnumerable_System_Type__System_Action_AttributeBasedRegistration_AttributeRegistrationOptions__" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(Autofac.ContainerBuilder,System.Collections.Generic.IEnumerable{System.Type},System.Action{AttributeBasedRegistration.AttributeRegistrationOptions})">AddAttributeDefinedServices(ContainerBuilder, IEnumerable&lt;Type&gt;, Action&lt;AttributeRegistrationOptions&gt;)</h4>
-  <div class="markdown level1 summary"><p>Registers services with <span class="xref">Autofac.ContainerBuilder</span> via attributes.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ContainerBuilder AddAttributeDefinedServices(this ContainerBuilder builder, IEnumerable&lt;Type&gt; assembliesContainingTypesToScan, Action&lt;AttributeRegistrationOptions&gt; options = null)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Autofac.ContainerBuilder</span></td>
-        <td><span class="parametername">builder</span></td>
-        <td><p>Current builder instance.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Type</span>&gt;</td>
-        <td><span class="parametername">assembliesContainingTypesToScan</span></td>
-        <td><p>Assemblies containing types to scan for services.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="AttributeBasedRegistration.AttributeRegistrationOptions.html">AttributeRegistrationOptions</a>&gt;</td>
-        <td><span class="parametername">options</span></td>
-        <td><p>Optional configuration.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Autofac.ContainerBuilder</span></td>
-        <td><p>Current <span class="xref">Autofac.ContainerBuilder</span> instance.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AddAttributeDefinedServices_Autofac_ContainerBuilder_System_Reflection_Assembly___.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(Autofac.ContainerBuilder%2CSystem.Reflection.Assembly%5B%5D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AddAttributeDefinedServices_ContainerBuilder_Assembly___.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(ContainerBuilder%2CAssembly%5B%5D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration.Autofac/ContainerBuilderExtensions.cs/#L48">View Source</a>
   </span>
   <a id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AddAttributeDefinedServices_" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices*"></a>
-  <h4 id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AddAttributeDefinedServices_Autofac_ContainerBuilder_System_Reflection_Assembly___" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(Autofac.ContainerBuilder,System.Reflection.Assembly[])">AddAttributeDefinedServices(ContainerBuilder, Assembly[])</h4>
-  <div class="markdown level1 summary"><p>Registers services with <span class="xref">Autofac.ContainerBuilder</span> via attributes.</p>
+  <h4 id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AddAttributeDefinedServices_ContainerBuilder_Assembly___" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(ContainerBuilder,Assembly[])">AddAttributeDefinedServices(ContainerBuilder, Assembly[])</h4>
+  <div class="markdown level1 summary"><p>Registers services with <see cref="!:ContainerBuilder"></see> via attributes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -413,13 +264,13 @@ public static class ContainerBuilderExtensions</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Autofac.ContainerBuilder</span></td>
+        <td><span class="xref">ContainerBuilder</span></td>
         <td><span class="parametername">builder</span></td>
         <td><p>Current builder instance.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Reflection.Assembly</span>[]</td>
+        <td><span class="xref">Assembly</span>[]</td>
         <td><span class="parametername">assembliesToScan</span></td>
         <td><p>Assemblies to scan for services.</p>
 </td>
@@ -436,22 +287,146 @@ public static class ContainerBuilderExtensions</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Autofac.ContainerBuilder</span></td>
-        <td><p>Current <span class="xref">Autofac.ContainerBuilder</span> instance.</p>
+        <td><span class="xref">ContainerBuilder</span></td>
+        <td><p>Current <see cref="!:ContainerBuilder"></see> instance.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AddAttributeDefinedServices_Autofac_ContainerBuilder_System_Type___.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(Autofac.ContainerBuilder%2CSystem.Type%5B%5D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AddAttributeDefinedServices_ContainerBuilder_IEnumerable_Assembly__System_Nullable_Action_AttributeBasedRegistration_AttributeRegistrationOptions___.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(ContainerBuilder%2CIEnumerable%7BAssembly%7D%2CSystem.Nullable%7BAction%7BAttributeBasedRegistration.AttributeRegistrationOptions%7D%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration.Autofac/ContainerBuilderExtensions.cs/#L78">View Source</a>
+  </span>
+  <a id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AddAttributeDefinedServices_" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices*"></a>
+  <h4 id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AddAttributeDefinedServices_ContainerBuilder_IEnumerable_Assembly__System_Nullable_Action_AttributeBasedRegistration_AttributeRegistrationOptions___" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(ContainerBuilder,IEnumerable{Assembly},System.Nullable{Action{AttributeBasedRegistration.AttributeRegistrationOptions}})">AddAttributeDefinedServices(ContainerBuilder, IEnumerable&lt;Assembly&gt;, Nullable&lt;Action&lt;AttributeRegistrationOptions&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Registers services with <see cref="!:ContainerBuilder"></see> via attributes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ContainerBuilder AddAttributeDefinedServices(this ContainerBuilder builder, IEnumerable&lt;Assembly&gt; assembliesToScan, Action&lt;AttributeRegistrationOptions&gt;? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ContainerBuilder</span></td>
+        <td><span class="parametername">builder</span></td>
+        <td><p>Current builder instance.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">Assembly</span>&gt;</td>
+        <td><span class="parametername">assembliesToScan</span></td>
+        <td><p>Assemblies to scan for services.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Action</span>&lt;<a class="xref" href="AttributeBasedRegistration.AttributeRegistrationOptions.html">AttributeRegistrationOptions</a>&gt;&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Optional configuration.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ContainerBuilder</span></td>
+        <td><p>Current <see cref="!:ContainerBuilder"></see> instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AddAttributeDefinedServices_ContainerBuilder_IEnumerable_Type__System_Nullable_Action_AttributeBasedRegistration_AttributeRegistrationOptions___.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(ContainerBuilder%2CIEnumerable%7BType%7D%2CSystem.Nullable%7BAction%7BAttributeBasedRegistration.AttributeRegistrationOptions%7D%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration.Autofac/ContainerBuilderExtensions.cs/#L29">View Source</a>
+  </span>
+  <a id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AddAttributeDefinedServices_" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices*"></a>
+  <h4 id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AddAttributeDefinedServices_ContainerBuilder_IEnumerable_Type__System_Nullable_Action_AttributeBasedRegistration_AttributeRegistrationOptions___" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(ContainerBuilder,IEnumerable{Type},System.Nullable{Action{AttributeBasedRegistration.AttributeRegistrationOptions}})">AddAttributeDefinedServices(ContainerBuilder, IEnumerable&lt;Type&gt;, Nullable&lt;Action&lt;AttributeRegistrationOptions&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Registers services with <see cref="!:ContainerBuilder"></see> via attributes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ContainerBuilder AddAttributeDefinedServices(this ContainerBuilder builder, IEnumerable&lt;Type&gt; assembliesContainingTypesToScan, Action&lt;AttributeRegistrationOptions&gt;? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ContainerBuilder</span></td>
+        <td><span class="parametername">builder</span></td>
+        <td><p>Current builder instance.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">Type</span>&gt;</td>
+        <td><span class="parametername">assembliesContainingTypesToScan</span></td>
+        <td><p>Assemblies containing types to scan for services.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Action</span>&lt;<a class="xref" href="AttributeBasedRegistration.AttributeRegistrationOptions.html">AttributeRegistrationOptions</a>&gt;&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Optional configuration.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ContainerBuilder</span></td>
+        <td><p>Current <see cref="!:ContainerBuilder"></see> instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AddAttributeDefinedServices_ContainerBuilder_Type___.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(ContainerBuilder%2CType%5B%5D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration.Autofac/ContainerBuilderExtensions.cs/#L39">View Source</a>
   </span>
   <a id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AddAttributeDefinedServices_" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices*"></a>
-  <h4 id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AddAttributeDefinedServices_Autofac_ContainerBuilder_System_Type___" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(Autofac.ContainerBuilder,System.Type[])">AddAttributeDefinedServices(ContainerBuilder, Type[])</h4>
-  <div class="markdown level1 summary"><p>Registers services with <span class="xref">Autofac.ContainerBuilder</span> via attributes.</p>
+  <h4 id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AddAttributeDefinedServices_ContainerBuilder_Type___" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AddAttributeDefinedServices(ContainerBuilder,Type[])">AddAttributeDefinedServices(ContainerBuilder, Type[])</h4>
+  <div class="markdown level1 summary"><p>Registers services with <see cref="!:ContainerBuilder"></see> via attributes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -469,13 +444,13 @@ public static class ContainerBuilderExtensions</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Autofac.ContainerBuilder</span></td>
+        <td><span class="xref">ContainerBuilder</span></td>
         <td><span class="parametername">builder</span></td>
         <td><p>Current builder instance.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Type</span>[]</td>
+        <td><span class="xref">Type</span>[]</td>
         <td><span class="parametername">assembliesContainingTypesToScan</span></td>
         <td><p>Assemblies containing types to scan for services.</p>
 </td>
@@ -492,27 +467,27 @@ public static class ContainerBuilderExtensions</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Autofac.ContainerBuilder</span></td>
-        <td><p>Current <span class="xref">Autofac.ContainerBuilder</span> instance.</p>
+        <td><span class="xref">ContainerBuilder</span></td>
+        <td><p>Current <see cref="!:ContainerBuilder"></see> instance.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AsConventionNamedInterface__2_Autofac_Builder_IRegistrationBuilder_System_Object___1___0__.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AsConventionNamedInterface%60%602(Autofac.Builder.IRegistrationBuilder%7BSystem.Object%2C%60%601%2C%60%600%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AsConventionNamedInterface__2_IRegistrationBuilder_System_Object___1___0__.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AsConventionNamedInterface%60%602(IRegistrationBuilder%7BSystem.Object%2C%60%601%2C%60%600%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration.Autofac/ContainerBuilderExtensions.cs/#L176">View Source</a>
   </span>
   <a id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AsConventionNamedInterface_" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AsConventionNamedInterface*"></a>
-  <h4 id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AsConventionNamedInterface__2_Autofac_Builder_IRegistrationBuilder_System_Object___1___0__" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AsConventionNamedInterface``2(Autofac.Builder.IRegistrationBuilder{System.Object,``1,``0})">AsConventionNamedInterface&lt;TRegistrationStyle, TActivatorData&gt;(IRegistrationBuilder&lt;Object, TActivatorData, TRegistrationStyle&gt;)</h4>
+  <h4 id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AsConventionNamedInterface__2_IRegistrationBuilder_System_Object___1___0__" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AsConventionNamedInterface``2(IRegistrationBuilder{System.Object,``1,``0})">AsConventionNamedInterface&lt;TRegistrationStyle, TActivatorData&gt;(IRegistrationBuilder&lt;Object, TActivatorData, TRegistrationStyle&gt;)</h4>
   <div class="markdown level1 summary"><p>Specifies that the type is registered with an interface that is found via naming convention (Service -&gt; IService).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IRegistrationBuilder&lt;object, TActivatorData, TRegistrationStyle&gt; AsConventionNamedInterface&lt;TRegistrationStyle, TActivatorData&gt;(this IRegistrationBuilder&lt;object, TActivatorData, TRegistrationStyle&gt; builder)
+    <pre><code class="lang-csharp hljs">public static IRegistrationBuilder&lt;object, TActivatorData, TRegistrationStyle&gt;? AsConventionNamedInterface&lt;TRegistrationStyle, TActivatorData&gt;(this IRegistrationBuilder&lt;object, TActivatorData, TRegistrationStyle&gt; builder)
     where TActivatorData : ReflectionActivatorData</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -526,7 +501,7 @@ public static class ContainerBuilderExtensions</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Autofac.Builder.IRegistrationBuilder</span>&lt;<span class="xref">System.Object</span>, TActivatorData, TRegistrationStyle&gt;</td>
+        <td><span class="xref">IRegistrationBuilder</span>&lt;<span class="xref">System.Object</span>, TActivatorData, TRegistrationStyle&gt;</td>
         <td><span class="parametername">builder</span></td>
         <td><p>Autofac's builder.</p>
 </td>
@@ -543,7 +518,7 @@ public static class ContainerBuilderExtensions</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Autofac.Builder.IRegistrationBuilder</span>&lt;<span class="xref">System.Object</span>, TActivatorData, TRegistrationStyle&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">IRegistrationBuilder</span>&lt;<span class="xref">System.Object</span>, TActivatorData, TRegistrationStyle&gt;&gt;</td>
         <td><p>Current Autofac builder instance.</p>
 </td>
       </tr>
@@ -570,19 +545,19 @@ public static class ContainerBuilderExtensions</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AsDirectAncestorInterfaces__2_Autofac_Builder_IRegistrationBuilder_System_Object___1___0__.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AsDirectAncestorInterfaces%60%602(Autofac.Builder.IRegistrationBuilder%7BSystem.Object%2C%60%601%2C%60%600%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AsDirectAncestorInterfaces__2_IRegistrationBuilder_System_Object___1___0__.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AsDirectAncestorInterfaces%60%602(IRegistrationBuilder%7BSystem.Object%2C%60%601%2C%60%600%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration.Autofac/ContainerBuilderExtensions.cs/#L156">View Source</a>
   </span>
   <a id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AsDirectAncestorInterfaces_" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AsDirectAncestorInterfaces*"></a>
-  <h4 id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AsDirectAncestorInterfaces__2_Autofac_Builder_IRegistrationBuilder_System_Object___1___0__" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AsDirectAncestorInterfaces``2(Autofac.Builder.IRegistrationBuilder{System.Object,``1,``0})">AsDirectAncestorInterfaces&lt;TRegistrationStyle, TActivatorData&gt;(IRegistrationBuilder&lt;Object, TActivatorData, TRegistrationStyle&gt;)</h4>
+  <h4 id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_AsDirectAncestorInterfaces__2_IRegistrationBuilder_System_Object___1___0__" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.AsDirectAncestorInterfaces``2(IRegistrationBuilder{System.Object,``1,``0})">AsDirectAncestorInterfaces&lt;TRegistrationStyle, TActivatorData&gt;(IRegistrationBuilder&lt;Object, TActivatorData, TRegistrationStyle&gt;)</h4>
   <div class="markdown level1 summary"><p>Specifies that the type is registered with it's direct ancestor interfaces.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IRegistrationBuilder&lt;object, TActivatorData, TRegistrationStyle&gt; AsDirectAncestorInterfaces&lt;TRegistrationStyle, TActivatorData&gt;(this IRegistrationBuilder&lt;object, TActivatorData, TRegistrationStyle&gt; builder)
+    <pre><code class="lang-csharp hljs">public static IRegistrationBuilder&lt;object, TActivatorData, TRegistrationStyle&gt;? AsDirectAncestorInterfaces&lt;TRegistrationStyle, TActivatorData&gt;(this IRegistrationBuilder&lt;object, TActivatorData, TRegistrationStyle&gt; builder)
     where TActivatorData : ReflectionActivatorData</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -596,7 +571,7 @@ public static class ContainerBuilderExtensions</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Autofac.Builder.IRegistrationBuilder</span>&lt;<span class="xref">System.Object</span>, TActivatorData, TRegistrationStyle&gt;</td>
+        <td><span class="xref">IRegistrationBuilder</span>&lt;<span class="xref">System.Object</span>, TActivatorData, TRegistrationStyle&gt;</td>
         <td><span class="parametername">builder</span></td>
         <td><p>Autofac's builder.</p>
 </td>
@@ -613,7 +588,7 @@ public static class ContainerBuilderExtensions</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Autofac.Builder.IRegistrationBuilder</span>&lt;<span class="xref">System.Object</span>, TActivatorData, TRegistrationStyle&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">IRegistrationBuilder</span>&lt;<span class="xref">System.Object</span>, TActivatorData, TRegistrationStyle&gt;&gt;</td>
         <td><p>Current Autofac builder instance.</p>
 </td>
       </tr>
@@ -640,13 +615,13 @@ public static class ContainerBuilderExtensions</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_IsRootScope_Autofac_ILifetimeScope_.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.IsRootScope(Autofac.ILifetimeScope)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_IsRootScope_ILifetimeScope_.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.IsRootScope(ILifetimeScope)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration.Autofac/ContainerBuilderExtensions.cs/#L374">View Source</a>
   </span>
   <a id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_IsRootScope_" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.IsRootScope*"></a>
-  <h4 id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_IsRootScope_Autofac_ILifetimeScope_" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.IsRootScope(Autofac.ILifetimeScope)">IsRootScope(ILifetimeScope)</h4>
+  <h4 id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_IsRootScope_ILifetimeScope_" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.IsRootScope(ILifetimeScope)">IsRootScope(ILifetimeScope)</h4>
   <div class="markdown level1 summary"><p>Checks whether the given scope is a root scope.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -665,7 +640,7 @@ public static class ContainerBuilderExtensions</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Autofac.ILifetimeScope</span></td>
+        <td><span class="xref">ILifetimeScope</span></td>
         <td><span class="parametername">lifetimeScope</span></td>
         <td><p>Root scope candidate.</p>
 </td>
@@ -690,13 +665,13 @@ public static class ContainerBuilderExtensions</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_IsRootScope_System_IServiceProvider_.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.IsRootScope(System.IServiceProvider)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_IsRootScope_IServiceProvider_.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.IsRootScope(IServiceProvider)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration.Autofac/ContainerBuilderExtensions.cs/#L356">View Source</a>
   </span>
   <a id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_IsRootScope_" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.IsRootScope*"></a>
-  <h4 id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_IsRootScope_System_IServiceProvider_" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.IsRootScope(System.IServiceProvider)">IsRootScope(IServiceProvider)</h4>
+  <h4 id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_IsRootScope_IServiceProvider_" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.IsRootScope(IServiceProvider)">IsRootScope(IServiceProvider)</h4>
   <div class="markdown level1 summary"><p>Checks whether the given scope is a root scope.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -715,7 +690,7 @@ public static class ContainerBuilderExtensions</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.IServiceProvider</span></td>
+        <td><span class="xref">IServiceProvider</span></td>
         <td><span class="parametername">serviceProvider</span></td>
         <td><p>Root scope candidate.</p>
 </td>
@@ -740,13 +715,13 @@ public static class ContainerBuilderExtensions</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterAsyncInterceptorAdapter_Autofac_ContainerBuilder_.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterAsyncInterceptorAdapter(Autofac.ContainerBuilder)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterAsyncInterceptorAdapter_ContainerBuilder_.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterAsyncInterceptorAdapter(ContainerBuilder)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration.Autofac/ContainerBuilderExtensions.cs/#L423">View Source</a>
   </span>
   <a id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterAsyncInterceptorAdapter_" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterAsyncInterceptorAdapter*"></a>
-  <h4 id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterAsyncInterceptorAdapter_Autofac_ContainerBuilder_" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterAsyncInterceptorAdapter(Autofac.ContainerBuilder)">RegisterAsyncInterceptorAdapter(ContainerBuilder)</h4>
+  <h4 id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterAsyncInterceptorAdapter_ContainerBuilder_" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterAsyncInterceptorAdapter(ContainerBuilder)">RegisterAsyncInterceptorAdapter(ContainerBuilder)</h4>
   <div class="markdown level1 summary"><p>Registers the adapter (<a class="xref" href="AttributeBasedRegistration.Autofac.AsyncInterceptorAdapter-1.html">AsyncInterceptorAdapter&lt;TAsyncInterceptor&gt;</a>) for async interceptors.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -765,7 +740,7 @@ public static class ContainerBuilderExtensions</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Autofac.ContainerBuilder</span></td>
+        <td><span class="xref">ContainerBuilder</span></td>
         <td><span class="parametername">builder</span></td>
         <td><p>Container builder.</p>
 </td>
@@ -774,19 +749,19 @@ public static class ContainerBuilderExtensions</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptor__1_Autofac_ContainerBuilder_System_Func_Autofac_IComponentContext___0__AttributeBasedRegistration_ServiceLifetime_System_Collections_Generic_IEnumerable_System_Object__.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptor%60%601(Autofac.ContainerBuilder%2CSystem.Func%7BAutofac.IComponentContext%2C%60%600%7D%2CAttributeBasedRegistration.ServiceLifetime%2CSystem.Collections.Generic.IEnumerable%7BSystem.Object%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptor__1_ContainerBuilder_Func_IComponentContext___0__AttributeBasedRegistration_ServiceLifetime_System_Nullable_IEnumerable_System_Object___.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptor%60%601(ContainerBuilder%2CFunc%7BIComponentContext%2C%60%600%7D%2CAttributeBasedRegistration.ServiceLifetime%2CSystem.Nullable%7BIEnumerable%7BSystem.Object%7D%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration.Autofac/ContainerBuilderExtensions.cs/#L638">View Source</a>
   </span>
   <a id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptor_" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptor*"></a>
-  <h4 id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptor__1_Autofac_ContainerBuilder_System_Func_Autofac_IComponentContext___0__AttributeBasedRegistration_ServiceLifetime_System_Collections_Generic_IEnumerable_System_Object__" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptor``1(Autofac.ContainerBuilder,System.Func{Autofac.IComponentContext,``0},AttributeBasedRegistration.ServiceLifetime,System.Collections.Generic.IEnumerable{System.Object})">RegisterInterceptor&lt;T&gt;(ContainerBuilder, Func&lt;IComponentContext, T&gt;, ServiceLifetime, IEnumerable&lt;Object&gt;)</h4>
-  <div class="markdown level1 summary"><p>Registers an interceptor with <span class="xref">Autofac.ContainerBuilder</span>.</p>
+  <h4 id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptor__1_ContainerBuilder_Func_IComponentContext___0__AttributeBasedRegistration_ServiceLifetime_System_Nullable_IEnumerable_System_Object___" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptor``1(ContainerBuilder,Func{IComponentContext,``0},AttributeBasedRegistration.ServiceLifetime,System.Nullable{IEnumerable{System.Object}})">RegisterInterceptor&lt;T&gt;(ContainerBuilder, Func&lt;IComponentContext, T&gt;, ServiceLifetime, Nullable&lt;IEnumerable&lt;Object&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Registers an interceptor with <see cref="!:ContainerBuilder"></see>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ContainerBuilder RegisterInterceptor&lt;T&gt;(this ContainerBuilder builder, Func&lt;IComponentContext, T&gt; factoryMethod, ServiceLifetime lifetime = ServiceLifetime.InstancePerDependency, IEnumerable&lt;object&gt; tags = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static ContainerBuilder RegisterInterceptor&lt;T&gt;(this ContainerBuilder builder, Func&lt;IComponentContext, T&gt; factoryMethod, ServiceLifetime lifetime = ServiceLifetime.InstancePerDependency, IEnumerable&lt;object&gt;? tags = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -799,13 +774,13 @@ public static class ContainerBuilderExtensions</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Autofac.ContainerBuilder</span></td>
+        <td><span class="xref">ContainerBuilder</span></td>
         <td><span class="parametername">builder</span></td>
         <td><p>Container builder.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;<span class="xref">Autofac.IComponentContext</span>, T&gt;</td>
+        <td><span class="xref">Func</span>&lt;<span class="xref">IComponentContext</span>, T&gt;</td>
         <td><span class="parametername">factoryMethod</span></td>
         <td><p>Factory method for the registration.</p>
 </td>
@@ -817,7 +792,7 @@ public static class ContainerBuilderExtensions</code></pre>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">IEnumerable</span>&lt;<span class="xref">System.Object</span>&gt;&gt;</td>
         <td><span class="parametername">tags</span></td>
         <td><p>Optional tags for a <a class="xref" href="AttributeBasedRegistration.ServiceLifetime.html#AttributeBasedRegistration_ServiceLifetime_InstancePerMatchingLifetimeScope">InstancePerMatchingLifetimeScope</a> registration.</p>
 </td>
@@ -834,7 +809,7 @@ public static class ContainerBuilderExtensions</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Autofac.ContainerBuilder</span></td>
+        <td><span class="xref">ContainerBuilder</span></td>
         <td><p>Current instance of the <a class="xref" href="AttributeBasedRegistration.AttributeRegistrationOptions.html">AttributeRegistrationOptions</a>.</p>
 </td>
       </tr>
@@ -857,14 +832,14 @@ public static class ContainerBuilderExtensions</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptorInstance__1_Autofac_ContainerBuilder___0_AttributeBasedRegistration_ServiceLifetime_.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptorInstance%60%601(Autofac.ContainerBuilder%2C%60%600%2CAttributeBasedRegistration.ServiceLifetime)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptorInstance__1_ContainerBuilder___0_AttributeBasedRegistration_ServiceLifetime_.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptorInstance%60%601(ContainerBuilder%2C%60%600%2CAttributeBasedRegistration.ServiceLifetime)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration.Autofac/ContainerBuilderExtensions.cs/#L676">View Source</a>
   </span>
   <a id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptorInstance_" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptorInstance*"></a>
-  <h4 id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptorInstance__1_Autofac_ContainerBuilder___0_AttributeBasedRegistration_ServiceLifetime_" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptorInstance``1(Autofac.ContainerBuilder,``0,AttributeBasedRegistration.ServiceLifetime)">RegisterInterceptorInstance&lt;T&gt;(ContainerBuilder, T, ServiceLifetime)</h4>
-  <div class="markdown level1 summary"><p>Registers an interceptor with <span class="xref">Autofac.ContainerBuilder</span>.</p>
+  <h4 id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptorInstance__1_ContainerBuilder___0_AttributeBasedRegistration_ServiceLifetime_" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptorInstance``1(ContainerBuilder,``0,AttributeBasedRegistration.ServiceLifetime)">RegisterInterceptorInstance&lt;T&gt;(ContainerBuilder, T, ServiceLifetime)</h4>
+  <div class="markdown level1 summary"><p>Registers an interceptor with <see cref="!:ContainerBuilder"></see>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -883,7 +858,7 @@ public static class ContainerBuilderExtensions</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Autofac.ContainerBuilder</span></td>
+        <td><span class="xref">ContainerBuilder</span></td>
         <td><span class="parametername">builder</span></td>
         <td><p>Container builder.</p>
 </td>
@@ -912,7 +887,7 @@ public static class ContainerBuilderExtensions</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Autofac.ContainerBuilder</span></td>
+        <td><span class="xref">ContainerBuilder</span></td>
         <td><p>Current instance of the <a class="xref" href="AttributeBasedRegistration.AttributeRegistrationOptions.html">AttributeRegistrationOptions</a>.</p>
 </td>
       </tr>
@@ -935,279 +910,13 @@ public static class ContainerBuilderExtensions</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_Autofac_ContainerBuilder_AttributeBasedRegistration_ServiceLifetime_System_Reflection_Assembly___.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(Autofac.ContainerBuilder%2CAttributeBasedRegistration.ServiceLifetime%2CSystem.Reflection.Assembly%5B%5D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration.Autofac/ContainerBuilderExtensions.cs/#L453">View Source</a>
-  </span>
-  <a id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors*"></a>
-  <h4 id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_Autofac_ContainerBuilder_AttributeBasedRegistration_ServiceLifetime_System_Reflection_Assembly___" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(Autofac.ContainerBuilder,AttributeBasedRegistration.ServiceLifetime,System.Reflection.Assembly[])">RegisterInterceptors(ContainerBuilder, ServiceLifetime, Assembly[])</h4>
-  <div class="markdown level1 summary"><p>Registers all interceptors (sync and async) within provided assemblies.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ContainerBuilder RegisterInterceptors(this ContainerBuilder containerBuilder, ServiceLifetime defaultLifetime, params Assembly[] assembliesToScan)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Autofac.ContainerBuilder</span></td>
-        <td><span class="parametername">containerBuilder</span></td>
-        <td><p>Container builder.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="AttributeBasedRegistration.ServiceLifetime.html">ServiceLifetime</a></td>
-        <td><span class="parametername">defaultLifetime</span></td>
-        <td><p>Default interceptor lifetime.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Reflection.Assembly</span>[]</td>
-        <td><span class="parametername">assembliesToScan</span></td>
-        <td><p>Assemblies to scan for interceptors.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Autofac.ContainerBuilder</span></td>
-        <td><p>Container builder instance with registered interceptors.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_Autofac_ContainerBuilder_AttributeBasedRegistration_ServiceLifetime_System_Reflection_Assembly____remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Takes <a class="xref" href="AttributeBasedRegistration.Attributes.LifetimeAttribute.html">LifetimeAttribute</a> into account.
-All registrations are <a class="xref" href="AttributeBasedRegistration.RegistrationStrategy.html#AttributeBasedRegistration_RegistrationStrategy_AsSelf">AsSelf</a>.
-<a class="xref" href="AttributeBasedRegistration.ServiceLifetime.html#AttributeBasedRegistration_ServiceLifetime_InstancePerDependency">InstancePerDependency</a> will be used as a default lifetime.</p>
-</div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_Autofac_ContainerBuilder_AttributeBasedRegistration_ServiceLifetime_System_Type___.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(Autofac.ContainerBuilder%2CAttributeBasedRegistration.ServiceLifetime%2CSystem.Type%5B%5D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration.Autofac/ContainerBuilderExtensions.cs/#L484">View Source</a>
-  </span>
-  <a id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors*"></a>
-  <h4 id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_Autofac_ContainerBuilder_AttributeBasedRegistration_ServiceLifetime_System_Type___" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(Autofac.ContainerBuilder,AttributeBasedRegistration.ServiceLifetime,System.Type[])">RegisterInterceptors(ContainerBuilder, ServiceLifetime, Type[])</h4>
-  <div class="markdown level1 summary"><p>Registers all interceptors (sync and async) within provided assemblies.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ContainerBuilder RegisterInterceptors(this ContainerBuilder containerBuilder, ServiceLifetime defaultLifetime, params Type[] assembliesContainingTypesToScan)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Autofac.ContainerBuilder</span></td>
-        <td><span class="parametername">containerBuilder</span></td>
-        <td><p>Container builder.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="AttributeBasedRegistration.ServiceLifetime.html">ServiceLifetime</a></td>
-        <td><span class="parametername">defaultLifetime</span></td>
-        <td><p>Default interceptor lifetime.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Type</span>[]</td>
-        <td><span class="parametername">assembliesContainingTypesToScan</span></td>
-        <td><p>Assemblies that contain given types to scan for interceptors.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Autofac.ContainerBuilder</span></td>
-        <td><p>Container builder instance with registered interceptors.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_Autofac_ContainerBuilder_AttributeBasedRegistration_ServiceLifetime_System_Type____remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Takes <a class="xref" href="AttributeBasedRegistration.Attributes.LifetimeAttribute.html">LifetimeAttribute</a> into account.
-All registrations are <a class="xref" href="AttributeBasedRegistration.RegistrationStrategy.html#AttributeBasedRegistration_RegistrationStrategy_AsSelf">AsSelf</a>.
-<a class="xref" href="AttributeBasedRegistration.ServiceLifetime.html#AttributeBasedRegistration_ServiceLifetime_InstancePerDependency">InstancePerDependency</a> will be used as a default lifetime.</p>
-</div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_Autofac_ContainerBuilder_System_Collections_Generic_IEnumerable_System_Reflection_Assembly__AttributeBasedRegistration_ServiceLifetime_.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(Autofac.ContainerBuilder%2CSystem.Collections.Generic.IEnumerable%7BSystem.Reflection.Assembly%7D%2CAttributeBasedRegistration.ServiceLifetime)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration.Autofac/ContainerBuilderExtensions.cs/#L516">View Source</a>
-  </span>
-  <a id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors*"></a>
-  <h4 id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_Autofac_ContainerBuilder_System_Collections_Generic_IEnumerable_System_Reflection_Assembly__AttributeBasedRegistration_ServiceLifetime_" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(Autofac.ContainerBuilder,System.Collections.Generic.IEnumerable{System.Reflection.Assembly},AttributeBasedRegistration.ServiceLifetime)">RegisterInterceptors(ContainerBuilder, IEnumerable&lt;Assembly&gt;, ServiceLifetime)</h4>
-  <div class="markdown level1 summary"><p>Registers all interceptors (sync and async) within provided assemblies.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ContainerBuilder RegisterInterceptors(this ContainerBuilder containerBuilder, IEnumerable&lt;Assembly&gt; assembliesToScan, ServiceLifetime defaultLifetime = ServiceLifetime.InstancePerDependency)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Autofac.ContainerBuilder</span></td>
-        <td><span class="parametername">containerBuilder</span></td>
-        <td><p>Container builder.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Reflection.Assembly</span>&gt;</td>
-        <td><span class="parametername">assembliesToScan</span></td>
-        <td><p>Assemblies to scan for interceptors.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="AttributeBasedRegistration.ServiceLifetime.html">ServiceLifetime</a></td>
-        <td><span class="parametername">defaultLifetime</span></td>
-        <td><p>Default interceptor lifetime.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Autofac.ContainerBuilder</span></td>
-        <td><p>Container builder instance with registered interceptors.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_Autofac_ContainerBuilder_System_Collections_Generic_IEnumerable_System_Reflection_Assembly__AttributeBasedRegistration_ServiceLifetime__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Takes <a class="xref" href="AttributeBasedRegistration.Attributes.LifetimeAttribute.html">LifetimeAttribute</a> into account.
-All registrations are <a class="xref" href="AttributeBasedRegistration.RegistrationStrategy.html#AttributeBasedRegistration_RegistrationStrategy_AsSelf">AsSelf</a>.</p>
-</div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_Autofac_ContainerBuilder_System_Collections_Generic_IEnumerable_System_Type__AttributeBasedRegistration_ServiceLifetime_.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(Autofac.ContainerBuilder%2CSystem.Collections.Generic.IEnumerable%7BSystem.Type%7D%2CAttributeBasedRegistration.ServiceLifetime)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration.Autofac/ContainerBuilderExtensions.cs/#L499">View Source</a>
-  </span>
-  <a id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors*"></a>
-  <h4 id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_Autofac_ContainerBuilder_System_Collections_Generic_IEnumerable_System_Type__AttributeBasedRegistration_ServiceLifetime_" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(Autofac.ContainerBuilder,System.Collections.Generic.IEnumerable{System.Type},AttributeBasedRegistration.ServiceLifetime)">RegisterInterceptors(ContainerBuilder, IEnumerable&lt;Type&gt;, ServiceLifetime)</h4>
-  <div class="markdown level1 summary"><p>Registers all interceptors (sync and async) within provided assemblies.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ContainerBuilder RegisterInterceptors(this ContainerBuilder containerBuilder, IEnumerable&lt;Type&gt; assembliesContainingTypesToScan, ServiceLifetime defaultLifetime = ServiceLifetime.InstancePerDependency)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Autofac.ContainerBuilder</span></td>
-        <td><span class="parametername">containerBuilder</span></td>
-        <td><p>Container builder.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Type</span>&gt;</td>
-        <td><span class="parametername">assembliesContainingTypesToScan</span></td>
-        <td><p>Assemblies that contain given types to scan for interceptors.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="AttributeBasedRegistration.ServiceLifetime.html">ServiceLifetime</a></td>
-        <td><span class="parametername">defaultLifetime</span></td>
-        <td><p>Default interceptor lifetime.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Autofac.ContainerBuilder</span></td>
-        <td><p>Container builder instance with registered interceptors.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_Autofac_ContainerBuilder_System_Collections_Generic_IEnumerable_System_Type__AttributeBasedRegistration_ServiceLifetime__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Takes <a class="xref" href="AttributeBasedRegistration.Attributes.LifetimeAttribute.html">LifetimeAttribute</a> into account.
-All registrations are <a class="xref" href="AttributeBasedRegistration.RegistrationStrategy.html#AttributeBasedRegistration_RegistrationStrategy_AsSelf">AsSelf</a>.</p>
-</div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_Autofac_ContainerBuilder_System_Reflection_Assembly___.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(Autofac.ContainerBuilder%2CSystem.Reflection.Assembly%5B%5D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_ContainerBuilder_Assembly___.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder%2CAssembly%5B%5D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration.Autofac/ContainerBuilderExtensions.cs/#L437">View Source</a>
   </span>
   <a id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors*"></a>
-  <h4 id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_Autofac_ContainerBuilder_System_Reflection_Assembly___" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(Autofac.ContainerBuilder,System.Reflection.Assembly[])">RegisterInterceptors(ContainerBuilder, Assembly[])</h4>
+  <h4 id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_ContainerBuilder_Assembly___" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder,Assembly[])">RegisterInterceptors(ContainerBuilder, Assembly[])</h4>
   <div class="markdown level1 summary"><p>Registers all interceptors (sync and async) within provided assemblies.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -1226,13 +935,13 @@ All registrations are <a class="xref" href="AttributeBasedRegistration.Registrat
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Autofac.ContainerBuilder</span></td>
+        <td><span class="xref">ContainerBuilder</span></td>
         <td><span class="parametername">containerBuilder</span></td>
         <td><p>Container builder.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Reflection.Assembly</span>[]</td>
+        <td><span class="xref">Assembly</span>[]</td>
         <td><span class="parametername">assembliesToScan</span></td>
         <td><p>Assemblies to scan for interceptors.</p>
 </td>
@@ -1249,26 +958,292 @@ All registrations are <a class="xref" href="AttributeBasedRegistration.Registrat
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Autofac.ContainerBuilder</span></td>
+        <td><span class="xref">ContainerBuilder</span></td>
         <td><p>Container builder instance with registered interceptors.</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h5 id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_Autofac_ContainerBuilder_System_Reflection_Assembly____remarks">Remarks</h5>
+  <h5 id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_ContainerBuilder_Assembly____remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>Takes <a class="xref" href="AttributeBasedRegistration.Attributes.LifetimeAttribute.html">LifetimeAttribute</a> into account.
 All registrations are <a class="xref" href="AttributeBasedRegistration.RegistrationStrategy.html#AttributeBasedRegistration_RegistrationStrategy_AsSelf">AsSelf</a>.
 <a class="xref" href="AttributeBasedRegistration.ServiceLifetime.html#AttributeBasedRegistration_ServiceLifetime_InstancePerDependency">InstancePerDependency</a> will be used as a default lifetime.</p>
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_Autofac_ContainerBuilder_System_Type___.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(Autofac.ContainerBuilder%2CSystem.Type%5B%5D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_ContainerBuilder_AttributeBasedRegistration_ServiceLifetime_Assembly___.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder%2CAttributeBasedRegistration.ServiceLifetime%2CAssembly%5B%5D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration.Autofac/ContainerBuilderExtensions.cs/#L453">View Source</a>
+  </span>
+  <a id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors*"></a>
+  <h4 id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_ContainerBuilder_AttributeBasedRegistration_ServiceLifetime_Assembly___" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder,AttributeBasedRegistration.ServiceLifetime,Assembly[])">RegisterInterceptors(ContainerBuilder, ServiceLifetime, Assembly[])</h4>
+  <div class="markdown level1 summary"><p>Registers all interceptors (sync and async) within provided assemblies.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ContainerBuilder RegisterInterceptors(this ContainerBuilder containerBuilder, ServiceLifetime defaultLifetime, params Assembly[] assembliesToScan)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ContainerBuilder</span></td>
+        <td><span class="parametername">containerBuilder</span></td>
+        <td><p>Container builder.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AttributeBasedRegistration.ServiceLifetime.html">ServiceLifetime</a></td>
+        <td><span class="parametername">defaultLifetime</span></td>
+        <td><p>Default interceptor lifetime.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Assembly</span>[]</td>
+        <td><span class="parametername">assembliesToScan</span></td>
+        <td><p>Assemblies to scan for interceptors.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ContainerBuilder</span></td>
+        <td><p>Container builder instance with registered interceptors.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_ContainerBuilder_AttributeBasedRegistration_ServiceLifetime_Assembly____remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Takes <a class="xref" href="AttributeBasedRegistration.Attributes.LifetimeAttribute.html">LifetimeAttribute</a> into account.
+All registrations are <a class="xref" href="AttributeBasedRegistration.RegistrationStrategy.html#AttributeBasedRegistration_RegistrationStrategy_AsSelf">AsSelf</a>.
+<a class="xref" href="AttributeBasedRegistration.ServiceLifetime.html#AttributeBasedRegistration_ServiceLifetime_InstancePerDependency">InstancePerDependency</a> will be used as a default lifetime.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_ContainerBuilder_AttributeBasedRegistration_ServiceLifetime_Type___.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder%2CAttributeBasedRegistration.ServiceLifetime%2CType%5B%5D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration.Autofac/ContainerBuilderExtensions.cs/#L484">View Source</a>
+  </span>
+  <a id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors*"></a>
+  <h4 id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_ContainerBuilder_AttributeBasedRegistration_ServiceLifetime_Type___" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder,AttributeBasedRegistration.ServiceLifetime,Type[])">RegisterInterceptors(ContainerBuilder, ServiceLifetime, Type[])</h4>
+  <div class="markdown level1 summary"><p>Registers all interceptors (sync and async) within provided assemblies.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ContainerBuilder RegisterInterceptors(this ContainerBuilder containerBuilder, ServiceLifetime defaultLifetime, params Type[] assembliesContainingTypesToScan)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ContainerBuilder</span></td>
+        <td><span class="parametername">containerBuilder</span></td>
+        <td><p>Container builder.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AttributeBasedRegistration.ServiceLifetime.html">ServiceLifetime</a></td>
+        <td><span class="parametername">defaultLifetime</span></td>
+        <td><p>Default interceptor lifetime.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Type</span>[]</td>
+        <td><span class="parametername">assembliesContainingTypesToScan</span></td>
+        <td><p>Assemblies that contain given types to scan for interceptors.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ContainerBuilder</span></td>
+        <td><p>Container builder instance with registered interceptors.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_ContainerBuilder_AttributeBasedRegistration_ServiceLifetime_Type____remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Takes <a class="xref" href="AttributeBasedRegistration.Attributes.LifetimeAttribute.html">LifetimeAttribute</a> into account.
+All registrations are <a class="xref" href="AttributeBasedRegistration.RegistrationStrategy.html#AttributeBasedRegistration_RegistrationStrategy_AsSelf">AsSelf</a>.
+<a class="xref" href="AttributeBasedRegistration.ServiceLifetime.html#AttributeBasedRegistration_ServiceLifetime_InstancePerDependency">InstancePerDependency</a> will be used as a default lifetime.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_ContainerBuilder_IEnumerable_Assembly__AttributeBasedRegistration_ServiceLifetime_.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder%2CIEnumerable%7BAssembly%7D%2CAttributeBasedRegistration.ServiceLifetime)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration.Autofac/ContainerBuilderExtensions.cs/#L516">View Source</a>
+  </span>
+  <a id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors*"></a>
+  <h4 id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_ContainerBuilder_IEnumerable_Assembly__AttributeBasedRegistration_ServiceLifetime_" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder,IEnumerable{Assembly},AttributeBasedRegistration.ServiceLifetime)">RegisterInterceptors(ContainerBuilder, IEnumerable&lt;Assembly&gt;, ServiceLifetime)</h4>
+  <div class="markdown level1 summary"><p>Registers all interceptors (sync and async) within provided assemblies.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ContainerBuilder RegisterInterceptors(this ContainerBuilder containerBuilder, IEnumerable&lt;Assembly&gt; assembliesToScan, ServiceLifetime defaultLifetime = ServiceLifetime.InstancePerDependency)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ContainerBuilder</span></td>
+        <td><span class="parametername">containerBuilder</span></td>
+        <td><p>Container builder.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">Assembly</span>&gt;</td>
+        <td><span class="parametername">assembliesToScan</span></td>
+        <td><p>Assemblies to scan for interceptors.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AttributeBasedRegistration.ServiceLifetime.html">ServiceLifetime</a></td>
+        <td><span class="parametername">defaultLifetime</span></td>
+        <td><p>Default interceptor lifetime.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ContainerBuilder</span></td>
+        <td><p>Container builder instance with registered interceptors.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_ContainerBuilder_IEnumerable_Assembly__AttributeBasedRegistration_ServiceLifetime__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Takes <a class="xref" href="AttributeBasedRegistration.Attributes.LifetimeAttribute.html">LifetimeAttribute</a> into account.
+All registrations are <a class="xref" href="AttributeBasedRegistration.RegistrationStrategy.html#AttributeBasedRegistration_RegistrationStrategy_AsSelf">AsSelf</a>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_ContainerBuilder_IEnumerable_Type__AttributeBasedRegistration_ServiceLifetime_.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder%2CIEnumerable%7BType%7D%2CAttributeBasedRegistration.ServiceLifetime)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration.Autofac/ContainerBuilderExtensions.cs/#L499">View Source</a>
+  </span>
+  <a id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors*"></a>
+  <h4 id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_ContainerBuilder_IEnumerable_Type__AttributeBasedRegistration_ServiceLifetime_" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder,IEnumerable{Type},AttributeBasedRegistration.ServiceLifetime)">RegisterInterceptors(ContainerBuilder, IEnumerable&lt;Type&gt;, ServiceLifetime)</h4>
+  <div class="markdown level1 summary"><p>Registers all interceptors (sync and async) within provided assemblies.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ContainerBuilder RegisterInterceptors(this ContainerBuilder containerBuilder, IEnumerable&lt;Type&gt; assembliesContainingTypesToScan, ServiceLifetime defaultLifetime = ServiceLifetime.InstancePerDependency)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ContainerBuilder</span></td>
+        <td><span class="parametername">containerBuilder</span></td>
+        <td><p>Container builder.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">Type</span>&gt;</td>
+        <td><span class="parametername">assembliesContainingTypesToScan</span></td>
+        <td><p>Assemblies that contain given types to scan for interceptors.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AttributeBasedRegistration.ServiceLifetime.html">ServiceLifetime</a></td>
+        <td><span class="parametername">defaultLifetime</span></td>
+        <td><p>Default interceptor lifetime.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ContainerBuilder</span></td>
+        <td><p>Container builder instance with registered interceptors.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_ContainerBuilder_IEnumerable_Type__AttributeBasedRegistration_ServiceLifetime__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Takes <a class="xref" href="AttributeBasedRegistration.Attributes.LifetimeAttribute.html">LifetimeAttribute</a> into account.
+All registrations are <a class="xref" href="AttributeBasedRegistration.RegistrationStrategy.html#AttributeBasedRegistration_RegistrationStrategy_AsSelf">AsSelf</a>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_ContainerBuilder_Type___.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder%2CType%5B%5D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration.Autofac/ContainerBuilderExtensions.cs/#L468">View Source</a>
   </span>
   <a id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors*"></a>
-  <h4 id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_Autofac_ContainerBuilder_System_Type___" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(Autofac.ContainerBuilder,System.Type[])">RegisterInterceptors(ContainerBuilder, Type[])</h4>
+  <h4 id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_ContainerBuilder_Type___" data-uid="AttributeBasedRegistration.Autofac.ContainerBuilderExtensions.RegisterInterceptors(ContainerBuilder,Type[])">RegisterInterceptors(ContainerBuilder, Type[])</h4>
   <div class="markdown level1 summary"><p>Registers all interceptors (sync and async) within provided assemblies.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -1287,13 +1262,13 @@ All registrations are <a class="xref" href="AttributeBasedRegistration.Registrat
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Autofac.ContainerBuilder</span></td>
+        <td><span class="xref">ContainerBuilder</span></td>
         <td><span class="parametername">containerBuilder</span></td>
         <td><p>Container builder.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Type</span>[]</td>
+        <td><span class="xref">Type</span>[]</td>
         <td><span class="parametername">assembliesContainingTypesToScan</span></td>
         <td><p>Assemblies that contain given types to scan for interceptors.</p>
 </td>
@@ -1310,13 +1285,13 @@ All registrations are <a class="xref" href="AttributeBasedRegistration.Registrat
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Autofac.ContainerBuilder</span></td>
+        <td><span class="xref">ContainerBuilder</span></td>
         <td><p>Container builder instance with registered interceptors.</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h5 id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_Autofac_ContainerBuilder_System_Type____remarks">Remarks</h5>
+  <h5 id="AttributeBasedRegistration_Autofac_ContainerBuilderExtensions_RegisterInterceptors_ContainerBuilder_Type____remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>Takes <a class="xref" href="AttributeBasedRegistration.Attributes.LifetimeAttribute.html">LifetimeAttribute</a> into account.
 All registrations are <a class="xref" href="AttributeBasedRegistration.RegistrationStrategy.html#AttributeBasedRegistration_RegistrationStrategy_AsSelf">AsSelf</a>.
 <a class="xref" href="AttributeBasedRegistration.ServiceLifetime.html#AttributeBasedRegistration_ServiceLifetime_InstancePerDependency">InstancePerDependency</a> will be used as a default lifetime.</p>

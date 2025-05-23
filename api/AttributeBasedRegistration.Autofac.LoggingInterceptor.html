@@ -103,64 +103,25 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Castle.DynamicProxy.AsyncInterceptorBase</span></div>
-    <div class="level2"><span class="xref">LoggingInterceptor</span></div>
-  </div>
-  <div class="implements">
-    <h5>Implements</h5>
-    <div><span class="xref">Castle.DynamicProxy.IAsyncInterceptor</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">Castle.DynamicProxy.AsyncInterceptorBase.InterceptSynchronous(Castle.DynamicProxy.IInvocation)</span>
-    </div>
-    <div>
-      <span class="xref">Castle.DynamicProxy.AsyncInterceptorBase.InterceptAsynchronous(Castle.DynamicProxy.IInvocation)</span>
-    </div>
-    <div>
-      <span class="xref">Castle.DynamicProxy.AsyncInterceptorBase.InterceptAsynchronous&lt;TResult&gt;(Castle.DynamicProxy.IInvocation)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">LoggingInterceptor</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="AttributeBasedRegistration.Autofac.html">AttributeBasedRegistration.Autofac</a></h6>
   <h6><strong>Assembly</strong>: AttributeBasedRegistration.Autofac.dll</h6>
   <h5 id="AttributeBasedRegistration_Autofac_LoggingInterceptor_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[PublicAPI]
-public class LoggingInterceptor : AsyncInterceptorBase, IAsyncInterceptor</code></pre>
+    <pre><code class="lang-csharp hljs">public class LoggingInterceptor : AsyncInterceptorBase</code></pre>
   </div>
   <h3 id="constructors">Constructors
 </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Autofac_LoggingInterceptor__ctor_Microsoft_Extensions_Logging_ILogger_.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Autofac.LoggingInterceptor.%23ctor(Microsoft.Extensions.Logging.ILogger)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Autofac_LoggingInterceptor__ctor_ILogger_.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Autofac.LoggingInterceptor.%23ctor(ILogger)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration.Autofac/LoggingInterceptor.cs/#L18">View Source</a>
   </span>
   <a id="AttributeBasedRegistration_Autofac_LoggingInterceptor__ctor_" data-uid="AttributeBasedRegistration.Autofac.LoggingInterceptor.#ctor*"></a>
-  <h4 id="AttributeBasedRegistration_Autofac_LoggingInterceptor__ctor_Microsoft_Extensions_Logging_ILogger_" data-uid="AttributeBasedRegistration.Autofac.LoggingInterceptor.#ctor(Microsoft.Extensions.Logging.ILogger)">LoggingInterceptor(ILogger)</h4>
+  <h4 id="AttributeBasedRegistration_Autofac_LoggingInterceptor__ctor_ILogger_" data-uid="AttributeBasedRegistration.Autofac.LoggingInterceptor.#ctor(ILogger)">LoggingInterceptor(ILogger)</h4>
   <div class="markdown level1 summary"><p>Base logging interceptor.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -179,7 +140,7 @@ public class LoggingInterceptor : AsyncInterceptorBase, IAsyncInterceptor</code>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Microsoft.Extensions.Logging.ILogger</span></td>
+        <td><span class="xref">ILogger</span></td>
         <td><span class="parametername">logger</span></td>
         <td></td>
       </tr>
@@ -189,13 +150,13 @@ public class LoggingInterceptor : AsyncInterceptorBase, IAsyncInterceptor</code>
 </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Autofac_LoggingInterceptor_InterceptAsync_Castle_DynamicProxy_IInvocation_Castle_DynamicProxy_IInvocationProceedInfo_System_Func_Castle_DynamicProxy_IInvocation_Castle_DynamicProxy_IInvocationProceedInfo_System_Threading_Tasks_Task__.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Autofac.LoggingInterceptor.InterceptAsync(Castle.DynamicProxy.IInvocation%2CCastle.DynamicProxy.IInvocationProceedInfo%2CSystem.Func%7BCastle.DynamicProxy.IInvocation%2CCastle.DynamicProxy.IInvocationProceedInfo%2CSystem.Threading.Tasks.Task%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Autofac_LoggingInterceptor_InterceptAsync_IInvocation_IInvocationProceedInfo_Func_IInvocation_IInvocationProceedInfo_Task__.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Autofac.LoggingInterceptor.InterceptAsync(IInvocation%2CIInvocationProceedInfo%2CFunc%7BIInvocation%2CIInvocationProceedInfo%2CTask%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration.Autofac/LoggingInterceptor.cs/#L24">View Source</a>
   </span>
   <a id="AttributeBasedRegistration_Autofac_LoggingInterceptor_InterceptAsync_" data-uid="AttributeBasedRegistration.Autofac.LoggingInterceptor.InterceptAsync*"></a>
-  <h4 id="AttributeBasedRegistration_Autofac_LoggingInterceptor_InterceptAsync_Castle_DynamicProxy_IInvocation_Castle_DynamicProxy_IInvocationProceedInfo_System_Func_Castle_DynamicProxy_IInvocation_Castle_DynamicProxy_IInvocationProceedInfo_System_Threading_Tasks_Task__" data-uid="AttributeBasedRegistration.Autofac.LoggingInterceptor.InterceptAsync(Castle.DynamicProxy.IInvocation,Castle.DynamicProxy.IInvocationProceedInfo,System.Func{Castle.DynamicProxy.IInvocation,Castle.DynamicProxy.IInvocationProceedInfo,System.Threading.Tasks.Task})">InterceptAsync(IInvocation, IInvocationProceedInfo, Func&lt;IInvocation, IInvocationProceedInfo, Task&gt;)</h4>
+  <h4 id="AttributeBasedRegistration_Autofac_LoggingInterceptor_InterceptAsync_IInvocation_IInvocationProceedInfo_Func_IInvocation_IInvocationProceedInfo_Task__" data-uid="AttributeBasedRegistration.Autofac.LoggingInterceptor.InterceptAsync(IInvocation,IInvocationProceedInfo,Func{IInvocation,IInvocationProceedInfo,Task})">InterceptAsync(IInvocation, IInvocationProceedInfo, Func&lt;IInvocation, IInvocationProceedInfo, Task&gt;)</h4>
   <div class="markdown level1 summary"><p>Base logging interceptor.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -214,17 +175,17 @@ public class LoggingInterceptor : AsyncInterceptorBase, IAsyncInterceptor</code>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Castle.DynamicProxy.IInvocation</span></td>
+        <td><span class="xref">IInvocation</span></td>
         <td><span class="parametername">invocation</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Castle.DynamicProxy.IInvocationProceedInfo</span></td>
+        <td><span class="xref">IInvocationProceedInfo</span></td>
         <td><span class="parametername">proceedInfo</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;<span class="xref">Castle.DynamicProxy.IInvocation</span>, <span class="xref">Castle.DynamicProxy.IInvocationProceedInfo</span>, <span class="xref">System.Threading.Tasks.Task</span>&gt;</td>
+        <td><span class="xref">Func</span>&lt;<span class="xref">IInvocation</span>, <span class="xref">IInvocationProceedInfo</span>, <span class="xref">Task</span>&gt;</td>
         <td><span class="parametername">proceed</span></td>
         <td></td>
       </tr>
@@ -240,22 +201,20 @@ public class LoggingInterceptor : AsyncInterceptorBase, IAsyncInterceptor</code>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><span class="xref">Task</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">Castle.DynamicProxy.AsyncInterceptorBase.InterceptAsync(Castle.DynamicProxy.IInvocation, Castle.DynamicProxy.IInvocationProceedInfo, System.Func&lt;Castle.DynamicProxy.IInvocation, Castle.DynamicProxy.IInvocationProceedInfo, System.Threading.Tasks.Task&gt;)</span></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Autofac_LoggingInterceptor_InterceptAsync__1_Castle_DynamicProxy_IInvocation_Castle_DynamicProxy_IInvocationProceedInfo_System_Func_Castle_DynamicProxy_IInvocation_Castle_DynamicProxy_IInvocationProceedInfo_System_Threading_Tasks_Task___0___.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Autofac.LoggingInterceptor.InterceptAsync%60%601(Castle.DynamicProxy.IInvocation%2CCastle.DynamicProxy.IInvocationProceedInfo%2CSystem.Func%7BCastle.DynamicProxy.IInvocation%2CCastle.DynamicProxy.IInvocationProceedInfo%2CSystem.Threading.Tasks.Task%7B%60%600%7D%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Autofac_LoggingInterceptor_InterceptAsync__1_IInvocation_IInvocationProceedInfo_Func_IInvocation_IInvocationProceedInfo_Task___0___.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Autofac.LoggingInterceptor.InterceptAsync%60%601(IInvocation%2CIInvocationProceedInfo%2CFunc%7BIInvocation%2CIInvocationProceedInfo%2CTask%7B%60%600%7D%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration.Autofac/LoggingInterceptor.cs/#L52">View Source</a>
   </span>
   <a id="AttributeBasedRegistration_Autofac_LoggingInterceptor_InterceptAsync_" data-uid="AttributeBasedRegistration.Autofac.LoggingInterceptor.InterceptAsync*"></a>
-  <h4 id="AttributeBasedRegistration_Autofac_LoggingInterceptor_InterceptAsync__1_Castle_DynamicProxy_IInvocation_Castle_DynamicProxy_IInvocationProceedInfo_System_Func_Castle_DynamicProxy_IInvocation_Castle_DynamicProxy_IInvocationProceedInfo_System_Threading_Tasks_Task___0___" data-uid="AttributeBasedRegistration.Autofac.LoggingInterceptor.InterceptAsync``1(Castle.DynamicProxy.IInvocation,Castle.DynamicProxy.IInvocationProceedInfo,System.Func{Castle.DynamicProxy.IInvocation,Castle.DynamicProxy.IInvocationProceedInfo,System.Threading.Tasks.Task{``0}})">InterceptAsync&lt;TResult&gt;(IInvocation, IInvocationProceedInfo, Func&lt;IInvocation, IInvocationProceedInfo, Task&lt;TResult&gt;&gt;)</h4>
+  <h4 id="AttributeBasedRegistration_Autofac_LoggingInterceptor_InterceptAsync__1_IInvocation_IInvocationProceedInfo_Func_IInvocation_IInvocationProceedInfo_Task___0___" data-uid="AttributeBasedRegistration.Autofac.LoggingInterceptor.InterceptAsync``1(IInvocation,IInvocationProceedInfo,Func{IInvocation,IInvocationProceedInfo,Task{``0}})">InterceptAsync&lt;TResult&gt;(IInvocation, IInvocationProceedInfo, Func&lt;IInvocation, IInvocationProceedInfo, Task&lt;TResult&gt;&gt;)</h4>
   <div class="markdown level1 summary"><p>Base logging interceptor.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -274,17 +233,17 @@ public class LoggingInterceptor : AsyncInterceptorBase, IAsyncInterceptor</code>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Castle.DynamicProxy.IInvocation</span></td>
+        <td><span class="xref">IInvocation</span></td>
         <td><span class="parametername">invocation</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Castle.DynamicProxy.IInvocationProceedInfo</span></td>
+        <td><span class="xref">IInvocationProceedInfo</span></td>
         <td><span class="parametername">proceedInfo</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;<span class="xref">Castle.DynamicProxy.IInvocation</span>, <span class="xref">Castle.DynamicProxy.IInvocationProceedInfo</span>, <span class="xref">System.Threading.Tasks.Task</span>&lt;TResult&gt;&gt;</td>
+        <td><span class="xref">Func</span>&lt;<span class="xref">IInvocation</span>, <span class="xref">IInvocationProceedInfo</span>, <span class="xref">Task</span>&lt;TResult&gt;&gt;</td>
         <td><span class="parametername">proceed</span></td>
         <td></td>
       </tr>
@@ -300,7 +259,7 @@ public class LoggingInterceptor : AsyncInterceptorBase, IAsyncInterceptor</code>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;TResult&gt;</td>
+        <td><span class="xref">Task</span>&lt;TResult&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -320,12 +279,6 @@ public class LoggingInterceptor : AsyncInterceptorBase, IAsyncInterceptor</code>
       </tr>
     </tbody>
   </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">Castle.DynamicProxy.AsyncInterceptorBase.InterceptAsync&lt;TResult&gt;(Castle.DynamicProxy.IInvocation, Castle.DynamicProxy.IInvocationProceedInfo, System.Func&lt;Castle.DynamicProxy.IInvocation, Castle.DynamicProxy.IInvocationProceedInfo, System.Threading.Tasks.Task&lt;TResult&gt;&gt;)</span></div>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <span class="xref">Castle.DynamicProxy.IAsyncInterceptor</span>
-  </div>
 </article>
               
                 </div>

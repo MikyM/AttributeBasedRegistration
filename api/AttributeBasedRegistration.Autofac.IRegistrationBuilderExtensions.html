@@ -105,48 +105,23 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">IRegistrationBuilderExtensions</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="AttributeBasedRegistration.Autofac.html">AttributeBasedRegistration.Autofac</a></h6>
   <h6><strong>Assembly</strong>: AttributeBasedRegistration.Autofac.dll</h6>
   <h5 id="AttributeBasedRegistration_Autofac_IRegistrationBuilderExtensions_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[PublicAPI]
-public static class IRegistrationBuilderExtensions</code></pre>
+    <pre><code class="lang-csharp hljs">public static class IRegistrationBuilderExtensions : object</code></pre>
   </div>
   <h3 id="methods">Methods
 </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Autofac_IRegistrationBuilderExtensions_AsClosedClassesOf__3_Autofac_Builder_IRegistrationBuilder___0___1___2__System_Type_.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Autofac.IRegistrationBuilderExtensions.AsClosedClassesOf%60%603(Autofac.Builder.IRegistrationBuilder%7B%60%600%2C%60%601%2C%60%602%7D%2CSystem.Type)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Autofac_IRegistrationBuilderExtensions_AsClosedClassesOf__3_IRegistrationBuilder___0___1___2__Type_.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Autofac.IRegistrationBuilderExtensions.AsClosedClassesOf%60%603(IRegistrationBuilder%7B%60%600%2C%60%601%2C%60%602%7D%2CType)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration.Autofac/IRegistrationBuilderExtensions.cs/#L50">View Source</a>
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration.Autofac/IRegistrationBuilderExtensions.cs/#L51">View Source</a>
   </span>
   <a id="AttributeBasedRegistration_Autofac_IRegistrationBuilderExtensions_AsClosedClassesOf_" data-uid="AttributeBasedRegistration.Autofac.IRegistrationBuilderExtensions.AsClosedClassesOf*"></a>
-  <h4 id="AttributeBasedRegistration_Autofac_IRegistrationBuilderExtensions_AsClosedClassesOf__3_Autofac_Builder_IRegistrationBuilder___0___1___2__System_Type_" data-uid="AttributeBasedRegistration.Autofac.IRegistrationBuilderExtensions.AsClosedClassesOf``3(Autofac.Builder.IRegistrationBuilder{``0,``1,``2},System.Type)">AsClosedClassesOf&lt;TLimit, TScanningActivatorData, TRegistrationStyle&gt;(IRegistrationBuilder&lt;TLimit, TScanningActivatorData, TRegistrationStyle&gt;, Type)</h4>
+  <h4 id="AttributeBasedRegistration_Autofac_IRegistrationBuilderExtensions_AsClosedClassesOf__3_IRegistrationBuilder___0___1___2__Type_" data-uid="AttributeBasedRegistration.Autofac.IRegistrationBuilderExtensions.AsClosedClassesOf``3(IRegistrationBuilder{``0,``1,``2},Type)">AsClosedClassesOf&lt;TLimit, TScanningActivatorData, TRegistrationStyle&gt;(IRegistrationBuilder&lt;TLimit, TScanningActivatorData, TRegistrationStyle&gt;, Type)</h4>
   <div class="markdown level1 summary"><p>Specifies that a type from a scanned assembly is registered if it implements an interface
 that closes the provided open generic interface type.</p>
 </div>
@@ -167,13 +142,13 @@ that closes the provided open generic interface type.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Autofac.Builder.IRegistrationBuilder</span>&lt;TLimit, TScanningActivatorData, TRegistrationStyle&gt;</td>
+        <td><span class="xref">IRegistrationBuilder</span>&lt;TLimit, TScanningActivatorData, TRegistrationStyle&gt;</td>
         <td><span class="parametername">registration</span></td>
         <td><p>Registration to set service mapping on.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Type</span></td>
+        <td><span class="xref">Type</span></td>
         <td><span class="parametername">openGenericServiceType</span></td>
         <td><p>The open generic interface or base class type for which implementations will be found.</p>
 </td>
@@ -190,7 +165,7 @@ that closes the provided open generic interface type.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Autofac.Builder.IRegistrationBuilder</span>&lt;TLimit, TScanningActivatorData, TRegistrationStyle&gt;</td>
+        <td><span class="xref">IRegistrationBuilder</span>&lt;TLimit, TScanningActivatorData, TRegistrationStyle&gt;</td>
         <td><p>Registration builder allowing the registration to be configured.</p>
 </td>
       </tr>
@@ -224,13 +199,13 @@ that closes the provided open generic interface type.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Autofac_IRegistrationBuilderExtensions_AsClosedInterfacesOf__3_Autofac_Builder_IRegistrationBuilder___0___1___2__System_Type_.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Autofac.IRegistrationBuilderExtensions.AsClosedInterfacesOf%60%603(Autofac.Builder.IRegistrationBuilder%7B%60%600%2C%60%601%2C%60%602%7D%2CSystem.Type)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_Autofac_IRegistrationBuilderExtensions_AsClosedInterfacesOf__3_IRegistrationBuilder___0___1___2__Type_.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.Autofac.IRegistrationBuilderExtensions.AsClosedInterfacesOf%60%603(IRegistrationBuilder%7B%60%600%2C%60%601%2C%60%602%7D%2CType)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration.Autofac/IRegistrationBuilderExtensions.cs/#L25">View Source</a>
   </span>
   <a id="AttributeBasedRegistration_Autofac_IRegistrationBuilderExtensions_AsClosedInterfacesOf_" data-uid="AttributeBasedRegistration.Autofac.IRegistrationBuilderExtensions.AsClosedInterfacesOf*"></a>
-  <h4 id="AttributeBasedRegistration_Autofac_IRegistrationBuilderExtensions_AsClosedInterfacesOf__3_Autofac_Builder_IRegistrationBuilder___0___1___2__System_Type_" data-uid="AttributeBasedRegistration.Autofac.IRegistrationBuilderExtensions.AsClosedInterfacesOf``3(Autofac.Builder.IRegistrationBuilder{``0,``1,``2},System.Type)">AsClosedInterfacesOf&lt;TLimit, TScanningActivatorData, TRegistrationStyle&gt;(IRegistrationBuilder&lt;TLimit, TScanningActivatorData, TRegistrationStyle&gt;, Type)</h4>
+  <h4 id="AttributeBasedRegistration_Autofac_IRegistrationBuilderExtensions_AsClosedInterfacesOf__3_IRegistrationBuilder___0___1___2__Type_" data-uid="AttributeBasedRegistration.Autofac.IRegistrationBuilderExtensions.AsClosedInterfacesOf``3(IRegistrationBuilder{``0,``1,``2},Type)">AsClosedInterfacesOf&lt;TLimit, TScanningActivatorData, TRegistrationStyle&gt;(IRegistrationBuilder&lt;TLimit, TScanningActivatorData, TRegistrationStyle&gt;, Type)</h4>
   <div class="markdown level1 summary"><p>Specifies that a type from a scanned assembly is registered if it implements an interface
 that closes the provided open generic interface type.</p>
 </div>
@@ -251,13 +226,13 @@ that closes the provided open generic interface type.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Autofac.Builder.IRegistrationBuilder</span>&lt;TLimit, TScanningActivatorData, TRegistrationStyle&gt;</td>
+        <td><span class="xref">IRegistrationBuilder</span>&lt;TLimit, TScanningActivatorData, TRegistrationStyle&gt;</td>
         <td><span class="parametername">registration</span></td>
         <td><p>Registration to set service mapping on.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Type</span></td>
+        <td><span class="xref">Type</span></td>
         <td><span class="parametername">openGenericServiceType</span></td>
         <td><p>The open generic interface or base class type for which implementations will be found.</p>
 </td>
@@ -274,7 +249,7 @@ that closes the provided open generic interface type.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Autofac.Builder.IRegistrationBuilder</span>&lt;TLimit, TScanningActivatorData, TRegistrationStyle&gt;</td>
+        <td><span class="xref">IRegistrationBuilder</span>&lt;TLimit, TScanningActivatorData, TRegistrationStyle&gt;</td>
         <td><p>Registration builder allowing the registration to be configured.</p>
 </td>
       </tr>

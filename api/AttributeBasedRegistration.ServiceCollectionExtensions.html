@@ -105,49 +105,24 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">ServiceCollectionExtensions</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="AttributeBasedRegistration.html">AttributeBasedRegistration</a></h6>
   <h6><strong>Assembly</strong>: AttributeBasedRegistration.dll</h6>
   <h5 id="AttributeBasedRegistration_ServiceCollectionExtensions_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[PublicAPI]
-public static class ServiceCollectionExtensions</code></pre>
+    <pre><code class="lang-csharp hljs">public static class ServiceCollectionExtensions : object</code></pre>
   </div>
   <h3 id="methods">Methods
 </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_ServiceCollectionExtensions_AddAttributeDefinedServices_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_AttributeBasedRegistration_AttributeRegistrationOptions__System_Reflection_Assembly___.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(Microsoft.Extensions.DependencyInjection.IServiceCollection%2CSystem.Action%7BAttributeBasedRegistration.AttributeRegistrationOptions%7D%2CSystem.Reflection.Assembly%5B%5D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_ServiceCollectionExtensions_AddAttributeDefinedServices_IServiceCollection_Action_AttributeBasedRegistration_AttributeRegistrationOptions__Assembly___.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(IServiceCollection%2CAction%7BAttributeBasedRegistration.AttributeRegistrationOptions%7D%2CAssembly%5B%5D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration/ServiceCollectionExtensions.cs/#L53">View Source</a>
   </span>
   <a id="AttributeBasedRegistration_ServiceCollectionExtensions_AddAttributeDefinedServices_" data-uid="AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices*"></a>
-  <h4 id="AttributeBasedRegistration_ServiceCollectionExtensions_AddAttributeDefinedServices_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_AttributeBasedRegistration_AttributeRegistrationOptions__System_Reflection_Assembly___" data-uid="AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{AttributeBasedRegistration.AttributeRegistrationOptions},System.Reflection.Assembly[])">AddAttributeDefinedServices(IServiceCollection, Action&lt;AttributeRegistrationOptions&gt;, Assembly[])</h4>
-  <div class="markdown level1 summary"><p>Registers services with <span class="xref">Microsoft.Extensions.DependencyInjection.IServiceCollection</span> via attributes.</p>
+  <h4 id="AttributeBasedRegistration_ServiceCollectionExtensions_AddAttributeDefinedServices_IServiceCollection_Action_AttributeBasedRegistration_AttributeRegistrationOptions__Assembly___" data-uid="AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(IServiceCollection,Action{AttributeBasedRegistration.AttributeRegistrationOptions},Assembly[])">AddAttributeDefinedServices(IServiceCollection, Action&lt;AttributeRegistrationOptions&gt;, Assembly[])</h4>
+  <div class="markdown level1 summary"><p>Registers services with <see cref="!:IServiceCollection"></see> via attributes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -165,19 +140,19 @@ public static class ServiceCollectionExtensions</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Microsoft.Extensions.DependencyInjection.IServiceCollection</span></td>
+        <td><span class="xref">IServiceCollection</span></td>
         <td><span class="parametername">serviceCollection</span></td>
         <td><p>Current service collection instance.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="AttributeBasedRegistration.AttributeRegistrationOptions.html">AttributeRegistrationOptions</a>&gt;</td>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="AttributeBasedRegistration.AttributeRegistrationOptions.html">AttributeRegistrationOptions</a>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>Configuration.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Reflection.Assembly</span>[]</td>
+        <td><span class="xref">Assembly</span>[]</td>
         <td><span class="parametername">assembliesToScan</span></td>
         <td><p>Assemblies to scan for services.</p>
 </td>
@@ -194,22 +169,22 @@ public static class ServiceCollectionExtensions</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Microsoft.Extensions.DependencyInjection.IServiceCollection</span></td>
-        <td><p>Current <span class="xref">Microsoft.Extensions.DependencyInjection.IServiceCollection</span> instance.</p>
+        <td><span class="xref">IServiceCollection</span></td>
+        <td><p>Current <see cref="!:IServiceCollection"></see> instance.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_ServiceCollectionExtensions_AddAttributeDefinedServices_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_AttributeBasedRegistration_AttributeRegistrationOptions__System_Type___.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(Microsoft.Extensions.DependencyInjection.IServiceCollection%2CSystem.Action%7BAttributeBasedRegistration.AttributeRegistrationOptions%7D%2CSystem.Type%5B%5D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_ServiceCollectionExtensions_AddAttributeDefinedServices_IServiceCollection_Action_AttributeBasedRegistration_AttributeRegistrationOptions__Type___.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(IServiceCollection%2CAction%7BAttributeBasedRegistration.AttributeRegistrationOptions%7D%2CType%5B%5D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration/ServiceCollectionExtensions.cs/#L43">View Source</a>
   </span>
   <a id="AttributeBasedRegistration_ServiceCollectionExtensions_AddAttributeDefinedServices_" data-uid="AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices*"></a>
-  <h4 id="AttributeBasedRegistration_ServiceCollectionExtensions_AddAttributeDefinedServices_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_AttributeBasedRegistration_AttributeRegistrationOptions__System_Type___" data-uid="AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{AttributeBasedRegistration.AttributeRegistrationOptions},System.Type[])">AddAttributeDefinedServices(IServiceCollection, Action&lt;AttributeRegistrationOptions&gt;, Type[])</h4>
-  <div class="markdown level1 summary"><p>Registers services with <span class="xref">Microsoft.Extensions.DependencyInjection.IServiceCollection</span> via attributes.</p>
+  <h4 id="AttributeBasedRegistration_ServiceCollectionExtensions_AddAttributeDefinedServices_IServiceCollection_Action_AttributeBasedRegistration_AttributeRegistrationOptions__Type___" data-uid="AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(IServiceCollection,Action{AttributeBasedRegistration.AttributeRegistrationOptions},Type[])">AddAttributeDefinedServices(IServiceCollection, Action&lt;AttributeRegistrationOptions&gt;, Type[])</h4>
+  <div class="markdown level1 summary"><p>Registers services with <see cref="!:IServiceCollection"></see> via attributes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -227,19 +202,19 @@ public static class ServiceCollectionExtensions</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Microsoft.Extensions.DependencyInjection.IServiceCollection</span></td>
+        <td><span class="xref">IServiceCollection</span></td>
         <td><span class="parametername">serviceCollection</span></td>
         <td><p>Current service collection instance.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="AttributeBasedRegistration.AttributeRegistrationOptions.html">AttributeRegistrationOptions</a>&gt;</td>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="AttributeBasedRegistration.AttributeRegistrationOptions.html">AttributeRegistrationOptions</a>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>Configuration.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Type</span>[]</td>
+        <td><span class="xref">Type</span>[]</td>
         <td><span class="parametername">assembliesContainingTypesToScan</span></td>
         <td><p>Assemblies containing types to scan for services.</p>
 </td>
@@ -256,146 +231,22 @@ public static class ServiceCollectionExtensions</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Microsoft.Extensions.DependencyInjection.IServiceCollection</span></td>
-        <td><p>Current <span class="xref">Microsoft.Extensions.DependencyInjection.IServiceCollection</span> instance.</p>
+        <td><span class="xref">IServiceCollection</span></td>
+        <td><p>Current <see cref="!:IServiceCollection"></see> instance.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_ServiceCollectionExtensions_AddAttributeDefinedServices_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Collections_Generic_IEnumerable_System_Reflection_Assembly__System_Action_AttributeBasedRegistration_AttributeRegistrationOptions__.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(Microsoft.Extensions.DependencyInjection.IServiceCollection%2CSystem.Collections.Generic.IEnumerable%7BSystem.Reflection.Assembly%7D%2CSystem.Action%7BAttributeBasedRegistration.AttributeRegistrationOptions%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration/ServiceCollectionExtensions.cs/#L72">View Source</a>
-  </span>
-  <a id="AttributeBasedRegistration_ServiceCollectionExtensions_AddAttributeDefinedServices_" data-uid="AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices*"></a>
-  <h4 id="AttributeBasedRegistration_ServiceCollectionExtensions_AddAttributeDefinedServices_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Collections_Generic_IEnumerable_System_Reflection_Assembly__System_Action_AttributeBasedRegistration_AttributeRegistrationOptions__" data-uid="AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Collections.Generic.IEnumerable{System.Reflection.Assembly},System.Action{AttributeBasedRegistration.AttributeRegistrationOptions})">AddAttributeDefinedServices(IServiceCollection, IEnumerable&lt;Assembly&gt;, Action&lt;AttributeRegistrationOptions&gt;)</h4>
-  <div class="markdown level1 summary"><p>Registers services with <span class="xref">Microsoft.Extensions.DependencyInjection.IServiceCollection</span> via attributes.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IServiceCollection AddAttributeDefinedServices(this IServiceCollection serviceCollection, IEnumerable&lt;Assembly&gt; assembliesToScan, Action&lt;AttributeRegistrationOptions&gt; options = null)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Microsoft.Extensions.DependencyInjection.IServiceCollection</span></td>
-        <td><span class="parametername">serviceCollection</span></td>
-        <td><p>Current service collection instance.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Reflection.Assembly</span>&gt;</td>
-        <td><span class="parametername">assembliesToScan</span></td>
-        <td><p>Assemblies to scan for services.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="AttributeBasedRegistration.AttributeRegistrationOptions.html">AttributeRegistrationOptions</a>&gt;</td>
-        <td><span class="parametername">options</span></td>
-        <td><p>Optional configuration.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Microsoft.Extensions.DependencyInjection.IServiceCollection</span></td>
-        <td><p>Current <span class="xref">Microsoft.Extensions.DependencyInjection.IServiceCollection</span> instance.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_ServiceCollectionExtensions_AddAttributeDefinedServices_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Collections_Generic_IEnumerable_System_Type__System_Action_AttributeBasedRegistration_AttributeRegistrationOptions__.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(Microsoft.Extensions.DependencyInjection.IServiceCollection%2CSystem.Collections.Generic.IEnumerable%7BSystem.Type%7D%2CSystem.Action%7BAttributeBasedRegistration.AttributeRegistrationOptions%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration/ServiceCollectionExtensions.cs/#L22">View Source</a>
-  </span>
-  <a id="AttributeBasedRegistration_ServiceCollectionExtensions_AddAttributeDefinedServices_" data-uid="AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices*"></a>
-  <h4 id="AttributeBasedRegistration_ServiceCollectionExtensions_AddAttributeDefinedServices_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Collections_Generic_IEnumerable_System_Type__System_Action_AttributeBasedRegistration_AttributeRegistrationOptions__" data-uid="AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Collections.Generic.IEnumerable{System.Type},System.Action{AttributeBasedRegistration.AttributeRegistrationOptions})">AddAttributeDefinedServices(IServiceCollection, IEnumerable&lt;Type&gt;, Action&lt;AttributeRegistrationOptions&gt;)</h4>
-  <div class="markdown level1 summary"><p>Registers services with <span class="xref">Microsoft.Extensions.DependencyInjection.IServiceCollection</span> via attributes.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IServiceCollection AddAttributeDefinedServices(this IServiceCollection serviceCollection, IEnumerable&lt;Type&gt; assembliesContainingTypesToScan, Action&lt;AttributeRegistrationOptions&gt; options = null)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Microsoft.Extensions.DependencyInjection.IServiceCollection</span></td>
-        <td><span class="parametername">serviceCollection</span></td>
-        <td><p>Current service collection instance.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Type</span>&gt;</td>
-        <td><span class="parametername">assembliesContainingTypesToScan</span></td>
-        <td><p>Assemblies containing types to scan for services.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="AttributeBasedRegistration.AttributeRegistrationOptions.html">AttributeRegistrationOptions</a>&gt;</td>
-        <td><span class="parametername">options</span></td>
-        <td><p>Optional configuration.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Microsoft.Extensions.DependencyInjection.IServiceCollection</span></td>
-        <td><p>Current <span class="xref">Microsoft.Extensions.DependencyInjection.IServiceCollection</span> instance.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_ServiceCollectionExtensions_AddAttributeDefinedServices_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Reflection_Assembly___.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(Microsoft.Extensions.DependencyInjection.IServiceCollection%2CSystem.Reflection.Assembly%5B%5D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_ServiceCollectionExtensions_AddAttributeDefinedServices_IServiceCollection_Assembly___.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(IServiceCollection%2CAssembly%5B%5D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration/ServiceCollectionExtensions.cs/#L62">View Source</a>
   </span>
   <a id="AttributeBasedRegistration_ServiceCollectionExtensions_AddAttributeDefinedServices_" data-uid="AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices*"></a>
-  <h4 id="AttributeBasedRegistration_ServiceCollectionExtensions_AddAttributeDefinedServices_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Reflection_Assembly___" data-uid="AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Reflection.Assembly[])">AddAttributeDefinedServices(IServiceCollection, Assembly[])</h4>
-  <div class="markdown level1 summary"><p>Registers services with <span class="xref">Microsoft.Extensions.DependencyInjection.IServiceCollection</span> via attributes.</p>
+  <h4 id="AttributeBasedRegistration_ServiceCollectionExtensions_AddAttributeDefinedServices_IServiceCollection_Assembly___" data-uid="AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(IServiceCollection,Assembly[])">AddAttributeDefinedServices(IServiceCollection, Assembly[])</h4>
+  <div class="markdown level1 summary"><p>Registers services with <see cref="!:IServiceCollection"></see> via attributes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -413,13 +264,13 @@ public static class ServiceCollectionExtensions</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Microsoft.Extensions.DependencyInjection.IServiceCollection</span></td>
+        <td><span class="xref">IServiceCollection</span></td>
         <td><span class="parametername">serviceCollection</span></td>
         <td><p>Current service collection instance.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Reflection.Assembly</span>[]</td>
+        <td><span class="xref">Assembly</span>[]</td>
         <td><span class="parametername">assembliesToScan</span></td>
         <td><p>Assemblies to scan for services.</p>
 </td>
@@ -436,22 +287,146 @@ public static class ServiceCollectionExtensions</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Microsoft.Extensions.DependencyInjection.IServiceCollection</span></td>
-        <td><p>Current <span class="xref">Microsoft.Extensions.DependencyInjection.IServiceCollection</span> instance.</p>
+        <td><span class="xref">IServiceCollection</span></td>
+        <td><p>Current <see cref="!:IServiceCollection"></see> instance.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_ServiceCollectionExtensions_AddAttributeDefinedServices_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Type___.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(Microsoft.Extensions.DependencyInjection.IServiceCollection%2CSystem.Type%5B%5D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_ServiceCollectionExtensions_AddAttributeDefinedServices_IServiceCollection_IEnumerable_Assembly__System_Nullable_Action_AttributeBasedRegistration_AttributeRegistrationOptions___.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(IServiceCollection%2CIEnumerable%7BAssembly%7D%2CSystem.Nullable%7BAction%7BAttributeBasedRegistration.AttributeRegistrationOptions%7D%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration/ServiceCollectionExtensions.cs/#L72">View Source</a>
+  </span>
+  <a id="AttributeBasedRegistration_ServiceCollectionExtensions_AddAttributeDefinedServices_" data-uid="AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices*"></a>
+  <h4 id="AttributeBasedRegistration_ServiceCollectionExtensions_AddAttributeDefinedServices_IServiceCollection_IEnumerable_Assembly__System_Nullable_Action_AttributeBasedRegistration_AttributeRegistrationOptions___" data-uid="AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(IServiceCollection,IEnumerable{Assembly},System.Nullable{Action{AttributeBasedRegistration.AttributeRegistrationOptions}})">AddAttributeDefinedServices(IServiceCollection, IEnumerable&lt;Assembly&gt;, Nullable&lt;Action&lt;AttributeRegistrationOptions&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Registers services with <see cref="!:IServiceCollection"></see> via attributes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddAttributeDefinedServices(this IServiceCollection serviceCollection, IEnumerable&lt;Assembly&gt; assembliesToScan, Action&lt;AttributeRegistrationOptions&gt;? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IServiceCollection</span></td>
+        <td><span class="parametername">serviceCollection</span></td>
+        <td><p>Current service collection instance.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">Assembly</span>&gt;</td>
+        <td><span class="parametername">assembliesToScan</span></td>
+        <td><p>Assemblies to scan for services.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Action</span>&lt;<a class="xref" href="AttributeBasedRegistration.AttributeRegistrationOptions.html">AttributeRegistrationOptions</a>&gt;&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Optional configuration.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IServiceCollection</span></td>
+        <td><p>Current <see cref="!:IServiceCollection"></see> instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_ServiceCollectionExtensions_AddAttributeDefinedServices_IServiceCollection_IEnumerable_Type__System_Nullable_Action_AttributeBasedRegistration_AttributeRegistrationOptions___.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(IServiceCollection%2CIEnumerable%7BType%7D%2CSystem.Nullable%7BAction%7BAttributeBasedRegistration.AttributeRegistrationOptions%7D%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration/ServiceCollectionExtensions.cs/#L22">View Source</a>
+  </span>
+  <a id="AttributeBasedRegistration_ServiceCollectionExtensions_AddAttributeDefinedServices_" data-uid="AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices*"></a>
+  <h4 id="AttributeBasedRegistration_ServiceCollectionExtensions_AddAttributeDefinedServices_IServiceCollection_IEnumerable_Type__System_Nullable_Action_AttributeBasedRegistration_AttributeRegistrationOptions___" data-uid="AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(IServiceCollection,IEnumerable{Type},System.Nullable{Action{AttributeBasedRegistration.AttributeRegistrationOptions}})">AddAttributeDefinedServices(IServiceCollection, IEnumerable&lt;Type&gt;, Nullable&lt;Action&lt;AttributeRegistrationOptions&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Registers services with <see cref="!:IServiceCollection"></see> via attributes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddAttributeDefinedServices(this IServiceCollection serviceCollection, IEnumerable&lt;Type&gt; assembliesContainingTypesToScan, Action&lt;AttributeRegistrationOptions&gt;? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IServiceCollection</span></td>
+        <td><span class="parametername">serviceCollection</span></td>
+        <td><p>Current service collection instance.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">Type</span>&gt;</td>
+        <td><span class="parametername">assembliesContainingTypesToScan</span></td>
+        <td><p>Assemblies containing types to scan for services.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Action</span>&lt;<a class="xref" href="AttributeBasedRegistration.AttributeRegistrationOptions.html">AttributeRegistrationOptions</a>&gt;&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Optional configuration.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IServiceCollection</span></td>
+        <td><p>Current <see cref="!:IServiceCollection"></see> instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_ServiceCollectionExtensions_AddAttributeDefinedServices_IServiceCollection_Type___.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(IServiceCollection%2CType%5B%5D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration/ServiceCollectionExtensions.cs/#L33">View Source</a>
   </span>
   <a id="AttributeBasedRegistration_ServiceCollectionExtensions_AddAttributeDefinedServices_" data-uid="AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices*"></a>
-  <h4 id="AttributeBasedRegistration_ServiceCollectionExtensions_AddAttributeDefinedServices_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Type___" data-uid="AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type[])">AddAttributeDefinedServices(IServiceCollection, Type[])</h4>
-  <div class="markdown level1 summary"><p>Registers services with <span class="xref">Microsoft.Extensions.DependencyInjection.IServiceCollection</span> via attributes.</p>
+  <h4 id="AttributeBasedRegistration_ServiceCollectionExtensions_AddAttributeDefinedServices_IServiceCollection_Type___" data-uid="AttributeBasedRegistration.ServiceCollectionExtensions.AddAttributeDefinedServices(IServiceCollection,Type[])">AddAttributeDefinedServices(IServiceCollection, Type[])</h4>
+  <div class="markdown level1 summary"><p>Registers services with <see cref="!:IServiceCollection"></see> via attributes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -469,13 +444,13 @@ public static class ServiceCollectionExtensions</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Microsoft.Extensions.DependencyInjection.IServiceCollection</span></td>
+        <td><span class="xref">IServiceCollection</span></td>
         <td><span class="parametername">serviceCollection</span></td>
         <td><p>Current service collection instance.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Type</span>[]</td>
+        <td><span class="xref">Type</span>[]</td>
         <td><span class="parametername">assembliesContainingTypesToScan</span></td>
         <td><p>Assemblies containing types to scan for services.</p>
 </td>
@@ -492,22 +467,22 @@ public static class ServiceCollectionExtensions</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Microsoft.Extensions.DependencyInjection.IServiceCollection</span></td>
-        <td><p>Current <span class="xref">Microsoft.Extensions.DependencyInjection.IServiceCollection</span> instance.</p>
+        <td><span class="xref">IServiceCollection</span></td>
+        <td><p>Current <see cref="!:IServiceCollection"></see> instance.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_ServiceCollectionExtensions_AddRootScopeIdentifier_Microsoft_Extensions_DependencyInjection_IServiceCollection_.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.ServiceCollectionExtensions.AddRootScopeIdentifier(Microsoft.Extensions.DependencyInjection.IServiceCollection)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_ServiceCollectionExtensions_AddRootScopeIdentifier_IServiceCollection_.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.ServiceCollectionExtensions.AddRootScopeIdentifier(IServiceCollection)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration/ServiceCollectionExtensions.cs/#L196">View Source</a>
   </span>
   <a id="AttributeBasedRegistration_ServiceCollectionExtensions_AddRootScopeIdentifier_" data-uid="AttributeBasedRegistration.ServiceCollectionExtensions.AddRootScopeIdentifier*"></a>
-  <h4 id="AttributeBasedRegistration_ServiceCollectionExtensions_AddRootScopeIdentifier_Microsoft_Extensions_DependencyInjection_IServiceCollection_" data-uid="AttributeBasedRegistration.ServiceCollectionExtensions.AddRootScopeIdentifier(Microsoft.Extensions.DependencyInjection.IServiceCollection)">AddRootScopeIdentifier(IServiceCollection)</h4>
-  <div class="markdown level1 summary"><p>Adds the identifier services of the root DI scope making <a class="xref" href="AttributeBasedRegistration.ServiceCollectionExtensions.html#AttributeBasedRegistration_ServiceCollectionExtensions_IsRootScope_System_IServiceProvider_">IsRootScope(IServiceProvider)</a> available.</p>
+  <h4 id="AttributeBasedRegistration_ServiceCollectionExtensions_AddRootScopeIdentifier_IServiceCollection_" data-uid="AttributeBasedRegistration.ServiceCollectionExtensions.AddRootScopeIdentifier(IServiceCollection)">AddRootScopeIdentifier(IServiceCollection)</h4>
+  <div class="markdown level1 summary"><p>Adds the identifier services of the root DI scope making <a class="xref" href="AttributeBasedRegistration.ServiceCollectionExtensions.html#AttributeBasedRegistration_ServiceCollectionExtensions_IsRootScope_IServiceProvider_">IsRootScope(IServiceProvider)</a> available.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -525,7 +500,7 @@ public static class ServiceCollectionExtensions</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Microsoft.Extensions.DependencyInjection.IServiceCollection</span></td>
+        <td><span class="xref">IServiceCollection</span></td>
         <td><span class="parametername">serviceCollection</span></td>
         <td><p>The service collection.</p>
 </td>
@@ -542,20 +517,20 @@ public static class ServiceCollectionExtensions</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Microsoft.Extensions.DependencyInjection.IServiceCollection</span></td>
+        <td><span class="xref">IServiceCollection</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_ServiceCollectionExtensions_IsRootScope_System_IServiceProvider_.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.ServiceCollectionExtensions.IsRootScope(System.IServiceProvider)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/MikyM/AttributeBasedRegistration/new/master/apiSpec/new?filename=AttributeBasedRegistration_ServiceCollectionExtensions_IsRootScope_IServiceProvider_.md&amp;value=---%0Auid%3A%20AttributeBasedRegistration.ServiceCollectionExtensions.IsRootScope(IServiceProvider)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/MikyM/AttributeBasedRegistration/blob/master/src/AttributeBasedRegistration/ServiceCollectionExtensions.cs/#L209">View Source</a>
   </span>
   <a id="AttributeBasedRegistration_ServiceCollectionExtensions_IsRootScope_" data-uid="AttributeBasedRegistration.ServiceCollectionExtensions.IsRootScope*"></a>
-  <h4 id="AttributeBasedRegistration_ServiceCollectionExtensions_IsRootScope_System_IServiceProvider_" data-uid="AttributeBasedRegistration.ServiceCollectionExtensions.IsRootScope(System.IServiceProvider)">IsRootScope(IServiceProvider)</h4>
+  <h4 id="AttributeBasedRegistration_ServiceCollectionExtensions_IsRootScope_IServiceProvider_" data-uid="AttributeBasedRegistration.ServiceCollectionExtensions.IsRootScope(IServiceProvider)">IsRootScope(IServiceProvider)</h4>
   <div class="markdown level1 summary"><p>Checks whether the given scope is a root scope.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -574,7 +549,7 @@ public static class ServiceCollectionExtensions</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.IServiceProvider</span></td>
+        <td><span class="xref">IServiceProvider</span></td>
         <td><span class="parametername">serviceProvider</span></td>
         <td><p>Root scope candidate.</p>
 </td>
