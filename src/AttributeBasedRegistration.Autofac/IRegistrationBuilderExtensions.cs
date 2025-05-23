@@ -27,7 +27,8 @@ public static class IRegistrationBuilderExtensions
             this IRegistrationBuilder<TLimit, TScanningActivatorData, TRegistrationStyle> registration,
             Type openGenericServiceType) where TScanningActivatorData : ScanningActivatorData
     {
-        if ((object)openGenericServiceType == null) throw new ArgumentNullException(nameof(openGenericServiceType));
+        ArgumentNullException.ThrowIfNull(openGenericServiceType);
+        
         if (!openGenericServiceType.IsInterface)
             throw new ArgumentException("Generic type must be an interface", nameof(openGenericServiceType));
 
