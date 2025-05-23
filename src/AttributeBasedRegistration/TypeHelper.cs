@@ -4,7 +4,7 @@ namespace AttributeBasedRegistration;
 
 internal static class TypeHelper
 {
-       internal static List<Type> GetServiceTypes(this Type type, IServiceImplementationAttribute implementationAttribute, IEnumerable<IRegisterAsAttribute> asAttributes)
+    internal static List<Type> GetServiceTypes(this Type type, IServiceImplementationAttribute implementationAttribute, IEnumerable<IRegisterAsAttribute> asAttributes)
         => asAttributes.Where(x => x.ServiceTypes is not null)
             .SelectMany(x => x.ServiceTypes ?? Type.EmptyTypes)
             .Concat(implementationAttribute?.ServiceTypes ?? Type.EmptyTypes)

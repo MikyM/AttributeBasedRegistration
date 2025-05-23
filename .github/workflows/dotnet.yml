@@ -18,19 +18,18 @@ jobs:
     if: "!contains(format('{0} {1}', github.event.head_commit.message, github.event.pull_request.title), '[ci-skip]')"
     steps:
     - name: Setup .NET
-      uses: actions/setup-dotnet@v3
+      uses: actions/setup-dotnet@v4
       with:
         dotnet-version: | 
-          6.0.x
-          7.0.x
           8.0.x
+          9.0.x
     - name: Install and cache PowerShell modules
-      uses: potatoqualitee/psmodulecache@v5.2
+      uses: potatoqualitee/psmodulecache@v6.0
       with:
         modules-to-cache: powershell-yaml
 
     - name: Check out Code 
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Restore dotnet tools
       run: dotnet tool restore
@@ -75,7 +74,7 @@ jobs:
   
     - name: Upload packages as artifacts
       if: github.event_name == 'push'
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: nuget-packages
         path: nuget-packages
@@ -95,7 +94,7 @@ jobs:
       
     - name: Upload docs
       if: github.event_name == 'push' && !contains(format('{0} {1}', github.event.head_commit.message, github.event.pull_request.title), '[doc-skip]')
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: docfx-site
         path: docs/_site/
@@ -107,12 +106,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout triggering branch
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           path: base
       
       - name: Checkout gh-pages
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: gh-pages
           path: site
@@ -121,7 +120,7 @@ jobs:
         run: bash base/docs/scripts/prepare.sh
       
       - name: Download documentation artifacts
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: docfx-site
           path: site
@@ -130,7 +129,7 @@ jobs:
         run: bash base/docs/scripts/build.sh
       
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./site
